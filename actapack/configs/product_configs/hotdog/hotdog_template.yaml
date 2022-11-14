@@ -1,1 +1,1 @@
-hotdog_file_template: '{array}_{freq}_{num_splits}_{condiment}.txt'
+hotdog_file_template: '{array}_{freq}_{num_splits}way_{condiment}.txt'
