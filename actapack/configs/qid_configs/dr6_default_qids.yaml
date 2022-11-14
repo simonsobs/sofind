@@ -1,0 +1,39 @@
+pa4a:
+  array: pa4
+  freq: f150
+  num_splits: 8
+
+pa4b: 
+  array: pa4
+  freq: f220
+  num_splits: 8
+
+pa5a:
+  array: pa5
+  freq: f090
+  num_splits: 8
+
+pa5b: 
+  array: pa5
+  freq: f150
+  num_splits: 8
+
+pa6a:
+  array: pa6
+  freq: f090
+  num_splits: 8
+
+pa6b: 
+  array: pa6
+  freq: f150
+  num_splits: 8
+
+pa7a:
+  array: pa7
+  freq: f030
+  num_splits: 4
+
+pa7b: 
+  array: pa7
+  freq: f040
+  num_splits: 4
