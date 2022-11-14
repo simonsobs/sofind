@@ -55,6 +55,8 @@ There are three steps:
     * This must be a `.yaml` file.
     * This should contain any information to help get filenames for your product or load them from disk. For instance, given a `array='pa6', freq='f090', num_splits=8, condiment='mustard'`, the `hotdog_file_template` in `hotdog_template.yaml` would populate to `pa6_f090_8way_mustard.txt` (the actual implementation of that population would happen in your `HotDog` class's `get_hotdog_fn` method).
     
+Please commit and push your contribution to a new branch and open a PR on github!
+    
 ## If you would like to contribute a data model to `actapack`
 There are one (maybe two) steps:
 1. Create a new data model config in `actapack/configs/datamodel_configs/`.
@@ -62,3 +64,5 @@ There are one (maybe two) steps:
     * It must also have an entry for a `qid_dict`, indicating one of the qid config files under `actapack/configs/qid_configs/`.
     * Note: for each of the above, one could also add the full dictionary of information by hand, rather than pointing to a config file.
 2. Only if one of the included qid config files is not sufficient for your needs, you'll need to add another one with your qids (or add your qids to what's already there).
+
+Please commit and push your contribution to a new branch and open a PR on github!
