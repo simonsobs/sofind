@@ -6,11 +6,44 @@ import os
 class DataModel(*Product.__subclasses__()):
 
     def __init__(self, qid_dict, **kwargs):
+        """A wrapper class that mixes in all Product subclasses. Also grabs any
+        qid-related information to be used in subclass methods, e.g., if a
+        product's filenames are labeled by particular array, frequency, etc.
+
+        Parameters
+        ----------
+        qid_dict : dict
+            A mapping between 'qids', or 'query identifiers', and their itemized
+            information. For instance, qid 'pa6a' maps to {'array': 'pa6', 
+            'freq': 'f090', ...}. This dictionary will hold many such qid
+            mappings, e.g. a block under 'pa4a', 'pa4b', 'pa5a', ... These 
+            mappings are useful for going from/to human-readable filenames.
+
+        Notes
+        -----
+        This class is the only class a user should need. It exposes all product
+        methods implemented in this repo.
+        """
         self.qid_dict = qid_dict
         super().__init__(**kwargs)
 
     @classmethod
     def from_config(cls, config_name):
+        """Build a DataModel instance from configuration files distributed in
+        the actapack package.
+
+        Parameters
+        ----------
+        config_name : str
+            The name of the configuration file. If does not end in '.yaml', 
+            '.yaml' will be appended.
+
+        Returns
+        -------
+        DataModel
+            Instance corresponding to the collection of products indicated in 
+            the named configuration file.
+        """
         dm_kwargs = {}
         
         # first get the config dictionary

@@ -1,4 +1,4 @@
-from .product import Product, make_implements_decorator
+from .product import Product, set_attrs_by_filename, make_implements_decorator
 
 from pixell import enmap
 import os
@@ -9,9 +9,7 @@ class Map(Product):
     implements = make_implements_decorator(implementedmethods)
     
     def __init__(self, **kwargs):
-        product_tag = os.path.splitext(os.path.basename(__file__))[0]
-        setattr(self, f'{product_tag}_path', kwargs.pop(f'{product_tag}_path'))
-        setattr(self, f'{product_tag}_dict', kwargs.pop(f'{product_tag}_dict'))
+        set_attrs_by_filename(self, __file__, kwargs)
         super().__init__(**kwargs)
 
     @implements(Product.get_fn)

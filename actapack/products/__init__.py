@@ -8,10 +8,14 @@ from .beam import *
 
 ### PRODUCT TEMPLATE in module file hotdog.py ###
 
-# from .product import Product, make_implements_decorator
+# from .product import Product, set_attrs_by_filename, make_implements_decorator
 
 # import numpy as np
 
+# All products must inherit from Product and implement its productmethods,
+# which one does by decorating a subclass method, e.g. get_hotdog_fn, with
+# the decorator @implements(Product.get_fn), for each productmethod in
+# the Product class.
 # class HotDog(Product):
 
 #     implementedmethods = []
@@ -20,9 +24,7 @@ from .beam import *
 #     def __init__(self, **kwargs):
 #         # each product needs a system path and a dictionary to hold a 
 #         # filename template (see get_hotdog_fn)
-#         product_tag = os.path.splitext(os.path.basename(__file__))[0]
-#         setattr(self, f'{product_tag}_path', kwargs.pop(f'{product_tag}_path'))
-#         setattr(self, f'{product_tag}_dict', kwargs.pop(f'{product_tag}_dict'))
+#         set_attrs_by_filename(self, __file__, kwargs)
 #         super().__init__(**kwargs)
 
 #     @implements(Product.get_fn)

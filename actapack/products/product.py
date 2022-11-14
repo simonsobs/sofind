@@ -2,6 +2,8 @@
 # "renamed" dynamically
 
 import functools
+import os
+
 
 # This is only for use in decorating Product methods, but needs to be 
 # defined outside the Product class scope
@@ -53,12 +55,6 @@ class Product:
                     f'implementation of {method_name}; found '+ \
                     f'{num_implementations}'
 
-    # All Product subclasses must implement any @productmethods defined below
-    # @property
-    # @productmethod
-    # def path_key(self):
-    #     pass
-
     @productmethod
     def get_fn(self):
         pass
@@ -66,6 +62,32 @@ class Product:
     @productmethod
     def read_product(self):
         pass
+
+
+# This is a helper function to package-up all the lines (and the only lines)
+# of code to be run in a Product subclass's __init__method
+def set_attrs_by_filename(self, filename, kwargs):
+    """Assign attributes in self from kwargs based on filename. First, get the
+    extension-less basename of filename, e.g. 'test' from
+    '/home/zatkins/test.py'. Then, set the value under keys 'test_path' and 
+    'test_dict' in kwargs to attributes of the same name in self.
+
+    Parameters
+    ----------
+    filename : str
+        Path to a file, e.g. the calling module of this function.
+    kwargs : dict
+        Dictionary holding values under keys corresponding to the 
+        filename (see function description).
+
+    Notes
+    -----
+    The values retrieved from kwargs are popped out, so that after this function
+    call those items are no longer in kwargs.
+    """
+    product_tag = os.path.splitext(os.path.basename(filename))[0]
+    setattr(self, f'{product_tag}_path', kwargs.pop(f'{product_tag}_path'))
+    setattr(self, f'{product_tag}_dict', kwargs.pop(f'{product_tag}_dict'))
 
 
 # This is for use inside the declaration of each Product subclass. Every 
