@@ -46,6 +46,7 @@ There are three steps:
     * The module should only contain a subclass of the `actapack.products.product.Product` class.
     * There is a set prescription your subclass implementation must follow. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `actapack.products.__init__.py`. You should *only* modify the class name and the methods (method name and contents). Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.map.Map` for inspiration.
 2. Make sure your product is imported directly by the `actapack.products` package. For instance, if your module was named `hotdog.py` and your product class in that module was `HotDog`, add either of these lines to `actapack.products.__init__.py`:
+
     ```
     from .hotdog import *
     # or
