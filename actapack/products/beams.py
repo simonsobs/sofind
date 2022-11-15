@@ -1,4 +1,4 @@
-from .product import Product, set_attrs_by_filename, get_implements_decorator
+from .products import Product, set_attrs_by_filename, get_implements_decorator
 
 import os
 
@@ -13,8 +13,8 @@ class Beam(Product):
 
     @implements(Product.get_fn)
     def get_beam_fn(self):
-        fn = self.beam_dict['beam_info']
-        return os.path.join(self.beam_path, fn)
+        fn = self.beams_dict['beam_info']
+        return os.path.join(self.beams_path, fn)
 
     @implements(Product.read_product)
     def read_beam(self):

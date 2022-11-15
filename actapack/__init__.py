@@ -54,7 +54,7 @@ class DataModel(*Product.__subclasses__()):
         # then get the config dictionary
         if not config_name.endswith('.yaml'):
             config_name += '.yaml'
-        basename = f'configs/datamodel/{config_name}'
+        basename = f'configs/datamodels/{config_name}'
         config_fn = utils.get_package_fn('actapack', basename)
         config_dict = utils.config_from_yaml_file(config_fn)
 
@@ -64,7 +64,7 @@ class DataModel(*Product.__subclasses__()):
                 if not product_dict.endswith('.yaml'):
                     product_dict += '.yaml'
                 subdir = dict_name.split('_')[0]
-                if subdir == 'qid':
+                if subdir == 'qids':
                     basename = f'configs/{subdir}/{product_dict}'
                 else:
                     basename = f'configs/products/{subdir}/{product_dict}'

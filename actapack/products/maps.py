@@ -1,4 +1,4 @@
-from .product import Product, set_attrs_by_filename, get_implements_decorator
+from .products import Product, set_attrs_by_filename, get_implements_decorator
 
 from pixell import enmap
 import os
@@ -35,12 +35,12 @@ class Map(Product):
             Full path to requested product, including its directory.
         """
         if coadd:
-            fn_template = self.map_dict['coadd_map_file_template']
+            fn_template = self.maps_dict['coadd_map_file_template']
         else:
-            fn_template = self.map_dict['split_map_file_template']
+            fn_template = self.maps_dict['split_map_file_template']
 
         fn_kwargs = {}
-        fn_kwargs.update(self.qid_dict[qid]) # add info about the requested array
+        fn_kwargs.update(self.qids_dict[qid]) # add info about the requested array
         fn_kwargs.update(dict(               # add args passed to this method
             split_num=split_num,
             maptag=maptag
@@ -48,7 +48,7 @@ class Map(Product):
             
         fn = fn_template.format(**fn_kwargs) # format the file string
 
-        return os.path.join(self.map_path, fn)
+        return os.path.join(self.maps_path, fn)
 
     @implements(Product.read_product)
     def read_map(self, qid, split_num=0, coadd=False, maptag='map', **kwargs):

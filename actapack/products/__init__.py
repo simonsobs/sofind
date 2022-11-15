@@ -1,12 +1,12 @@
 # Add an import statement for your module
-from .map import *
-from .beam import *
+from .maps import *
+from .beams import *
 
 # If you are adding a product you can use the following template
 # in your module. Please only define the product class in this 
 # module.
 
-### PRODUCT TEMPLATE in module file hotdog.py ###
+### PRODUCT TEMPLATE in module file hotdogs.py ###
 
 # from .product import Product, set_attrs_by_filename, get_implements_decorator
 
@@ -28,20 +28,20 @@ from .beam import *
 #     @implements(Product.get_fn)
 #     def get_hotdog_fn(self, qid, condiment='mustard'):
 #         # use arguments, and possibly info coming from a qid, to populate a 
-#         # "filename_template" coming from the self.hotdog_dict
-#         fn_template = self.hotdog_dict['hotdog_file_template']
+#         # "filename_template" coming from the self.hotdogs_dict
+#         fn_template = self.hotdogs_dict['hotdog_file_template']
 
 #         fn_kwargs = {}
-#         fn_kwargs.update(self.qid_dict[qid]) # add info about the requested array
+#         fn_kwargs.update(self.qids_dict[qid]) # add info about the requested array
 #         fn_kwargs.update(dict(               # add args passed to this method
 #             condiment=condiment
 #         ))
 
 #         fn = fn_template.format(**fn_kwargs) # format the file string
 
-#         # finally, tack on the self.hotdog_path (along with self.hotdog_dict,
+#         # finally, tack on the self.hotdogs_path (along with self.hotdogs_dict,
 #         # this attribute is assigned for you in set_attrs_by_filename(...))
-#         return os.path.join(self.hotdog_path, fn)
+#         return os.path.join(self.hotdogs_path, fn)
 
 #     @implements(Product.read_product)
 #     def read_hotdog(self, qid, condiment='mustard', *args, **kwargs):

@@ -43,7 +43,7 @@ class Product:
         """Base class for products. Enforces subclasses implement any
         productmethods exactly once.
         """
-        self.qid_dict = kwargs.pop('qid_dict')
+        self.qids_dict = kwargs.pop('qids_dict')
 
         for product in Product.__subclasses__():
             for method_name in self.productmethods:
