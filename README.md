@@ -16,7 +16,7 @@ or
 ```
 $ pip install -e .
 ```
-to see changes to source code automatically updated in your environment. To check the installation, run tests from within the same directory:
+to see changes to source code automatically updated in your environment.
 
 ## Setup
 All users must create a file `.actapack_config.yaml` in their system's `HOME` directory. This file encodes the location on the system of all products implemented in the `actapack` package. It also groups a set of product locations under data model "names," such that different data models may have their products in different locations.
@@ -44,7 +44,7 @@ mybeam_fn = dm.get_beam_fn(...)
 There are three steps:
 1. Create a new product module in the `actapack/products` directory.
     * The module should only contain a subclass of the `actapack.products.product.Product` class.
-    * There is a set prescription your subclass implementation must follow. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `actapack.products.__init__.py`. You should *only* modify the class name and the methods (method name and contents). Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.map.Map` for inspiration.
+    * There is a set prescription your subclass implementation must follow. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `actapack.products.__init__.py`. You should *only* modify the class name and the exposed methods (not the class declaration or `__init__` method). Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.map.Map` for inspiration.
 2. Make sure your product is imported directly by the `actapack.products` package. For instance, if your module was named `hotdog.py` and your product class in that module was `HotDog`, add either of these lines to `actapack.products.__init__.py`:
 
     ```
@@ -54,7 +54,7 @@ There are three steps:
     ```
 3. Add a config (or multiple configs if you have multiple product versions etc.) to `actapack/configs/product_configs/{module_name}/`. Following the hotdog example, there is a config file `hotdog_template.yaml` in `actapack/configs/product_configs/hotdog/`.
     * This must be a `.yaml` file.
-    * This should contain any information to help get filenames for your product or load them from disk. For instance, given a `array='pa6', freq='f090', num_splits=8, condiment='mustard'`, the `hotdog_file_template` in `hotdog_template.yaml` would populate to `pa6_f090_8way_mustard.txt` (the actual implementation of that population would happen in your `HotDog` class's `get_hotdog_fn` method).
+    * This should contain any information to help get filenames for your product or load them from disk. For instance, given a set of keyword arguments `array='pa6', freq='f090', num_splits=8, condiment='mustard'`, the `hotdog_file_template` in `hotdog_template.yaml` would populate to `pa6_f090_8way_mustard.txt` (the actual implementation of that population would happen in your `HotDog` class's `get_hotdog_fn` method).
     
 Please commit and push your contribution to a new branch and open a PR on github!
     
