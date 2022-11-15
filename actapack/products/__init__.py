@@ -8,7 +8,7 @@ from .beam import *
 
 ### PRODUCT TEMPLATE in module file hotdog.py ###
 
-# from .product import Product, set_attrs_by_filename, make_implements_decorator
+# from .product import Product, set_attrs_by_filename, get_implements_decorator
 
 # import numpy as np
 
@@ -19,17 +19,16 @@ from .beam import *
 # class HotDog(Product):
 
 #     implementedmethods = []
-#     implements = make_implements_decorator(implementedmethods)
-    
+#     implements = get_implements_decorator(implementedmethods)
+
 #     def __init__(self, **kwargs):
-#         # each product needs a system path and a dictionary to hold a 
-#         # filename template (see get_hotdog_fn)
 #         set_attrs_by_filename(self, __file__, kwargs)
 #         super().__init__(**kwargs)
 
 #     @implements(Product.get_fn)
 #     def get_hotdog_fn(self, qid, condiment='mustard'):
-#         # use self.hotdog_path, self.hotdog_dict, arguments
+#         # use arguments, and possibly info coming from a qid, to populate a 
+#         # "filename_template" coming from the self.hotdog_dict
 #         fn_template = self.hotdog_dict['hotdog_file_template']
 
 #         fn_kwargs = {}
@@ -40,6 +39,8 @@ from .beam import *
 
 #         fn = fn_template.format(**fn_kwargs) # format the file string
 
+#         # finally, tack on the self.hotdog_path (along with self.hotdog_dict,
+#         # this attribute is assigned for you in set_attrs_by_filename(...))
 #         return os.path.join(self.hotdog_path, fn)
 
 #     @implements(Product.read_product)

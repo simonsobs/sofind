@@ -7,7 +7,7 @@ import os
 
 # This is only for use in decorating Product methods, but needs to be 
 # defined outside the Product class scope
-def make_productmethod_decorator(productmethods_list):
+def get_productmethod_decorator(productmethods_list):
     """Make a decorator that adds the decorated function to the specified
     list. The decorated function then only raises a NotImplementedError
     if called.
@@ -37,16 +37,18 @@ class Product:
     # Methods decorated with productmethod will be added to the
     # productmethods list
     productmethods = []
-    productmethod = make_productmethod_decorator(productmethods)
+    productmethod = get_productmethod_decorator(productmethods)
 
     def __init__(self, **kwargs):
         """Base class for products. Enforces subclasses implement any
         productmethods exactly once.
         """
+        self.qid_dict = kwargs.pop('qid_dict')
+
         for product in Product.__subclasses__():
             for method_name in self.productmethods:
                 num_implementations = 0
-                for implementedmethod_name in product.implementedmethods:
+                for implementedmethod_name in product.implementedmethods: 
                     if implementedmethod_name == method_name:
                         num_implementations += 1
 
@@ -62,6 +64,12 @@ class Product:
     @productmethod
     def read_product(self):
         pass
+
+
+# This creates a mapping between Product subclasses and their product tag
+def get_producttag_by_filename(filename):
+    """Return os.path.splitext(os.path.basename(filename))[0]"""
+    return os.path.splitext(os.path.basename(filename))[0]
 
 
 # This is a helper function to package-up all the lines (and the only lines)
@@ -85,9 +93,9 @@ def set_attrs_by_filename(self, filename, kwargs):
     The values retrieved from kwargs are popped out, so that after this function
     call those items are no longer in kwargs.
     """
-    product_tag = os.path.splitext(os.path.basename(filename))[0]
-    setattr(self, f'{product_tag}_path', kwargs.pop(f'{product_tag}_path'))
-    setattr(self, f'{product_tag}_dict', kwargs.pop(f'{product_tag}_dict'))
+    producttag = get_producttag_by_filename(filename)
+    setattr(self, f'{producttag}_path', kwargs.pop(f'{producttag}_path', None))
+    setattr(self, f'{producttag}_dict', kwargs.pop(f'{producttag}_dict', None))
 
 
 # This is for use inside the declaration of each Product subclass. Every 
@@ -97,7 +105,7 @@ def set_attrs_by_filename(self, filename, kwargs):
 
 #     implementedmethods = []
 #     implements = make_implements_decorator(implementedmethods)
-def make_implements_decorator(implementedmethods_list):
+def get_implements_decorator(implementedmethods_list):
     """Make a decorator that adds the decorated function to the specified
     list. The decorated function itself is unaltered.
 
