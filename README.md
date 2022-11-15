@@ -47,7 +47,7 @@ There are three steps:
 1. Create a new product module in the `actapack/products` directory.
     * The module should only contain a subclass of the `actapack.products.product.Product` class.
     * There is a set prescription your subclass implementation must follow. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `actapack.products.__init__.py`. You should *only* modify the class name and the exposed methods (not the class declaration or `__init__` method). Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.map.Map` for inspiration.
-2. Make sure your product is imported directly by the `actapack.products` package. For instance, if your module was named `hotdog.py` and your product class in that module was `HotDog`, add either of this line to `actapack.products.__init__.py`:
+2. Make sure your product is imported directly by the `actapack.products` package. For instance, if your module was named `hotdog.py` and your product class in that module was `HotDog`, then add this line to `actapack.products.__init__.py`:
 
     ```
     from .hotdog import *
@@ -64,6 +64,6 @@ There are one (maybe two) steps:
     * Like the `.actapack_config.yaml` file, this config must have an entry for each product this data model will load, where now the entry is under `{module_name}_dict` (e.g. `map_dict` for `map.py`). Note, also like the `.actapack_config.yaml` file, it is not necessary to have an entry for every product in `actapack`, only those that will be functional in this data model.
     * This config file must have an entry for a `qid_dict`, indicating one of the qid config files under `actapack/configs/qid/`.
     * Note: for each entry, one could also add the full dictionary of information by hand directly to the data model config file, rather than pointing to a product or qid config file.
-2. Only if one of the included qid config files is not sufficient for your needs, you'll need to add another one with your qids (or add your qids to what's already there).
+2. Only if one of the included qid config files are not sufficient for your needs, you'll need to add another one with your qids (or add your qids to what's already there).
 
 Please commit and push your contribution to a new branch and open a PR on github!
