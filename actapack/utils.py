@@ -130,7 +130,7 @@ def get_protected_fn(fns, no_fn_collisions=True, write_to_fn_idx=None):
         if no_fn_collisions and num_exists > 0:
             err_str = '\n'.join(fns) 
             raise FileExistsError(
-                f'Want to write to {write_fn}\n\nbut more than one of the following exists:\n{err_str}'
+                f'Want to write to {write_fn}\n\nbut at least one of the following exists:\n{err_str}'
                 )
         else:
             return write_fn
