@@ -1,0 +1,2 @@
+split_map_file_template: '{patch}_{daynight}_{array}_{freq}_low_pwv_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_low_pwv_{num_splits}way_coadd_{maptag}.fits'

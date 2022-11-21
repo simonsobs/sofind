@@ -13,7 +13,7 @@ from .beams import *
 # import numpy as np
 
 # All products must inherit from Product and implement its productmethods,
-# which one does by decorating a subclass method, e.g. get_hotdog_fn, with
+# which one does by decorating a subclass method, e.g. get_hotdog_fn with
 # the decorator @implements(Product.get_fn), for each productmethod in
 # the Product class.
 # class HotDog(Product):
@@ -33,11 +33,8 @@ from .beams import *
 
 #         fn_kwargs = {}
 #         fn_kwargs.update(self.qids_dict[qid]) # add info about the requested array
-#         fn_kwargs.update(dict(               # add args passed to this method
-#             condiment=condiment
-#         ))
-
-#         fn = fn_template.format(**fn_kwargs) # format the file string
+#         fn_kwargs.update(condiment=condiment) # add args passed to this method
+#         fn = fn_template.format(**fn_kwargs)  # format the file string
 
 #         # finally, tack on the self.hotdogs_path (along with self.hotdogs_dict,
 #         # this attribute is assigned for you in set_attrs_by_filename(...))

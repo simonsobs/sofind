@@ -1,3 +1,7 @@
 qids_dict: dr6_default_qids.yaml  
-maps_dict: dr6v3.yaml
-beams_dict: beam.yaml
+maps: 
+  default_dict: dr6v3.yaml
+  high_pwv_dict: dr6v3_high_pwv.yaml
+  low_pwv_dict: dr6v3_low_pwv.yaml
+beams:
+  default_dict: beam.yaml
