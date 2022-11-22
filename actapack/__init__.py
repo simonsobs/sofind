@@ -10,15 +10,6 @@ class DataModel(*Product.__subclasses__()):
         qid-related information to be used in subclass methods, e.g., if a
         product's filenames are labeled by particular array, frequency, etc.
 
-        Parameters
-        ----------
-        qid_dict : dict
-            A mapping between 'qids', or 'query identifiers', and their itemized
-            information. For instance, qid 'pa6a' maps to {'array': 'pa6', 
-            'freq': 'f090', ...}. This dictionary will hold many such qid
-            mappings, e.g. a block under 'pa4a', 'pa4b', 'pa5a', ... These 
-            mappings are useful for going from/to human-readable filenames.
-
         Notes
         -----
         This class is the only class a user should need. It exposes all product
@@ -40,8 +31,14 @@ class DataModel(*Product.__subclasses__()):
         Returns
         -------
         DataModel
-            Instance corresponding to the collection of products indicated in 
-            the named configuration file.
+            Instance corresponding to the collection of products and subroducts
+            indicated in the named configuration file.
+
+        Raises
+        ------
+        KeyError
+            If a subproduct in a user's .actapack_config.yaml file is not a
+            member the datamodel's product type.
         """
         dm_kwargs = {}
 
@@ -51,26 +48,50 @@ class DataModel(*Product.__subclasses__()):
         system_path_dict = actapack_config[os.path.splitext(config_name)[0]]
         dm_kwargs.update(system_path_dict)
         
-        # then get the config dictionary
+        # then get the datamodel dictionary
         if not config_name.endswith('.yaml'):
             config_name += '.yaml'
         basename = f'configs/datamodels/{config_name}'
-        config_fn = utils.get_package_fn('actapack', basename)
-        config_dict = utils.config_from_yaml_file(config_fn)
+        datamodel_fn = utils.get_package_fn('actapack', basename)
+        datamodel_dict = utils.config_from_yaml_file(datamodel_fn)
 
-        # finally get the qid dict and product dicts
-        for dict_name, product_dict in config_dict.items():
-            if isinstance(product_dict, str):
-                if not product_dict.endswith('.yaml'):
-                    product_dict += '.yaml'
-                subdir = dict_name.split('_')[0]
-                if subdir == 'qids':
-                    basename = f'configs/{subdir}/{product_dict}'
-                else:
-                    basename = f'configs/products/{subdir}/{product_dict}'
-                product_fn = utils.get_package_fn('actapack', basename)
-                product_dict = utils.config_from_yaml_file(product_fn)
-            dm_kwargs.update({f'{dict_name}': product_dict})
+        # get the product dicts
+        # need to iterate over lists because dm_kwargs updated during iteration
+        for product_name in list(dm_kwargs):
+            for subproduct_name in list(dm_kwargs[product_name]):
+                # default_path --> default_dict
+                subproduct_name = subproduct_name.split('_path')[0]
+                subproduct_name = f'{subproduct_name}_dict'
+
+                # the actual config basename
+                try:
+                    subproduct_dict = datamodel_dict[product_name][subproduct_name]
+                except KeyError:
+                    raise KeyError(
+                        f'Product {product_name}, subproduct {subproduct_name} '
+                        'not in datamodel configuration file'
+                    )
+                if not subproduct_dict.endswith('.yaml'):
+                    subproduct_dict += '.yaml'
+
+                # the actual config full filename
+                basename = f'configs/products/{product_name}/{subproduct_dict}'
+                subproduct_fn = utils.get_package_fn('actapack', basename)
+
+                # the contents of the filename
+                subproduct_dict = utils.config_from_yaml_file(subproduct_fn)
+
+                # dm_kwargs already populated by the system_path_dict
+                dm_kwargs[product_name].update({f'{subproduct_name}': subproduct_dict})
+        
+        # add the qids
+        qids_name = datamodel_dict['qids_dict']
+        if not qids_name.endswith('.yaml'):
+            qids_name += '.yaml'
+        basename = f'configs/qids/{qids_name}'
+        qids_fn = utils.get_package_fn('actapack', basename)
+        qids_dict = utils.config_from_yaml_file(qids_fn)
+        dm_kwargs.update(qids_dict=qids_dict)
 
         return cls(**dm_kwargs)
 

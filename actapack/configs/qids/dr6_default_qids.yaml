@@ -3,151 +3,129 @@ pa4a:
   freq: f150
   patch: cmb
   daynight: night
-  num_splits: 8
 
 pa4a_dw:
   array: pa4
   freq: f150
   patch: cmb
   daynight: day_wide
-  num_splits: 4
 
 pa4a_dd:
   array: pa4
   freq: f150
   patch: cmb
   daynight: day_deep
-  num_splits: 8
 
-pa4b: 
+pa4b:
   array: pa4
   freq: f220
   patch: cmb
   daynight: night
-  num_splits: 8
 
 pa4b_dw:
   array: pa4
   freq: f220
   patch: cmb
   daynight: day_wide
-  num_splits: 4
 
 pa4b_dd:
   array: pa4
   freq: f220
   patch: cmb
   daynight: day_deep
-  num_splits: 8
 
 pa5a:
   array: pa5
   freq: f090
   patch: cmb
   daynight: night
-  num_splits: 8
 
 pa5a_dw:
   array: pa5
   freq: f090
   patch: cmb
   daynight: day_wide
-  num_splits: 4
 
 pa5a_dd:
   array: pa5
   freq: f090
   patch: cmb
   daynight: day_deep
-  num_splits: 8
 
-pa5b: 
+pa5b:
   array: pa5
   freq: f150
   patch: cmb
   daynight: night
-  num_splits: 8
 
 pa5b_dw:
   array: pa5
   freq: f150
   patch: cmb
   daynight: day_wide
-  num_splits: 4
 
 pa5b_dd:
   array: pa5
   freq: f150
   patch: cmb
   daynight: day_deep
-  num_splits: 8
 
 pa6a:
   array: pa6
   freq: f090
   patch: cmb
   daynight: night
-  num_splits: 8
 
 pa6a_dw:
   array: pa6
   freq: f090
   patch: cmb
   daynight: day_wide
-  num_splits: 4
 
 pa6a_dd:
   array: pa6
   freq: f090
   patch: cmb
   daynight: day_deep
-  num_splits: 8
 
-pa6b: 
+pa6b:
   array: pa6
   freq: f150
   patch: cmb
   daynight: night
-  num_splits: 8
 
 pa6b_dw:
   array: pa6
   freq: f150
   patch: cmb
   daynight: day_wide
-  num_splits: 4
 
 pa6b_dd:
   array: pa6
   freq: f150
   patch: cmb
   daynight: day_deep
-  num_splits: 8
 
 pa7a:
   array: pa7
   freq: f030
   patch: cmb
   daynight: night
-  num_splits: 4
 
 pa7a_dw:
   array: pa7
   freq: f030
   patch: cmb
   daynight: day_wide
-  num_splits: 4
 
-pa7b: 
+pa7b:
   array: pa7
   freq: f040
   patch: cmb
   daynight: night
-  num_splits: 4
 
 pa7b_dw:
   array: pa7
   freq: f040
   patch: cmb
   daynight: day_wide
-  num_splits: 4
