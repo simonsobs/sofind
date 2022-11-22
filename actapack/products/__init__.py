@@ -30,7 +30,8 @@ from .beams import *
 
 #     @implements(Product.get_fn)
 #     # in order to access the subproduct_dict and subproduct_path, subproduct
-#     # must be passed as a kwarg
+#     # must be passed as a kwarg. for consistency, please set the default 
+#     # value of subproduct to 'default'
 #     def get_hotdog_fn(self, qid, condiment='mustard', subproduct='default'):
 #         # use subprod_dict to get the filename template for this (sub)product,
 #         # as well as any other info in the (sub)product configuration file
@@ -52,7 +53,8 @@ from .beams import *
 
 #     @implements(Product.read_product)
 #     # in order to access the subproduct_dict and subproduct_path, subproduct
-#     # must be passed as a kwarg
+#     # must be passed as a kwarg. for consistency, please set the default 
+#     # value of subproduct to 'default'
 #     def read_hotdog(self, qid, condiment='mustard', subproduct='default', **kwargs):
 #         # use get_hotdog_fn and some external library to load the data
 #         fn = self.get_hotdog_fn(qid, condiment=condiment, subproduct=subproduct)
