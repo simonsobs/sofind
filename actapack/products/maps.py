@@ -58,7 +58,7 @@ class Map(Product):
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
-        fn_kwargs = self.get_qid_kwargs_by_suproduct(qid, __file__, subproduct)
+        fn_kwargs = self.get_qid_kwargs_by_subproduct(qid, __file__, subproduct)
         fn_kwargs.update(null_split=null_split, split_num=split_num, maptag=maptag)
         fn = fn_template.format(**fn_kwargs)
 

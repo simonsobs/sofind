@@ -224,7 +224,7 @@ class Product:
             )
         return subproduct_path
 
-    def get_qid_kwargs_by_suproduct(self, qid, product, subproduct):
+    def get_qid_kwargs_by_subproduct(self, qid, product, subproduct):
         """Return a set of keyword arguments for this qid. The set is a merger
         of any default keywords in this datamodel's qid_dict, as well as any
         additional keywords specified in a particular subproduct's configuration

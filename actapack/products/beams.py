@@ -20,7 +20,7 @@ class Beam(Product):
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
-        fn_kwargs = self.get_qid_kwargs_by_suproduct(qid, __file__, subproduct)
+        fn_kwargs = self.get_qid_kwargs_by_subproduct(qid, __file__, subproduct)
         fn = fn_template.format(**fn_kwargs)
 
         # return the full system path to the file
