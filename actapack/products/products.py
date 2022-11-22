@@ -147,11 +147,10 @@ class Product:
         product_dict = getattr(self, producttag)
         if product_dict == {}:
             raise KeyError(
-                f'Product {producttag} not in user .actapack_config.yaml file, '
-                f'cannot get any {producttag} filename'
-                )
-        return product_dict
-
+                f'Product {producttag} not in datamodel configuration file'
+            )
+        return product_dict                    
+            
     def get_subproduct_dict(self, product, subproduct):
         """Get the subproduct dictionary for this subproduct of a given product
         type. The subproduct dictionary will hold things like a filename
@@ -184,9 +183,8 @@ class Product:
         except KeyError:
             producttag = utils.get_producttag(product)
             raise KeyError(
-                f'Product {producttag}, subproduct {subproduct} not in user '
-                f'.actapack_config.yaml file, cannot get {producttag}, {subproduct} '
-                'filename'
+                f'Product {producttag}, subproduct {subproduct} not in '
+                'datamodel configuration file'
             )
         return subproduct_dict
 
