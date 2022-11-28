@@ -245,9 +245,20 @@ class Product:
             A set of keywords for the requested qid, such as its array, frequency,
             etc.
         """
-        subprod_dict = self.get_subproduct_dict(product, subproduct)
-
         out = self.qids_dict[qid].copy()
-        out.update(subprod_dict.get(qid, {}).copy())
+
+        subprod_dict = self.get_subproduct_dict(product, subproduct)
+        try:
+            qid_subprod_dict = subprod_dict[qid]
+            
+            if qid_subprod_dict is None:
+                qid_subprod_dict = {}
+            
+            out.update(qid_subprod_dict.copy())
+
+        except KeyError as e:
+            print(f'qid {qid} not permitted by product {product}, subproduct '
+                  f'{subproduct} configuration file')
+            raise e
 
         return out

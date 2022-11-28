@@ -12,7 +12,7 @@ class Beam(Product):
         super().__init__(**kwargs)
 
     @implements(Product.get_fn)
-    def get_beam_fn(self, qid, subproduct='default'):
+    def get_beam_fn(self, qid, subproduct='default', **kwargs):
         subprod_dict = self.get_subproduct_dict(__file__, subproduct)
 
         # get the appropriate filename template
@@ -21,6 +21,7 @@ class Beam(Product):
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
         fn_kwargs = self.get_qid_kwargs_by_subproduct(qid, __file__, subproduct)
+        fn_kwargs.update(**kwargs)
         fn = fn_template.format(**fn_kwargs)
 
         # return the full system path to the file
@@ -28,7 +29,7 @@ class Beam(Product):
         return os.path.join(subprod_path, fn)
 
     @implements(Product.read_product)
-    def read_beam(self, qid, subproduct='default'):
-        fn = self.get_beam_fn(qid, subproduct=subproduct)
+    def read_beam(self, qid, subproduct='default', **kwargs):
+        fn = self.get_beam_fn(qid, subproduct=subproduct, **kwargs)
         print(f'Loading {fn} from disk')
         return None

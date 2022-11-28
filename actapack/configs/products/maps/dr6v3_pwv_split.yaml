@@ -54,15 +54,3 @@ pa6b_dw:
 
 pa6b_dd:
   num_splits: 4
-
-pa7a:
-  num_splits: 4
-
-pa7a_dw:
-  num_splits: 4
-
-pa7b:
-  num_splits: 4
-
-pa7b_dw:
-  num_splits: 4

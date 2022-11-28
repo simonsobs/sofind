@@ -32,7 +32,8 @@ from .beams import *
 #     # in order to access the subproduct_dict and subproduct_path, subproduct
 #     # must be passed as a kwarg. for consistency, please set the default 
 #     # value of subproduct to 'default'
-#     def get_hotdog_fn(self, qid, condiment='mustard', subproduct='default'):
+#     def get_hotdog_fn(self, qid, condiment='mustard', subproduct='default',
+#                       **kwargs):
 #         # use subprod_dict to get the filename template for this (sub)product,
 #         # as well as any other info in the (sub)product configuration file
 #         subprod_dict = self.get_subproduct_dict(__file__, subproduct)
@@ -43,7 +44,7 @@ from .beams import *
 #         # get info about the requested array and add kwargs passed to this
 #         # method call. use this info to format the file template
 #         fn_kwargs = self.get_qid_kwargs_by_subproduct(qid, __file__, subproduct)
-#         fn_kwargs.update(condiment=condiment)
+#         fn_kwargs.update(condiment=condiment, **kwargs)
 #         fn = fn_template.format(**fn_kwargs)
 
 #         # return the full system path to the file
@@ -55,7 +56,13 @@ from .beams import *
 #     # in order to access the subproduct_dict and subproduct_path, subproduct
 #     # must be passed as a kwarg. for consistency, please set the default 
 #     # value of subproduct to 'default'
-#     def read_hotdog(self, qid, condiment='mustard', subproduct='default', **kwargs):
+#     def read_hotdog(self, qid, condiment='mustard', subproduct='default', 
+#                     loadtxt_kwargs=None, **kwargs):
 #         # use get_hotdog_fn and some external library to load the data
-#         fn = self.get_hotdog_fn(qid, condiment=condiment, subproduct=subproduct)
-#         return np.loadtxt(fn, **kwargs)
+#         fn = self.get_hotdog_fn(qid, condiment=condiment, subproduct=subproduct, 
+#                                 **kwargs)
+
+#         if loadtxt_kwargs is None:
+#             loadtxt_kwargs = {}
+
+#         return np.loadtxt(fn, **loadtxt_kwargs)

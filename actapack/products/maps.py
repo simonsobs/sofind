@@ -13,17 +13,14 @@ class Map(Product):
         super().__init__(**kwargs)
 
     @implements(Product.get_fn)
-    def get_map_fn(self, qid, null_split=None, split_num=0, coadd=False, 
-                   maptag='map', subproduct='default'):
+    def get_map_fn(self, qid, split_num=0, coadd=False, maptag='map',
+                   subproduct='default', **kwargs):
         """Get the full path to a map product.
 
         Parameters
         ----------
         qid : str
             Dataset identification string.
-        null_split : str, optional
-            If subproduct refers to a null test map, e.g. 'pwv_split', then
-            the particular desired split, e.g. 'low_pwv'. By default None.
         split_num : int, optional
             Split index of the map product, by default 0.
         coadd : bool, optional
@@ -34,19 +31,13 @@ class Map(Product):
             'srcs', 'ivar', 'xlink', 'hits', etc.
         subproduct : str, optional
             The maps subproduct, by default the 'default' maps subproduct. 
+        kwargs : dict
+            Any additional keyword arguments use to format the map filename.
 
         Returns
         -------
         str
             Full path to requested product, including its directory.
-
-        Notes
-        -----
-        The list of possible null_split arguments is given below for each
-        subproduct:
-
-        * default: []
-        * pwv_split: ['low_pwv', 'high_pwv']
         """
         subprod_dict = self.get_subproduct_dict(__file__, subproduct)
 
@@ -59,7 +50,7 @@ class Map(Product):
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
         fn_kwargs = self.get_qid_kwargs_by_subproduct(qid, __file__, subproduct)
-        fn_kwargs.update(null_split=null_split, split_num=split_num, maptag=maptag)
+        fn_kwargs.update(split_num=split_num, maptag=maptag, **kwargs)
         fn = fn_template.format(**fn_kwargs)
 
         # return the full system path to the file
@@ -67,8 +58,8 @@ class Map(Product):
         return os.path.join(subprod_path, fn)
 
     @implements(Product.read_product)
-    def read_map(self, qid, null_split=None, split_num=0, coadd=False, 
-                 maptag='map', subproduct='default', **kwargs):
+    def read_map(self, qid, split_num=0, coadd=False, maptag='map',
+                 subproduct='default', read_map_kwargs=None, **kwargs):
         """Read a map product from disk.
 
         Parameters
@@ -88,24 +79,22 @@ class Map(Product):
             'srcs', 'ivar', 'xlink', 'hits', etc.
         subproduct : str, optional
             The maps subproduct, by default the 'default' maps subproduct. 
-        kwargs : dict
+        read_map_kwargs : dict
             Any keyword arguments to pass to enmap.read_map.
+        kwargs : dict
+            Any additional keyword arguments use to format the map filename.
 
         Returns
         -------
         enmap.ndmap
             The requested map.
-
-        Notes
-        -----
-        The list of possible null_split arguments is given below for each
-        subproduct:
-
-        * default: []
-        * pwv_split: ['low_pwv', 'high_pwv']
         """
         fn = self.get_map_fn(
-            qid, null_split=null_split, split_num=split_num, coadd=coadd,
-            maptag=maptag, subproduct=subproduct
+            qid, split_num=split_num, coadd=coadd, maptag=maptag,
+            subproduct=subproduct, **kwargs
             )
-        return enmap.read_map(fn, **kwargs)
+        
+        if read_map_kwargs is None:
+            read_map_kwargs = {}
+
+        return enmap.read_map(fn, **read_map_kwargs)
