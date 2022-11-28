@@ -9,11 +9,11 @@ All other dependencies (e.g. `numpy` etc.) are required by packages listed here,
 
 ## Installation
 Clone this repo and `cd` to `/path/to/actapack/`:
-```
+```shell
 $ pip install .
 ```
 or 
-```
+```shell
 $ pip install -e .
 ```
 to see changes to source code automatically updated in your environment.
@@ -24,7 +24,7 @@ All users must create a file `.actapack_config.yaml` in their system's `HOME` di
 To facilitate setup, we have provided some `.actapack_config.yaml` files for common public systems, such as `NERSC`, in the `actapack_configs` folder for users to copy. However, we recommend reading this section regardless to understand these files in case changes are necessary, or if you'd like to install `actapack` on your laptop, for instance.
 
 We'll start with a basic example. Let's assume you wish to interact with the `dr6_default` data model. Let's also assume that `actapack` currently implements (see `actapack/products`) map and beam products in `maps.py` and `beams.py`, along with possibly more products in different modules as well. Then, your `.actapack_config.yaml` file might look like this:
-```
+```yaml
 dr6_default:
     maps:
         default_path: "/path/to/default/maps/on/this/system/"
@@ -42,7 +42,7 @@ A few notes:
 
 ## Usage
 All you need in your code is the following (e.g. for the `dr6_default` data model):
-```
+```python
 from actapack import DataModel
 
 dm = DataModel.from_config('dr6_default')
@@ -53,13 +53,13 @@ my_beam_fn = dm.get_beam_fn(...)
 ```
 
 ## If you would like to contribute a product to `actapack`
-There are three steps:
+There are four steps:
 1. Create a new product module in the `actapack/products` directory.
     * The module should only contain a subclass of the `actapack.products.products.Product` class.
     * There is a set prescription your subclass implementation must follow. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `actapack.products.__init__.py`. You should *only* modify the class name and the exposed methods (not the class declaration or `__init__` method). Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.maps.Map` for inspiration.
 2. Make sure your product is imported directly by the `actapack.products` package. For instance, if your module was named `hotdogs.py`, then add this line to `actapack.products.__init__.py`:
 
-    ```
+    ```python
     from .hotdogs import *
     ```
 3. Add a config (or multiple configs if you have multiple product versions etc.) to `actapack/configs/products/{module_name}/`. Following the hotdog example, there is a config file `hotdog_example.yaml` in `actapack/configs/products/hotdogs/`.
@@ -67,18 +67,19 @@ There are three steps:
     * This should contain any information to help get filenames for your product or load them from disk, such as a template filename. For instance, given a set of keyword arguments `array='pa6', freq='f090', num_splits=8, condiment='mustard'`, the `hotdog_file_template` string in `hotdog_example.yaml` would format to `pa6_f090_8way_mustard.txt` (the actual formatting would occur in your `HotDog` class's `get_hotdog_fn` method).
     * If your product methods use a `qid` to provide keywords to filename templates, then the permissible `qid`(s) for that product must be listed in this config file. For instance, a call to `HotDog.read_hotdog` will raise an error if `hotdog_example.yaml` is used to configure the calling `HotDog` instance and the supplied `qid` is *not* one of `pa4a`, `pa5a`, or `pa6a`.
     * If your template filename requires additional keywords for a given `qid` than are present in any `qids` config files (see `actapack/configs/qids/`), those keywords would need to be added here. For instance, the `dr6_default_qids.yaml` file only contains `array`, `freq`, `patch`, and `daynight` keywords. The `num_splits` keyword required for the `hotdog_file_template` is thus added for each permissible qid directly in `hotdog_example.yaml`, e.g.:
-        ```
+        ```yaml
         pa6a:
             num_splits: 8
         ```
     * If a `qid` is permissible but there are no additional keywords to add for that `qid`, then the value of that `qid`  in the config file should be blank, `null`, or `{}`:
-        ```
+        ```yaml
         pa5b:
         # OR
         pa5b: null
         # OR
         pa5b: {}
         ```
+4. Clearly document product implementations and product configs. For example, see the docstrings in the `Map` class (`actapack/products/maps.py`) as well as the `maps` readme (`actapack/configs/products/maps/README.md`).
     
 Please commit and push your contribution to a new branch and open a PR on github! If you are updating an old config, please include it under a new file altogether so that historical products may still be loaded at runtime.
     
