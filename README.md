@@ -13,7 +13,7 @@ Clone this repo and `cd` to `/path/to/actapack/`:
 $ pip install .
 ```
 or 
-```shell
+```bash
 $ pip install -e .
 ```
 to see changes to source code automatically updated in your environment.
