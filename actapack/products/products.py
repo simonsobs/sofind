@@ -97,14 +97,14 @@ class Product:
     # of code to be run in a Product subclass's __init__method
     def set_attrs(self, product, kwargs):
         """Assign attributes to self from kwargs based on product. If product is a
-        module filename: first, get the extension-less basename of filename, e.g.
-        'things' from '/home/zatkins/things.py'. Then, set the value under key
-        'things' in kwargs to attributes of the same name in self.
+        module __name__: first, get the basename of __name__, e.g. 'things' from 
+        'actapack.things.things'. Then, set the value under key 'things' in 
+        kwargs to attributes of the same name in self.
 
         Parameters
         ----------
         product : str
-            Name of type of product, e.g. 'maps'. Can also be a path to a module
+            Name of type of product, e.g. 'maps'. Can also be a module __name__
             in which case the product is inferred from the module basename.
         kwargs : dict
             Dictionary holding values under keys corresponding to the 
@@ -127,7 +127,7 @@ class Product:
         Parameters
         ----------
         product : str
-            Name of type of product, e.g. 'maps'. Can also be a path to a module
+            Name of type of product, e.g. 'maps'. Can also be a module __name__
             in which case the product is inferred from the module basename.
 
         Returns
@@ -160,7 +160,7 @@ class Product:
         Parameters
         ----------
         product : str
-            Name of type of product, e.g. 'maps'. Can also be a path to a module
+            Name of type of product, e.g. 'maps'. Can also be a module __name__
             in which case the product is inferred from the module basename.
         subproduct : str
             The specific subproduct.
@@ -195,7 +195,7 @@ class Product:
         Parameters
         ----------
         product : str
-            Name of type of product, e.g. 'maps'. Can also be a path to a module
+            Name of type of product, e.g. 'maps'. Can also be a module __name__
             in which case the product is inferred from the module basename.
         subproduct : str
             The specific subproduct.
@@ -244,6 +244,12 @@ class Product:
         dict
             A set of keywords for the requested qid, such as its array, frequency,
             etc.
+
+        Raises
+        ------
+        KeyError
+            If qid is not explicitly included in the product/subproduct.yaml
+            config file.
         """
         out = self.qids_dict[qid].copy()
 

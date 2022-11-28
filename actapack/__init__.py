@@ -13,7 +13,7 @@ class DataModel(*Product.__subclasses__()):
         Notes
         -----
         This class is the only class a user should need. It exposes all product
-        methods implemented in this repo.
+        methods implemented in this package.
         """
         super().__init__(**kwargs)
 
@@ -31,21 +31,15 @@ class DataModel(*Product.__subclasses__()):
         Returns
         -------
         DataModel
-            Instance corresponding to the collection of products and subroducts
+            Instance corresponding to the collection of products and subproducts
             indicated in the named configuration file.
-
-        Raises
-        ------
-        KeyError
-            If a subproduct in a user's .actapack_config.yaml file is not a
-            member the datamodel's product type.
         """
         dm_kwargs = {}
         
         # first get the datamodel dictionary and system path dictionary
         if not config_name.endswith('.yaml'):
             config_name += '.yaml'
-        basename = f'configs/datamodels/{config_name}'
+        basename = f'datamodels/{config_name}'
         datamodel_fn = utils.get_package_fn('actapack', basename)
         datamodel_dict = utils.config_from_yaml_file(datamodel_fn)
 
@@ -64,7 +58,7 @@ class DataModel(*Product.__subclasses__()):
                     qids_name += '.yaml'
 
                 # qids_fn: the actual config full filename
-                basename = f'configs/qids/{qids_name}'
+                basename = f'qids/{qids_name}'
                 qids_fn = utils.get_package_fn('actapack', basename)
 
                 # qids_dict: the contents of the filename
@@ -78,7 +72,7 @@ class DataModel(*Product.__subclasses__()):
                         subproduct_dict += '.yaml'
 
                     # subproduct_fn: the actual config full filename
-                    basename = f'configs/products/{product_name}/{subproduct_dict}'
+                    basename = f'products/{product_name}/{subproduct_dict}'
                     subproduct_fn = utils.get_package_fn('actapack', basename)
 
                     # subproduct_dict: the contents of the filename

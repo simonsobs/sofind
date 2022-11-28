@@ -155,5 +155,5 @@ def get_protected_fn(fns, no_fn_collisions=True, write_to_fn_idx=None):
 
 # This creates a mapping between Product subclasses and their product tag
 def get_producttag(product):
-    """Return os.path.splitext(os.path.basename(product))[0]"""
-    return os.path.splitext(os.path.basename(product))[0]
+    """Return product.split('.')[-1]"""
+    return product.split('.')[-1]
