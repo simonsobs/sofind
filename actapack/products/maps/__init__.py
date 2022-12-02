@@ -14,7 +14,7 @@ class Map(Product):
 
     @implements(Product.get_fn)
     def get_map_fn(self, qid, split_num=0, coadd=False, maptag='map',
-                   subproduct='default', **kwargs):
+                   subproduct='default', **subproduct_kwargs):
         """Get the full path to a map product.
 
         Parameters
@@ -30,9 +30,9 @@ class Map(Product):
             The type of product to load, by default 'map.' E.g. 'map_srcfree', 
             'srcs', 'ivar', 'xlink', 'hits', etc.
         subproduct : str, optional
-            The maps subproduct, by default the 'default' maps subproduct. 
-        kwargs : dict
-            Any additional keyword arguments use to format the map filename.
+            Name of map subproduct to load raw products from, by default 'default'.
+        subproduct_kwargs : dict, optional
+            Any additional keyword arguments used to format the map filename.
 
         Returns
         -------
@@ -50,7 +50,7 @@ class Map(Product):
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
         fn_kwargs = self.get_qid_kwargs_by_subproduct(qid, __name__, subproduct)
-        fn_kwargs.update(split_num=split_num, maptag=maptag, **kwargs)
+        fn_kwargs.update(split_num=split_num, maptag=maptag, **subproduct_kwargs)
         fn = fn_template.format(**fn_kwargs)
 
         # return the full system path to the file
@@ -59,7 +59,8 @@ class Map(Product):
 
     @implements(Product.read_product)
     def read_map(self, qid, split_num=0, coadd=False, maptag='map',
-                 subproduct='default', read_map_kwargs=None, **kwargs):
+                 subproduct='default', read_map_kwargs=None,
+                 **subproduct_kwargs):
         """Read a map product from disk.
 
         Parameters
@@ -78,11 +79,11 @@ class Map(Product):
             The type of product to load, by default 'map.' E.g. 'map_srcfree', 
             'srcs', 'ivar', 'xlink', 'hits', etc.
         subproduct : str, optional
-            The maps subproduct, by default the 'default' maps subproduct. 
-        read_map_kwargs : dict
+            Name of map subproduct to load raw products from, by default 'default'.
+        read_map_kwargs : dict, optional
             Any keyword arguments to pass to enmap.read_map.
-        kwargs : dict
-            Any additional keyword arguments use to format the map filename.
+        subproduct_kwargs : dict, optional
+            Any additional keyword arguments used to format the map filename.
 
         Returns
         -------
@@ -91,7 +92,7 @@ class Map(Product):
         """
         fn = self.get_map_fn(
             qid, split_num=split_num, coadd=coadd, maptag=maptag,
-            subproduct=subproduct, **kwargs
+            subproduct=subproduct, **subproduct_kwargs
             )
         
         if read_map_kwargs is None:

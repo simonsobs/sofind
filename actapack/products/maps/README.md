@@ -10,5 +10,5 @@ We give additional information for each `maps` config file, such as permissible 
 ## Required Additional Keyword Arguments
 | Config File | Additional Keywords | Possible Values |
 | ----------- | ------------------- | --------------- |
-| dr6v3.yaml| - | - |
+| dr6v3.yaml| | |
 | dr6v3_pwv_split.yaml | `null_split` | `low_pwv`, `high_pwv` |

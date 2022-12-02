@@ -30,7 +30,7 @@
 #     # must be passed as a kwarg. for consistency, please set the default 
 #     # value of subproduct to 'default'
 #     def get_hotdog_fn(self, qid, condiment='mustard', subproduct='default',
-#                       **kwargs):
+#                       **subproduct_kwargs):
 #         # use subprod_dict to get the filename template for this (sub)product,
 #         # as well as any other info in the (sub)product configuration file
 #         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
@@ -41,7 +41,7 @@
 #         # get info about the requested array and add kwargs passed to this
 #         # method call. use this info to format the file template
 #         fn_kwargs = self.get_qid_kwargs_by_subproduct(qid, __name__, subproduct)
-#         fn_kwargs.update(condiment=condiment, **kwargs)
+#         fn_kwargs.update(condiment=condiment, **subproduct_kwargs)
 #         fn = fn_template.format(**fn_kwargs)
 
 #         # return the full system path to the file
@@ -54,10 +54,10 @@
 #     # must be passed as a kwarg. for consistency, please set the default 
 #     # value of subproduct to 'default'
 #     def read_hotdog(self, qid, condiment='mustard', subproduct='default', 
-#                     loadtxt_kwargs=None, **kwargs):
+#                     loadtxt_kwargs=None, **subproduct_kwargs):
 #         # use get_hotdog_fn and some external library to load the data
 #         fn = self.get_hotdog_fn(qid, condiment=condiment, subproduct=subproduct, 
-#                                 **kwargs)
+#                                 **subproduct_kwargs)
 
 #         if loadtxt_kwargs is None:
 #             loadtxt_kwargs = {}
