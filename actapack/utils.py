@@ -25,7 +25,7 @@ def config_from_yaml_file(filename):
     if isinstance(filename, io.TextIOBase):
         return read(filename)
     else:
-        with open(filename) as f:
+        with open(filename, 'r') as f:
             return read(f)
 
 def get_package_fn(package, basename):
