@@ -57,7 +57,8 @@ Users should only ever interface with the high-level `DataModel` class. This cla
 There are four steps:
 1. Create a new product folder in the `actapack/products` directory. Add to this folder a python module named `__init__.py`.
     * The module should only contain a subclass of the `actapack.products.products.Product` class.
-    * There is a set prescription your subclass implementation must follow. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `actapack/products/hotdogs/__init__.py`. You should *only* modify the class name and the exposed methods (not the class declaration or `__init__` method). Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.maps.Map` for inspiration.
+    * There is a minimum prescription your subclass implementation must follow. You should *not* modify the class declaration or `__init__` method, and you *must* modify the `actapack.products.products.Product` methods decorated with `@productmethod`. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `actapack/products/hotdogs/__init__.py`. Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.maps.Map` for inspiration.
+    * Anything beyond this minimal perscription can be added if your product has more complicated features!
 2. Make sure your product is imported directly by the `actapack.products` package. For instance, if your folder was named `hotdogs`, then add this line to `actapack.products.__init__.py`:
 
     ```python

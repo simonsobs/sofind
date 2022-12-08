@@ -2,14 +2,31 @@ from pixell import enmap
 import numpy as np
 import yaml
 
+import io
 import os, sys
 
 # adapted from soapack.interfaces
 def config_from_yaml_file(filename):
-    """Returns a dictionary from a yaml file given by absolute filename."""
-    with open(filename) as f:
-        config = yaml.safe_load(f)
-    return config
+    """Return a yaml file contents as a dictionary.
+
+    Parameters
+    ----------
+    filename : io.TextIOBase or path-like
+        Either an io.TextIOBase stream or a system path.
+
+    Returns
+    -------
+    dict
+        Contents of file.
+    """
+    def read(file_like_object):
+        return yaml.safe_load(file_like_object)
+    
+    if isinstance(filename, io.TextIOBase):
+        return read(filename)
+    else:
+        with open(filename) as f:
+            return read(f)
 
 def get_package_fn(package, basename):
     """Get a filename from within a given package. Useful for accessing
