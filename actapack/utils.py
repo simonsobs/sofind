@@ -21,6 +21,7 @@ def config_from_yaml_file(filename):
     """
     if isinstance(filename, io.TextIOBase):
         def read(file_like_object):
+            file_like_object.seek(0)
             return yaml.safe_load(file_like_object)
     else:
         def read(file_like_object):
