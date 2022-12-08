@@ -19,14 +19,15 @@ def config_from_yaml_file(filename):
     dict
         Contents of file.
     """
-    def read(file_like_object):
-        return yaml.safe_load(file_like_object)
-    
     if isinstance(filename, io.TextIOBase):
-        return read(filename)
+        def read(file_like_object):
+            return yaml.safe_load(file_like_object)
     else:
-        with open(filename, 'r') as f:
-            return read(f)
+        def read(file_like_object):
+            with open(file_like_object, 'r') as f:
+                return yaml.safe_load(f)
+                
+    return read(filename)
 
 def get_package_fn(package, basename):
     """Get a filename from within a given package. Useful for accessing
