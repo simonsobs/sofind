@@ -4,6 +4,7 @@
 from actapack import utils
 
 import functools
+import os
 
 # This is only for use in decorating Product methods, but needs to be 
 # defined outside the Product class scope
@@ -71,7 +72,8 @@ class Product:
         """Base class for products. Enforces subclasses implement any
         productmethods exactly once.
         """
-        self.qids_dict = kwargs.pop('qids_dict')
+        self.qids = kwargs.pop('qids')
+        self.paths = kwargs.pop('paths')
 
         for product in Product.__subclasses__():
             for method_name in self.productmethods:
@@ -113,13 +115,144 @@ class Product:
         Notes
         -----
         The values retrieved from kwargs are popped out, so that after this function
-        call those items are no longer in kwargs.
+        call those items are no longer in kwargs. This is why the signature is kwargs,
+        not **kwargs: if the latter, then kwargs.pop(name) first builds a new
+        dictionary 'kwargs' before popping. 
 
-        If product is not in kwargs, then a value of {} is assigned.
+        Checks the product for compatibility (for each of its subproducts, see
+        check_subproduct_config).
         """
-        producttag = utils.get_producttag(product)
-        setattr(self, producttag, kwargs.pop(producttag, {}))
+        product = utils.get_producttag(product)
+        
+        assert product not in ['qids', 'paths'], \
+            "Cannot have a product named 'qids' or 'paths'"
+        
+        product_dict = kwargs.pop(product, None)
 
+        if product_dict is not None:
+            for subproduct, subproduct_dict in product_dict.items():
+                self.check_subproduct_config(product, subproduct, subproduct_dict)
+
+            setattr(self, product, product_dict)     
+
+    def check_subproduct_config(self, product, subproduct, subproduct_dict):
+        """Ensure the subproduct configuration file is compatible. 
+
+        Parameters
+        ----------
+        product : str
+            Name of type of product, e.g. 'maps'. Can also be a module __name__
+            in which case the product is inferred from the module basename.
+        subproduct : str
+            The specific subproduct.
+        subproduct_dict : dict
+            A dictionary corresponding to a subproduct configuration file. Should
+            contain 'allowed_qids_configs', 'allowed_qids',
+            'allowed_qids_extra_kwargs' entries.
+
+        Raises
+        ------
+        AssertionError
+            If 'allowed_qids_configs' is empty in the configuration file.
+
+        AssertionError
+            If an allowed_qid is not in any of the specified allowed_qid_configs.
+            Both 'allowed_qid' and 'allowed_qid_configs' may be 'all'.
+
+        AssertionError
+            If any qid in 'allowed_qids_extra_kwargs' is not in 'allowed_qids'.
+        """
+        product = utils.get_producttag(product)
+
+        # check that allowed_qids_configs is not None
+        assert subproduct_dict['allowed_qids_configs'] is not None, \
+            f'No allowed_qids_configs for product {product}, subproduct {subproduct}'
+        
+        # check each allowed_qid is in each allowed_qids_configs
+        allowed_qids_configs = subproduct_dict['allowed_qids_configs']
+        if allowed_qids_configs == 'all':
+            allowed_qids_configs = os.listdir(utils.get_package_fn('actapack', 'qids'))
+
+        allowed_qids = subproduct_dict['allowed_qids']
+
+        if allowed_qids is not None and allowed_qids != 'all':
+            for allowed_qids_config in allowed_qids_configs:
+
+                # need to get the contents from the config_name
+                allowed_qids_fn = utils.get_package_fn('actapack', f'qids/{allowed_qids_config}')
+                allowed_qids_dict = utils.config_from_yaml_file(allowed_qids_fn)
+
+                for qid in allowed_qids:
+                    assert qid in allowed_qids_dict, \
+                        f'qid {qid} allowed by product {product}, subproduct ' + \
+                        f'{subproduct} configuration file, but not in ' + \
+                        f'{allowed_qids_config}'
+
+        # check each allowed_qid_extra_kwarg key is an allowed_qid
+        if subproduct_dict['allowed_qids_extra_kwargs'] is not None:
+            assert allowed_qids is not None, \
+                f'{product}, subproduct {subproduct} configuration file has '+ \
+                'allowed_qids_extra_kwargs but allowed_qids is None'
+
+            if allowed_qids != 'all':
+                for qid in subproduct_dict['allowed_qids_extra_kwargs']:
+                    assert qid in allowed_qids, \
+                        f'qid {qid} has extra kwargs in product {product}, subproduct ' + \
+                        f'{subproduct} configuration file, but not is not an allowed_qid'
+
+    def get_qid_kwargs_by_subproduct(self, qid, product, subproduct):
+        """Return a set of keyword arguments for this qid. The set is a merger
+        of any default keywords in this datamodel's qid_dict, as well as any
+        additional keywords specified in a particular subproduct's configuration
+        file, if any.
+
+        Parameters
+        ----------
+        qid : str
+            Dataset identification string.
+        product : str
+            The type of product, e.g. 'maps' or 'beams'.
+        subproduct : str
+            The specific subproduct.
+
+        Returns
+        -------
+        dict
+            A set of keywords for the requested qid, such as its array, frequency,
+            etc.
+
+        Raises
+        ------
+        AssertionError
+            If the suproduct has no allowed qids, signified by an empty
+            'allowed_qids' block in the config file.
+
+        AssertionError
+            If there are allowed qids, but the called qid is not one of
+            them.
+
+        KeyError
+            If qid is not in the data_model qids_dict.
+        """
+        subproduct_dict = self.get_subproduct_dict(product, subproduct)
+
+        # check allowed_qids is not None
+        assert subproduct_dict['allowed_qids'] is not None, \
+            f'No allowed qids for product {product}, subproduct {subproduct}'
+
+        # check qid is in the allowed_qids or 'all'
+        if qid not in subproduct_dict['allowed_qids']:
+            assert subproduct_dict['allowed_qids'] == 'all', \
+                f'qid {qid} not allowed by product {product}, subproduct ' + \
+                f'{subproduct} configuration file'
+
+        qid_dict = self.qids[qid].copy()
+        if subproduct_dict['allowed_qids_extra_kwargs'] is not None:
+            qid_subproduct_dict = subproduct_dict['allowed_qids_extra_kwargs'].get(qid, {})
+            qid_dict.update(qid_subproduct_dict.copy())
+
+        return qid_dict
+                
     def get_product_dict(self, product):
         """Get the set of subproduct dictionaries under a product type, such as
         'maps' or 'beams'.
@@ -138,17 +271,17 @@ class Product:
 
         Raises
         ------
-        KeyError
+        LookupError
             If a user has not added the product type to their
             .actapack_config.yaml file under this datamodel, indicating they 
             do not want to interact with these products.
         """
-        producttag = utils.get_producttag(product)
-        product_dict = getattr(self, producttag)
-        if product_dict == {}:
-            raise KeyError(
-                f'Product {producttag} not in datamodel configuration file'
-            )
+        product = utils.get_producttag(product)
+        try:
+            product_dict = getattr(self, product)
+        except AttributeError as e:
+            raise LookupError(f'Product {product} not in datamodel configuration file') from e
+        
         return product_dict                    
             
     def get_subproduct_dict(self, product, subproduct):
@@ -179,11 +312,11 @@ class Product:
         """
         product_dict = self.get_product_dict(product)
         try:
-            subproduct_dict = product_dict[f'{subproduct}_dict']
+            subproduct_dict = product_dict[subproduct]
         except KeyError:
-            producttag = utils.get_producttag(product)
+            product = utils.get_producttag(product)
             raise KeyError(
-                f'Product {producttag}, subproduct {subproduct} not in '
+                f'Product {product}, subproduct {subproduct} not in '
                 'datamodel configuration file'
             )
         return subproduct_dict
@@ -212,59 +345,13 @@ class Product:
             their .actapack_config.yaml file under this datamodel, indicating
             they do not want to interact with these subproducts.
         """
-        product_dict = self.get_product_dict(product)
         try:
-            subproduct_path = product_dict[f'{subproduct}_path']
+            product = utils.get_producttag(product)
+            subproduct_path = self.paths[product][subproduct]
         except KeyError:
-            producttag = utils.get_producttag(product)
             raise KeyError(
-                f'Product {producttag}, subproduct {subproduct} not in user '
-                f'.actapack_config.yaml file, cannot get {producttag}, {subproduct} '
+                f'Product {product}, subproduct {subproduct} not in user '
+                f'.actapack_config.yaml file, cannot get {product}, {subproduct} '
                 'filename'
             )
         return subproduct_path
-
-    def get_qid_kwargs_by_subproduct(self, qid, product, subproduct):
-        """Return a set of keyword arguments for this qid. The set is a merger
-        of any default keywords in this datamodel's qid_dict, as well as any
-        additional keywords specified in a particular subproduct's configuration
-        file, if any.
-
-        Parameters
-        ----------
-        qid : str
-            Dataset identification string.
-        product : str
-            The type of product, e.g. 'maps' or 'beams'.
-        subproduct : str
-            The specific subproduct.
-
-        Returns
-        -------
-        dict
-            A set of keywords for the requested qid, such as its array, frequency,
-            etc.
-
-        Raises
-        ------
-        KeyError
-            If qid is not explicitly included in the product/subproduct.yaml
-            config file.
-        """
-        out = self.qids_dict[qid].copy()
-
-        subprod_dict = self.get_subproduct_dict(product, subproduct)
-        try:
-            qid_subprod_dict = subprod_dict[qid]
-            
-            if qid_subprod_dict is None:
-                qid_subprod_dict = {}
-            
-            out.update(qid_subprod_dict.copy())
-
-        except KeyError as e:
-            print(f'qid {qid} not permitted by product {product}, subproduct '
-                  f'{subproduct} configuration file')
-            raise e
-
-        return out

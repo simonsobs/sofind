@@ -1,7 +1,7 @@
 beam_file_template: 'placeholder'
 
-pa4a:
+allowed_qids_configs: 'all'
 
-pa5a: null
+allowed_qids: 'all'
 
-pa6a: {}
+allowed_qids_extra_kwargs:

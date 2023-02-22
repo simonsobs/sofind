@@ -1,7 +1,0 @@
-qids_dict: dr6_default_qids.yaml  
-
-maps: 
-  default_dict: dr6v3.yaml
-  pwv_split_dict: dr6v3_pwv_split.yaml
-beams:
-  default_dict: beam.yaml

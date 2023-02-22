@@ -49,45 +49,54 @@ class DataModel(*Product.__subclasses__()):
 
         # evaluate the (sub)product dicts and add in the system paths.
         # handle special case of qids_dict separately
-        for product_name in datamodel_dict:
 
-            if product_name == 'qids_dict':
-                # qids_name: the config basename
-                qids_name = datamodel_dict[product_name]
-                if not qids_name.endswith('.yaml'):
-                    qids_name += '.yaml'
+        # qids_config: the config basename
+        qids_config = datamodel_dict.pop('qids_config')
+        if not qids_config.endswith('.yaml'):
+            qids_config += '.yaml'
 
-                # qids_fn: the actual config full filename
-                basename = f'qids/{qids_name}'
-                qids_fn = utils.get_package_fn('actapack', basename)
+        # qids_fn: the actual config full filename
+        basename = f'qids/{qids_config}'
+        qids_fn = utils.get_package_fn('actapack', basename)
 
-                # qids_dict: the contents of the filename
-                qids_dict = utils.config_from_yaml_file(qids_fn)
-                dm_kwargs[product_name] = qids_dict
-            else:
-                dm_kwargs[product_name] = {}
-                for subproduct_name, subproduct_dict in datamodel_dict[product_name].items():
-                    # subproduct_dict: the config basename
-                    if not subproduct_dict.endswith('.yaml'):
-                        subproduct_dict += '.yaml'
+        # qids_dict: the contents of the filename
+        qids_dict = utils.config_from_yaml_file(qids_fn)
+        dm_kwargs['qids'] = qids_dict
 
-                    # subproduct_fn: the actual config full filename
-                    basename = f'products/{product_name}/{subproduct_dict}'
-                    subproduct_fn = utils.get_package_fn('actapack', basename)
+        dm_kwargs['paths'] = {}
+        for product in datamodel_dict:
+            dm_kwargs[product] = {}
+            dm_kwargs['paths'][product] = {}
+            for subproduct, subproduct_config in datamodel_dict[product].items():
+                # subproduct_config: the config basename
+                if not subproduct_config.endswith('.yaml'):
+                    subproduct_config += '.yaml'
 
-                    # subproduct_dict: the contents of the filename
-                    subproduct_dict = utils.config_from_yaml_file(subproduct_fn)
-                    dm_kwargs[product_name][subproduct_name] = subproduct_dict
+                # subproduct_fn: the actual config full filename
+                basename = f'products/{product}/{subproduct_config}'
+                subproduct_fn = utils.get_package_fn('actapack', basename)
 
-                    # default_dict --> default_path
-                    subproduct_name = subproduct_name.split('_dict')[0]
-                    subproduct_name = f'{subproduct_name}_path'
+                # subproduct_dict: the contents of the filename
+                subproduct_dict = utils.config_from_yaml_file(subproduct_fn)
 
-                    # if in user .actapack_config.yaml file, add subproduct path
-                    if product_name in system_path_dict:
-                        if subproduct_name in system_path_dict[product_name]:
-                            subproduct_path = system_path_dict[product_name][subproduct_name]
-                            dm_kwargs[product_name][subproduct_name] = subproduct_path
+                # NOTE: check for compatibility of this subproduct with the
+                # data_model, meaning the requested qids_dict is allowed
+                subproduct = subproduct.split('_config')[0] # remove _config
+
+                if subproduct_dict['allowed_qids_configs'] is not None:
+                    if qids_config not in subproduct_dict['allowed_qids_configs']:
+                        assert subproduct_dict['allowed_qids_configs'] == 'all', \
+                            f'qids_config {qids_config} not allowed by product {product}, ' + \
+                            f"subproduct {subproduct} configuration file"
+
+                # if compatible, add to the dm_kwargs
+                dm_kwargs[product][subproduct] = subproduct_dict
+
+                # if in user .actapack_config.yaml file, add subproduct path
+                if product in system_path_dict:
+                    if f'{subproduct}_path' in system_path_dict[product]:
+                        subproduct_path = system_path_dict[product][f'{subproduct}_path']
+                        dm_kwargs['paths'][product][subproduct] = subproduct_path
 
         return cls(**dm_kwargs)
 

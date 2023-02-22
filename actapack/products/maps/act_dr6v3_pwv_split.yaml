@@ -1,0 +1,80 @@
+split_map_file_template: '{patch}_{daynight}_{array}_{freq}_{null_split}_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_{null_split}_{num_splits}way_coadd_{maptag}.fits'
+
+allowed_qids_configs:
+- act_dr6_default_qids.yaml
+
+allowed_qids:
+- pa4a
+- pa4a_dw
+- pa4a_dd
+- pa4b
+- pa4b_dw
+- pa4b_dd
+- pa5a
+- pa5a_dw
+- pa5a_dd
+- pa5b
+- pa5b_dw
+- pa5b_dd
+- pa6a
+- pa6a_dw
+- pa6a_dd
+- pa6b
+- pa6b_dw
+- pa6b_dd
+
+allowed_qids_extra_kwargs:
+  pa4a:
+    num_splits: 4
+
+  pa4a_dw:
+    num_splits: 4
+
+  pa4a_dd:
+    num_splits: 4
+
+  pa4b:
+    num_splits: 4
+
+  pa4b_dw:
+    num_splits: 4
+
+  pa4b_dd:
+    num_splits: 4
+
+  pa5a:
+    num_splits: 4
+
+  pa5a_dw:
+    num_splits: 4
+
+  pa5a_dd:
+    num_splits: 4
+
+  pa5b:
+    num_splits: 4
+
+  pa5b_dw:
+    num_splits: 4
+
+  pa5b_dd:
+    num_splits: 4
+
+  pa6a:
+    num_splits: 4
+
+  pa6a_dw:
+    num_splits: 4
+
+  pa6a_dd:
+    num_splits: 4
+
+  pa6b:
+    num_splits: 4
+
+  pa6b_dw:
+    num_splits: 4
+
+  pa6b_dd:
+    num_splits: 4
