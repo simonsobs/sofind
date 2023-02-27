@@ -1,5 +1,5 @@
-from actapack import utils
-from actapack.products import Product
+from sofind import utils
+from sofind.products import Product
 
 import os
 
@@ -20,7 +20,7 @@ class DataModel(*Product.__subclasses__()):
     @classmethod
     def from_config(cls, config_name):
         """Build a DataModel instance from configuration files distributed in
-        the actapack package.
+        the sofind package.
 
         Parameters
         ----------
@@ -40,12 +40,12 @@ class DataModel(*Product.__subclasses__()):
         if not config_name.endswith('.yaml'):
             config_name += '.yaml'
         basename = f'datamodels/{config_name}'
-        datamodel_fn = utils.get_package_fn('actapack', basename)
+        datamodel_fn = utils.get_package_fn('sofind', basename)
         datamodel_dict = utils.config_from_yaml_file(datamodel_fn)
 
-        actapack_fn = os.path.join(os.environ['HOME'], '.actapack_config.yaml')
-        actapack_config = utils.config_from_yaml_file(actapack_fn)
-        system_path_dict = actapack_config[os.path.splitext(config_name)[0]]
+        sofind_fn = os.path.join(os.environ['HOME'], '.sofind_config.yaml')
+        sofind_config = utils.config_from_yaml_file(sofind_fn)
+        system_path_dict = sofind_config[os.path.splitext(config_name)[0]]
 
         # evaluate the (sub)product dicts and add in the system paths.
         # handle special case of qids_dict separately
@@ -57,7 +57,7 @@ class DataModel(*Product.__subclasses__()):
 
         # qids_fn: the actual config full filename
         basename = f'qids/{qids_config}'
-        qids_fn = utils.get_package_fn('actapack', basename)
+        qids_fn = utils.get_package_fn('sofind', basename)
 
         # qids_dict: the contents of the filename
         qids_dict = utils.config_from_yaml_file(qids_fn)
@@ -74,7 +74,7 @@ class DataModel(*Product.__subclasses__()):
 
                 # subproduct_fn: the actual config full filename
                 basename = f'products/{product}/{subproduct_config}'
-                subproduct_fn = utils.get_package_fn('actapack', basename)
+                subproduct_fn = utils.get_package_fn('sofind', basename)
 
                 # subproduct_dict: the contents of the filename
                 subproduct_dict = utils.config_from_yaml_file(subproduct_fn)
@@ -92,7 +92,7 @@ class DataModel(*Product.__subclasses__()):
                 # if compatible, add to the dm_kwargs
                 dm_kwargs[product][subproduct] = subproduct_dict
 
-                # if in user .actapack_config.yaml file, add subproduct path
+                # if in user .sofind_config.yaml file, add subproduct path
                 if product in system_path_dict:
                     if f'{subproduct}_path' in system_path_dict[product]:
                         subproduct_path = system_path_dict[product][f'{subproduct}_path']

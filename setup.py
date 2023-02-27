@@ -1,2 +1,2 @@
 from distutils.core import setup
-setup(name='actapack', packages=['actapack'])
+setup(name='sofind', packages=['sofind'])

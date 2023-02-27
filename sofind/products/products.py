@@ -1,7 +1,7 @@
 # This module's design gets around the fact that abstractmethods cannot be 
 # "renamed" dynamically
 
-from actapack import utils
+from sofind import utils
 
 import functools
 import os
@@ -100,7 +100,7 @@ class Product:
     def set_attrs(self, product, kwargs):
         """Assign attributes to self from kwargs based on product. If product is a
         module __name__: first, get the basename of __name__, e.g. 'things' from 
-        'actapack.things.things'. Then, set the value under key 'things' in 
+        'sofind.things.things'. Then, set the value under key 'things' in 
         kwargs to attributes of the same name in self.
 
         Parameters
@@ -171,7 +171,7 @@ class Product:
         # check each allowed_qid is in each allowed_qids_configs
         allowed_qids_configs = subproduct_dict['allowed_qids_configs']
         if allowed_qids_configs == 'all':
-            allowed_qids_configs = os.listdir(utils.get_package_fn('actapack', 'qids'))
+            allowed_qids_configs = os.listdir(utils.get_package_fn('sofind', 'qids'))
 
         allowed_qids = subproduct_dict['allowed_qids']
 
@@ -179,7 +179,7 @@ class Product:
             for allowed_qids_config in allowed_qids_configs:
 
                 # need to get the contents from the config_name
-                allowed_qids_fn = utils.get_package_fn('actapack', f'qids/{allowed_qids_config}')
+                allowed_qids_fn = utils.get_package_fn('sofind', f'qids/{allowed_qids_config}')
                 allowed_qids_dict = utils.config_from_yaml_file(allowed_qids_fn)
 
                 for qid in allowed_qids:
@@ -273,7 +273,7 @@ class Product:
         ------
         LookupError
             If a user has not added the product type to their
-            .actapack_config.yaml file under this datamodel, indicating they 
+            .sofind_config.yaml file under this datamodel, indicating they 
             do not want to interact with these products.
         """
         product = utils.get_producttag(product)
@@ -307,7 +307,7 @@ class Product:
         ------
         KeyError
             If a user has not added the subproduct under the product type to
-            their .actapack_config.yaml file under this datamodel, indicating
+            their .sofind_config.yaml file under this datamodel, indicating
             they do not want to interact with these subproducts.
         """
         product_dict = self.get_product_dict(product)
@@ -342,7 +342,7 @@ class Product:
         ------
         KeyError
             If a user has not added the subproduct under the product type to
-            their .actapack_config.yaml file under this datamodel, indicating
+            their .sofind_config.yaml file under this datamodel, indicating
             they do not want to interact with these subproducts.
         """
         try:
@@ -351,7 +351,7 @@ class Product:
         except KeyError:
             raise KeyError(
                 f'Product {product}, subproduct {subproduct} not in user '
-                f'.actapack_config.yaml file, cannot get {product}, {subproduct} '
+                f'.sofind_config.yaml file, cannot get {product}, {subproduct} '
                 'filename'
             )
         return subproduct_path
