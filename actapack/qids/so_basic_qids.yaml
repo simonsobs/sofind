@@ -1,0 +1,23 @@
+lfa:
+  array: lf
+  freq: f030
+
+lfb:
+  array: lf
+  freq: f040
+
+mfa:
+  array: mf
+  freq: f090
+
+mfb:
+  array: mf
+  freq: f150
+
+uhfa:
+  array: uhf
+  freq: f230
+
+uhfb:
+  array: uhf
+  freq: f290
