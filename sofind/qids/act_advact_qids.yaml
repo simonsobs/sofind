@@ -1,0 +1,131 @@
+pa4a:
+  array: pa4
+  freq: f150
+  daynight: night
+  patch: wide
+
+pa4a_dw:
+  array: pa4
+  freq: f150
+  daynight: day
+  patch: wide
+
+pa4a_dd:
+  array: pa4
+  freq: f150
+  daynight: day
+  patch: deep
+
+pa4b:
+  array: pa4
+  freq: f220
+  daynight: night
+  patch: wide
+
+pa4b_dw:
+  array: pa4
+  freq: f220
+  daynight: day
+  patch: wide
+
+pa4b_dd:
+  array: pa4
+  freq: f220
+  daynight: day
+  patch: deep
+
+pa5a:
+  array: pa5
+  freq: f090
+  daynight: night  
+  patch: wide
+
+pa5a_dw:
+  array: pa5
+  freq: f090
+  daynight: day
+  patch: wide
+
+pa5a_dd:
+  array: pa5
+  freq: f090
+  daynight: day
+  patch: deep
+
+pa5b:
+  array: pa5
+  freq: f150
+  daynight: night
+  patch: wide
+
+pa5b_dw:
+  array: pa5
+  freq: f150
+  daynight: day
+  patch: wide
+
+pa5b_dd:
+  array: pa5
+  freq: f150
+  daynight: day
+  patch: deep
+
+pa6a:
+  array: pa6
+  freq: f090
+  daynight: night
+  patch: wide
+
+pa6a_dw:
+  array: pa6
+  freq: f090
+  daynight: day
+  patch: wide
+
+pa6a_dd:
+  array: pa6
+  freq: f090
+  daynight: day
+  patch: deep
+
+pa6b:
+  array: pa6
+  freq: f150
+  daynight: night
+  patch: wide
+
+pa6b_dw:
+  array: pa6
+  freq: f150
+  daynight: day
+  patch: wide
+
+pa6b_dd:
+  array: pa6
+  freq: f150
+  daynight: day
+  patch: deep
+
+pa7a:
+  array: pa7
+  freq: f030
+  daynight: night
+  patch: wide
+
+pa7a_dw:
+  array: pa7
+  freq: f030
+  daynight: day
+  patch: wide
+
+pa7b:
+  array: pa7
+  freq: f040
+  daynight: night
+  patch: wide
+
+pa7b_dw:
+  array: pa7
+  freq: f040
+  daynight: day
+  patch: wide

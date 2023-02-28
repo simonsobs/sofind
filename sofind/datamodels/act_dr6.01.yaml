@@ -1,0 +1,6 @@
+qids_config: act_advact_qids.yaml  
+
+maps: 
+  default_config: act_dr6.01.yaml
+beams:
+  default_config: beam.yaml
