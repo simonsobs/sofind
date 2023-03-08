@@ -1,5 +1,5 @@
-# sofind
-Simple, extendable framework for loading generic products from disk: `S`imons `O`bservatory `FI`le`N`ame `D`epot.
+# `S`imons `O`bservatory `FI`le`N`ame `D`epot
+Simple, extendable framework for loading generic products from disk.
 
 ## Contact
 For any questions please reach out to Zach Atkins (email: [zatkins@princeton.edu](mailto:zatkins@princeton.edu), github: [@zatkins2](https://github.com/zatkins2)).
