@@ -42,7 +42,7 @@ my_default_map_filename = dm.get_map_fn(my_qid, **more_kwargs)
 my_pwv_split_map = dm.read_map(my_qid, subproduct='pwv_split', **more_kwargs)
 my_beam = dm.read_beam(my_qid, **more_kwargs)
 ```
-Users should only ever interface with the high-level `DataModel` class. This class inherits from all implemented `sofind` products!
+Users should only ever interface with the high-level `DataModel` class. This class inherits from all implemented `sofind` products! Available `qids` for a particular data model or product are available either by following the `qids_config` entry in the data model config itself (referring to a particular file in `sofind/qids`) or should be documented for the product (see, e.g., the `sofind/products/maps` README file).
 
 ## Detailed Setup
 If you would like to better understand the meaning of your `.sofind_config.yaml` file or the structure of `sofind`, keep reading! This could be helpful in case changes are necessary, or if you'd like to install `sofind` on your laptop, for instance.

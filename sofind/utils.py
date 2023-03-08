@@ -80,7 +80,7 @@ def get_system_fn(home_config, basename, config_keys=None):
     >>> from sofind.utils import get_sytem fn
     >>> home_config = '.mnms_config' # could also use full name, '.mnms_config.yaml'
     >>> basename = 'sims/sim_001.fits' # this file lives inside the the private_path, for example
-    >>> config_keys=['private_path'] # get the private_path
+    >>> config_keys=['mnms', 'private_path'] # get the private_path
     >>> fn = get_system_fn(home_config, basename, config_keys=config_keys)
     >>> print(fn)
     >>> '/scratch/gpfs/zatkins/data/ACTCollaboration/mnms/sims/sim_001.fits'
