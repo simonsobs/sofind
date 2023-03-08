@@ -21,40 +21,50 @@ $ pip install -e .
 ```
 to see changes to source code automatically updated in your environment.
 
-## Setup
-All users must create a file `.sofind_config.yaml` in their system's `HOME` directory. This file encodes the location on their system of products implemented in the `sofind` package. It also groups a set of these locations under data model "names," such as `act_dr6v3_default` (see `sofind/datamodels`). This way, different data models may have their products in different locations on the system. 
+## Quick Setup
+All users must create a file `.sofind_config.yaml` in their system's `HOME` directory. This file encodes the location on their system of products implemented in the `sofind` package. It also groups a set of these locations under data model "names," such as `act_dr6.01` (see `sofind/datamodels`). This way, different data models may have their products in different locations on the system. 
 
-To facilitate setup, we have provided some `.sofind_config.yaml` files for common public systems, such as `NERSC`, in the `sofind_configs` folder for users to copy. However, we recommend reading this section regardless to understand these files in case changes are necessary, or if you'd like to install `sofind` on your laptop, for instance.
+To facilitate setup, we have provided some `.sofind_config.yaml` files for common public systems, such as `NERSC`, in the `sofind_configs` folder for users to copy. If you are on one of these systems, all you need to do is copy the relevant file to `~/.sofind_config.yaml`!
 
-We'll start with a basic example. Let's assume you wish to interact with the `act_dr6v3_default` data model. Let's also assume that `sofind` currently implements map and beam products in `sofind/products/maps` and `sofind/products/beams`, along with possibly more products in different `sofind/products` modules as well. Then, your `.sofind_config.yaml` file might look like this:
+## Usage
+All you need in your code is the following (e.g. for the `act_dr6v3` data model):
+```python
+from sofind import DataModel
+
+# use the from_config method to specify the data model at runtime
+dm = DataModel.from_config('act_dr6v3')
+
+# a qid is an identifier tag for a dataset, like a detector array
+my_qid = 'pa4a'
+
+# have fun
+my_default_map_filename = dm.get_map_fn(my_qid, **more_kwargs)
+my_pwv_split_map = dm.read_map(my_qid, subproduct='pwv_split', **more_kwargs)
+my_beam = dm.read_beam(my_qid, **more_kwargs)
+```
+Users should only ever interface with the high-level `DataModel` class. This class inherits from all implemented `sofind` products!
+
+## Detailed Setup
+If you would like to better understand the meaning of your `.sofind_config.yaml` file or the structure of `sofind`, keep reading! This could be helpful in case changes are necessary, or if you'd like to install `sofind` on your laptop, for instance.
+
+We'll start with a basic example. Let's assume you wish to interact with the `act_dr6v3` data model. Let's also assume that `sofind` currently implements map and beam products in `sofind/products/maps` and `sofind/products/beams`, along with possibly more products in different `sofind/products` modules as well. Then, your `.sofind_config.yaml` file might look like this:
 ```yaml
-act_dr6v3_default:
+act_dr6v3:
     maps:
         default_path: "/path/to/default/maps/on/this/system/"
         pwv_split_path: "/path/to/pwv_split/maps/on/this/system/"
     beams:
         default_path: "/path/to/default/beams/on/this/system/"
 ```
-First, we must have a block for the data model (`act_dr6v3_default`) we wish to use. Under this block, we must have "product"-level blocks for each product implementation (e.g. `maps`, `beams`) we wish to interact with. The name of these "product" blocks must match the module in which the product is implemented (e.g. `maps` for `sofind/products/maps/__init__.py`). Finally, within each "product" block, we may have several "subproducts." These "subproducts" share the same code interface (again, in `sofind/products/maps/__init__.py`), but may just be different "kinds" of maps. The name of each "subproduct" is indicated by the words before `_path`. The system path for that product/subproduct pair is then listed. For example, all the possible files for `pwv_split` maps should be in the directory `"/path/to/pwv_split/maps/on/this/system/"`.
+First, we must have a block for the data model (`act_dr6v3`) we wish to use. Under this block, we must have "product"-level blocks for each product implementation (e.g. `maps`, `beams`) we wish to interact with. The name of these "product" blocks must match the module in which the product is implemented (e.g. `maps` for `sofind/products/maps`). Finally, within each "product" block, we may have several "subproducts." These "subproducts" share the same code interface (again, in `sofind/products/maps/__init__.py`), but may just be different "kinds" of maps.
+
+The name of each "subproduct" is indicated by the words before `_path`. The system path for that product/subproduct pair is then listed. For example, all the possible files for the `pwv_split` subproduct of the `maps` product should be in the directory `"/path/to/pwv_split/maps/on/this/system/"`.
 
 A few notes:
 * A user's `.sofind_config.yaml` may have several different "data model" blocks, so that they can select from their desired data model at runtime.
 * It is *not* necessary to have a "product" block for every product in a data model. In this example, if you omit the `beams` block, then a call to load a beam from disk (for any beam "subproduct") would raise an error, but the other products, like `maps`, would be unaffected. Thus, users do not need to make any other changes to `sofind` or their setup if some products do not exist on their system.  
 * It is *not* necessary to have a "subproduct" path for every subproduct in a product. In this example, if you omit the `pwv_split_path` from the `maps` block, then a call map methods with the keyword argument `subproduct='pwv_split'` would raise an error without affecting other subproducts. Thus, users do not need to make any other changes to `sofind` or their setup if some subproducts do not exist on their system.  
 * By convention, the default "subproduct" passed to the methods in each product implementation (e.g. `read_map` in `sofind/products/maps/__init__.py`) is called "default". Thus, most "product" blocks in a `.sofind_config.yaml` file will have, at minimum, a `default_path`. However, there is nothing special about this name as far as whether it must be present or may be omitted from the `.sofind_config.yaml` file.
-
-## Usage
-All you need in your code is the following (e.g. for the `act_dr6v3_default` data model):
-```python
-from sofind import DataModel
-
-dm = DataModel.from_config('act_dr6v3_default')
-
-my_default_map_filename = dm.get_map_fn(...)
-my_pwv_split_map = dm.read_map(..., subproduct='pwv_split')
-my_beam_fn = dm.get_beam_fn(...)
-```
-Users should only ever interface with the high-level `DataModel` class. This class inherits from all implemented `sofind` products!
 
 ## If you would like to contribute a product to `sofind`
 There are four steps:
