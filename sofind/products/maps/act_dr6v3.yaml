@@ -2,7 +2,7 @@ split_map_file_template: '{patch}_{daynight}_{array}_{freq}_{num_splits}way_set{
 coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_{num_splits}way_coadd_{maptag}.fits'
 
 allowed_qids_configs:
-- act_dr6v3_qids.yaml
+- act_dr6vX_qids.yaml
 
 allowed_qids: 'all'
 
