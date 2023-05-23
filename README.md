@@ -64,7 +64,7 @@ A few notes:
 * A user's `.sofind_config.yaml` may have several different "data model" blocks, so that they can select from their desired data model at runtime.
 * It is *not* necessary to have a "product" block for every product in a data model. In this example, if you omit the `beams` block, then a call to load a beam from disk (for any beam "subproduct") would raise an error, but the other products, like `maps`, would be unaffected. Thus, users do not need to make any other changes to `sofind` or their setup if some products do not exist on their system.  
 * It is *not* necessary to have a "subproduct" path for every subproduct in a product. In this example, if you omit the `pwv_split_path` from the `maps` block, then a call map methods with the keyword argument `subproduct='pwv_split'` would raise an error without affecting other subproducts. Thus, users do not need to make any other changes to `sofind` or their setup if some subproducts do not exist on their system.  
-* By convention, the default "subproduct" passed to the methods in each product implementation (e.g. `read_map` in `sofind/products/maps/__init__.py`) is called "default". Thus, most "product" blocks in a `.sofind_config.yaml` file will have, at minimum, a `default_path`. However, there is nothing special about this name as far as whether it must be present or may be omitted from the `.sofind_config.yaml` file.
+* For many products (but not all!) the default "subproduct" passed to the methods in each product implementation (e.g. `read_map` in `sofind/products/maps/__init__.py`) is called "default". Thus, many (but not all!) "product" blocks in a `.sofind_config.yaml` file will have, at minimum, a `default_path`. However, there is nothing special about this name as far as whether it must be present or may be omitted from the `.sofind_config.yaml` file.
 
 ## If you would like to contribute a product to `sofind`
 There are four steps:
@@ -102,7 +102,6 @@ There are one (maybe two) steps:
                 subprod_config: config.yaml
         ``` 
         where `prod` and `subprod` are the names of the product and subproduct that may be called by the `DataModel`.
-    * As in the `.sofind_config.yaml` file, you should include a `default` subproduct if this default is obvious. 
     * This config file must also have an entry for a `qids_config` (at the top-level), indicating one of the qid config files under `sofind/qids`.
 2. Only if one of the included qid config files are not sufficient for your needs, you'll need to add another one with your qids.
 

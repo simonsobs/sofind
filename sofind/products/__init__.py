@@ -4,3 +4,4 @@ from .products import Product
 from .maps import Map
 from .beams import Beam
 from .hotdogs import HotDog
+from .noise_models import NoiseModel

@@ -1,6 +1,7 @@
 from pixell import enmap
 import numpy as np
 import yaml
+import h5py
 
 import io
 import os, sys
@@ -25,6 +26,36 @@ def config_from_yaml_file(filename):
     
     filename.seek(0)
     return yaml.safe_load(filename)
+
+def config_from_hdf5_file(filename, address='/', op=lambda x: x):
+    """Return a dictionary of the attributes at hfile[address].attrs.
+
+    Parameters
+    ----------
+    filename : h5py.Group or path-like
+        Either an h5py.Group stream or a system path.
+    address : str, optional
+        Group in hfile to look for config, by default the root.
+    op : callable, optional
+        How to transform the values under each key in hfile[address].attrs in
+        the output, by default the identity. This may change depending on the 
+        format of how the values were written (e.g., if yaml-encoded strings,
+        one might use op=yaml.safe_load).
+
+    Returns
+    -------
+    dict
+        dict(hfile[address].attrs)
+    """
+    if not isinstance(filename, h5py.Group):
+        with h5py.File(filename, 'r') as hfile:
+            return config_from_hdf5_file(hfile, address=address)
+    
+    idict = filename[address].attrs
+    odict = {}
+    for k, v in idict.items():
+        odict[k] = op(v)
+    return odict
 
 def get_package_fn(package, basename):
     """Get a filename from within a given package. Useful for accessing

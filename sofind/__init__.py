@@ -3,12 +3,18 @@ from sofind.products import Product
 
 import os
 
+
 class DataModel(*Product.__subclasses__()):
 
-    def __init__(self, **kwargs):
+    def __init__(self, name, **kwargs):
         """A wrapper class that mixes in all Product subclasses. Also grabs any
         qid-related information to be used in subclass methods, e.g., if a
         product's filenames are labeled by particular array, frequency, etc.
+
+        Parameters
+        ----------
+        name : str
+            Name of the DataModel instance.
 
         Notes
         -----
@@ -17,8 +23,14 @@ class DataModel(*Product.__subclasses__()):
         """
         super().__init__(**kwargs)
 
+        self._name = name
+
+    @property
+    def name(self):
+        return self._name
+
     @classmethod
-    def from_config(cls, config_name):
+    def from_config(cls, config_name, data_model_name=None):
         """Build a DataModel instance from configuration files distributed in
         the sofind package.
 
@@ -27,6 +39,8 @@ class DataModel(*Product.__subclasses__()):
         config_name : str
             The name of the configuration file. If does not end in '.yaml', 
             '.yaml' will be appended.
+        data_model_name : str, optional
+            Name of the DataModel instance, by default the config_name.
 
         Returns
         -------
@@ -98,7 +112,9 @@ class DataModel(*Product.__subclasses__()):
                         subproduct_path = system_path_dict[product][f'{subproduct}_path']
                         dm_kwargs['paths'][product][subproduct] = subproduct_path
 
-        return cls(**dm_kwargs)
+        if data_model_name is None:
+            data_model_name = os.path.splitext(config_name)[0]
+        return cls(data_model_name, **dm_kwargs)
 
     @classmethod
     def from_productdb(cls, config_name):

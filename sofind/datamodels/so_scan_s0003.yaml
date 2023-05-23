@@ -2,3 +2,6 @@ qids_config: so_basic_qids.yaml
 
 maps: 
   default_config: so_scan_s0003.yaml
+
+noise_models:
+  default_config: so_scan_s0003.yaml
