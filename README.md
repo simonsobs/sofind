@@ -69,13 +69,12 @@ A few notes:
 ## If you would like to contribute a product to `sofind`
 There are four steps:
 1. Create a new product folder in the `sofind/products` directory. Add to this folder a python module named `__init__.py`.
-    * The module should only contain a subclass of the `sofind.products.products.Product` class.
-    * There is a minimum prescription your subclass implementation must follow. You should *not* modify the class declaration or `__init__` method, and you *must* modify the `sofind.products.products.Product` methods decorated with `@productmethod`. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `sofind/products/hotdogs/__init__.py`. Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.maps.Map` for inspiration.
+    * There is a minimum prescription your subclass implementation must follow. To make it easy, a template of this implementation (for a product called `HotDog`) can be copied from `sofind/products/hotdogs/__init__.py`. You should *not* delete the template class declaration or `__init__` method (but you may add to them), and you *must* modify the `sofind.products.products.Product` methods decorated with `@productmethod`. Note the template has more detail on how to implement your product class. You can also look at e.g. `actpack.products.maps.Map` for inspiration.
     * Anything beyond this minimal perscription can be added if your product has more complicated features!
-2. Make sure your product is imported directly by the `sofind.products` package. For instance, if your folder was named `hotdogs`, then add this line to `sofind.products.__init__.py`:
+2. Make sure your product is imported directly by the `sofind.products` package. For instance, if your module was named `hotdogs` and your particular class named `HotDog`, then add this line to `sofind.products.__init__.py`:
 
     ```python
-    from .hotdogs import *
+    from .hotdogs import HotDog
     ```
 3. Add a config (or multiple configs if you have multiple product versions, or subproducts, etc.) to `sofind/products/{module_name}`. Following the hotdog example, there is a config file `hotdog_example.yaml` in `sofind/products/hotdogs`.
     * This must be a `.yaml` file.

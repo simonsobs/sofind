@@ -1,6 +1,5 @@
 # If you are adding a product you can use the following template
-# in your module. Please only define the product class in this 
-# module.
+# in your module.
 
 ### PRODUCT TEMPLATE in module file hotdogs.py ###
 
@@ -24,6 +23,8 @@ class HotDog(Product):
         self.set_attrs(__name__, kwargs)
         super().__init__(**kwargs)
     #################################
+
+    # Feel free to add stuff here
 
     @implements(Product.get_fn)
     # in order to access the subproduct_dict and subproduct_path, subproduct
@@ -63,3 +64,5 @@ class HotDog(Product):
             loadtxt_kwargs = {}
 
         return np.loadtxt(fn, **loadtxt_kwargs)
+    
+# Feel free to add stuff here

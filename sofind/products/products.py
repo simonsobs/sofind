@@ -201,9 +201,9 @@ class Product:
                         f'{subproduct} configuration file, but not is not an allowed_qid'
 
     def get_qid_kwargs_by_subproduct(self, qid, product, subproduct):
-        """Return a set of keyword arguments for this qid. The set is a merger
-        of any default keywords in this datamodel's qid_dict, as well as any
-        additional keywords specified in a particular subproduct's configuration
+        """Return a dict of key-value pairs for this qid. The dict is a merger
+        of any default pairs in this datamodel's qid_dict, as well as any
+        additional pairs specified in a particular subproduct's configuration
         file, if any.
 
         Parameters
@@ -272,15 +272,15 @@ class Product:
         Raises
         ------
         LookupError
-            If a user has not added the product type to their
-            .sofind_config.yaml file under this datamodel, indicating they 
-            do not want to interact with these products.
+            If a product type is not in this datamodel.
         """
         product = utils.get_producttag(product)
         try:
             product_dict = getattr(self, product)
         except AttributeError as e:
-            raise LookupError(f'Product {product} not in datamodel configuration file') from e
+            raise LookupError(
+                f'Product {product} not in datamodel configuration file'
+                ) from e
         
         return product_dict                    
             
@@ -306,19 +306,17 @@ class Product:
         Raises
         ------
         KeyError
-            If a user has not added the subproduct under the product type to
-            their .sofind_config.yaml file under this datamodel, indicating
-            they do not want to interact with these subproducts.
+            If a subproduct under the product type is not in this datamodel.
         """
         product_dict = self.get_product_dict(product)
         try:
             subproduct_dict = product_dict[subproduct]
-        except KeyError:
+        except KeyError as e:
             product = utils.get_producttag(product)
-            raise KeyError(
+            raise LookupError(
                 f'Product {product}, subproduct {subproduct} not in '
                 'datamodel configuration file'
-            )
+            ) from e
         return subproduct_dict
 
     def get_subproduct_path(self, product, subproduct):
@@ -348,10 +346,10 @@ class Product:
         try:
             product = utils.get_producttag(product)
             subproduct_path = self.paths[product][subproduct]
-        except KeyError:
-            raise KeyError(
+        except KeyError as e:
+            raise LookupError(
                 f'Product {product}, subproduct {subproduct} not in user '
                 f'.sofind_config.yaml file, cannot get {product}, {subproduct} '
                 'filename'
-            )
+            ) from e
         return subproduct_path
