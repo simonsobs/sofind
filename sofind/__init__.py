@@ -30,7 +30,7 @@ class DataModel(*Product.__subclasses__()):
         return self._name
 
     @classmethod
-    def from_config(cls, config_name, data_model_name=None):
+    def from_config(cls, config_name):
         """Build a DataModel instance from configuration files distributed in
         the sofind package.
 
@@ -39,14 +39,18 @@ class DataModel(*Product.__subclasses__()):
         config_name : str
             The name of the configuration file. If does not end in '.yaml', 
             '.yaml' will be appended.
-        data_model_name : str, optional
-            Name of the DataModel instance, by default the config_name.
 
         Returns
         -------
         DataModel
             Instance corresponding to the collection of products and subproducts
             indicated in the named configuration file.
+
+        Raises
+        ------
+        AssertionError
+            If the qids_config for the data model is not allowed by a
+            subproduct in the data model.
         """
         dm_kwargs = {}
         
@@ -77,10 +81,13 @@ class DataModel(*Product.__subclasses__()):
         qids_dict = utils.config_from_yaml_file(qids_fn)
         dm_kwargs['qids'] = qids_dict
 
+        # next get the paths, configs, and config info
         dm_kwargs['paths'] = {}
+        dm_kwargs['configs'] = {}
         for product in datamodel_dict:
             dm_kwargs[product] = {}
             dm_kwargs['paths'][product] = {}
+            dm_kwargs['configs'][product] = {}
             for subproduct, subproduct_config in datamodel_dict[product].items():
                 # subproduct_config: the config basename
                 if not subproduct_config.endswith('.yaml'):
@@ -97,14 +104,19 @@ class DataModel(*Product.__subclasses__()):
                 # data_model, meaning the requested qids_dict is allowed
                 subproduct = subproduct.split('_config')[0] # remove _config
 
-                if subproduct_dict['allowed_qids_configs'] is not None:
+                try:
                     if qids_config not in subproduct_dict['allowed_qids_configs']:
                         assert subproduct_dict['allowed_qids_configs'] == 'all', \
                             f'qids_config {qids_config} not allowed by product {product}, ' + \
-                            f"subproduct {subproduct} configuration file"
+                            f'subproduct {subproduct} configuration file'
+                except TypeError as e:
+                    raise AssertionError(
+                         f'No allowed_qids_configs for product {product}, subproduct {subproduct}'
+                         ) from e
 
-                # if compatible, add to the dm_kwargs
+                # if compatible, add to the dm_kwargs. also add config name for the record
                 dm_kwargs[product][subproduct] = subproduct_dict
+                dm_kwargs['configs'][product][subproduct] = subproduct_config
 
                 # if in user .sofind_config.yaml file, add subproduct path
                 if product in system_path_dict:
@@ -112,9 +124,7 @@ class DataModel(*Product.__subclasses__()):
                         subproduct_path = system_path_dict[product][f'{subproduct}_path']
                         dm_kwargs['paths'][product][subproduct] = subproduct_path
 
-        if data_model_name is None:
-            data_model_name = os.path.splitext(config_name)[0]
-        return cls(data_model_name, **dm_kwargs)
+        return cls(os.path.splitext(config_name)[0], **dm_kwargs)
 
     @classmethod
     def from_productdb(cls, config_name):

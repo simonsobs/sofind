@@ -132,7 +132,7 @@ def get_system_fn(home_config, basename, config_keys=None):
 
     return os.path.join(out, basename)
 
-def get_protected_fn(fns, no_fn_collisions=True, write_to_fn_idx=None):
+def get_protected_fn(*fns, no_fn_collisions=True, write_to_fn_idx=None):
     """Get one filename from a list of filenames, with restrictions on whether
     all or None of the possibilities exist.
 

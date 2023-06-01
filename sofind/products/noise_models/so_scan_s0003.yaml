@@ -3,16 +3,39 @@ allowed_qids_configs:
 
 allowed_qids: 'all'
 
-allowed_qids_extra_kwargs: null
+allowed_qids_extra_kwargs:
+  lfa:
+    num_splits: 4
+
+  lfb:
+    num_splits: 4
+
+  mfa:
+    num_splits: 4
+
+  mfb:
+    num_splits: 4
+
+  uhfa:
+    num_splits: 4
+
+  uhfb:
+    num_splits: 4
 
 fdw:
-  noise_model_class: FDWNoiseModel
-  calibrated: false
-  catalog_name: null
+  noise_model_class: FDW
   data_model_name: so_scan_s0003
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  possible_maps_subproduct_kwargs: null
+  calibrated: false
+  catalogs_subproduct: default
+  catalog_name: null
   differenced: false
   dtype: f4
   enforce_equal_qid_kwargs:
+  - array
   - num_splits
   filter_kwargs:
     post_filt_rel_downgrade: 2
@@ -30,13 +53,12 @@ fdw:
     - 100
     - null
   kfilt_lbounds: null
+  masks_subproduct: default
   mask_est_name: so_scan_s0003_mask.fits
   mask_obs_name: null
   mask_obs_edgecut: 0
-  possible_subproduct_kwargs: null
   qid_names_template: '{array}_{freq}'
   srcfree: false
-  subproduct: default
   fwhm_fact_pt1:
   - 1350
   - 10.0
@@ -78,4 +100,4 @@ fdw:
   w_lmax_j: 5300
   w_lmin: 10
   model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num}'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'

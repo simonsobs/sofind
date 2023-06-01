@@ -2,4 +2,3 @@ qids_config: act_dr6vX_qids.yaml
 
 maps: 
   default_config: act_dr6v4.yaml
-  noreconv_config: act_dr6v4.yaml
