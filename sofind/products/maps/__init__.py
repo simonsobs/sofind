@@ -1,6 +1,7 @@
 from ..products import Product, get_implements_decorator
 
 from pixell import enmap
+
 import os
 
 class Map(Product):
@@ -39,7 +40,8 @@ class Map(Product):
         Returns
         -------
         str
-            Full path to requested product, including its directory.
+            If basename, basename of requested product. Else, full path to
+            requested product.
 
         Raises
         ------

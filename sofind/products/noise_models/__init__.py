@@ -42,10 +42,10 @@ class NoiseModel(Product):
         # param_dict is deepcopy :) also _noise_model_class now lives in the object
         # as a class attribute
         nm_cls = param_dict.pop('noise_model_class') 
-        modelio = io.BaseIO.get_subclass(nm_cls)(**param_dict)
+        ioobj = io.BaseIO.get_subclass(nm_cls)(**param_dict)
         
-        # don't worry about updating param_dict because modelio only in this scope
-        param_dict = modelio.param_formatted_dict 
+        # don't worry about updating param_dict because ioobj only in this scope
+        param_dict = ioobj.param_formatted_dict 
         model_file_template = param_dict['model_file_template']
         sim_file_template = param_dict['sim_file_template']
         qid_names_template = param_dict['qid_names_template']
@@ -91,7 +91,7 @@ class NoiseModel(Product):
         param_dict = subprod_dict[noise_model_name]
 
         nm_cls = param_dict.pop('noise_model_class') # param_dict is deepcopy :)
-        modelio = io.BaseIO.get_subclass(nm_cls)(**param_dict)
+        ioobj = io.BaseIO.get_subclass(nm_cls)(**param_dict)
     
         fn = self.get_noise_fn(
             noise_model_name, *qids, which=which, subproduct=subproduct,
@@ -103,8 +103,8 @@ class NoiseModel(Product):
 
         # only sims or models supported
         if which == 'sims':
-            return modelio._read_sim(fn, alm=alm, **read_noise_kwargs) 
+            return ioobj.read_sim(fn, alm=alm, **read_noise_kwargs) 
         elif which == 'models':
-            return modelio._read_model(fn, **read_noise_kwargs)
+            return ioobj.read_model(fn, **read_noise_kwargs)
         else:
             raise ValueError(f"which must be 'sims' or 'models', got {which}")

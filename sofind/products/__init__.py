@@ -5,3 +5,5 @@ from .maps import Map
 from .beams import Beam
 from .hotdogs import HotDog
 from .noise_models import NoiseModel
+from .catalogs import Catalog
+from .masks import Mask

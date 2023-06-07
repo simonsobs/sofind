@@ -3,5 +3,11 @@ qids_config: so_basic_qids.yaml
 maps: 
   default_config: so_scan_s0003.yaml
 
+masks:
+  default_config: generic_file.yaml
+
+catalogs:
+  default_config: generic_file.yaml
+
 noise_models:
   default_config: so_scan_s0003.yaml
