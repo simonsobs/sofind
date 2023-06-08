@@ -4,10 +4,10 @@ maps:
   default_config: so_scan_s0003.yaml
 
 masks:
-  default_config: generic_file.yaml
+  mnms_masks_config: mnms_masks.yaml
 
 catalogs:
-  default_config: generic_file.yaml
+  inpaint_catalogs_config: inpaint_catalogs.yaml
 
 noise_models:
   default_config: so_scan_s0003.yaml

@@ -1,5 +1,6 @@
-split_map_file_template: '{patch}_{daynight}_{array}_{freq}_{num_splits}way_set{split_num}_{maptag}.fits'
-coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_{num_splits}way_coadd_{maptag}.fits'
+system_paths:
+  della: /scratch/gpfs/ACT/dr6v3/maps/dr6v3_20211031/release_bestpass
+  perlmutter: /global/cfs/cdirs/act/data/sigurdkn/actpol/maps/dr6v3_20211031/release_bestpass
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
@@ -72,3 +73,6 @@ allowed_qids_extra_kwargs:
 
   pa7b_dw:
     num_splits: 4
+
+split_map_file_template: '{patch}_{daynight}_{array}_{freq}_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_{num_splits}way_coadd_{maptag}.fits'

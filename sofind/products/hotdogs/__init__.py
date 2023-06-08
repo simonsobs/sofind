@@ -22,6 +22,7 @@ class HotDog(Product):
     def __init__(self, **kwargs):
         self.set_attrs(__name__, kwargs)
         super().__init__(**kwargs)
+        self.check_product_config_internal_consistency(__name__)
     #################################
 
     # Feel free to add stuff here

@@ -1,3 +1,6 @@
+system_paths:
+  della: /scratch/gpfs/zatkins/data/simonsobs/mnms/masks
+
 allowed_qids_configs: 'all'
 
 allowed_qids: 'all'

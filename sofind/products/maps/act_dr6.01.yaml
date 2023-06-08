@@ -1,5 +1,5 @@
-split_map_file_template: 'act_dr6.01_{patch}_{array}_{freq}_{daynight}_{num_splits}way_set{split_num}_{maptag}.fits'
-coadd_map_file_template: 'act_dr6.01_{patch}_{array}_{freq}_{daynight}_{num_splits}way_coadd_{maptag}.fits'
+system_paths:
+  
 
 allowed_qids_configs:
 - act_advact_qids.yaml
@@ -72,3 +72,6 @@ allowed_qids_extra_kwargs:
 
   pa7b_dw:
     num_splits: 4
+
+split_map_file_template: 'act_dr6.01_{patch}_{array}_{freq}_{daynight}_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: 'act_dr6.01_{patch}_{array}_{freq}_{daynight}_{num_splits}way_coadd_{maptag}.fits'

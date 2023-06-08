@@ -13,6 +13,7 @@ class NoiseModel(Product):
     def __init__(self, **kwargs):
         self.set_attrs(__name__, kwargs)
         super().__init__(**kwargs)
+        self.check_product_config_internal_consistency(__name__)
 
     @implements(Product.get_fn)
     def get_noise_fn(self, noise_model_name, *qids, which='sims',

@@ -1,4 +1,6 @@
-split_map_file_template: 'lat01_s25_fullfp_{freq}_1pass_{num_splits}way_set0{split_num}_{maptag}.fits'
+system_paths:
+  della: /scratch/gpfs/zatkins/sync/simonsobs/scan-s0003/combined/processed/fejer1
+  perlmutter: /global/cfs/cdirs/sobs/sims/scan-s0003/output/combined/processed/fejer1
 
 allowed_qids_configs:
 - so_basic_qids.yaml
@@ -23,3 +25,5 @@ allowed_qids_extra_kwargs:
 
   uhfb:
     num_splits: 4
+
+split_map_file_template: 'lat01_s25_fullfp_{freq}_1pass_{num_splits}way_set0{split_num}_{maptag}.fits'

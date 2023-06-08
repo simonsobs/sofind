@@ -1,7 +1,10 @@
-beam_file_template: 'placeholder'
+system_paths:
+  della: /home/zatkins
 
 allowed_qids_configs: 'all'
 
 allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
+
+beam_file_template: 'placeholder'

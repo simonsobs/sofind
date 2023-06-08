@@ -12,6 +12,7 @@ class Mask(Product):
     def __init__(self, **kwargs):
         self.set_attrs(__name__, kwargs)
         super().__init__(**kwargs)
+        self.check_product_config_internal_consistency(__name__)
 
     @implements(Product.get_fn)
     def get_mask_fn(self, mask_fn, subproduct='default', basename=False,

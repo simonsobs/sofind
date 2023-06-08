@@ -1,7 +1,7 @@
 # This module's design gets around the fact that abstractmethods cannot be 
 # easily "renamed" dynamically
 
-from sofind import utils
+from sofind import utils, systems
 
 import functools
 import os
@@ -74,7 +74,6 @@ class Product:
         productmethods exactly once.
         """
         self.qids = kwargs.pop('qids')
-        self.paths = kwargs.pop('paths')
         self.configs = kwargs.pop('configs')
 
         for product in Product.__subclasses__():
@@ -126,37 +125,32 @@ class Product:
         """
         product = utils.get_producttag(product)
         
-        assert product not in ['qids', 'paths'], \
-            "Cannot have a product named 'qids' or 'paths'"
+        assert product not in ['qids', 'configs'], \
+            "Cannot have a product named 'qids' or 'configs'"
         
         product_dict = kwargs.pop(product, None)
 
         if product_dict is not None:
-            for subproduct, subproduct_dict in product_dict.items():
-                self.check_subproduct_config_internal_consistency(
-                    product, subproduct, subproduct_dict
-                    )
-
             setattr(self, product, product_dict)     
 
-    def check_subproduct_config_internal_consistency(self, product, subproduct,
-                                                     subproduct_dict):
-        """Ensure the subproduct configuration file is internally consistent. 
+    def check_product_config_internal_consistency(self, product):
+        """Ensure the subproduct configuration file is internally consistent for
+        every subproduct in this product in the datamodel. 
 
         Parameters
         ----------
         product : str
             Name of type of product, e.g. 'maps'. Can also be a module __name__
             in which case the product is inferred from the module basename.
-        subproduct : str
-            The specific subproduct.
-        subproduct_dict : dict
-            A dictionary corresponding to a subproduct configuration file. Should
-            contain 'allowed_qids_configs', 'allowed_qids',
-            'allowed_qids_extra_kwargs' entries.
 
         Raises
         ------
+        AssertionError
+            If a subproduct config lists a system that is not an sofind system.
+
+        KeyError
+            If subproduct config does not have a populated system_paths block.
+
         AssertionError
             If an allowed_qid is not in all of the specified allowed_qid_configs.
             Both 'allowed_qid' and 'allowed_qid_configs' may be 'all'.
@@ -164,39 +158,57 @@ class Product:
         AssertionError
             If any qid in 'allowed_qids_extra_kwargs' is not in 'allowed_qids'.
         """
-        product = utils.get_producttag(product)
+        try:
+            product_dict = self.get_product_dict(product)
+        except LookupError:
+            return # if not in the data model, it is internally consistent
 
-        # check each allowed_qid is in each allowed_qids_configs
-        allowed_qids_configs = subproduct_dict['allowed_qids_configs']
-        if allowed_qids_configs == 'all':
-            allowed_qids_configs = os.listdir(utils.get_package_fn('sofind', 'qids'))
+        for subproduct, subproduct_dict in product_dict.items():
+            subproduct_config = self.get_subproduct_config(product, subproduct)
+            product = utils.get_producttag(product)
 
-        allowed_qids = subproduct_dict['allowed_qids']
+            # check each listed system is in sofind systems
+            try:
+                for system in subproduct_dict['system_paths']:
+                    assert system in systems.sofind_systems, \
+                        f'product {product}, subproduct {subproduct} (config {subproduct_config}) ' + \
+                        f'has system {system} but {system} not in sofind_systems: ' + \
+                        f'{systems.sofind_systems}'
+            except (TypeError, KeyError) as e:
+                raise KeyError(f'product {product}, subproduct {subproduct} (config {subproduct_config}) '
+                            'missing system_paths') from e
 
-        if allowed_qids is not None and allowed_qids != 'all':
-            for allowed_qids_config in allowed_qids_configs:
+            # check each allowed_qid is in each allowed_qids_configs
+            allowed_qids_configs = subproduct_dict['allowed_qids_configs']
+            if allowed_qids_configs == 'all':
+                allowed_qids_configs = os.listdir(utils.get_package_fn('sofind', 'qids'))
 
-                # need to get the contents from the config_name
-                allowed_qids_fn = utils.get_package_fn('sofind', f'qids/{allowed_qids_config}')
-                allowed_qids_dict = utils.config_from_yaml_file(allowed_qids_fn)
+            allowed_qids = subproduct_dict['allowed_qids']
 
-                for qid in allowed_qids:
-                    assert qid in allowed_qids_dict, \
-                        f'qid {qid} allowed by product {product}, subproduct ' + \
-                        f'{subproduct} configuration file, but not in ' + \
-                        f'{allowed_qids_config}'
+            if allowed_qids is not None and allowed_qids != 'all':
+                for allowed_qids_config in allowed_qids_configs:
 
-        # check each allowed_qids_extra_kwarg key is an allowed_qid
-        if subproduct_dict['allowed_qids_extra_kwargs'] is not None:
-            assert allowed_qids is not None, \
-                f'{product}, subproduct {subproduct} configuration file has '+ \
-                'allowed_qids_extra_kwargs but allowed_qids is None'
+                    # need to get the contents from the config_name
+                    allowed_qids_fn = utils.get_package_fn('sofind', f'qids/{allowed_qids_config}')
+                    allowed_qids_dict = utils.config_from_yaml_file(allowed_qids_fn)
 
-            if allowed_qids != 'all':
-                for qid in subproduct_dict['allowed_qids_extra_kwargs']:
-                    assert qid in allowed_qids, \
-                        f'qid {qid} has extra kwargs in product {product}, subproduct ' + \
-                        f'{subproduct} configuration file, but not is not an allowed_qid'
+                    for qid in allowed_qids:
+                        assert qid in allowed_qids_dict, \
+                            f'qid {qid} allowed by product {product}, subproduct ' + \
+                            f'{subproduct} (config {subproduct_config}), but not in ' + \
+                            f'{allowed_qids_config}'
+
+            # check each allowed_qids_extra_kwarg key is an allowed_qid
+            if subproduct_dict['allowed_qids_extra_kwargs'] is not None:
+                assert allowed_qids is not None, \
+                    f'product {product}, subproduct {subproduct} (config {subproduct_config}) has '+ \
+                    'allowed_qids_extra_kwargs but allowed_qids is None'
+
+                if allowed_qids != 'all':
+                    for qid in subproduct_dict['allowed_qids_extra_kwargs']:
+                        assert qid in allowed_qids, \
+                            f'qid {qid} has extra kwargs in product {product}, subproduct ' + \
+                            f'{subproduct} (config {subproduct_config}), but not is not an allowed_qid'
 
     def check_subproduct_config_is_subset(self, this_product, this_subproduct,
                                           this_subproduct_dict, that_product,
@@ -325,17 +337,18 @@ class Product:
         KeyError
             If qid is not in the data_model qids_dict.
         """
+        subproduct_config = self.get_subproduct_config(product, subproduct)
         subproduct_dict = self.get_subproduct_dict(product, subproduct)
 
         # check allowed_qids is not None
         assert subproduct_dict['allowed_qids'] is not None, \
-            f'No allowed qids for product {product}, subproduct {subproduct}'
+            f'No allowed qids for product {product}, subproduct {subproduct} (config {subproduct_config})'
 
         # check qid is in the allowed_qids or 'all'
         if qid not in subproduct_dict['allowed_qids']:
             assert subproduct_dict['allowed_qids'] == 'all', \
                 f'qid {qid} not allowed by product {product}, subproduct ' + \
-                f'{subproduct} configuration file'
+                f'{subproduct} (config {subproduct_config})'
 
         qid_dict = deepcopy(self.qids[qid])
         if subproduct_dict['allowed_qids_extra_kwargs'] is not None:
@@ -435,7 +448,7 @@ class Product:
             product_dict = getattr(self, product)
         except AttributeError as e:
             raise LookupError(
-                f'Product {product} not in datamodel configuration file'
+                f'product {product} not in datamodel configuration file'
                 ) from e
         
         return deepcopy(product_dict) if copy else product_dict                   
@@ -474,7 +487,7 @@ class Product:
         except KeyError as e:
             product = utils.get_producttag(product)
             raise LookupError(
-                f'Product {product}, subproduct {subproduct} not in '
+                f'product {product}, subproduct {subproduct} not in '
                 'datamodel configuration file'
             ) from e
         
@@ -499,19 +512,29 @@ class Product:
 
         Raises
         ------
-        KeyError
-            If a user has not added the subproduct under the product type to
-            their .sofind_config.yaml file under this datamodel, indicating
-            they do not want to interact with these subproducts.
+        AssertionError
+            If a user's SOFIND_SYSTEM is not an sofind system.
+
+        LookupError
+            If a subproduct is not served on the user SOFIND_SYSTEM.
         """
+        subproduct_dict = self.get_subproduct_dict(product, subproduct)
+        subproduct_config = self.get_subproduct_config(product, subproduct)
+        my_system = os.environ['SOFIND_SYSTEM']
+
+        assert my_system in systems.sofind_systems, \
+            f'user system {my_system} not in sofind_systems: {systems.sofind_systems}'
+
         try:
             product = utils.get_producttag(product)
-            subproduct_path = self.paths[product][subproduct]
+            subproduct_path = subproduct_dict['system_paths'][my_system]
         except KeyError as e:
+            # we know KeyError thrown on my_system because 
+            # check_subproduct_config_internal_consistency already checks for key
+            # system_paths in subproduct_dict
             raise LookupError(
-                f'Product {product}, subproduct {subproduct} not in user '
-                f'.sofind_config.yaml file, cannot get {product}, {subproduct} '
-                'filename'
+                f'product {product}, subproduct {subproduct} (config {subproduct_config}) not served on '
+                f'user system {my_system}'
             ) from e
         return subproduct_path
     
@@ -542,7 +565,7 @@ class Product:
             subproduct_config = self.configs[product][subproduct]
         except KeyError as e:
             raise LookupError(
-                f'Product {product}, subproduct {subproduct} not in '
+                f'product {product}, subproduct {subproduct} not in '
                 'datamodel configuration file'
             ) from e
         return subproduct_config

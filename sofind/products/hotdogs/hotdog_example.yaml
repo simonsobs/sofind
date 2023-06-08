@@ -1,4 +1,5 @@
-hotdog_file_template: '{array}_{freq}_{num_splits}way_{condiment}.txt'
+system_paths:
+  perlmutter: /home/zatkins
 
 allowed_qids_configs:
 - act_dr6_default_qids.yaml
@@ -18,3 +19,5 @@ pa5a:
 
 pa6a:
   num_splits: 7
+
+hotdog_file_template: '{array}_{freq}_{num_splits}way_{condiment}.txt'
