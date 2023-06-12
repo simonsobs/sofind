@@ -1,6 +1,5 @@
 system_paths:
-  della: /scratch/gpfs/SIMONSOBS/sims/scan-s0003/output/combined/processed/fejer1
-  perlmutter: /global/cfs/cdirs/sobs/sims/scan-s0003/output/combined/processed/fejer1
+  della: /scratch/gpfs/SIMONSOBS/sims/scan-s0003/output/combined/processed/cc
 
 allowed_qids_configs:
 - so_basic_qids.yaml

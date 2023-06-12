@@ -3,5 +3,12 @@ qids_config: act_dr6vX_qids.yaml
 maps: 
   default_config: act_dr6v3.yaml
   pwv_split_config: act_dr6v3_pwv_split.yaml
-beams:
-  default_config: beam.yaml
+
+masks:
+  mnms_masks_config: mnms_masks.yaml
+
+catalogs:
+  inpaint_catalogs_config: inpaint_catalogs.yaml
+
+noise_models:
+  default_config: act_dr6v3.yaml

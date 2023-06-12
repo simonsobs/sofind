@@ -2,12 +2,11 @@ qids_config: so_basic_qids.yaml
 
 maps: 
   default_config: so_scan_s0003.yaml
+  cc_config: so_scan_s0003_cc.yaml
 
 masks:
   mnms_masks_config: mnms_masks.yaml
 
-catalogs:
-  inpaint_catalogs_config: inpaint_catalogs.yaml
-
 noise_models:
   default_config: so_scan_s0003.yaml
+  cc_config: so_scan_s0003_cc.yaml

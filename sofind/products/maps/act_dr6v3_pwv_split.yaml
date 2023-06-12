@@ -80,5 +80,5 @@ allowed_qids_extra_kwargs:
   pa6b_dd:
     num_splits: 4
 
-split_map_file_template: '{patch}_{daynight}_{array}_{freq}_{null_split}_{num_splits}way_set{split_num}_{maptag}.fits'
-coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_{null_split}_{num_splits}way_coadd_{maptag}.fits'
+split_map_file_template: '{patch}_{daynight}_{array}_{freq}_{pwv_split}_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_{pwv_split}_{num_splits}way_coadd_{maptag}.fits'

@@ -29,9 +29,9 @@ allowed_qids_extra_kwargs:
 fdw:
   noise_model_class: FDW
   data_model_name: so_scan_s0003
-  subproduct: default
+  subproduct: cc
   maps_product: maps
-  maps_subproduct: default
+  maps_subproduct: cc
   possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null

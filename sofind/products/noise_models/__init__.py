@@ -22,15 +22,19 @@ class NoiseModel(Product):
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
         param_dict = subprod_dict[noise_model_name]
 
-        # check compatibility with data model and parent product/subproduct
-        # (e.g., maps)
-        data_model_name = os.path.splitext(param_dict['data_model_name'])[0]
+        # check compatibility with data model
+        # allow data_model_name to have periods before .yaml
+        data_model_name = param_dict['data_model_name']
+        if not data_model_name.endswith('.yaml'):
+            data_model_name += '.yaml'
+        data_model_name = os.path.splitext(data_model_name)[0]
         assert data_model_name == self.name, \
             f'Inconsistent data_model_name: {data_model_name} and {self.name}'
         subproduct_from_config = param_dict['subproduct']
         assert subproduct_from_config == subproduct, \
             f'Inconsistent subproduct: {subproduct_from_config} and {subproduct}'
         
+        # check compatibility with parent product/subproduct (e.g., maps).
         parent_product, parent_subproduct = param_dict['maps_product'], param_dict['maps_subproduct']
         parent_subprod_dict = self.get_subproduct_dict(
             parent_product, parent_subproduct

@@ -174,9 +174,11 @@ class Product:
                         f'product {product}, subproduct {subproduct} (config {subproduct_config}) ' + \
                         f'has system {system} but {system} not in sofind_systems: ' + \
                         f'{systems.sofind_systems}'
-            except (TypeError, KeyError) as e:
+            except KeyError as e:
                 raise KeyError(f'product {product}, subproduct {subproduct} (config {subproduct_config}) '
                             'missing system_paths') from e
+            except TypeError as e:
+                assert subproduct_dict['system_paths'] is None # None is OK
 
             # check each allowed_qid is in each allowed_qids_configs
             allowed_qids_configs = subproduct_dict['allowed_qids_configs']
@@ -528,10 +530,12 @@ class Product:
         try:
             product = utils.get_producttag(product)
             subproduct_path = subproduct_dict['system_paths'][my_system]
-        except KeyError as e:
+        except (TypeError, KeyError) as e:
             # we know KeyError thrown on my_system because 
             # check_subproduct_config_internal_consistency already checks for key
             # system_paths in subproduct_dict
+            #
+            # TypeError is if subproduct_dict['system_paths'] is None
             raise LookupError(
                 f'product {product}, subproduct {subproduct} (config {subproduct_config}) not served on '
                 f'user system {my_system}'
