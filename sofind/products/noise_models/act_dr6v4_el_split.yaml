@@ -1,5 +1,6 @@
 system_paths:
-  della: /scratch/gpfs/ACT/dr6v3/simulations/noise
+  della: /scratch/gpfs/ACT/dr6v4/simulations/noise
+  perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
@@ -60,7 +61,7 @@ tile_cmbmask:
   mask_obs_name: dr6v3_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   qid_names_template: '{array}_{freq}'
-  srcfree: true
+  srcfree: false
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
@@ -96,7 +97,7 @@ fdw_cmbmask:
   mask_obs_name: dr6v3_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   qid_names_template: '{array}_{freq}'
-  srcfree: true
+  srcfree: false
   fwhm_fact_pt1:
   - 1350
   - 10.0

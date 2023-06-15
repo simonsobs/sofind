@@ -1,5 +1,6 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v3/simulations/noise
+  perlmutter: /global/cfs/cdirs/act/data/act_dr6v3/simulations/noise
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
