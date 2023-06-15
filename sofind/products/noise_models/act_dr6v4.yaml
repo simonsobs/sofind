@@ -61,7 +61,7 @@ tile_cmbmask:
   mask_obs_name: dr6v3_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   qid_names_template: '{array}_{freq}'
-  srcfree: false
+  srcfree: true
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
@@ -97,7 +97,7 @@ fdw_cmbmask:
   mask_obs_name: dr6v3_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   qid_names_template: '{array}_{freq}'
-  srcfree: false
+  srcfree: true
   fwhm_fact_pt1:
   - 1350
   - 10.0

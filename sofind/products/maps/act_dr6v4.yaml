@@ -1,5 +1,5 @@
 system_paths:
-  della: /scratch/gpfs/ACT/dr6v4/maps/dr6v4_20230316/release
+  della: /scratch/gpfs/ACT/dr6v4/maps/dr6v4_20230316/release_old
   perlmutter: /global/cfs/cdirs/act/data/sigurdkn/actpol/maps/dr6v4_20230316/release
 
 allowed_qids_configs:
