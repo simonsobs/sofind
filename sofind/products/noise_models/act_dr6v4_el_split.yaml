@@ -38,7 +38,11 @@ tile_cmbmask:
   subproduct: el_split
   maps_product: maps
   maps_subproduct: el_split
-  possible_maps_subproduct_kwargs: null
+  possible_maps_subproduct_kwargs:
+    el_split:
+      - el1
+      - el2
+      - el3
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
@@ -65,8 +69,8 @@ tile_cmbmask:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
-  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
 fdw_cmbmask:
   noise_model_class: FDW
@@ -138,5 +142,5 @@ fdw_cmbmask:
   w_lmax: 10800
   w_lmax_j: 5300
   w_lmin: 10
-  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
