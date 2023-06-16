@@ -6,7 +6,7 @@ For any questions please reach out to Zach Atkins (email: [zatkins@princeton.edu
 
 ## Dependencies
 Currently:
-* from `simonsobs`: [`pixell`](https://github.com/simonsobs/pixell)
+* from `simonsobs`: [`pixell`](https://github.com/simonsobs/pixell), [`mnms`](https://github.com/simonsobs/mnms)
 
 All other dependencies (e.g. `numpy` etc.) are required by packages listed here, especially by `pixell`.
 
