@@ -1,5 +1,6 @@
 system_paths:
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/masks
+  perlmutter: /global/cfs/cdirs/act/data/zatkins/data/simonsobs/mnms/masks
 
 allowed_qids_configs: 'all'
 

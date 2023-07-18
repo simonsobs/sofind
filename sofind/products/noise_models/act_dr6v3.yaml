@@ -130,7 +130,7 @@ fdw_cmbmask:
   filter_kwargs:
     post_filt_rel_downgrade: 2
   iso_filt_method: harmonic
-  ivar_filt_method: basic
+  ivar_filt_method: null
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
@@ -146,6 +146,7 @@ fdw_cmbmask:
   fwhm_fact_pt2:
   - 5400
   - 16.0
+  kern_cut: 0
   lamb: 1.6
   n: 36
   nback:
