@@ -59,6 +59,8 @@ fdw:
   kfilt_lbounds: null
   masks_subproduct: mnms_masks
   mask_est_name: so_scan_s0003_mask_cc.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 180
   mask_obs_name: null
   mask_obs_edgecut: 0
   qid_names_template: '{array}_{freq}'

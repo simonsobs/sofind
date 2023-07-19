@@ -60,8 +60,10 @@ tile_cmbmask:
   ivar_lmaxs: null
   kfilt_lbounds: null
   masks_subproduct: mnms_masks
-  mask_est_name: dr6v3_20220316_baseline_union_mask_fejer1.fits
-  mask_obs_name: dr6v3_xlink_union_mask_fejer1_0.001.fits
+  mask_est_name: dr6v4_pwv_split_ivar_union_mask_fejer1_GAL060_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_pwv_split_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   qid_names_template: '{array}_{freq}'
   srcfree: true
@@ -99,8 +101,10 @@ tile_cmbmask_ivar4arcmin_sameseed:
   ivar_lmaxs: null
   kfilt_lbounds: null
   masks_subproduct: mnms_masks
-  mask_est_name: dr6v3_20220316_baseline_union_mask_fejer1.fits
-  mask_obs_name: dr6v3_xlink_union_mask_fejer1_0.001.fits
+  mask_est_name: dr6v4_pwv_split_ivar_union_mask_fejer1_GAL060_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_pwv_split_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   qid_names_template: '{array}_{freq}'
   srcfree: true
@@ -138,8 +142,10 @@ fdw_cmbmask:
   ivar_lmaxs: null
   kfilt_lbounds: null
   masks_subproduct: mnms_masks
-  mask_est_name: dr6v3_20220316_baseline_union_mask_fejer1.fits
-  mask_obs_name: dr6v3_xlink_union_mask_fejer1_0.001.fits
+  mask_est_name: dr6v4_pwv_split_ivar_union_mask_fejer1_GAL060_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_pwv_split_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   qid_names_template: '{array}_{freq}'
   srcfree: true

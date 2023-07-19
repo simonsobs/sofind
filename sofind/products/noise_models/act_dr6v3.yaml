@@ -58,6 +58,8 @@ tile_cmbmask:
   kfilt_lbounds: null
   masks_subproduct: mnms_masks
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 180
   mask_obs_name: dr6v3_xlink_union_mask_cc_0.001.fits
   mask_obs_edgecut: 0
   qid_names_template: '{array}_{freq}'
@@ -94,6 +96,8 @@ wav_cmbmask:
   kfilt_lbounds: null
   masks_subproduct: mnms_masks
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 180
   mask_obs_name: dr6v3_xlink_union_mask_cc_0.001.fits
   mask_obs_edgecut: 0
   qid_names_template: '{array}_{freq}'
@@ -136,6 +140,8 @@ fdw_cmbmask:
   kfilt_lbounds: null
   masks_subproduct: mnms_masks
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 180
   mask_obs_name: dr6v3_xlink_union_mask_cc_0.001.fits
   mask_obs_edgecut: 0
   qid_names_template: '{array}_{freq}'
