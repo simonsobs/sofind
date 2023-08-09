@@ -50,6 +50,8 @@ tile_cmbmask:
   - daynight
   - num_splits
   filter_kwargs:
+    lim: 0.000001
+    lim0: null
     post_filt_rel_downgrade: 2
   iso_filt_method: harmonic
   ivar_filt_method: basic
@@ -62,6 +64,8 @@ tile_cmbmask:
   mask_est_apodization: 180
   mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
   qid_names_template: '{array}_{freq}'
   srcfree: true
   delta_ell_smooth: 400
@@ -88,6 +92,8 @@ tile_cmbmask_ivfwhm2:
   - daynight
   - num_splits
   filter_kwargs:
+    lim: 0.000001
+    lim0: null
     post_filt_rel_downgrade: 2
   iso_filt_method: harmonic
   ivar_filt_method: basic
@@ -100,6 +106,8 @@ tile_cmbmask_ivfwhm2:
   mask_est_apodization: 180
   mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
   qid_names_template: '{array}_{freq}'
   srcfree: true
   delta_ell_smooth: 400
@@ -126,6 +134,8 @@ fdw_cmbmask:
   - daynight
   - num_splits
   filter_kwargs:
+    lim: 0.000001
+    lim0: null
     post_filt_rel_downgrade: 2
   iso_filt_method: harmonic
   ivar_filt_method: basic
@@ -138,6 +148,8 @@ fdw_cmbmask:
   mask_est_apodization: 180
   mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
   qid_names_template: '{array}_{freq}'
   srcfree: true
   fwhm_fact_pt1:
@@ -202,6 +214,8 @@ fdw_cmbmask_ivfwhm2:
   - daynight
   - num_splits
   filter_kwargs:
+    lim: 0.000001
+    lim0: null
     post_filt_rel_downgrade: 2
   iso_filt_method: harmonic
   ivar_filt_method: basic
@@ -214,6 +228,8 @@ fdw_cmbmask_ivfwhm2:
   mask_est_apodization: 180
   mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
   qid_names_template: '{array}_{freq}'
   srcfree: true
   fwhm_fact_pt1:
