@@ -1,0 +1,290 @@
+system_paths:
+  rusty: /mnt/home/aduivenvoorden/project/so/20230524_sat_noise/v1/car/noise_models
+
+allowed_qids_configs:
+- so_basic_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+  lfa:
+    num_splits: 2
+
+  lfb:
+    num_splits: 2
+
+  mfa:
+    num_splits: 2
+
+  mfb:
+    num_splits: 2
+
+  uhfa:
+    num_splits: 2
+
+  uhfb:
+    num_splits: 2
+
+fdw_lf:
+  noise_model_class: FDW
+  data_model_name: so_sat_v1
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  possible_maps_subproduct_kwargs: null
+  calibrated: false
+  catalogs_subproduct: null
+  catalog_name: null
+  differenced: false
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - array
+  - num_splits
+  filter_kwargs:
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  #ivar_filt_method: null
+  ivar_fwhms: null
+  #ivar_fwhms: 30
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: so_sat_v1_f1_masks
+  mask_est_name: coadd_SAT_f030_f040_mask_est.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: coadd_SAT_f030_f040_mask_obs.fits
+  mask_obs_edgecut: 0
+  qid_names_template: '{array}_{freq}'
+  srcfree: false
+  fwhm_fact_pt1:
+  - 1350
+  - 10.0
+  fwhm_fact_pt2:
+  - 5400
+  - 16.0
+  kern_cut: 0.0001
+  lamb: 1.7
+  n: 12
+  nback:
+  #- 0
+  - 12
+  nforw:
+  - 0
+  - 6
+  - 6
+  #- 6
+  #- 6
+  - 12
+  - 12 
+  - 12
+  - 12
+  p: 2
+  pback:
+  #- 0
+  - 2
+  pforw:
+  # - 0
+  # - 6
+  # - 4
+  # - 2
+  # - 2
+  # - 12
+  # - 8
+  - 0
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  w_lmax: 405
+  w_lmax_j: 304
+  w_lmin: 10
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+fdw_mf:
+  noise_model_class: FDW
+  data_model_name: so_sat_v1
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  possible_maps_subproduct_kwargs: null
+  calibrated: false
+  catalogs_subproduct: null
+  catalog_name: null
+  differenced: false
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - array
+  - num_splits
+  filter_kwargs:
+    post_filt_rel_downgrade: 2
+  #  ell_lows:
+  #    - 25
+  #  ell_highs:
+  #    - 50
+  #  profile: cosine    
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  #ivar_filt_method: null
+  #ivar_filt_method: scaledep
+  #ivar_fwhms:
+  #  - 15
+  #  - 15
+  #ivar_lmaxs:
+  #  - 25
+  #  - null
+  ivar_fwhms: null
+  #ivar_fwhms: 30
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: so_sat_v1_f1_masks
+  mask_est_name: coadd_SAT_f090_f150_mask_est.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: coadd_SAT_f090_f150_mask_obs.fits
+  mask_obs_edgecut: 0
+  qid_names_template: '{array}_{freq}'
+  srcfree: false
+  fwhm_fact_pt1:
+  - 1350
+  - 10.0
+  fwhm_fact_pt2:
+  - 5400
+  - 16.0
+  kern_cut: 0.0001
+  lamb: 1.3
+  n: 12
+  nback:
+  - 0
+  #- 16
+  nforw:
+  - 6
+  - 6
+  - 6
+  - 6
+  - 12
+  - 12 
+  - 12
+  - 12
+  - 12
+  p: 2
+  pback:
+  - 0
+  #- 2
+  pforw:
+  - 2
+  # - 6
+  # - 4
+  # - 2
+  # - 2
+  # - 12
+  # - 8
+  # - 4
+  # - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+#  w_lmax: 1620
+#  w_lmax_j: 620
+  w_lmax: 2620
+  w_lmax_j: 1600 
+  #w_lmin: 10
+  w_lmin: 15
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+fdw_uhf:
+  noise_model_class: FDW
+  data_model_name: so_sat_v1
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  possible_maps_subproduct_kwargs: null
+  calibrated: false
+  catalogs_subproduct: null
+  catalog_name: null
+  differenced: false
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - array
+  - num_splits
+  filter_kwargs:
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  #ivar_filt_method: null
+  ivar_fwhms: null
+  #ivar_fwhms: 30
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: so_sat_v1_f1_masks
+  mask_est_name: coadd_SAT_f230_f290_mask_est.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: coadd_SAT_f230_f290_mask_obs.fits
+  mask_obs_edgecut: 0
+  qid_names_template: '{array}_{freq}'
+  srcfree: false
+  fwhm_fact_pt1:
+  - 1350
+  - 10.0
+  fwhm_fact_pt2:
+  - 5400
+  - 16.0
+  kern_cut: 0.0001
+  lamb: 1.7
+  n: 12
+  nback:
+  #- 0
+  - 6
+  nforw:
+  - 0
+  - 6
+  - 6
+  - 6
+  - 6
+  - 12
+  - 12
+  - 12
+  - 12
+  - 12
+  - 12
+  p: 2
+  pback:
+  #- 0
+  - 2
+  pforw:
+  - 0
+  # - 6
+  # - 4
+  # - 2
+  # - 2
+  # - 12
+  # - 8
+  # - 4
+  # - 2
+  # - 12
+  # - 8
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  w_lmax: 3240
+  w_lmax_j: 2240
+  w_lmin: 10
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'

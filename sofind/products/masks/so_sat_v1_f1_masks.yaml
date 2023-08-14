@@ -1,0 +1,9 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/sobs/sims/sat-noise-sims/v1/car/masks
+  rusty: /mnt/home/aduivenvoorden/project/so/20230524_sat_noise/v1/car/masks
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
