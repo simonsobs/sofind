@@ -42,6 +42,8 @@ fdw:
   - array
   - num_splits
   filter_kwargs:
+    lim: 0.000001
+    lim0: null
     post_filt_rel_downgrade: 2
     ell_lows:
       - 100
@@ -63,6 +65,8 @@ fdw:
   mask_est_apodization: 180
   mask_obs_name: null
   mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
   qid_names_template: '{array}_{freq}'
   srcfree: false
   fwhm_fact_pt1:
