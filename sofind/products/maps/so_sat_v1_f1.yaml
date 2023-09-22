@@ -1,5 +1,5 @@
 system_paths:
-  perlmutter: /global/cfs/cdirs/sobs/sims/sat-noise-sims/v1/car
+  perlmutter: /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0014_20230920/car/
   rusty: /mnt/home/aduivenvoorden/project/so/20230524_sat_noise/v1/car
 
 allowed_qids_configs:
