@@ -38,7 +38,6 @@ tile_cmbmask:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
@@ -80,7 +79,6 @@ tile_cmbmask_ivfwhm2:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
@@ -122,7 +120,6 @@ fdw_cmbmask:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
@@ -202,7 +199,6 @@ fdw_cmbmask_ivfwhm2:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv

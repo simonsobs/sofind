@@ -32,7 +32,6 @@ fdw:
   subproduct: cc
   maps_product: maps
   maps_subproduct: cc
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null
   catalog_name: null

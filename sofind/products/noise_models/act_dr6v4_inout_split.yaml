@@ -38,10 +38,6 @@ tile_cmbmask:
   subproduct: inout_split
   maps_product: maps
   maps_subproduct: inout_split
-  possible_maps_subproduct_kwargs:
-    inout_split:
-      - inout1
-      - inout2
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
@@ -83,10 +79,6 @@ tile_cmbmask_ivfwhm2:
   subproduct: inout_split
   maps_product: maps
   maps_subproduct: inout_split
-  possible_maps_subproduct_kwargs:
-    inout_split:
-      - inout1
-      - inout2
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
@@ -128,10 +120,6 @@ fdw_cmbmask:
   subproduct: inout_split
   maps_product: maps
   maps_subproduct: inout_split
-  possible_maps_subproduct_kwargs:
-    inout_split:
-      - inout1
-      - inout2
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
@@ -211,10 +199,6 @@ fdw_cmbmask_ivfwhm2:
   subproduct: inout_split
   maps_product: maps
   maps_subproduct: inout_split
-  possible_maps_subproduct_kwargs:
-    inout_split:
-      - inout1
-      - inout2
   calibrated: false
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
