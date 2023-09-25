@@ -32,7 +32,6 @@ fdw_lf:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null
   catalog_name: null
@@ -102,7 +101,6 @@ fdw_mf:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null
   catalog_name: null
@@ -180,7 +178,6 @@ fdw_uhf:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null
   catalog_name: null
@@ -258,7 +255,6 @@ tile_lf:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null
   catalog_name: null
@@ -298,7 +294,6 @@ tile_mf:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null
   catalog_name: null
@@ -338,7 +333,6 @@ tile_uhf:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  possible_maps_subproduct_kwargs: null
   calibrated: false
   catalogs_subproduct: null
   catalog_name: null
