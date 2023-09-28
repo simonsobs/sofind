@@ -1,5 +1,6 @@
 ### ADD SYSTEMS ON WHICH SOFIND PRODUCTS ARE SERVED HERE ###
 sofind_systems = [
     'della',
-    'perlmutter'
+    'perlmutter',
+    'rusty'
 ]

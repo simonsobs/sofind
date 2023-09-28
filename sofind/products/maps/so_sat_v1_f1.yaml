@@ -1,0 +1,29 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0014_20230920/car/
+  rusty: /mnt/home/aduivenvoorden/project/so/20230524_sat_noise/v1/car
+
+allowed_qids_configs:
+- so_basic_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+  lfa:
+    num_splits: 2
+
+  lfb:
+    num_splits: 2
+
+  mfa:
+    num_splits: 2
+
+  mfb:
+    num_splits: 2
+
+  uhfa:
+    num_splits: 2
+
+  uhfb:
+    num_splits: 2
+
+split_map_file_template: 'coadd_SAT_{freq}_{num_splits}way_set0{split_num}_{maptag}_inpaint.fits'

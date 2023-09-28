@@ -1,0 +1,10 @@
+qids_config: so_basic_qids.yaml  
+
+maps: 
+  default_config: so_sat_v1_f1.yaml
+
+masks:
+  so_sat_v1_f1_masks: so_sat_v1_f1_masks.yaml
+
+noise_models:
+  default_config: so_sat_v1_f1.yaml
