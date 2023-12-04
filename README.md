@@ -11,13 +11,13 @@ Currently:
 All other dependencies (e.g. `numpy` etc.) are required by packages listed here, especially by `pixell`.
 
 ## Installation
-Clone this repo and `cd` to `/path/to/sofind/`:
+Clone this repo and the `mnms` repo. `mnms` and `sofind` are install-time circular dependencies. Thus, they need to be installed in the same call to pip:
 ```shell
-$ pip install .
+$ pip install path/to/mnms path/to/sofind
 ```
 or 
 ```shell
-$ pip install -e .
+$ pip install -e path/to/mnms -e path/to/sofind
 ```
 to see changes to source code automatically updated in your environment.
 
