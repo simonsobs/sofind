@@ -13,7 +13,7 @@ catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
 
 noise_models:
-  default_config: act_dr6v4.yaml
+  default_config: act_dr6v4_day.yaml
   # el_split_config: act_dr6v4_day_el_split.yaml
   # pwv_split_config: act_dr6v4_day_pwv_split.yaml
   # inout_split_config: act_dr6v4_day_inout_split.yaml
