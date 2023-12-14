@@ -1,7 +1,7 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v4/simulations/noise
   perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
-  dirac: /rds/user/ia404/hpc-work/sslp/dr6v4/mnms/
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
@@ -13,6 +13,7 @@ allowed_qids:
 - pa5b
 - pa6a
 - pa6b
+
 
 allowed_qids_extra_kwargs:
   pa4a:
