@@ -1,0 +1,61 @@
+system_paths:
+  della: /scratch/gpfs/ACT/dr6v4/maps/dr6v4_20230316/release
+  perlmutter: /global/cfs/cdirs/act/data/sigurdkn/actpol/maps/dr6v4_20230316/release
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/daytime/
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa4a_dw
+- pa4b_dw
+- pa5a_dw
+- pa5b_dw
+- pa6a_dw
+- pa6b_dw
+- pa4a_dd
+- pa4b_dd
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
+
+allowed_qids_extra_kwargs:
+  pa4a_dw:
+    num_splits: 4
+
+  pa4b_dw:
+    num_splits: 4
+
+  pa5a_dw:
+    num_splits: 4
+
+  pa5b_dw:
+    num_splits: 4
+
+  pa6a_dw:
+    num_splits: 4
+
+  pa6b_dw:
+    num_splits: 4
+  
+  pa4a_dd:
+    num_splits: 4
+
+  pa4b_dd:
+    num_splits: 4
+
+  pa5a_dd:
+    num_splits: 4
+
+  pa5b_dd:
+    num_splits: 4
+
+  pa6a_dd:
+    num_splits: 4
+
+  pa6b_dd:
+    num_splits: 4
+
+split_map_file_template: '{patch}_{daynight}_{array}_{freq}_3pass_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_3pass_{num_splits}way_coadd_{maptag}.fits'
