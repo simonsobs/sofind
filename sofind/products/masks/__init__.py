@@ -15,7 +15,7 @@ class Mask(Product):
         self.check_product_config_internal_consistency(__name__)
 
     @implements(Product.get_fn)
-    def get_mask_fn(self, mask_fn, mask_type=None, subproduct='default', basename=False,
+    def get_mask_fn(self, mask_fn, subproduct='default', basename=False,
                        **kwargs):
         """Get the full path to a mask product.
 
@@ -48,13 +48,12 @@ class Mask(Product):
         if mask_fn is None:
 
             # construct filename of mask from yaml file
-            fn = subprod_dict[mask_type]
-            template = fn['mask_template']
+            fn_template = subprod_dict['mask_template']
 
-            fn['restricted_tag'] = 'sk' if fn['restricted'] else ''
-            fn['coordinates_tag'] = '_fejer' if fn['coordinates'] == 'fejer' else ''
+            subprod_dict['restricted_tag'] = 'sk' if subprod_dict['restricted'] else ''
+            subprod_dict['coordinates_tag'] = '_fejer' if subprod_dict['coordinates'] == 'fejer' else ''
 
-            mask_fn = template.format(**fn)
+            mask_fn = fn_template.format(**subprod_dict)
 
         if basename:
             return mask_fn
@@ -63,7 +62,7 @@ class Mask(Product):
             return os.path.join(subprod_path, mask_fn)
 
     @implements(Product.read_product)
-    def read_mask(self, mask_fn, mask_type = None, subproduct='default', read_map_kwargs=None, 
+    def read_mask(self, mask_fn, subproduct='default', read_map_kwargs=None, 
                   **kwargs):
         """Read a mask product from disk.
 
@@ -84,7 +83,7 @@ class Mask(Product):
         enmap.ndmap
             The requested mask.
         """
-        fn = self.get_mask_fn(mask_fn, mask_type, subproduct=subproduct, basename=False,
+        fn = self.get_mask_fn(mask_fn, subproduct=subproduct, basename=False,
                               **kwargs)
         
         if read_map_kwargs is None:

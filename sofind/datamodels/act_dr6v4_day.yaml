@@ -20,5 +20,4 @@ noise_models:
   # inout_split_config: act_dr6v4_day_inout_split.yaml
 
 beams:
-  beams_20230130 : beams_20230130.yaml
-  beams_nemo: beams_nemo.yaml
+  beams_v4_20230130 : beams_v4_20230130.yaml

@@ -1,6 +1,7 @@
 system_paths:
   della: 
-  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/20230130_beams/
+  perlmutter: /global/cfs/cdirs/act/data/adriaand/beams/20220817_beams/
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/beams/20220817_beams/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
@@ -12,25 +13,9 @@ allowed_qids:
 - pa5b
 - pa6a
 - pa6b
-- pa4a_dd
-- pa4b_dd
-- pa5a_dd
-- pa5b_dd
-- pa6a_dd
-- pa6b_dd
-- pa4a_dw
-- pa4b_dw
-- pa5a_dw
-- pa5b_dw
-- pa6a_dw
-- pa6b_dw
 
 allowed_qids_extra_kwargs:
 
-beams_v4_20230130:
+beams_v3_20220817:
   split_beam_file_template:  'set{split_num}_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
   coadd_beam_file_template:  'coadd_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
-
-beams_v4_20230130_snfit:
-  coadd_beam_file_template:  'beam_tform_cmbfit_{daynight}_{array}_{freq}.txt'
-

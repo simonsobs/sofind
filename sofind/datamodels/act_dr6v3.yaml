@@ -18,7 +18,7 @@ calibrations:
   cal_baseline: dr6v3_cal_baseline.yaml
 
 beams:
-  
+  beams_v3_20220817: beams_v3_20220817.yaml
 
 transfer_func:
   dr6_night: dr6_night_tf.yaml

@@ -15,13 +15,13 @@ class TransferFunc(Product):
 
     @implements(Product.get_fn)
 
-    def get_tf_fn(self, tf_name, qid, subproduct='default',
+    def get_tf_fn(self, qid, subproduct='default',
                       basename=False, **kwargs):
         
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         # get the appropriate filename template
-        fn_template = subprod_dict[tf_name]['tf_template']
+        fn_template = subprod_dict['tf_template']
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
@@ -38,11 +38,11 @@ class TransferFunc(Product):
 
 
     @implements(Product.read_product)
-    def read_tf(self, tf_name, qid, subproduct='default', 
+    def read_tf(self, qid, subproduct='default', 
                     loadtxt_kwargs=None, **kwargs):
 
         # use get_tf_fn and some external library to load the data
-        fn = self.get_tf_fn(tf_name, qid, subproduct=subproduct, 
+        fn = self.get_tf_fn(qid, subproduct=subproduct, 
                                 basename=False, **kwargs)
         if loadtxt_kwargs is None:
             loadtxt_kwargs = {'unpack': True}
