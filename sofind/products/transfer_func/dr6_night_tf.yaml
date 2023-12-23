@@ -1,0 +1,22 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/act/data/alaposta/transfer_functions/
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/transfer_functions/
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa4a
+- pa4b
+- pa5a
+- pa5b
+- pa6a
+- pa6b
+
+allowed_qids_extra_kwargs:
+
+tf_dr6_v4_230523:
+  tf_template: '/dr6_v4_230523/map_making_tf_ACTxNPIPE_NPIPExNPIPE_logistic/tf_fit_dr6_{array}_{freq}.dat'
+
+tf_dr6_v3_220701:
+  tf_template: '/dr6_v3_220701/map_making_tf_ACTxNPIPE_NPIPExNPIPE_logistic/tf_fit_dr6_{array}_{freq}.dat'

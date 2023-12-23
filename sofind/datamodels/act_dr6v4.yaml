@@ -23,6 +23,8 @@ calibrations:
   cal_230523: dr6v4_cal_230523.yaml
 
 beams:
-  beams_20230130 : beams_20230130.yaml
-  beams_nemo: beams_nemo.yaml
-  
+  beams_v4_20230130 : beams_v4_20230130.yaml
+
+transfer_func:
+  dr6_night: dr6_night_tf.yaml
+

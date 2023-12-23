@@ -8,3 +8,4 @@ from .noise_models import NoiseModel
 from .catalogs import Catalog
 from .masks import Mask
 from .calibrations import Calibration
+from .transfer_func import TransferFunc

@@ -1,0 +1,50 @@
+from ..products import Product, get_implements_decorator
+    
+import numpy as np
+import os
+
+class TransferFunc(Product):
+
+    implementedmethods = []
+    implements = get_implements_decorator(implementedmethods)
+
+    def __init__(self, **kwargs):
+        self.set_attrs(__name__, kwargs)
+        super().__init__(**kwargs)
+        self.check_product_config_internal_consistency(__name__)
+
+    @implements(Product.get_fn)
+
+    def get_tf_fn(self, tf_name, qid, subproduct='default',
+                      basename=False, **kwargs):
+        
+        subprod_dict = self.get_subproduct_dict(__name__, subproduct)
+
+        # get the appropriate filename template
+        fn_template = subprod_dict[tf_name]['tf_template']
+
+        # get info about the requested array and add kwargs passed to this
+        # method call. use this info to format the file template
+        fn_kwargs = self.get_qid_kwargs_by_subproduct(__name__, subproduct, qid)
+        fn_kwargs.update(**kwargs)
+        fn = fn_template.format(**fn_kwargs)
+
+        if basename:
+            return fn
+        else:
+            # subprod_path is the system path to the directory holding this (sub)product
+            subprod_path = self.get_subproduct_path(__name__, subproduct)
+            return os.path.join(subprod_path, fn)
+
+
+    @implements(Product.read_product)
+    def read_tf(self, tf_name, qid, subproduct='default', 
+                    loadtxt_kwargs=None, **kwargs):
+
+        # use get_tf_fn and some external library to load the data
+        fn = self.get_tf_fn(tf_name, qid, subproduct=subproduct, 
+                                basename=False, **kwargs)
+        if loadtxt_kwargs is None:
+            loadtxt_kwargs = {'unpack': True}
+
+        return np.loadtxt(fn, **loadtxt_kwargs)
