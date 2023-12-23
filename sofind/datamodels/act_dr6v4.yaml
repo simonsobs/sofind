@@ -18,3 +18,6 @@ noise_models:
   el_split_config: act_dr6v4_el_split.yaml
   pwv_split_config: act_dr6v4_pwv_split.yaml
   inout_split_config: act_dr6v4_inout_split.yaml
+
+calibrations:
+  cal_230523: dr6v4_cal_230523.yaml
