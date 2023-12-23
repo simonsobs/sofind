@@ -6,7 +6,7 @@ maps:
 
 masks:
   mnms_masks_config: mnms_masks.yaml
-  lensing_20220316: act_dr6v3_lensing_20220316.yaml
+  lensing_masks: lensing_masks.yaml
 
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml

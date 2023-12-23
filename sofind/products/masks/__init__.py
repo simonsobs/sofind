@@ -15,7 +15,7 @@ class Mask(Product):
         self.check_product_config_internal_consistency(__name__)
 
     @implements(Product.get_fn)
-    def get_mask_fn(self, mask_fn, subproduct='default', basename=False,
+    def get_mask_fn(self, mask_fn, mask_type=None, subproduct='default', basename=False,
                        **kwargs):
         """Get the full path to a mask product.
 
@@ -46,8 +46,9 @@ class Mask(Product):
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         if mask_fn is None:
+
             # construct filename of mask from yaml file
-            fn = subprod_dict['mask_name']
+            fn = subprod_dict[mask_type]
             template = fn['mask_template']
 
             fn['restricted_tag'] = 'sk' if fn['restricted'] else ''
@@ -62,7 +63,7 @@ class Mask(Product):
             return os.path.join(subprod_path, mask_fn)
 
     @implements(Product.read_product)
-    def read_mask(self, mask_fn, subproduct='default', read_map_kwargs=None, 
+    def read_mask(self, mask_fn, mask_type = None, subproduct='default', read_map_kwargs=None, 
                   **kwargs):
         """Read a mask product from disk.
 
@@ -83,7 +84,7 @@ class Mask(Product):
         enmap.ndmap
             The requested mask.
         """
-        fn = self.get_mask_fn(mask_fn, subproduct=subproduct, basename=False,
+        fn = self.get_mask_fn(mask_fn, mask_type, subproduct=subproduct, basename=False,
                               **kwargs)
         
         if read_map_kwargs is None:

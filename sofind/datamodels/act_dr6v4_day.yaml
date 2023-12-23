@@ -8,8 +8,7 @@ maps:
 
 masks:
   mnms_masks_config: mnms_masks.yaml
-  lensing_deep: act_dr6v4_lensing_deep_v3.yaml
-  lensing_wide: act_dr6v4_lensing_wide_20220316.yaml
+  lensing_masks: lensing_masks.yaml
 
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
@@ -19,3 +18,7 @@ noise_models:
   # el_split_config: act_dr6v4_day_el_split.yaml
   # pwv_split_config: act_dr6v4_day_pwv_split.yaml
   # inout_split_config: act_dr6v4_day_inout_split.yaml
+
+beams:
+  beams_20230130 : beams_20230130.yaml
+  beams_nemo: beams_nemo.yaml

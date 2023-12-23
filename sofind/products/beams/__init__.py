@@ -14,7 +14,7 @@ class Beam(Product):
         self.check_product_config_internal_consistency(__name__)
 
     @implements(Product.get_fn)
-    def get_beam_fn(self, qid, split_num=0, coadd=False, 
+    def get_beam_fn(self, beam_name, qid, split_num=0, coadd=False, 
                     subproduct='default', basename=False, **kwargs):
     
         """Get the full path to a beam product.
@@ -44,26 +44,23 @@ class Beam(Product):
         """
 
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
+        param_dict = subprod_dict[beam_name]
 
         # get the appropriate filename template
         if coadd:
-            fn_template = subprod_dict['coadd_beam_file_template']
+            fn_template = param_dict['coadd_beam_file_template']
         else:
-            fn_template = subprod_dict['split_beam_file_template']
+            fn_template = param_dict['split_beam_file_template']
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
         fn_kwargs = self.get_qid_kwargs_by_subproduct(__name__, subproduct, qid)
 
-        if fn_kwargs['freq'] == 'f150':
-            fn_kwargs['nemo_freq_tag'] = 's16_pa2_f150'
-        elif fn_kwargs['freq'] == 'f090':
-            fn_kwargs['nemo_freq_tag'] = 's16_pa3_f090'
-        else:
-            fn_kwargs['nemo_freq_tag'] = ''
-
         fn_kwargs.update(split_num = split_num, **kwargs)
         fn = fn_template.format(**fn_kwargs)
+
+        if not fn.endswith('.txt'): 
+                fn += '.txt'
 
         if basename:
             return fn
@@ -72,7 +69,7 @@ class Beam(Product):
             return os.path.join(subprod_path, fn)
 
     @implements(Product.read_product)
-    def read_beam(self, qid, split_num=0, coadd=False, 
+    def read_beam(self, beam_name, qid, split_num=0, coadd=False, 
                   subproduct='default', loadtxt_kwargs=None, **kwargs):
 
         """Read a map product from disk.
@@ -103,7 +100,7 @@ class Beam(Product):
         np.array
             The requested beam = [ells, bells]
         """
-        fn = self.get_beam_fn(qid, split_num=split_num, coadd=coadd,
+        fn = self.get_beam_fn(beam_name, qid, split_num=split_num, coadd=coadd,
                               subproduct=subproduct, basename=False, 
                               **kwargs)
         print(f'Loading {fn} from disk')
