@@ -17,3 +17,8 @@ noise_models:
   el_split_config: act_dr6v4_el_split.yaml
   pwv_split_config: act_dr6v4_pwv_split.yaml
   inout_split_config: act_dr6v4_inout_split.yaml
+
+beams:
+  beams_20230130 : beams_20230130.yaml
+  beams_nemo: beams_nemo.yaml
+  

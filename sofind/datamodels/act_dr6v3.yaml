@@ -12,3 +12,6 @@ catalogs:
 
 noise_models:
   default_config: act_dr6v3.yaml
+
+beams:
+  beams_nemo: beams_nemo.yaml
