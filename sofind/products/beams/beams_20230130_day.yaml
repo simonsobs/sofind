@@ -1,0 +1,12 @@
+system_paths:
+  della: 
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/20230130_beams/
+  perlmutter: /global/cfs/cdirs/act/data/sigurdkn/actpol/daybeam_cmb/20231103/beams/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_beam_file_template:  'beam_tform_cmbfit_{daynight}_{array}_{frequency}.txt'

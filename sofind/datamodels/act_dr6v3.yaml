@@ -16,3 +16,6 @@ noise_models:
 
 calibrations:
   cal_baseline: dr6v3_cal_baseline.yaml
+
+beams:
+  beams_nemo: beams_nemo.yaml
