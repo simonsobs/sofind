@@ -45,6 +45,16 @@ class Mask(Product):
         """
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
+        if mask_fn is None:
+            # construct filename of mask from yaml file
+            fn = subprod_dict['mask_name']
+            template = fn['mask_template']
+
+            fn['restricted_tag'] = 'sk' if fn['restricted'] else ''
+            fn['coordinates_tag'] = '_fejer' if fn['coordinates'] == 'fejer' else ''
+
+            mask_fn = template.format(**fn)
+
         if basename:
             return mask_fn
         else:

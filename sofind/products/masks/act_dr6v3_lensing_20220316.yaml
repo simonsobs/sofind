@@ -1,0 +1,18 @@
+system_paths:
+  della: 
+  perlmutter:
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+mask_name:
+  fsky: 60
+  rms: 70.
+  downgrade: 2
+  restricted: True
+  coordinates:
+  mask_template: act_mask_20220316_GAL{fsky:03}_rms_{rms:.2f}_d{downgrade}{restricted_tag}.fits

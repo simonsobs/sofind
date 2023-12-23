@@ -8,6 +8,8 @@ maps:
 
 masks:
   mnms_masks_config: mnms_masks.yaml
+  lensing_deep: act_dr6v4_lensing_deep_v3.yaml
+  lensing_wide: act_dr6v4_lensing_wide_20220316.yaml
 
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
