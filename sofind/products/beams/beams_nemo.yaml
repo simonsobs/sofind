@@ -2,41 +2,16 @@ system_paths:
   della: 
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/beams/planck_beams/
 
-allowed_qids_configs: 'all'
+allowed_qids_configs:
+- nemo_qids.yaml
 
-allowed_qids: 'all'
+allowed_qids: all
 
 allowed_qids_extra_kwargs:
-  pa4a:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa4a_dd:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa4a_dw:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa5a:
-    nemo_freq_tag: 's16_pa3_f090'
-  pa5a_dd:
-    nemo_freq_tag: 's16_pa3_f090'
-  pa5a_dw:
-    nemo_freq_tag: 's16_pa3_f090'
-  pa5b:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa5b_dd:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa5b_dw:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa6a:
-    nemo_freq_tag: 's16_pa3_f090'
-  pa6a_dd:
-    nemo_freq_tag: 's16_pa3_f090'
-  pa6a_dw:
-    nemo_freq_tag: 's16_pa3_f090'
-  pa6b:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa6b_dd:
-    nemo_freq_tag: 's16_pa2_f150'
-  pa6b_dw:
-    nemo_freq_tag: 's16_pa2_f150'
+  n150:
+    nemo_tag: 's16_pa2'
+  n090:
+    nemo_tag: 's16_pa3'
 
 beams_nemo:
-  coadd_beam_file_template:  '{nemo_freq_tag}_nohwp_night_beam_tform_jitter.txt'
+  coadd_beam_file_template:  '{nemo_tag}_{freq}_nohwp_night_beam_tform_jitter.txt'

@@ -1,0 +1,5 @@
+qids_config: nemo_qids.yaml  
+  
+beams:
+  beams_20230130 : beams_nemo.yaml
+
