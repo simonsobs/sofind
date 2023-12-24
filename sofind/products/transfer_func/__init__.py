@@ -18,8 +18,7 @@ class TransferFunc(Product):
     def get_tf_fn(self, qid, subproduct='default',
                       basename=False, **kwargs):
         
-        subprod_dict = self.get_subproduct_dict(__name__, subproduct)
-
+        subprod_dict = self.get_subproduct_dict(__name__, subproduct)[subproduct]
         # get the appropriate filename template
         fn_template = subprod_dict['tf_template']
 

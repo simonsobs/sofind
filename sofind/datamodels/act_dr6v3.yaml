@@ -21,4 +21,4 @@ beams:
   beams_v3_20220817: beams_v3_20220817.yaml
 
 transfer_func:
-  dr6_night: dr6_night_tf.yaml
+  tf_dr6v3_220701: tf_dr6v3_220701.yaml
