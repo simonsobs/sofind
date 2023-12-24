@@ -1,21 +1,10 @@
-# If you are adding a product you can use the following template
-# in your module.
-
-### PRODUCT TEMPLATE in module file hotdogs.py ###
-
 from ..products import Product, get_implements_decorator
     
 import numpy as np
 import os
 
-# # All products must inherit from Product and implement its productmethods,
-# # which one does by decorating a subclass method, e.g. get_hotdog_fn with
-# # the decorator @implements(Product.get_fn), for each method tagged with the
-# # @productmethod decorator in the Product class.
 class Calibration(Product):
 
-    #################################
-    ### DO NOT CHANGE THESE LINES ###
     implementedmethods = []
     implements = get_implements_decorator(implementedmethods)
 
@@ -23,22 +12,45 @@ class Calibration(Product):
         self.set_attrs(__name__, kwargs)
         super().__init__(**kwargs)
         self.check_product_config_internal_consistency(__name__)
-    #################################
-
-    # Feel free to add stuff here
 
     @implements(Product.get_fn)
-    # in order to access the subproduct_dict and subproduct_path, subproduct
-    # must be passed as a kwarg. for consistency, please set the default 
-    # value of subproduct to 'default'
     def get_calibration_fn(self, qid, **kwargs):
+
+        """
+        Get the full path to calibration product.
+
+        Raises
+        ------
+        NotImplementedError
+            Calibration factors live in sofind configs, not on disk
+        """
+        
         raise NotImplementedError('Cals live in sofind configs, not files on disk!')
 
     @implements(Product.read_product)
-    # in order to access the subproduct_dict and subproduct_path, subproduct
-    # must be passed as a kwarg. for consistency, please set the default 
-    # value of subproduct to 'default'
     def read_calibration(self, qid, subproduct='default', key=None):
+
+        """Read calibration product from sofind config.
+
+        Parameters
+        ----------
+        qid: str
+            Dataset identification string.
+        subproduct : str, optional
+            Name of mask subproduct to load raw products from, by default 
+            'default'.
+        key: str
+            Type of calibration product ('cal' or 'poleff')
+
+        Returns
+        -------
+        if key == None
+            dict
+                The requested calibrations for qid
+        else
+            np.float
+                The requested calibration (cal, poleff) for qid
+        """
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
         qid_info = subprod_dict[qid]
 

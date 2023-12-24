@@ -18,6 +18,29 @@ class TransferFunc(Product):
     def get_tf_fn(self, qid, subproduct='default',
                       basename=False, **kwargs):
         
+        """
+        Get the full path to a transfer function.
+
+        Parameters
+        ----------
+        qid : str
+            Dataset identification string.
+        subproduct : str, optional
+            Name of transfer function subproduct to load raw products from, by default 
+            'default'.
+        basename : bool, optional
+            Only return file basename, by default False.
+        kwargs : dict, optional
+            Any additional keyword arguments used to format the mask filename.
+
+        Returns
+        -------
+        str
+            If basename, basename of requested product. Else, full path to
+            requested product.
+        
+        """
+        
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)[subproduct]
         # get the appropriate filename template
         fn_template = subprod_dict['tf_template']
@@ -39,6 +62,28 @@ class TransferFunc(Product):
     @implements(Product.read_product)
     def read_tf(self, qid, subproduct='default', 
                     loadtxt_kwargs=None, **kwargs):
+
+        """
+        Read transfer function product from disk.
+
+        Parameters
+        ----------
+        qid : str
+            Dataset identification string.
+        subproduct : str, optional
+            Name of transfer function subproduct to load raw products from, by default 
+            'default'.
+        basename : bool, optional
+            Only return file basename, by default False.
+        kwargs : dict, optional
+            Any additional keyword arguments used to format the mask filename.
+
+        Returns
+        -------
+        np.array
+            The requested transfer function [ell, tf(ell)]
+        
+        """
 
         # use get_tf_fn and some external library to load the data
         fn = self.get_tf_fn(qid, subproduct=subproduct, 

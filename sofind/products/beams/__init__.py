@@ -23,6 +23,9 @@ class Beam(Product):
         ----------
         qid : str
             Dataset identification string.
+        beam_name: str
+            Name of beam
+            Defaults None sets beam_name = subproduct
         split_num : int, optional
             Split index of the map product, by default 0.
         coadd : bool, optional
@@ -78,6 +81,9 @@ class Beam(Product):
         ----------
         qid : str
             Dataset identification string.
+        beam_name: str
+            Name of beam
+            Defaults None sets beam_name = subproduct
         split_num : int, optional
             Split index of the map product, by default 0.
         coadd : bool, optional

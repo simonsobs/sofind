@@ -9,7 +9,7 @@ allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
 
-wide_v3:
+wide_v3_20220316:
   fsky: 60
   rms: 70.
   downgrade: 2
@@ -17,13 +17,10 @@ wide_v3:
   coordinates:
   mask_template: act_mask_20220316_GAL{fsky:03}_rms_{rms:.2f}_d{downgrade}{restricted_tag}.fits
 
-deep_v3_20220316:
-  fsky: 60
-  rms: 70.
-  downgrade: 2
-  restricted: True
+deep_v3:
   coordinates:
-  mask_template: act_mask_20220316_GAL{fsky:03}_rms_{rms:.2f}_d{downgrade}{restricted_tag}.fits
+  restricted:
+  mask_template: dr6v3_day_deep_union_mask{coordinates_tag}.fits
 
 wide_v4_20220316:
   fsky: 60
@@ -31,8 +28,9 @@ wide_v4_20220316:
   downgrade: 2
   restricted: False
   coordinates: 'fejer'
-  mask_template: act_mask_20220316_GAL{fsky:03}_rms_{rms:.2f}_d{downgrade}{restricted_tag}.fits
+  mask_template: act_mask_20220316_GAL{fsky:03}_rms_{rms:.2f}_d{downgrade}{restricted_tag}{coordinates_tag}.fits
 
 deep_v4:
   coordinates: 'fejer'
+  restricted:
   mask_template: dr6v3_day_deep_union_mask{coordinates_tag}.fits
