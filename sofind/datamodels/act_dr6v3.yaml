@@ -15,7 +15,7 @@ noise_models:
   default_config: act_dr6v3.yaml
 
 calibrations:
-  cal_baseline: dr6v3_cal_baseline.yaml
+  dr6v3_cal_baseline: dr6v3_cal_baseline.yaml
 
 beams:
   beams_v3_20220817: beams_v3_20220817.yaml
