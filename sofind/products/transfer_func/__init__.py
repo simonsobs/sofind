@@ -31,7 +31,7 @@ class TransferFunc(Product):
         basename : bool, optional
             Only return file basename, by default False.
         kwargs : dict, optional
-            Any additional keyword arguments used to format the mask filename.
+            Any additional keyword arguments used to format the tf filename.
 
         Returns
         -------
@@ -41,7 +41,7 @@ class TransferFunc(Product):
         
         """
         
-        subprod_dict = self.get_subproduct_dict(__name__, subproduct)[subproduct]
+        subprod_dict = self.get_subproduct_dict(__name__, subproduct)
         # get the appropriate filename template
         fn_template = subprod_dict['tf_template']
 
@@ -75,8 +75,11 @@ class TransferFunc(Product):
             'default'.
         basename : bool, optional
             Only return file basename, by default False.
+        loadtxt_kwargs: dict, optional
+            Any additional kwargs to pass to np.loadtxt, by default 
+            {'unpack': True}.
         kwargs : dict, optional
-            Any additional keyword arguments used to format the mask filename.
+            Any additional keyword arguments used to format the tf filename.
 
         Returns
         -------
