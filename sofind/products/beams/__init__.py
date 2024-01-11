@@ -37,7 +37,7 @@ class Beam(Product):
         basename : bool, optional
             Only return file basename, by default False.
         kwargs : dict, optional
-            Any additional keyword arguments used to format the mask filename.
+            Any additional keyword arguments used to format the beam filename.
 
         Returns
         -------
@@ -59,11 +59,8 @@ class Beam(Product):
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
         fn_kwargs = self.get_qid_kwargs_by_subproduct(__name__, subproduct, qid)
-        fn_kwargs.update(split_num = split_num, **kwargs)
+        fn_kwargs.update(split_num=split_num, **kwargs)
         fn = fn_template.format(**fn_kwargs)
-
-        if not fn.endswith('.txt'): 
-                fn += '.txt'
 
         if basename:
             return fn
@@ -94,10 +91,9 @@ class Beam(Product):
             'default'.
         basename : bool, optional
             Only return file basename, by default False.
-        kwargs : dict, optional
-            Any additional keyword arguments used to format the mask filename.
         loadtxt_kwargs : dict, optional
-            Any keyword arguments to pass to np.loadtxt
+            Any keyword arguments to pass to np.loadtxt, by default 
+            {'unpack': True, 'usecols': (0, 1)}.
         kwargs : dict, optional
             Any additional keyword arguments used to format the beam filename.
 
@@ -109,9 +105,8 @@ class Beam(Product):
         fn = self.get_beam_fn(qid, beam_name = beam_name, split_num=split_num, coadd=coadd,
                               subproduct=subproduct, basename=False, 
                               **kwargs)
-        print(f'Loading {fn} from disk')
 
         if loadtxt_kwargs is None:
-            loadtxt_kwargs = {'unpack': True, 'usecols': [0,1]}
+            loadtxt_kwargs = {'unpack': True, 'usecols': (0, 1)}
 
         return np.loadtxt(fn, **loadtxt_kwargs)
