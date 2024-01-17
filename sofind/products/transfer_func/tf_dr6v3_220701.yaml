@@ -15,5 +15,4 @@ allowed_qids:
 
 allowed_qids_extra_kwargs:
 
-tf_dr6v3_220701:
-  tf_template: 'tf_fit_dr6_{array}_{freq}.dat'
+tf_template: 'tf_fit_dr6_{array}_{freq}.dat'
