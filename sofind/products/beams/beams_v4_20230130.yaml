@@ -32,5 +32,5 @@ beams_v4_20230130:
   coadd_beam_file_template:  'coadd_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
 
 beams_v4_20230130_snfit:
-  coadd_beam_file_template:  'beam_tform_cmbfit_{daynight}_{array}_{freq}.txt'
+  coadd_beam_file_template:  'beam_tform_cmbfit_{TPOL}{daynight}_{array}_{freq}.txt'
 

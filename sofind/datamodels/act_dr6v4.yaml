@@ -21,6 +21,7 @@ noise_models:
 
 calibrations:
   dr6v4_cal_230523: dr6v4_cal_230523.yaml
+  dr6v4_cal_231113: dr6v4_cal_231113.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
