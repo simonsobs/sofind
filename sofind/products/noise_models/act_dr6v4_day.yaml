@@ -60,7 +60,7 @@ allowed_qids_extra_kwargs:
 tile_cmbmask:
   noise_model_class: Tiled
   data_model_name: act_dr6v4
-  subproduct: default
+  subproduct: day
   maps_product: maps
   maps_subproduct: default
   calibrated: false
@@ -101,7 +101,7 @@ tile_cmbmask:
 tile_cmbmask_ivfwhm2:
   noise_model_class: Tiled
   data_model_name: act_dr6v4
-  subproduct: default
+  subproduct: day
   maps_product: maps
   maps_subproduct: default
   calibrated: false
@@ -142,7 +142,7 @@ tile_cmbmask_ivfwhm2:
 fdw_cmbmask:
   noise_model_class: FDW
   data_model_name: act_dr6v4
-  subproduct: default
+  subproduct: day
   maps_product: maps
   maps_subproduct: default
   calibrated: false
@@ -221,7 +221,7 @@ fdw_cmbmask:
 fdw_cmbmask_ivfwhm2:
   noise_model_class: FDW
   data_model_name: act_dr6v4
-  subproduct: default
+  subproduct: day
   maps_product: maps
   maps_subproduct: default
   calibrated: false
