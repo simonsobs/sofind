@@ -1,5 +1,0 @@
-qids_config: nemo_qids.yaml  
-  
-beams:
-  beams_nemo : beams_nemo.yaml
-

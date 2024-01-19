@@ -19,6 +19,7 @@ calibrations:
 
 beams:
   beams_v3_20220817: beams_v3_20220817.yaml
+  beams_nemo: beams_nemo.yaml
 
 transfer_func:
   tf_dr6v3_220701: tf_dr6v3_220701.yaml
