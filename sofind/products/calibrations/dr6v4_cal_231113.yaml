@@ -13,15 +13,20 @@ allowed_qids_extra_kwargs:
 
 pa4b:
   poleff: 0.9111
+  cal: 1.0274
 
 pa5a:
+  cal: 1.0156
   poleff: 0.9647
 
 pa5b:
+  cal: 0.9851
   poleff: 0.9554
 
 pa6a:
+  cal: 1.0140
   poleff: 0.9750
 
 pa6b:
+  cal: 0.9686
   poleff: 0.9612
