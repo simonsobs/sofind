@@ -49,6 +49,9 @@ class Mask(Product):
 
         if mask_fn is None:
             mask_fn = subprod_dict[mask_type]['mask_fn']
+        
+        mask_fn.format(**kwargs)
+        
         if basename:
             return mask_fn
         else:
