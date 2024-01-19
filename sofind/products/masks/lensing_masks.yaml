@@ -10,13 +10,13 @@ allowed_qids: 'all'
 allowed_qids_extra_kwargs:
 
 wide_v3_20220316:
-  mask_fn: 'act_mask_20220316_{skyfrac}_rms_70.00_d2sk.fits'
+  mask_fn: act_mask_20220316_{skyfrac}_rms_70.00_d2sk.fits
 
 deep_v3:
   mask_fn: dr6v3_day_deep_union_mask.fits
 
 wide_v4_20220316:
-  mask_fn: 'act_mask_20220316_{skyfrac}_rms_70.00_d2_fejer1.fits'
+  mask_fn: act_mask_20220316_{skyfrac}_rms_70.00_d2_fejer1.fits
 
 deep_v4:
   mask_fn: dr6v3_day_deep_union_mask_fejer1.fits
