@@ -16,6 +16,5 @@ allowed_qids:
 
 allowed_qids_extra_kwargs:
 
-beams_v3_20220817:
-  split_beam_file_template:  'set{split_num}_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
-  coadd_beam_file_template:  'coadd_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
+split_beam_file_template:  'set{split_num}_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
+coadd_beam_file_template:  'coadd_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
