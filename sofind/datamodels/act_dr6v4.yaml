@@ -26,6 +26,7 @@ calibrations:
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
+  beams_v4_20230902 : beams_v4_20230902.yaml
   beams_nemo: beams_nemo.yaml
 
 transfer_func:
