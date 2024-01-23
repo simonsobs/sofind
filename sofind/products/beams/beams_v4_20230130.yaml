@@ -12,18 +12,6 @@ allowed_qids:
 - pa5b
 - pa6a
 - pa6b
-- pa4a_dd
-- pa4b_dd
-- pa5a_dd
-- pa5b_dd
-- pa6a_dd
-- pa6b_dd
-- pa4a_dw
-- pa4b_dw
-- pa5a_dw
-- pa5b_dw
-- pa6a_dw
-- pa6b_dw
 
 allowed_qids_extra_kwargs:
 
