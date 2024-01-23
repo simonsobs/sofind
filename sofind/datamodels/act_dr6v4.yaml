@@ -15,7 +15,6 @@ catalogs:
 
 noise_models:
   default_config: act_dr6v4.yaml
-  day_config: act_dr6v4_day.yaml
   el_split_config: act_dr6v4_el_split.yaml
   pwv_split_config: act_dr6v4_pwv_split.yaml
   inout_split_config: act_dr6v4_inout_split.yaml
