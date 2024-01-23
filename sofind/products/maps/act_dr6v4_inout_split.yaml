@@ -12,6 +12,18 @@ allowed_qids:
 - pa5b
 - pa6a
 - pa6b
+- pa4a_dw
+- pa4b_dw
+- pa5a_dw
+- pa5b_dw
+- pa6a_dw
+- pa6b_dw
+- pa4a_dd
+- pa4b_dd
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
 
 allowed_qids_extra_kwargs:
   pa4a:
@@ -30,6 +42,42 @@ allowed_qids_extra_kwargs:
     num_splits: 4
 
   pa6b:
+    num_splits: 4
+
+  pa4a_dw:
+    num_splits: 4
+
+  pa4b_dw:
+    num_splits: 4
+
+  pa5a_dw:
+    num_splits: 4
+
+  pa5b_dw:
+    num_splits: 4
+
+  pa6a_dw:
+    num_splits: 4
+
+  pa6b_dw:
+    num_splits: 4
+  
+  pa4a_dd:
+    num_splits: 4
+
+  pa4b_dd:
+    num_splits: 4
+
+  pa5a_dd:
+    num_splits: 4
+
+  pa5b_dd:
+    num_splits: 4
+
+  pa6a_dd:
+    num_splits: 4
+
+  pa6b_dd:
     num_splits: 4
 
 split_map_file_template: '{patch}_{daynight}_null_{inout_split}_{array}_{freq}_3pass_{num_splits}way_set{split_num}_{maptag}.fits'
