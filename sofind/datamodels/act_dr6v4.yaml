@@ -19,10 +19,6 @@ noise_models:
   pwv_split_config: act_dr6v4_pwv_split.yaml
   inout_split_config: act_dr6v4_inout_split.yaml
 
-calibrations:
-  dr6v4_cal_230523: dr6v4_cal_230523.yaml
-  dr6v4_cal_231113: dr6v4_cal_231113.yaml
-
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
   beams_v4_20230130_snfit: beams_v4_20230130_snfit.yaml
