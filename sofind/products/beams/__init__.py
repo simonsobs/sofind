@@ -72,21 +72,14 @@ class Beam(Product):
         ----------
         qid : str
             Dataset identification string.
-        beam_name: str
-            Name of beam
-            Defaults None sets beam_name = subproduct
         split_num : int, optional
             Split index of the map product, by default 0.
         coadd : bool, optional
             If True, load the corresponding product for the on-disk coadd map,
             by default False. If True, split_num is neglected.
-        tpol: 'T' or 'POL'
-            read temperature beam (includes transfer function) or polarization (without). default T.
         subproduct : str, optional
-            Name of mask subproduct to load raw products from, by default 
+            Name of beam subproduct to load raw products from, by default 
             'default'.
-        basename : bool, optional
-            Only return file basename, by default False.
         loadtxt_kwargs : dict, optional
             Any keyword arguments to pass to np.loadtxt, by default 
             {'unpack': True, 'usecols': (0, 1)}.

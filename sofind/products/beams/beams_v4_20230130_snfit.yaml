@@ -27,7 +27,7 @@ allowed_qids:
 
 allowed_qids_extra_kwargs:
 
-coadd_beam_file_template:  'beam_tform_cmbfit_{TPOL}{daynight}_{array}_{freq}.txt'
+coadd_beam_file_template:  'beam_tform_cmbfit_{tpol}{daynight}_{array}_{freq}.txt'
 
-# TPOL = '' if tpol == 'T' else 'tailonly_'
+# tpol = '' if tpol == 'T' else 'tailonly_'
 # read temperature beam (includes transfer function) or polarization (without). default T.
