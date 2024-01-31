@@ -46,7 +46,7 @@ class Map(Product):
 
         Raises
         ------
-        LookupError
+        TypeError
             If basename is False and the product, subproduct dirname is not
             known to the datamodel.
         """

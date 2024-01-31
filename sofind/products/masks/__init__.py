@@ -15,14 +15,19 @@ class Mask(Product):
         self.check_product_config_internal_consistency(__name__)
 
     @implements(Product.get_fn)
-    def get_mask_fn(self, mask_fn, subproduct='default', basename=False,
-                       **kwargs):
+    def get_mask_fn(self, mask_fn=None, mask_type=None, subproduct='default',
+                    basename=False, **kwargs):
         """Get the full path to a mask product.
 
         Parameters
         ----------
         mask_fn : str
-            The filename for a mask.
+            The filename for a mask, by default None.
+        mask_type: str
+            The type of mask to load (if mask_fn set to None). Depending on the
+            mask subproduct config, this will be an alias pointing to a mask
+            filename template. That template may have subproduct-specific fields
+            to be populated by kwargs.
         subproduct : str, optional
             Name of mask subproduct to load raw products from, by default 
             'default'.
@@ -39,12 +44,15 @@ class Mask(Product):
 
         Raises
         ------
-        LookupError
+        TypeError
             If basename is False and the product, subproduct dirname is not
             known to the datamodel.
         """
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
+        if mask_fn is None:
+            mask_fn = subprod_dict[mask_type]['mask_fn'].format(**kwargs)
+        
         if basename:
             return mask_fn
         else:
@@ -52,14 +60,16 @@ class Mask(Product):
             return os.path.join(subprod_path, mask_fn)
 
     @implements(Product.read_product)
-    def read_mask(self, mask_fn, subproduct='default', read_map_kwargs=None, 
-                  **kwargs):
+    def read_mask(self, mask_fn=None, mask_type=None, subproduct='default',
+                  read_map_kwargs=None, **kwargs):
         """Read a mask product from disk.
 
         Parameters
         ----------
         mask_fn : str
-            The filename for a mask.
+            The filename for a mask (set to None if unknown)
+        mask_type: str
+            The type of mask to load (if mask_fn set to None because unknown)
         subproduct : str, optional
             Name of mask subproduct to load raw products from, by default 
             'default'.
@@ -73,8 +83,8 @@ class Mask(Product):
         enmap.ndmap
             The requested mask.
         """
-        fn = self.get_mask_fn(mask_fn, subproduct=subproduct, basename=False,
-                              **kwargs)
+        fn = self.get_mask_fn(mask_fn=mask_fn, mask_type=mask_type, 
+                              subproduct=subproduct, basename=False, **kwargs)
         
         if read_map_kwargs is None:
             read_map_kwargs = {}
