@@ -22,9 +22,12 @@ class Mask(Product):
         Parameters
         ----------
         mask_fn : str
-            The filename for a mask (set to None if unknown)
+            The filename for a mask, by default None.
         mask_type: str
-            The type of mask to load (if mask_fn set to None because unknown)
+            The type of mask to load (if mask_fn set to None). Depending on the
+            mask subproduct config, this will be an alias pointing to a mask
+            filename template. That template may have subproduct-specific fields
+            to be populated by kwargs.
         subproduct : str, optional
             Name of mask subproduct to load raw products from, by default 
             'default'.
@@ -41,7 +44,7 @@ class Mask(Product):
 
         Raises
         ------
-        LookupError
+        TypeError
             If basename is False and the product, subproduct dirname is not
             known to the datamodel.
         """

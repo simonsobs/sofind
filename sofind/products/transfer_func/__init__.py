@@ -17,9 +17,7 @@ class TransferFunc(Product):
 
     def get_tf_fn(self, qid, subproduct='default',
                       basename=False, **kwargs):
-        
-        """
-        Get the full path to a transfer function.
+        """Get the full path to a transfer function.
 
         Parameters
         ----------
@@ -38,7 +36,12 @@ class TransferFunc(Product):
         str
             If basename, basename of requested product. Else, full path to
             requested product.
-        
+
+        Raises
+        ------
+        TypeError
+            If basename is False and the product, subproduct dirname is not
+            known to the datamodel.
         """
         
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
@@ -62,9 +65,7 @@ class TransferFunc(Product):
     @implements(Product.read_product)
     def read_tf(self, qid, subproduct='default', 
                     loadtxt_kwargs=None, **kwargs):
-
-        """
-        Read transfer function product from disk.
+        """Read transfer function product from disk.
 
         Parameters
         ----------
@@ -85,7 +86,6 @@ class TransferFunc(Product):
         -------
         np.array
             The requested transfer function [ell, tf(ell)]
-        
         """
 
         # use get_tf_fn and some external library to load the data

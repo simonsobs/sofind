@@ -19,6 +19,42 @@ class NoiseModel(Product):
     def get_noise_fn(self, noise_model_name, *qids, which='sims',
                      subproduct='default', alm=False, basename=False, 
                      **kwargs):
+        """Get the full path to an mnms noise model product.
+
+        Parameters
+        ----------
+        noise_model_name : str
+            The string name of this NoiseModel instance. This is the header
+            of the block in the config storing this NoiseModel's parameters.
+        which : str, optional
+            Whether to load from the available 'models' or 'sims', by default
+            'sims'.
+        subproduct : str, optional
+            Name of noise subproduct to load products from, by default
+            'default'.
+        alm : bool, optional
+            If 'sims', whether the product lives in map-space or alm-space, by
+            default False. Used for tagging the filename with 'alm' or 'map'.
+        basename : bool, optional
+            Only return file basename, by default False.
+        kwargs : dict, optional
+            Any additional keyword arguments used to format the filename.
+
+        Returns
+        -------
+        str
+            If basename, basename of requested product. Else, full path to
+            requested product.
+
+        Raises
+        ------
+        TypeError
+            If basename is False and the product, subproduct dirname is not
+            known to the datamodel.
+
+        ValueError
+            If 'which' is not 'models' or 'sims'.
+        """
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
         param_dict = subprod_dict[noise_model_name]
 
@@ -92,6 +128,39 @@ class NoiseModel(Product):
     def read_noise(self, noise_model_name, *qids, which='sims',
                    subproduct='default', alm=False, read_noise_kwargs=None,
                    **kwargs):
+        """Read an mnms noise model product from disk.
+
+        Parameters
+        ----------
+        noise_model_name : str
+            The string name of this NoiseModel instance. This is the header
+            of the block in the config storing this NoiseModel's parameters.
+        which : str, optional
+            Whether to load from the available 'models' or 'sims', by default
+            'sims'.
+        subproduct : str, optional
+            Name of noise subproduct to load products from, by default
+            'default'.
+        alm : bool, optional
+            If 'sims', whether the product lives in map-space or alm-space, by
+            default False. Used for tagging the filename with 'alm' or 'map'.
+        read_noise_kwargs : dict, optional
+            Any keyword arguments to pass to the noise model's 'read_sim' or
+            'read_model' methods (depending on the value of 'which').
+        kwargs : dict, optional
+            Any additional keyword arguments used to format the filename.
+
+        Returns
+        -------
+        enmap.ndmap or np.ndarray or dict
+            If 'sims', an ndmap or ndarray depending on 'alm'. If 'models', a
+            dictionary of model files.
+
+        Raises
+        ------
+        ValueError
+            If 'which' is not 'models' or 'sims'.
+        """
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
         param_dict = subprod_dict[noise_model_name]
 
