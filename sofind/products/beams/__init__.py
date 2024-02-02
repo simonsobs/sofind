@@ -14,8 +14,8 @@ class Beam(Product):
         self.check_product_config_internal_consistency(__name__)
 
     @implements(Product.get_fn)
-    def get_beam_fn(self, qid, split_num=0, coadd=False, subproduct='default', basename=False, **kwargs):
-    
+    def get_beam_fn(self, qid, split_num=0, coadd=False, subproduct='default',
+                    basename=False, **kwargs):
         """Get the full path to a beam product.
 
         Parameters
@@ -23,9 +23,9 @@ class Beam(Product):
         qid : str
             Dataset identification string.
         split_num : int, optional
-            Split index of the map product, by default 0.
+            Split index of the beam product, by default 0.
         coadd : bool, optional
-            If True, load the corresponding product for the on-disk coadd map,
+            If True, load the corresponding product for the on-disk coadd beam,
             by default False. If True, split_num is neglected.
         subproduct : str, optional
             Name of mask subproduct to load raw products from, by default 
@@ -40,8 +40,13 @@ class Beam(Product):
         str
             If basename, basename of requested product. Else, full path to
             beam product.
+
+        Raises
+        ------
+        TypeError
+            If basename is False and the product, subproduct dirname is not
+            known to the datamodel.
         """
-        
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         # get the appropriate filename template
@@ -65,28 +70,20 @@ class Beam(Product):
     @implements(Product.read_product)
     def read_beam(self, qid, split_num=0, coadd=False, subproduct='default',
                   loadtxt_kwargs=None, **kwargs):
-
-        """Read a map product from disk.
+        """Read a beam product from disk.
 
         Parameters
         ----------
         qid : str
             Dataset identification string.
-        beam_name: str
-            Name of beam
-            Defaults None sets beam_name = subproduct
         split_num : int, optional
-            Split index of the map product, by default 0.
+            Split index of the beam product, by default 0.
         coadd : bool, optional
-            If True, load the corresponding product for the on-disk coadd map,
+            If True, load the corresponding product for the on-disk coadd beam,
             by default False. If True, split_num is neglected.
-        tpol: 'T' or 'POL'
-            read temperature beam (includes transfer function) or polarization (without). default T.
         subproduct : str, optional
-            Name of mask subproduct to load raw products from, by default 
+            Name of beam subproduct to load raw products from, by default 
             'default'.
-        basename : bool, optional
-            Only return file basename, by default False.
         loadtxt_kwargs : dict, optional
             Any keyword arguments to pass to np.loadtxt, by default 
             {'unpack': True, 'usecols': (0, 1)}.
