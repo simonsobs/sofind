@@ -9,6 +9,9 @@ allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
 
+wide_v4_20220316:
+  mask_fn: act_mask_fejer1_20220316_{skyfrac}_rms_70.00_downgrade_{apodfact}.fits
+
 wide_v3_20220316:
   mask_fn: act_mask_20220316_{skyfrac}_rms_70.00_d2sk.fits
 
