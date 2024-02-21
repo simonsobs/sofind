@@ -1,6 +1,6 @@
 system_paths:
   perlmutter: ADDME
-  rusty: /mnt/home/aduivenvoorden/project/actpol/20230622_nilc_july/icov/mnms/tiled
+  rusty: /mnt/home/aduivenvoorden/project/actpol/20230622_nilc_july/icov/mnms/ivar_tiled
 
 allowed_qids_configs:
 - act_dr6v4_nilc070123_qids.yaml
