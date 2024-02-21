@@ -1,0 +1,8 @@
+system_paths:
+  rusty: /mnt/home/aduivenvoorden/project/actpol/20230622_nilc_july/icov/mnms/masks
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
