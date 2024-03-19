@@ -1,5 +1,5 @@
 system_paths:
-  perlmutter: /global/cfs/cdirs/act/www/dr6_nilc/mnms_20230220/models
+  perlmutter: /global/cfs/cdirs/act/www/dr6_nilc/mnms_20230220
   rusty: /mnt/home/aduivenvoorden/project/actpol/20230622_nilc_july/icov/mnms
 
 allowed_qids_configs:
