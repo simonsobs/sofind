@@ -1,0 +1,11 @@
+qids_config: act_dr6v4_nilc070123_qids.yaml  
+
+maps:
+  wavelet: act_dr6v4_nilc070123_wav
+  tiled: act_dr6v4_nilc070123_tiled
+
+masks:
+  default: act_dr6v4_nilc070123_masks.yaml
+
+noise_models:
+  default_config: act_dr6v4_nilc070123.yaml
