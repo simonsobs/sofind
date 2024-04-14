@@ -9,6 +9,9 @@ allowed_qids:
 - pa4a
 - pa4a_dd
 - pa4a_dw
+- pa4b
+- pa4b_dd
+- pa4b_dw
 - pa5a
 - pa5a_dd
 - pa5a_dw
@@ -29,6 +32,12 @@ allowed_qids_extra_kwargs:
     nemo_tag: 's16_pa2'
   pa4a_dw:
     nemo_tag: 's16_pa2'
+  pa4b:
+    nemo_tag: 's17_pa4'
+  pa4b_dd:
+    nemo_tag: 's17_pa4'
+  pa4b_dw:
+    nemo_tag: 's17_pa4'
   pa5a:
     nemo_tag: 's16_pa3'
   pa5a_dd:
