@@ -98,6 +98,47 @@ tile_cmbmask:
   model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
+tile_cmbmask_dd_cut:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4
+  subproduct: day
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: mnms_masks
+  mask_est_name: mask_xlink0.001_rms30_ivar0.1_dr6v4_pa5pa6_dd_cut_apo3deg.fits # mask_rms30_ivar0.1_dr6v4_pa5pa6_dd.fits # dr6v4_default_ivar_union_mask_fejer1_GAL070_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: mask_xlink0.001_rms30_ivar0.1_dr6v4_pa5pa6_dd_cut_apo3deg.fits # mask_xlink0.001_dr6v4_pa5pa6_dd.fits # dr6v4_default_xlink_union_mask_fejer1_0.001.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{daynight}_{array}_{freq}'
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
 tile_cmbmask_ivfwhm2:
   noise_model_class: Tiled
   data_model_name: act_dr6v4
@@ -127,7 +168,48 @@ tile_cmbmask_ivfwhm2:
   mask_est_name: dr6v4_default_ivar_union_mask_fejer1_GAL070_rms30.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
+  mask_obs_name: mask_xlink0.001_rms30_dr6v4_pa5pa6_dw.fits # dr6v4_default_xlink_union_mask_fejer1_0.001.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{daynight}_{array}_{freq}'
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_cmbmask_ivfwhm2_maskivar:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4
+  subproduct: day
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: 2
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: mnms_masks
+  mask_est_name: mask_xlink0.001_rms70_ivar0.1_dr6v4_pa5pa6_dw.fits # None # dr6v4_default_ivar_union_mask_fejer1_GAL070_rms30.fits
+  mask_est_edgecut: 60 # 300
+  mask_est_apodization: 180
+  mask_obs_name: # mask_xlink0.001_rms70_ivar0.1_dr6v4_pa5pa6_dw.fits # dr6v4_default_xlink_union_mask_fejer1_0.001.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null
