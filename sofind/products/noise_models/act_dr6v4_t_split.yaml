@@ -1,0 +1,269 @@
+system_paths:
+  della: /scratch/gpfs/ACT/dr6v4/simulations/noise
+  perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa4b
+- pa5a
+- pa5b
+- pa6a
+- pa6b
+
+allowed_qids_extra_kwargs:
+  pa4b:
+    num_splits: 2
+
+  pa5a:
+    num_splits: 2
+
+  pa5b:
+    num_splits: 2
+
+  pa6a:
+    num_splits: 2
+
+  pa6b:
+    num_splits: 2
+
+tile_cmbmask:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4
+  subproduct: t_split
+  maps_product: maps
+  maps_subproduct: t_split
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: mnms_masks
+  mask_est_name: dr6v4_default_ivar_union_mask_fejer1_GAL070_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_cmbmask_ivfwhm2:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4
+  subproduct: t_split
+  maps_product: maps
+  maps_subproduct: t_split
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: 2
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: mnms_masks
+  mask_est_name: dr6v4_default_ivar_union_mask_fejer1_GAL070_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+fdw_cmbmask:
+  noise_model_class: FDW
+  data_model_name: act_dr6v4
+  subproduct: t_split
+  maps_product: maps
+  maps_subproduct: t_split
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: mnms_masks
+  mask_est_name: dr6v4_default_ivar_union_mask_fejer1_GAL070_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'
+  srcfree: true
+  fwhm_fact_pt1:
+  - 1350
+  - 10.0
+  fwhm_fact_pt2:
+  - 5400
+  - 16.0
+  kern_cut: 0.0001
+  lamb: 1.6
+  n: 36
+  nback:
+  - 0
+  nforw:
+  - 0
+  - 6
+  - 6
+  - 6
+  - 6
+  - 12
+  - 12
+  - 12
+  - 12
+  - 24
+  - 24
+  p: 2
+  pback:
+  - 0
+  pforw:
+  - 0
+  - 6
+  - 4
+  - 2
+  - 2
+  - 12
+  - 8
+  - 4
+  - 2
+  - 12
+  - 8
+  w_lmax: 10800
+  w_lmax_j: 5300
+  w_lmin: 10
+  model_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+fdw_cmbmask_ivfwhm2:
+  noise_model_class: FDW
+  data_model_name: act_dr6v4
+  subproduct: t_split
+  maps_product: maps
+  maps_subproduct: t_split
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: 2
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: mnms_masks
+  mask_est_name: dr6v4_default_ivar_union_mask_fejer1_GAL070_rms30.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_default_xlink_union_mask_fejer1_0.001.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'
+  srcfree: true
+  fwhm_fact_pt1:
+  - 1350
+  - 10.0
+  fwhm_fact_pt2:
+  - 5400
+  - 16.0
+  kern_cut: 0.0001
+  lamb: 1.6
+  n: 36
+  nback:
+  - 0
+  nforw:
+  - 0
+  - 6
+  - 6
+  - 6
+  - 6
+  - 12
+  - 12
+  - 12
+  - 12
+  - 24
+  - 24
+  p: 2
+  pback:
+  - 0
+  pforw:
+  - 0
+  - 6
+  - 4
+  - 2
+  - 2
+  - 12
+  - 8
+  - 4
+  - 2
+  - 12
+  - 8
+  w_lmax: 10800
+  w_lmax_j: 5300
+  w_lmin: 10
+  model_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_null_{t_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
