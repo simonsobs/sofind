@@ -1,0 +1,12 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/act/www/dr6_nilc/mnms_20230220/ivar_tiled
+  rusty: /mnt/home/aduivenvoorden/project/actpol/20230622_nilc_july/icov/mnms/ivar_tiled
+
+allowed_qids_configs:
+- act_dr6v4_nilc070123_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+split_map_file_template: 'ilc_yy_{nilc_type}_{maptag}.fits'

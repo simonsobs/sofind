@@ -1,0 +1,9 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/act/www/dr6_nilc/mnms_20230220/masks
+  rusty: /mnt/home/aduivenvoorden/project/actpol/20230622_nilc_july/icov/mnms/masks
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
