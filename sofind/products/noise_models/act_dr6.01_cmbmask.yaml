@@ -57,11 +57,11 @@ tile:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: mnms_masks
+  masks_subproduct: mnms_masks_public
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
   mask_est_edgecut: 0
   mask_est_apodization: 180
-  mask_obs_name: dr6v3_xlink_union_mask_cc_0.001.fits
+  mask_obs_name: dr6v3_xlink_union_mask_0.001.fits
   mask_obs_edgecut: 0
   model_lim: 0.000001
   model_lim0: null
@@ -98,11 +98,11 @@ wav:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: mnms_masks
+  masks_subproduct: mnms_masks_public
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
   mask_est_edgecut: 0
   mask_est_apodization: 180
-  mask_obs_name: dr6v3_xlink_union_mask_cc_0.001.fits
+  mask_obs_name: dr6v3_xlink_union_mask_0.001.fits
   mask_obs_edgecut: 0
   model_lim: 0.000001
   model_lim0: null
@@ -145,11 +145,11 @@ fdw:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: mnms_masks
+  masks_subproduct: mnms_masks_public
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
   mask_est_edgecut: 0
   mask_est_apodization: 180
-  mask_obs_name: dr6v3_xlink_union_mask_cc_0.001.fits
+  mask_obs_name: dr6v3_xlink_union_mask_0.001.fits
   mask_obs_edgecut: 0
   model_lim: 0.000001
   model_lim0: null
