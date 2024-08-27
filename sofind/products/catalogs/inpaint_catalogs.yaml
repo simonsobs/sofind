@@ -1,6 +1,7 @@
 system_paths:
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/catalogs
   perlmutter: /global/cfs/cdirs/act/data/catalogs/inpaint_catalogs_20220316
+  niagara: /gpfs/fs0/project/r/rbond/msyriac/catalogs/inpaint_catalogs_20220316
 
 allowed_qids_configs: 'all'
 

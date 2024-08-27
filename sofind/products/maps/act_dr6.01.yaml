@@ -1,6 +1,7 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6.01/maps
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.01/maps
+  niagara: /gpfs/fs0/project/r/rbond/jaejoonk/lensing_pipeline_data/dr6.01/maps  
 
 allowed_qids_configs:
 - act_advact_qids.yaml

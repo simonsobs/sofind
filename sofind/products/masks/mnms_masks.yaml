@@ -1,6 +1,7 @@
 system_paths:
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/masks
   perlmutter: /global/cfs/cdirs/act/data/zatkins/data/simonsobs/mnms/masks
+  niagara: /home/r/rbond/jaejoonk/project/lensing_pipeline_data/dr6.01/simulations/noise
 
 allowed_qids_configs: 'all'
 

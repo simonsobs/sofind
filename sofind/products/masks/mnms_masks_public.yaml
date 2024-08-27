@@ -1,6 +1,7 @@
 system_paths:
   della:
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.01/simulations/noise/masks
+  niagara: /home/r/rbond/jaejoonk/project/lensing_pipeline_data/dr6.01/simulations/noise
 
 allowed_qids_configs: 'all'
 

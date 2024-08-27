@@ -1,6 +1,7 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v3/maps/dr6v3_20211031/release_bestpass
   perlmutter: /global/cfs/cdirs/act/data/sigurdkn/actpol/maps/dr6v3_20211031/release_bestpass
+  niagara: /gpfs/fs0/project/r/rbond/sigurdkn/actpol/maps/dr6v3_20211031/release_bestpass
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
