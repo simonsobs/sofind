@@ -14,3 +14,6 @@ wide_v3_20220316:
 
 deep_v3:
   mask_fn: dr6v3_day_deep_union_mask.fits
+
+dr6v4_20240919:
+  mask_fn: dr6v4_lensing_20240919_{daynight}_enhanced_mask_{skyfrac}.fits
