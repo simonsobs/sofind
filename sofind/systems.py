@@ -2,5 +2,7 @@
 sofind_systems = [
     'della',
     'perlmutter',
-    'rusty'
+    'rusty',
+    'penn-gpc',
+    'niagara'
 ]
