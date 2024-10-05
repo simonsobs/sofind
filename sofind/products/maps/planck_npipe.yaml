@@ -1,0 +1,41 @@
+system_paths:
+  perlmutter: /global/cfs/projectdirs/act/data/planck/npipe/fejer1_equ/
+  niagara: /gpfs/fs0/project/r/rbond/sigurdkn/actpol/planck/npipe/fejer1_equ/
+  
+allowed_qids_configs:
+- planck_qids.yaml
+
+allowed_qids:
+- '030'
+- '044'
+- '070'
+- '100'
+- '143'
+- '217'
+- '353'
+- '545'
+- '857'
+
+
+allowed_qids_extra_kwargs:
+  '030':
+    num_splits: 2
+  '044':
+    num_splits: 2
+  '070':
+    num_splits: 2
+  '100':
+    num_splits: 2
+  '143':
+    num_splits: 2
+  '217':
+    num_splits: 2
+  '353':
+    num_splits: 2
+  '545':
+    num_splits: 2
+  '857':
+    num_splits: 2
+
+split_map_file_template: 'planck_npipe_{freq}_split{split_num}_{maptag}.fits'
+coadd_map_file_template: 'planck_npipe_{freq}_coadd_{maptag}.fits'
