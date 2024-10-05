@@ -1,0 +1,11 @@
+ilc_y:
+  nilc_type: wBP
+  num_splits: 1
+
+ilc_y_noKspaceCor:
+  nilc_type: wBP_noKspaceCor
+  num_splits: 1
+
+ilc_y_planck:
+  nilc_type: wBP_planck
+  num_splits: 1

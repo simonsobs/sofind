@@ -1,0 +1,174 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/act/www/dr6_nilc/mnms_20230220
+  rusty: /mnt/home/aduivenvoorden/project/actpol/20230622_nilc_july/icov/mnms
+
+allowed_qids_configs:
+- act_dr6v4_nilc070123_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+tile:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4_nilc070123
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: tiled    
+  filter_kwargs:
+    post_filt_rel_downgrade: 1
+    lim: 0.000000001
+    lim0: null
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_edgecut: 0
+  masks_subproduct: default
+  mask_est_name: null
+  differenced: null
+  mask_obs_name: wide_mask_GAL070_apod_1.50_deg_wExtended_mask_obs_dg2.fits
+  ivar_filt_method: basic
+  dtype: f4
+  qid_names_template: null
+  ivar_lmaxs: 0
+  srcfree: null
+  catalog_name: null
+  catalogs_subproduct: null
+  iso_filt_method: harmonic  
+  kfilt_lbounds: null
+  enforce_equal_qid_kwargs:
+   - num_splits
+  ivar_fwhms: null
+  calibrated: False
+  model_lim0: null
+  model_lim: null  
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_planck:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4_nilc070123
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: tiled    
+  filter_kwargs:
+    post_filt_rel_downgrade: 1
+    lim: 0.000000001
+    lim0: null
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_edgecut: 0
+  masks_subproduct: default
+  mask_est_name: null
+  differenced: null
+  mask_obs_name: wide_mask_GAL070_apod_1.50_deg_wExtended_mask_obs_dg4.fits
+  ivar_filt_method: basic
+  dtype: f4
+  qid_names_template: null
+  ivar_lmaxs: 0
+  srcfree: null
+  catalog_name: null
+  catalogs_subproduct: null
+  iso_filt_method: harmonic  
+  kfilt_lbounds: null
+  enforce_equal_qid_kwargs:
+   - num_splits
+  ivar_fwhms: null
+  calibrated: False
+  model_lim0: null
+  model_lim: null  
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+wav:
+  noise_model_class: Wavelet
+  data_model_name: act_dr6v4_nilc070123
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: wavelet  
+  filter_kwargs:
+    post_filt_rel_downgrade: 1
+    lim: 0.000000001
+    lim0: null    
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_edgecut: 0
+  masks_subproduct: default
+  mask_est_name: null
+  differenced: null
+  mask_obs_name: wide_mask_GAL070_apod_1.50_deg_wExtended_mask_obs_dg2.fits
+  ivar_filt_method: null
+  dtype: f4
+  qid_names_template: null
+  ivar_lmaxs: 0
+  srcfree: null
+  catalog_name: null
+  catalogs_subproduct: null
+  iso_filt_method: harmonic  
+  kfilt_lbounds: null
+  enforce_equal_qid_kwargs:
+   - num_splits
+  ivar_fwhms: null
+  calibrated: False
+  model_lim0: null
+  model_lim: null  
+  fwhm_fact_pt1:
+  - 1350
+  - 2.
+  fwhm_fact_pt2:
+  - 5400
+  - 2.  
+  lamb: 1.3
+  w_lmax_j: 6000
+  w_lmin: 300
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+wav_planck:
+  noise_model_class: Wavelet
+  data_model_name: act_dr6v4_nilc070123
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: wavelet  
+  filter_kwargs:
+    post_filt_rel_downgrade: 1
+    lim: 0.000000001
+    lim0: null
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_edgecut: 0
+  masks_subproduct: default
+  mask_est_name: null
+  differenced: null
+  mask_obs_name: wide_mask_GAL070_apod_1.50_deg_wExtended_mask_obs_dg4.fits
+  ivar_filt_method: null
+  dtype: f4
+  qid_names_template: null
+  ivar_lmaxs: 0
+  srcfree: null
+  catalog_name: null
+  catalogs_subproduct: null
+  iso_filt_method: harmonic  
+  kfilt_lbounds: null
+  enforce_equal_qid_kwargs:
+   - num_splits
+  ivar_fwhms: null
+  calibrated: False
+  model_lim0: null
+  model_lim: null  
+  fwhm_fact_pt1:
+  - 1350
+  - 2.
+  fwhm_fact_pt2:
+  - 5400
+  - 2.
+  lamb: 1.3
+  w_lmax_j: 3100
+  w_lmin: 300
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
