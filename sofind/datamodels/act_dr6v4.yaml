@@ -22,6 +22,8 @@ noise_models:
 
 calibrationspkl:
   dr6v4_cal_230523: dr6v4_cal_230523.yaml
+  dr6v4_cal_240410: dr6v4_cal_240410.yaml
+  dr6v4_poleff_231113: dr6v4_poleff_231113.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
