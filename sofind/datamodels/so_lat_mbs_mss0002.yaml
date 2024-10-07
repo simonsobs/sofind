@@ -1,0 +1,10 @@
+qids_config: so_basic_qids.yaml  
+
+maps: 
+  default_config: so_lat_mbs_mss0002
+
+masks:
+  so_lat_mbs_mss0002_masks: so_lat_mbs_mss0002.yaml
+
+noise_models:
+  default_config: so_lat_mbs_mss0002.yaml
