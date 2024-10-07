@@ -103,3 +103,12 @@ class Beam(Product):
             loadtxt_kwargs = {'unpack': True, 'usecols': (0, 1)}
 
         return np.loadtxt(fn, **loadtxt_kwargs)
+    
+    def get_if_norm_beam(self, subproduct='default'):
+
+        subprod_dict = self.get_subproduct_dict(__name__, subproduct)
+
+        # Verify if 'norm' exists on subprod_dict
+        norm_value = subprod_dict.get('norm', None)
+
+        return norm_value

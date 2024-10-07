@@ -64,3 +64,4 @@ allowed_qids_extra_kwargs:
     nemo_tag: 's16_pa2'
 
 coadd_beam_file_template:  '{nemo_tag}_{freq}_nohwp_night_beam_tform_jitter.txt'
+norm: True
