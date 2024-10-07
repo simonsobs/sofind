@@ -6,9 +6,17 @@ maps:
 
 masks:
   mnms_masks_config: mnms_masks.yaml
+  lensing_masks: lensing_masks.yaml
 
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
 
 noise_models:
   default_config: act_dr6v3.yaml
+
+beams:
+  beams_v3_20220817: beams_v3_20220817.yaml
+  beams_nemo: beams_nemo.yaml
+
+transfer_func:
+  tf_dr6v3_220701: tf_dr6v3_220701.yaml

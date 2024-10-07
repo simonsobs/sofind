@@ -3,5 +3,6 @@ sofind_systems = [
     'della',
     'perlmutter',
     'rusty',
+    'dirac',
     'niagara'
 ]

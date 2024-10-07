@@ -1,0 +1,19 @@
+system_paths:
+  della: 
+  perlmutter:
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+wide_v3_20220316:
+  mask_fn: act_mask_20220316_{skyfrac}_rms_70.00_d2sk.fits
+
+deep_v3:
+  mask_fn: dr6v3_day_deep_union_mask.fits
+
+dr6v4_20240919:
+  mask_fn: dr6v4_lensing_20240919_{daynight}_enhanced_mask_{skyfrac}.fits

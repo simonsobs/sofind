@@ -7,3 +7,4 @@ from .hotdogs import HotDog
 from .noise_models import NoiseModel
 from .catalogs import Catalog
 from .masks import Mask
+from .transfer_func import TransferFunc

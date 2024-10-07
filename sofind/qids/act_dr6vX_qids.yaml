@@ -8,13 +8,13 @@ pa4a_dw:
   array: pa4
   freq: f150
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
 
 pa4a_dd:
   array: pa4
   freq: f150
   patch: cmb
-  daynight: day_deep
+  daynight: daydeep
 
 pa4b:
   array: pa4
@@ -26,13 +26,13 @@ pa4b_dw:
   array: pa4
   freq: f220
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
 
 pa4b_dd:
   array: pa4
   freq: f220
   patch: cmb
-  daynight: day_deep
+  daynight: daydeep
 
 pa5a:
   array: pa5
@@ -44,13 +44,13 @@ pa5a_dw:
   array: pa5
   freq: f090
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
 
 pa5a_dd:
   array: pa5
   freq: f090
   patch: cmb
-  daynight: day_deep
+  daynight: daydeep
 
 pa5b:
   array: pa5
@@ -62,13 +62,13 @@ pa5b_dw:
   array: pa5
   freq: f150
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
 
 pa5b_dd:
   array: pa5
   freq: f150
   patch: cmb
-  daynight: day_deep
+  daynight: daydeep
 
 pa6a:
   array: pa6
@@ -80,13 +80,13 @@ pa6a_dw:
   array: pa6
   freq: f090
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
 
 pa6a_dd:
   array: pa6
   freq: f090
   patch: cmb
-  daynight: day_deep
+  daynight: daydeep
 
 pa6b:
   array: pa6
@@ -98,13 +98,13 @@ pa6b_dw:
   array: pa6
   freq: f150
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
 
 pa6b_dd:
   array: pa6
   freq: f150
   patch: cmb
-  daynight: day_deep
+  daynight: daydeep
 
 pa7a:
   array: pa7
@@ -116,7 +116,7 @@ pa7a_dw:
   array: pa7
   freq: f030
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
 
 pa7b:
   array: pa7
@@ -128,4 +128,4 @@ pa7b_dw:
   array: pa7
   freq: f040
   patch: cmb
-  daynight: day_wide
+  daynight: daywide
