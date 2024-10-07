@@ -1,0 +1,4 @@
+qids_config: planck_qids.yaml  
+
+maps: 
+  default_config: planck_npipe.yaml

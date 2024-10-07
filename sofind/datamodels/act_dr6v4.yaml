@@ -5,6 +5,7 @@ maps:
   el_split_config: act_dr6v4_el_split.yaml
   pwv_split_config: act_dr6v4_pwv_split.yaml
   inout_split_config: act_dr6v4_inout_split.yaml
+  t_split_config: act_dr6v4_t_split.yaml
 
 masks:
   mnms_masks_config: mnms_masks.yaml
@@ -18,6 +19,7 @@ noise_models:
   el_split_config: act_dr6v4_el_split.yaml
   pwv_split_config: act_dr6v4_pwv_split.yaml
   inout_split_config: act_dr6v4_inout_split.yaml
+  t_split_config: act_dr6v4_t_split.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
@@ -27,4 +29,3 @@ beams:
 
 transfer_func:
   tf_dr6v4_230523: tf_dr6v4_230523.yaml
-

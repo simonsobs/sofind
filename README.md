@@ -41,6 +41,11 @@ my_el_split_map = dm.read_map(my_qid, subproduct='el_split', el_split='el1')
 ```
 Users should only ever interface with the high-level `DataModel` class. This class inherits from all implemented `sofind` products! Available `qids` for a particular data model or product are available either by following the `qids_config` entry in the data model config itself (referring to a particular file in `sofind/qids`) or should be documented for the product (see, e.g., the `sofind/products/maps` README file).
 
+## If you would like to add a system to `sofind`
+There are two simple steps:
+1. Add the system name to `sofind/systems.py`
+2. For a given product `.yaml` file, add the location of the product on-disk on that system under the `system_paths` block. Of course, this does not add that product to that system in that location; that must happen outside `sofind`.
+
 ## If you would like to contribute a product to `sofind`
 There are four steps:
 1. Create a new product folder in the `sofind/products` directory. Add to this folder a python module named `__init__.py`.
