@@ -106,6 +106,21 @@ class Beam(Product):
     
     def get_if_norm_beam(self, subproduct='default'):
 
+        """Check if the beam product needs to be normalised (operation bells /= bells[0]).
+
+        Parameters
+        ----------
+        subproduct : str, optional
+            Name of beam subproduct to load raw products from, by default 
+            'default'.
+
+        Returns
+        -------
+        np.bool
+            None if information unavailable
+            True or False otherwise
+        """
+
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         # Verify if 'norm' exists on subprod_dict
