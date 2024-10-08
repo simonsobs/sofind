@@ -1,6 +1,7 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v4/maps/dr6v4_20230316/release
   perlmutter: /global/cfs/cdirs/act/data/sigurdkn/actpol/maps/dr6v4_20230316/release
+  niagara: /gpfs/fs0/project/r/rbond/sigurdkn/actpol/maps/dr6v4_20230316/release
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/release_20230316/
 
 allowed_qids_configs:

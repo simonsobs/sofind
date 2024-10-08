@@ -4,7 +4,7 @@ maps:
   default_config: act_dr6.01.yaml
 
 masks:
-  mnms_masks_config: mnms_masks.yaml
+  mnms_masks_public_config: mnms_masks_public.yaml
 
 noise_models:
   default_config: act_dr6.01_cmbmask.yaml

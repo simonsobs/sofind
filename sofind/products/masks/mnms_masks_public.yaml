@@ -1,0 +1,9 @@
+system_paths:
+  della:
+  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.01/simulations/noise/masks
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:

@@ -1,0 +1,29 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed
+  rusty: /mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/renamed
+
+allowed_qids_configs:
+- so_basic_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+  lfa:
+    num_splits: 4
+
+  lfb:
+    num_splits: 4
+
+  mfa:
+    num_splits: 4
+
+  mfb:
+    num_splits: 4
+
+  uhfa:
+    num_splits: 4
+
+  uhfb:
+    num_splits: 4
+
+split_map_file_template: 'sobs_RC1.r01_LAT_mission_{freq}_{num_splits}way_split{split_num}_noise_{maptag}_car.fits'
