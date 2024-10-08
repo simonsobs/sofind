@@ -19,6 +19,27 @@ class Calibration(Product):
     @implements(Product.get_fn)
     def get_calibration_fn(self, qid, subproduct='default',
                       basename=False, **kwargs):
+        
+        """Get the full path to a calibration product.
+
+        Parameters
+        ----------
+        qid : str
+            Dataset identification string.
+        subproduct : str, optional
+            Name of calibration subproduct to load raw products from, by default 
+            'default'.
+        basename : bool, optional
+            Only return file basename, by default False.
+        kwargs : dict, optional
+            Any additional keyword arguments used to format the calibration filename.
+
+        Returns
+        -------
+        str
+            If basename, basename of requested product. Else, full path to
+            requested product.
+        """
 
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
@@ -43,9 +64,33 @@ class Calibration(Product):
         # use get_hotdog_fn and some external library to load the data
         fn = self.get_calibration_fn(qid, subproduct=subproduct, 
                                 basename=False, **kwargs)
+        
+        """
+        Read a calibration product from disk.
 
+        Parameters
+        ----------
+        qid : str
+            Dataset identification string.
+        subproduct : str, optional
+            Name of calibration subproduct to load raw products from, by default 
+            'default'.
+        basename : bool, optional
+            Only return file basename, by default False.
+        kwargs : dict, optional
+            Any additional keyword arguments used to format the calibration filename.
+
+        Returns
+        -------
+        np.float
+            The requested calibration value
+        """
+
+        # calibration & polarization efficies are stored in a dictionary
         cal_dict = pickle.load(open(fn, 'rb'))
 
+        # information on the qid
         qid_dict = self.get_qid_kwargs_by_subproduct(product='maps', subproduct='default', qid=qid)
 
+        # format the key to access the calibration value and return its values
         return cal_dict[f"dr6_{qid_dict['array']}_{qid_dict['freq']}"]['calibs'][0]
