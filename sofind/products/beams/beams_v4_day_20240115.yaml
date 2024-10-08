@@ -1,6 +1,6 @@
 system_paths:
-  della: 
-  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/20240115_beams/
+  niagara: /gpfs/fs0/project/r/rbond/sigurdkn/actpol/daybeam_srcs/20240115/release/
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/20240115_day_beams/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml

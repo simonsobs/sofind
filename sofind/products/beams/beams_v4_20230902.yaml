@@ -1,5 +1,5 @@
 system_paths:
-  della: 
+  perlmutter: /global/cfs/cdirs/act/data/adriaand/beams/20230902_beams/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/20230902_beams/
 
 allowed_qids_configs:
