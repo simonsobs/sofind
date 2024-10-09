@@ -22,5 +22,6 @@ allowed_qids:
 allowed_qids_extra_kwargs:
 
 coadd_beam_file_template:  'beam_full_{array}_{freq}_{daynight}_beam.txt'
+split_beam_file_template:  'beam_full_{array}_{freq}_{daynight}_beam.txt' # no splits exists for day beams
 
 norm: False
