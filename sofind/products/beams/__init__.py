@@ -103,3 +103,27 @@ class Beam(Product):
             loadtxt_kwargs = {'unpack': True, 'usecols': (0, 1)}
 
         return np.loadtxt(fn, **loadtxt_kwargs)
+    
+    def get_if_norm_beam(self, subproduct='default'):
+
+        """Check if the beam product needs to be normalised (operation bells /= bells[0]).
+
+        Parameters
+        ----------
+        subproduct : str, optional
+            Name of beam subproduct to load raw products from, by default 
+            'default'.
+
+        Returns
+        -------
+        np.bool
+            None if information unavailable
+            True or False otherwise
+        """
+
+        subprod_dict = self.get_subproduct_dict(__name__, subproduct)
+
+        # Verify if 'norm' exists on subprod_dict
+        norm_value = subprod_dict.get('norm', None)
+
+        return norm_value

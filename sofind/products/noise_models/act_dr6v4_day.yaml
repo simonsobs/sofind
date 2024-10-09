@@ -1,0 +1,118 @@
+system_paths:
+  della: /scratch/gpfs/ACT/dr6v4/simulations/noise
+  perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
+- pa5a_dw
+- pa5b_dw
+
+allowed_qids_extra_kwargs:
+  
+  pa5a_dd:
+    num_splits: 4
+
+  pa5b_dd:
+    num_splits: 4
+
+  pa6a_dd:
+    num_splits: 4
+
+  pa6b_dd:
+    num_splits: 4
+
+  pa5a_dw:
+    num_splits: 4
+
+  pa5b_dw:
+    num_splits: 4
+
+
+tile_cmbmask_daydeep:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4
+  subproduct: day
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: lensing_masks
+  mask_est_name: dr6v4_lensing_20240919_daydeep_enhanced_mask_60.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_lensing_20240919_daydeep_enhanced_mask_60.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{daynight}_{freq}'
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_cmbmask_daywide:
+  noise_model_class: Tiled
+  data_model_name: act_dr6v4
+  subproduct: day
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - daynight
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: lensing_masks
+  mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
+  mask_est_edgecut: 60
+  mask_est_apodization: 180
+  mask_obs_name: dr6v4_lensing_20240919_daywide_enhanced_mask_80.fits
+  mask_obs_edgecut: 10
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{daynight}_{freq}'
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'

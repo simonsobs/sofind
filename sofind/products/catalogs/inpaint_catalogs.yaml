@@ -1,7 +1,7 @@
 system_paths:
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/catalogs
   perlmutter: /global/cfs/cdirs/act/data/catalogs/inpaint_catalogs_20220316
-  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/catalogues/inpaint_catalogs_20220316
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/catalogues/inpaint_catalogs/
 
 allowed_qids_configs: 'all'
 

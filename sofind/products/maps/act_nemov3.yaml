@@ -1,0 +1,11 @@
+system_paths:
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/models/
+
+allowed_qids_configs:
+  - act_nemo.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'nemomodel_dr6_all_clustersSNR5{freq}down2_fejer1.fits'

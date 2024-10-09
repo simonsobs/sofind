@@ -1,0 +1,27 @@
+system_paths:
+  niagara: /gpfs/fs0/project/r/rbond/sigurdkn/actpol/daybeam_srcs/20240115/release/
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/20240115_day_beams/
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa4a_dd
+- pa4b_dd
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
+- pa4a_dw
+- pa4b_dw
+- pa5a_dw
+- pa5b_dw
+- pa6a_dw
+- pa6b_dw
+
+allowed_qids_extra_kwargs:
+
+coadd_beam_file_template:  'beam_full_{array}_{freq}_{daynight}_beam.txt'
+split_beam_file_template:  'beam_full_{array}_{freq}_{daynight}_beam.txt' # no splits exists for day beams
+
+norm: False
