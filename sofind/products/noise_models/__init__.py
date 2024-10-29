@@ -1,8 +1,17 @@
 from ..products import Product, get_implements_decorator
 
-from mnms import io
-
 import os
+
+def _defer_mnms_load():
+        """
+        The purpose of this function is to defer the load of `mnms.io` module at load 
+        time (and not at installation time to avoid cyclic-dependency)
+        """
+        try:
+            global io
+            from mnms import io
+        except ModuleNotFoundError:
+            raise ModuleNotFoundError("You need to install `mnms` to use `sofind.NoiseModel`.")
 
 
 class NoiseModel(Product):
@@ -55,6 +64,7 @@ class NoiseModel(Product):
         ValueError
             If 'which' is not 'models' or 'sims'.
         """
+        _defer_mnms_load()        
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
         param_dict = subprod_dict[noise_model_name]
 
@@ -161,6 +171,7 @@ class NoiseModel(Product):
         ValueError
             If 'which' is not 'models' or 'sims'.
         """
+        _defer_mnms_load()        
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
         param_dict = subprod_dict[noise_model_name]
 
