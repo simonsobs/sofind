@@ -5,7 +5,7 @@ import os
 def _defer_mnms_load():
         """
         The purpose of this function is to defer the load of `mnms.io` module when loading 
-        the `NoiseModel` (and not at installation time to avoid cyclic-dependency)
+        the `NoiseModel` (and not at installation time to avoid circular dependency)
         """
         try:
             global io
