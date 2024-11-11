@@ -6,9 +6,10 @@ For any questions please reach out to Zach Atkins (email: [zatkins@princeton.edu
 
 ## Dependencies
 Currently:
-* from `simonsobs`: [`pixell`](https://github.com/simonsobs/pixell), [`mnms`](https://github.com/simonsobs/mnms)
+* from `simonsobs`: [`pixell`](https://github.com/simonsobs/pixell)
+    * [`mnms`](https://github.com/simonsobs/mnms) is required if you are using `sofind` for any functionality related to `mnms` products.
 
-All other dependencies (e.g. `numpy` etc.) are required by packages listed here, especially by `pixell`. The `mnms` dependency currently only appears when calling `DataModel.get_noise_fn` or `DataModel.read_noise`. So, one can install `sofind` without `mnms`, but these functions will not work. 
+All other dependencies (e.g. `numpy` etc.) are required by packages listed here, especially by `pixell`.
 
 ## Installation
 Clone this repo and install it via pip:
