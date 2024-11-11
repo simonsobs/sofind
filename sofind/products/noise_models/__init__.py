@@ -1,9 +1,38 @@
 from ..products import Product, get_implements_decorator
 
-from mnms import io
-
 import os
 
+def _defer_mnms_load(param_dict):
+    """The purpose of this function is to defer the load of `mnms.io` module
+    when loading the `sofind.NoiseModel` to avoid circular installation-time
+    dependency with `mnms`.
+
+    Parameters
+    ----------
+    param_dict : dict
+        The dictionary of NoiseModel parameters. 
+
+    Returns
+    -------
+    io.BaseIO subclass instance
+        An instance of the io.BaseIO subclass specified in the param_dict.
+
+    Raises
+    ------
+    ModuleNotFoundError
+        If `mnms.io` is not importable. 
+    """
+    try:
+        from mnms import io
+    except ModuleNotFoundError as e:
+        raise ModuleNotFoundError("You need to install `mnms` to use `sofind.NoiseModel`.") from e
+    
+    # param_dict needs to be a deepcopy :) also _noise_model_class now lives in the object
+    # as a class attribute
+    nm_cls = param_dict.pop('noise_model_class') 
+    ioobj = io.BaseIO.get_subclass(nm_cls)(**param_dict)
+    
+    return ioobj
 
 class NoiseModel(Product):
 
@@ -56,7 +85,7 @@ class NoiseModel(Product):
             If 'which' is not 'models' or 'sims'.
         """
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
-        param_dict = subprod_dict[noise_model_name]
+        param_dict = subprod_dict[noise_model_name] # param_dict is a deepcopy :)
 
         # check compatibility with data model
         # allow data_model_name to have periods before .yaml
@@ -80,10 +109,7 @@ class NoiseModel(Product):
             parent_subproduct, parent_subprod_dict
             )
 
-        # param_dict is deepcopy :) also _noise_model_class now lives in the object
-        # as a class attribute
-        nm_cls = param_dict.pop('noise_model_class') 
-        ioobj = io.BaseIO.get_subclass(nm_cls)(**param_dict)
+        ioobj = _defer_mnms_load(param_dict)
         
         # don't worry about updating param_dict because ioobj only in this scope
         param_dict = ioobj.param_formatted_dict 
@@ -162,10 +188,9 @@ class NoiseModel(Product):
             If 'which' is not 'models' or 'sims'.
         """
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
-        param_dict = subprod_dict[noise_model_name]
+        param_dict = subprod_dict[noise_model_name] # param_dict is a deepcopy :)
 
-        nm_cls = param_dict.pop('noise_model_class') # param_dict is deepcopy :)
-        ioobj = io.BaseIO.get_subclass(nm_cls)(**param_dict)
+        ioobj = _defer_mnms_load(param_dict)
     
         fn = self.get_noise_fn(
             noise_model_name, *qids, which=which, subproduct=subproduct,
