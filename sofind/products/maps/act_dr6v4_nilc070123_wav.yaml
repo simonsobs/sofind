@@ -9,4 +9,4 @@ allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
 
-split_map_file_template: 'ilc_yy_{nilc_type}_{maptag}.fits'
+split_map_file_template: 'ilc_{ivar_type}_{nilc_type}_{maptag}.fits'

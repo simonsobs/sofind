@@ -1,11 +1,44 @@
 ilc_y:
   nilc_type: wBP
+  ivar_type: yy
   num_splits: 1
 
 ilc_y_noKspaceCor:
   nilc_type: wBP_noKspaceCor
+  ivar_type: yy
   num_splits: 1
 
 ilc_y_planck:
   nilc_type: wBP_planck
+  ivar_type: yy
+  num_splits: 1
+
+ilc_TT:
+  nilc_type: wBP
+  ivar_type: TT
+  num_splits: 1
+
+ilc_EE:
+  nilc_type: wBP
+  ivar_type: EE
+  num_splits: 1
+
+ilc_TT_noKspaceCor:
+  nilc_type: wBP_noKspaceCor
+  ivar_type: TT
+  num_splits: 1
+
+ilc_EE_noKspaceCor:
+  nilc_type: wBP_noKspaceCor
+  ivar_type: EE
+  num_splits: 1
+
+ilc_TT_planck:
+  nilc_type: wBP_planck
+  ivar_type: TT
+  num_splits: 1
+
+ilc_EE_planck:
+  nilc_type: wBP_planck
+  ivar_type: EE
   num_splits: 1
