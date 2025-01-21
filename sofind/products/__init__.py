@@ -9,3 +9,4 @@ from .catalogs import Catalog
 from .masks import Mask
 from .calibrationspkl import Calibration
 from .transfer_func import TransferFunc
+from .cluster_model import ClusterModel

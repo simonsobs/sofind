@@ -15,6 +15,9 @@ masks:
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
 
+cluster_model:
+  default_config: cluster_model.yaml
+
 noise_models:
   default_config: act_dr6v4.yaml
   day_config: act_dr6v4_day.yaml
@@ -33,6 +36,7 @@ beams:
   beams_v4_20230902 : beams_v4_20230902.yaml
   beams_v4_day_20240115: beams_v4_day_20240115.yaml
   beams_nemo: beams_nemo.yaml
+  beams_act_planck : beams_act_planck.yaml
 
 transfer_func:
   tf_dr6v4_230523: tf_dr6v4_230523.yaml

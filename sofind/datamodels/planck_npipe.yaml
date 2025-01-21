@@ -2,3 +2,12 @@ qids_config: planck_qids.yaml
 
 maps: 
   default_config: planck_npipe.yaml
+
+masks:
+  mnms_masks_config: mnms_masks.yaml
+  lensing_masks: lensing_masks.yaml
+  lensing_masks_20240919b: lensing_masks_20240919b.yaml
+
+
+cluster_model:
+  default_config: cluster_model.yaml

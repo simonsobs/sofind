@@ -1,6 +1,6 @@
 system_paths:
   perlmutter: 
-  niagara: 
+  niagara: /gpfs/fs0/project/r/rbond/jiaqu/actpol/DR6_plus/masks/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
 
 allowed_qids_configs: 'all'
@@ -11,3 +11,10 @@ allowed_qids_extra_kwargs:
 
 dr6v4_20240919:
   mask_fn: dr6v4_lensing_20240919_{daynight}_enhanced_mask_{skyfrac}.fits
+
+
+dr6v4_20220316_niagara:
+  mask_fn: act_mask_fejer1_20220316_{skyfrac}_rms_70.00_{downgrade}_3dg.fits
+
+dr6v4_20240919_niagara:
+  mask_fn: act_mask_fejer1_20240919_{skyfrac}_{downgrade}.fits
