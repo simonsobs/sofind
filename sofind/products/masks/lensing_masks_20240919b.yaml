@@ -1,7 +1,8 @@
 system_paths:
   perlmutter: 
-  niagara: /gpfs/fs0/project/r/rbond/msyriac/masks/dr6v4_lensing_20240919b_masks/baseline
+  niagara: /gpfs/fs0/project/r/rbond/msyriac/masks/dr6v4_lensing_20240919b_masks/baseline/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
+  gpc2: /data5/act/masks/dr6v4_lensing_20240919b_masks/baseline/
 
 allowed_qids_configs: 'all'
 

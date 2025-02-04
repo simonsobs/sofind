@@ -1,6 +1,7 @@
 system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/models/
   niagara: /scratch/r/rbond/jaejoonk/lensing_pipeline_data/models/
+  gpc2: /data5/act/DR6_products/models/
 
 allowed_qids_configs:
   - act_nemo.yaml
