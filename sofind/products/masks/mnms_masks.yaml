@@ -3,6 +3,7 @@ system_paths:
   perlmutter: /global/cfs/cdirs/act/data/zatkins/data/simonsobs/mnms/masks
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/masks/
   niagara: /scratch/r/rbond/jaejoonk/mnms/masks/
+  penn-gpc: /data5/act/mnms/masks/
 
 allowed_qids_configs: 'all'
 
