@@ -16,7 +16,7 @@ catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
 
 cluster_model:
-  default_config: cluster_model.yaml
+  default_config: dr6_nemo_cluster_model_snr5.yaml
 
 noise_models:
   default_config: act_dr6v4.yaml
