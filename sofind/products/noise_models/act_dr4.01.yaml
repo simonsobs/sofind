@@ -1,0 +1,620 @@
+system_paths:
+  rusty: /mnt/home/aduivenvoorden/project/actpol/20241212_dr4_mnms/noise
+
+allowed_qids_configs:
+- act_dr4_qids.yaml
+
+allowed_qids:
+- pa1_d1
+- pa1_d5
+- pa1_d6
+- pa1_d56_1
+- pa1_d56_2
+- pa2_d56_1
+- pa2_d56_2
+- pa3a_d56
+- pa3b_d56
+- pa1_boss
+- pa2_boss
+- pa3a_boss
+- pa3b_boss
+- pa1_d8
+- pa2_d8
+- pa3a_d8
+- pa3b_d8
+
+allowed_qids_extra_kwargs:
+  pa1_d1:
+    num_splits: 4
+  pa1_d5:
+    num_splits: 4
+  pa1_d6:
+    num_splits: 4
+  pa1_d56_1:
+    num_splits: 4
+  pa1_d56_2:
+    num_splits: 4
+  pa2_d56_1:
+    num_splits: 4
+  pa2_d56_2:
+    num_splits: 4
+  pa3a_d56:
+    num_splits: 4
+  pa3b_d56:
+    num_splits: 4
+  pa1_boss:
+    num_splits: 4
+  pa2_boss:
+    num_splits: 4
+  pa3a_boss:
+    num_splits: 4
+  pa3b_boss:
+    num_splits: 4
+  pa1_d8:
+    num_splits: 4
+  pa2_d8:
+    num_splits: 4
+  pa3a_d8:
+    num_splits: 4
+  pa3b_d8:
+    num_splits: 4
+
+tile_pa1_d1:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D1_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa1_d1_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa1_d5:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D5_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa1_d5_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa1_d6:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D6_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa1_d6_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa1_d56_1:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D56_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa1_d56_1_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa1_d56_2:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D56_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa1_d56_2_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa2_d56_1:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D56_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa2_d56_1_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa2_d56_2:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D56_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa2_d56_2_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa3_d56:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D56_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa3a_d56_pa3b_d56_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa1_boss:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_BN_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa1_boss_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa2_boss:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_BN_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa2_boss_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa3_boss:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_BN_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa3a_boss_pa3b_boss_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa1_d8:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D8_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa1_d8_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa2_d8:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D8_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa2_d8_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+
+tile_pa3_d8:
+  noise_model_class: Tiled
+  data_model_name: act_dr4.01
+  subproduct: default
+  maps_product: maps
+  maps_subproduct: default
+  calibrated: false
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
+  differenced: true
+  dtype: f4
+  enforce_equal_qid_kwargs:
+  - patch
+  - array
+  - num_splits
+  filter_kwargs:
+    lim: 0.000001
+    lim0: null
+    post_filt_rel_downgrade: 2
+  iso_filt_method: harmonic
+  ivar_filt_method: basic
+  ivar_fwhms: null
+  ivar_lmaxs: null
+  kfilt_lbounds: null
+  masks_subproduct: act_dr4.01_mnms
+  mask_est_name: act_dr4.01_D8_apo_w0.fits
+  mask_est_edgecut: 0
+  mask_est_apodization: 0
+  mask_obs_name: pa3a_d8_pa3b_d8_mask_obs.fits
+  mask_obs_edgecut: 0
+  model_lim: 0.000001
+  model_lim0: null
+  qid_names_template: '{array}_{freq}'  
+  srcfree: true
+  delta_ell_smooth: 400
+  height_deg: 4.0
+  width_deg: 4.0
+  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'

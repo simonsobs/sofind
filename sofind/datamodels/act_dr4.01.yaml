@@ -1,0 +1,13 @@
+qids_config: act_dr4_qids.yaml
+
+maps: 
+  default_config: act_dr4.01.yaml
+
+masks:
+  act_dr4.01_mnms_config: act_dr4.01_mnms.yaml
+
+catalogs:
+  inpaint_catalogs_config: inpaint_catalogs.yaml
+
+noise_models:
+  default_config: act_dr4.01.yaml

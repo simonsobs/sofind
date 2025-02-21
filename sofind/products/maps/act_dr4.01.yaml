@@ -1,0 +1,64 @@
+system_paths:
+  rusty: /mnt/home/aduivenvoorden/project/actpol/maps/act_dr4/maps/
+
+allowed_qids_configs:
+- act_dr4_qids.yaml
+
+allowed_qids:
+- pa1_d1
+- pa1_d5
+- pa1_d6
+- pa1_d56_1
+- pa1_d56_2
+- pa2_d56_1
+- pa2_d56_2
+- pa3a_d56
+- pa3b_d56
+- pa1_boss
+- pa2_boss
+- pa3a_boss
+- pa3b_boss
+- pa1_d8
+- pa2_d8
+- pa3a_d8
+- pa3b_d8
+
+allowed_qids_extra_kwargs:
+  pa1_d1:
+    num_splits: 4
+  pa1_d5:
+    num_splits: 4
+  pa1_d6:
+    num_splits: 4
+  pa1_d56_1:
+    num_splits: 4
+  pa1_d56_2:
+    num_splits: 4
+  pa2_d56_1:
+    num_splits: 4
+  pa2_d56_2:
+    num_splits: 4
+  pa3a_d56:
+    num_splits: 4
+  pa3b_d56:
+    num_splits: 4
+  pa1_boss:
+    num_splits: 4
+  pa2_boss:
+    num_splits: 4
+  pa3a_boss:
+    num_splits: 4
+  pa3b_boss:
+    num_splits: 4
+  pa1_d8:
+    num_splits: 4
+  pa2_d8:
+    num_splits: 4
+  pa3a_d8:
+    num_splits: 4
+  pa3b_d8:
+    num_splits: 4
+
+
+split_map_file_template: '{season}/act_dr4.01_{season}_{patch}_{array}_{freq}_nohwp_night_3pass_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: '{season}/act_dr4.01_{season}_{patch}_{array}_{freq}_nohwp_night_3pass_{num_splits}way_coadd_{maptag}.fits'

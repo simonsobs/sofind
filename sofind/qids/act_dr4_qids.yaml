@@ -1,0 +1,135 @@
+pa1_d1:
+  array: pa1
+  freq: f150
+  patch: D1
+  daynight: night
+  season: s13
+  num_splits: 4
+
+pa1_d5:
+  array: pa1
+  freq: f150
+  patch: D5
+  daynight: night
+  season: s13
+  num_splits: 4
+
+pa1_d6:
+  array: pa1
+  freq: f150
+  patch: D6
+  daynight: night
+  season: s13
+  num_splits: 4
+
+pa1_d56_1:
+  array: pa1
+  freq: f150
+  patch: D56
+  daynight: night
+  season: s14
+  num_splits: 4
+
+pa1_d56_2:
+  array: pa1
+  freq: f150
+  patch: D56
+  daynight: night
+  season: s15
+  num_splits: 4
+
+pa2_d56_1:
+  array: pa2
+  freq: f150
+  patch: D56
+  daynight: night
+  season: s14
+  num_splits: 4
+
+pa2_d56_2:
+  array: pa2
+  freq: f150
+  patch: D56
+  daynight: night
+  season: s15
+  num_splits: 4
+
+pa3a_d56:
+  array: pa3
+  freq: f090
+  patch: D56
+  daynight: night
+  season: s15
+  num_splits: 4
+
+pa3b_d56:
+  array: pa3
+  freq: f150
+  patch: D56
+  daynight: night
+  season: s15
+  num_splits: 4
+
+pa1_boss:
+  array: pa1
+  freq: f150
+  patch: BN
+  daynight: night  
+  season: s15
+  num_splits: 4
+  
+pa2_boss:
+  array: pa2
+  freq: f150
+  patch: BN
+  daynight: night  
+  season: s15
+  num_splits: 4
+
+pa3a_boss:
+  array: pa3
+  freq: f090
+  patch: BN
+  daynight: night  
+  season: s15
+  num_splits: 4
+  
+pa3b_boss:
+  array: pa3
+  freq: f150
+  patch: BN
+  daynight: night  
+  season: s15
+  num_splits: 4
+
+pa1_d8:
+  array: pa1
+  freq: f150
+  patch: D8
+  daynight: night  
+  season: s15
+  num_splits: 4
+  
+pa2_d8:
+  array: pa2
+  freq: f150
+  patch: D8
+  daynight: night  
+  season: s15
+  num_splits: 4
+
+pa3a_d8:
+  array: pa3
+  freq: f090
+  patch: D8
+  daynight: night  
+  season: s15
+  num_splits: 4
+  
+pa3b_d8:
+  array: pa3
+  freq: f150
+  patch: D8
+  daynight: night  
+  season: s15
+  num_splits: 4  
