@@ -5,30 +5,8 @@ system_paths:
   penn-gpc: /data5/act/beams/planck_beams/
 
 allowed_qids_configs: 'all'
-  # - planck_qids.yaml
-  # - act_dr6vX_qids.yaml
 
 allowed_qids: 'all'
-# - pa4a
-# - pa4a_dd
-# - pa4a_dw
-# - pa4b
-# - pa4b_dd
-# - pa4b_dw
-# - pa5a
-# - pa5a_dd
-# - pa5a_dw
-# - pa5b
-# - pa5b_dd
-# - pa5b_dw
-# - pa6a
-# - pa6a_dd
-# - pa6a_dw
-# - pa6b
-# - pa6b_dd
-# - pa6b_dw
-# - p04
-# - p05
 
 allowed_qids_extra_kwargs:
   p04:
