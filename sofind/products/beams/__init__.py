@@ -15,7 +15,7 @@ class Beam(Product):
 
     @implements(Product.get_fn)
     def get_beam_fn(self, qid, split_num=0, coadd=False, subproduct='default',
-                    basename=False, **kwargs):
+                    tpol = 'T', basename=False, **kwargs):
         """Get the full path to a beam product.
 
         Parameters
@@ -54,11 +54,13 @@ class Beam(Product):
             fn_template = subprod_dict['coadd_beam_file_template']
         else:
             fn_template = subprod_dict['split_beam_file_template']
+        
+        TPOL = '' if tpol == 'T' else 'tailonly_'
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
         fn_kwargs = self.get_qid_kwargs_by_subproduct(__name__, subproduct, qid)
-        fn_kwargs.update(split_num=split_num, **kwargs)
+        fn_kwargs.update(split_num=split_num, tpol=TPOL, **kwargs)
         fn = fn_template.format(**fn_kwargs)
 
         if basename:
@@ -69,7 +71,7 @@ class Beam(Product):
 
     @implements(Product.read_product)
     def read_beam(self, qid, split_num=0, coadd=False, subproduct='default',
-                  loadtxt_kwargs=None, **kwargs):
+                  tpol='T', loadtxt_kwargs=None, **kwargs):
         """Read a beam product from disk.
 
         Parameters
@@ -96,7 +98,7 @@ class Beam(Product):
             The requested beam = [ells, bells]
         """
         fn = self.get_beam_fn(qid, split_num=split_num, coadd=coadd,
-                              subproduct=subproduct, basename=False, 
+                              tpol=tpol, subproduct=subproduct, basename=False, 
                               **kwargs)
 
         if loadtxt_kwargs is None:

@@ -2,3 +2,7 @@ qids_config: planck_qids.yaml
 
 maps: 
   default_config: planck_npipe.yaml
+
+beams:
+  beams_nemo: beams_nemo.yaml
+  beams_npipe: beams_planck_npipe.yaml

@@ -26,12 +26,15 @@ calibrationspkl:
   dr6v4_cal_230523: dr6v4_cal_230523.yaml
   dr6v4_cal_240410: dr6v4_cal_240410.yaml
   dr6v4_poleff_231113: dr6v4_poleff_231113.yaml
+  dr6v4_poleff_slack_231110: dr6v4_poleff_slack_231110.yaml
+  dr6v4_cal_slack_231110: dr6v4_cal_slack_231110.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
   beams_v4_20230902 : beams_v4_20230902.yaml
   beams_v4_day_20240115: beams_v4_day_20240115.yaml
   beams_nemo: beams_nemo.yaml
+  beams_v4_20230130_snfit: beams_v4_20230130_snfit.yaml
 
 transfer_func:
   tf_dr6v4_230523: tf_dr6v4_230523.yaml
