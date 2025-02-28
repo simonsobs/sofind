@@ -6,18 +6,19 @@ For any questions please reach out to Zach Atkins (email: [zatkins@princeton.edu
 
 ## Dependencies
 Currently:
-* from `simonsobs`: [`pixell`](https://github.com/simonsobs/pixell), [`mnms`](https://github.com/simonsobs/mnms)
+* from `simonsobs`: [`pixell`](https://github.com/simonsobs/pixell)
+    * [`mnms`](https://github.com/simonsobs/mnms) is required if you are using `sofind` for any functionality related to `mnms` products.
 
 All other dependencies (e.g. `numpy` etc.) are required by packages listed here, especially by `pixell`.
 
 ## Installation
-Clone this repo and the `mnms` repo. `mnms` and `sofind` are install-time circular dependencies. Thus, they need to be installed in the same call to pip:
+Clone this repo and install it via pip:
 ```shell
-$ pip install path/to/mnms path/to/sofind
+$ pip install path/to/sofind
 ```
 or 
 ```shell
-$ pip install -e path/to/mnms -e path/to/sofind
+$ pip install -e path/to/sofind
 ```
 to see changes to source code automatically updated in your environment.
 
