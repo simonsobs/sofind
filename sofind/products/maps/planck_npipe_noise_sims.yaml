@@ -1,0 +1,43 @@
+system_paths:
+  niagara: /project/r/rbond/jiaqu/
+  
+allowed_qids_configs:
+- planck_qids.yaml
+
+allowed_qids:
+- 'p01'
+- 'p02'
+- 'p03'
+- 'p04'
+- 'p05'
+- 'p06'
+- 'p07'
+- 'p08'
+- 'p09'
+
+allowed_qids_extra_kwargs:
+  'p01':
+    num_splits: 2
+  'p02':
+    num_splits: 2
+  'p03':
+    num_splits: 2
+  'p04':
+    num_splits: 2
+  'p05':
+    num_splits: 2
+  'p06':
+    num_splits: 2
+  'p07':
+    num_splits: 2
+  'p08':
+    num_splits: 2
+  'p09':
+    num_splits: 2
+
+# using maptag for sim index (e.g. "0200") and split_num between "A" and "B" 
+# interfaced by solenspipe.preprocessing so shouldn't have to be manually accessed
+# THESE ARE HEALPIX MAPS
+split_map_file_template: 'npipe6v20{split_num}_sim/{maptag}/npipe6v20{split_num}_{freq}_map.fits'
+# by default use A but should really never be using coadd=True
+coadd_map_file_template: 'npipe6v20A_sim/{maptag}/npipe6v20A_{freq}_map.fits'
