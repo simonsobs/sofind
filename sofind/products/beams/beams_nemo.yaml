@@ -4,7 +4,9 @@ system_paths:
   niagara: /scratch/r/rbond/jaejoonk/lensing_pipeline_data/planck_beams/
   penn-gpc: /data5/act/beams/planck_beams/
 
-allowed_qids_configs: 'all'
+allowed_qids_configs:
+  - act_dr6vX_qids.yaml
+  - planck_qids.yaml
 
 allowed_qids: 'all'
 
