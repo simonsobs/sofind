@@ -1,4 +1,9 @@
 qids_config: planck_qids.yaml  
 
-maps: 
+maps:
   default_config: planck_npipe.yaml
+  noise_sims_config: planck_npipe_noise_sims.yaml
+
+beams:
+  beams_nemo: beams_nemo.yaml
+  beams_npipe: beams_planck_npipe.yaml

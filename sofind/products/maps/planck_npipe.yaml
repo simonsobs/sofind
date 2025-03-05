@@ -6,35 +6,35 @@ allowed_qids_configs:
 - planck_qids.yaml
 
 allowed_qids:
-- '030'
-- '044'
-- '070'
-- '100'
-- '143'
-- '217'
-- '353'
-- '545'
-- '857'
+- 'p01'
+- 'p02'
+- 'p03'
+- 'p04'
+- 'p05'
+- 'p06'
+- 'p07'
+- 'p08'
+- 'p09'
 
 
 allowed_qids_extra_kwargs:
-  '030':
+  'p01':
     num_splits: 2
-  '044':
+  'p02':
     num_splits: 2
-  '070':
+  'p03':
     num_splits: 2
-  '100':
+  'p04':
     num_splits: 2
-  '143':
+  'p05':
     num_splits: 2
-  '217':
+  'p06':
     num_splits: 2
-  '353':
+  'p07':
     num_splits: 2
-  '545':
+  'p08':
     num_splits: 2
-  '857':
+  'p09':
     num_splits: 2
 
 split_map_file_template: 'planck_npipe_{freq}_split{split_num}_{maptag}.fits'
