@@ -39,5 +39,5 @@ allowed_qids_extra_kwargs:
 # interfaced by solenspipe.preprocessing so shouldn't have to be manually accessed
 # THESE ARE HEALPIX MAPS
 split_map_file_template: 'npipe6v20{split_num}_sim/{maptag}/npipe6v20{split_num}_{freq}_map.fits'
-# by default use A but should really never be using coadd=True
-coadd_map_file_template: 'npipe6v20A_sim/{maptag}/npipe6v20A_{freq}_map.fits'
+# should really never be using coadd=True
+# coadd_map_file_template: 'npipe6v20A_sim/{maptag}/npipe6v20A_{freq}_map.fits'
