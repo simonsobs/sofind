@@ -112,4 +112,23 @@ class Calibration(Product):
         with open(fn, 'rb') as f:
             d = pickle.load(f)
 
-        return d[key]['calibs'][0]
+        # depending on the subproduct, the factors may be in a particular
+        # order in the list of 'calibs'
+        subproduct_kwargs_orders = subprod_dict['subproduct_kwargs_orders']
+        if subproduct_kwargs_orders is not None:
+            # first ensure that exactly one expected subproduct_kwarg is 
+            # available in kwargs
+            nmatch = 0
+            for subproduct_kwarg in subproduct_kwargs_orders.keys():
+                if subproduct_kwarg in kwargs:
+                    nmatch += 1
+                    subproduct_kwarg_key = subproduct_kwarg
+                    subproduct_kwarg_val = kwargs[subproduct_kwarg]
+            assert nmatch == 1, \
+                f"expected exactly one of {list(subproduct_kwargs_orders.keys())}" + \
+                f"in kwargs, got {nmatch}"
+            idx = subproduct_kwargs_orders[subproduct_kwarg_key].index(subproduct_kwarg_val)
+        else:
+            idx = 0
+
+        return d[key]['calibs'][idx]

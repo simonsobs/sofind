@@ -15,6 +15,8 @@ allowed_qids:
 
 allowed_qids_extra_kwargs:
 
+subproduct_kwargs_orders:
+  pwv_split: [pwv1, pwv2]
 cals_file_template: act_dr6.02_pwv_split_cals.pkl
 poleffs_file_template: act_dr6.02_pwv_split_poleffs.pkl
 key_template: dr6_{array}_{freq}
