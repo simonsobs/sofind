@@ -40,11 +40,10 @@ class Calibration(Product):
             If basename, basename of requested product. Else, full path to
             requested product.
         """
-
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         # get the appropriate filename template
-        fn_template = subprod_dict['cal_template']
+        fn_template = subprod_dict['cal_file_template']
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
@@ -60,11 +59,7 @@ class Calibration(Product):
             return os.path.join(subprod_path, fn)
 
     @implements(Product.read_product)
-    def read_calibration(self, qid, subproduct='default', **kwargs):
-        # use get_hotdog_fn and some external library to load the data
-        fn = self.get_calibration_fn(qid, subproduct=subproduct, 
-                                basename=False, **kwargs)
-        
+    def read_calibration(self, qid, subproduct='default', **kwargs):       
         """
         Read a calibration product from disk.
 
@@ -78,19 +73,30 @@ class Calibration(Product):
         basename : bool, optional
             Only return file basename, by default False.
         kwargs : dict, optional
-            Any additional keyword arguments used to format the calibration filename.
+            Any additional keyword arguments used to format the calibration key.
 
         Returns
         -------
         np.float
             The requested calibration value
         """
+        subprod_dict = self.get_subproduct_dict(__name__, subproduct)
+
+        # get the appropriate dictionary key template
+        key_template = subprod_dict['cal_key_template']
+
+        # get info about the requested array and add kwargs passed to this
+        # method call. use this info to format the key template
+        qid_kwargs = self.get_qid_kwargs_by_subproduct(__name__, subproduct, qid)
+        qid_kwargs.update(**kwargs)
+        key = key_template.format(**qid_kwargs)
 
         # calibration & polarization efficies are stored in a dictionary
-        cal_dict = pickle.load(open(fn, 'rb'))
+        # like {'dr6_pa4_f220': {'calibs': [0.9111]}}, annoyingly
+        fn = self.get_calibration_fn(qid, subproduct=subproduct, 
+                                basename=False, **kwargs)
 
-        # information on the qid
-        qid_dict = self.get_qid_kwargs_by_subproduct(product='maps', subproduct='default', qid=qid)
+        with open(fn, 'rb') as f:
+            cal_dict = pickle.load(f)
 
-        # format the key to access the calibration value and return its values
-        return cal_dict[f"dr6_{qid_dict['array']}_{qid_dict['freq']}"]['calibs'][0]
+        return cal_dict[key]['calibs'][0]
