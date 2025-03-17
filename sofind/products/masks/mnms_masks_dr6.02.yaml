@@ -1,6 +1,6 @@
 system_paths:
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/masks
-  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.01/simulations/noise/masks
+  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/masks
 
 allowed_qids_configs: 'all'
 
