@@ -17,7 +17,7 @@ class Calibration(Product):
 
 
     @implements(Product.get_fn)
-    def get_calibration_fn(self, qid, subproduct='default',
+    def get_calibration_fn(self, qid, which='cals', subproduct='default',
                       basename=False, **kwargs):
         
         """Get the full path to a calibration product.
@@ -26,6 +26,9 @@ class Calibration(Product):
         ----------
         qid : str
             Dataset identification string.
+        which : str, optional
+            Whether to load from the available 'cals' or 'poleffs', by default
+            'cals'.
         subproduct : str, optional
             Name of calibration subproduct to load raw products from, by default 
             'default'.
@@ -43,14 +46,21 @@ class Calibration(Product):
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         # get the appropriate filename template
-        fn_template = subprod_dict['cal_file_template']
+        cals_file_template = subprod_dict['cals_file_template']
+        poleffs_file_template = subprod_dict['poleffs_file_template']
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the file template
         fn_kwargs = self.get_qid_kwargs_by_subproduct(__name__, subproduct, qid)
         fn_kwargs.update(**kwargs)
-        fn = fn_template.format(**fn_kwargs)
 
+        if which == 'cals':
+            fn = cals_file_template.format(**fn_kwargs)
+        elif which == 'poleffs':
+            fn = poleffs_file_template.format(**fn_kwargs)      
+        else:
+            raise ValueError(f"which must be 'cals' or 'poleffs', got {which}")
+        
         if basename:
             return fn
         else:
@@ -59,7 +69,7 @@ class Calibration(Product):
             return os.path.join(subprod_path, fn)
 
     @implements(Product.read_product)
-    def read_calibration(self, qid, subproduct='default', **kwargs):       
+    def read_calibration(self, qid, which='cals', subproduct='default', **kwargs):       
         """
         Read a calibration product from disk.
 
@@ -67,6 +77,9 @@ class Calibration(Product):
         ----------
         qid : str
             Dataset identification string.
+        which : str, optional
+            Whether to load from the available 'cals' or 'poleffs', by default
+            'cals'.
         subproduct : str, optional
             Name of calibration subproduct to load raw products from, by default 
             'default'.
@@ -83,7 +96,7 @@ class Calibration(Product):
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         # get the appropriate dictionary key template
-        key_template = subprod_dict['cal_key_template']
+        key_template = subprod_dict['key_template']
 
         # get info about the requested array and add kwargs passed to this
         # method call. use this info to format the key template
@@ -93,10 +106,10 @@ class Calibration(Product):
 
         # calibration & polarization efficies are stored in a dictionary
         # like {'dr6_pa4_f220': {'calibs': [0.9111]}}, annoyingly
-        fn = self.get_calibration_fn(qid, subproduct=subproduct, 
+        fn = self.get_calibration_fn(qid, which=which, subproduct=subproduct, 
                                 basename=False, **kwargs)
 
         with open(fn, 'rb') as f:
-            cal_dict = pickle.load(f)
+            d = pickle.load(f)
 
-        return cal_dict[key]['calibs'][0]
+        return d[key]['calibs'][0]

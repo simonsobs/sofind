@@ -17,5 +17,6 @@ allowed_qids:
 
 allowed_qids_extra_kwargs:
 
-cal_file_template: calibs_dict_ACTxACT-NPIPExNPIPE.pkl
-cal_key_template: dr6_{array}_{freq}
+cals_file_template: calibs_dict_ACTxACT-NPIPExNPIPE.pkl
+poleffs_file_template:
+key_template: dr6_{array}_{freq}

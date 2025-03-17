@@ -1,0 +1,20 @@
+system_paths:
+  della: /scratch/gpfs/zatkins/data/simonsobs/mnms/calibrations
+  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/calibrations
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa4a
+- pa4b
+- pa5a
+- pa5b
+- pa6a
+- pa6b
+
+allowed_qids_extra_kwargs:
+
+cals_file_template: act_dr6.02_t_split_cals.pkl
+poleffs_file_template: act_dr6.02_t_split_poleffs.pkl
+key_template: dr6_{array}_{freq}
