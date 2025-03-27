@@ -1,7 +1,8 @@
 system_paths:
   della: 
   perlmutter: 
-  niagara: /gpfs/fs0/project/r/rbond/jiaqu/actpol/
+#  niagara: /gpfs/fs0/project/r/rbond/jiaqu/actpol/
+  niagara: /gpfs/fs1/scratch/r/rbond/jaejoonk/planck_beams_from_nersc/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/beams/planck_beams/
 
 allowed_qids_configs:
@@ -12,6 +13,6 @@ allowed_qids: 'all'
 allowed_qids_extra_kwargs:
 
 split_beam_file_template:  'npipe_DR6_{split_num}x{split_num}/bl_T_npipe_DR6_{split_num}x{split_num}_{freq}{split_num}x{freq}{split_num}.dat'
-# coadd_beam_file_template:  'coadd_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
+coadd_beam_file_template:  'npipe_DR6_coadd/bl_T_npipe_DR6_coadd_{freq}GHzx{freq}GHz.dat'
 
 norm: False
