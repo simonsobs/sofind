@@ -1,6 +1,6 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v4/maps/dr6v4_20230316/release
-  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/ivar
+  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/noise/ivar
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
