@@ -69,7 +69,8 @@ class Calibration(Product):
             return os.path.join(subprod_path, fn)
 
     @implements(Product.read_product)
-    def read_calibration(self, qid, which='cals', subproduct='default', **kwargs):       
+    def read_calibration(self, qid, which='cals', subproduct='default', 
+                         fn_kwargs=None, **kwargs):       
         """
         Read a calibration product from disk.
 
@@ -85,8 +86,14 @@ class Calibration(Product):
             'default'.
         basename : bool, optional
             Only return file basename, by default False.
+        fn_kwargs : dict, optional
+            Any additional keyowrd arguments used to format the calibration filename.
         kwargs : dict, optional
-            Any additional keyword arguments used to format the calibration key.
+            Any additional keyword arguments used to format the calibration key
+            and/or retrieve the calibration out of the data. I.e., the value of a
+            subproduct_kwarg, like "el_split='el1'". This is relevant to 
+            match the ordering of calibration values in the data, see each
+            yaml file's "subproduct_kwargs_orders" entry.
 
         Returns
         -------
@@ -104,10 +111,12 @@ class Calibration(Product):
         qid_kwargs.update(**kwargs)
         key = key_template.format(**qid_kwargs)
 
-        # calibration & polarization efficies are stored in a dictionary
-        # like {'dr6_pa4_f220': {'calibs': [0.9111]}}, annoyingly
+        # get info about the requested array and add kwargs passed to this
+        # method call. use this info to format the file template
+        if fn_kwargs is None:
+            fn_kwargs = {}
         fn = self.get_calibration_fn(qid, which=which, subproduct=subproduct, 
-                                basename=False, **kwargs)
+                                basename=False, **fn_kwargs)
 
         with open(fn, 'rb') as f:
             d = pickle.load(f)
@@ -117,18 +126,21 @@ class Calibration(Product):
         subproduct_kwargs_orders = subprod_dict['subproduct_kwargs_orders']
         if subproduct_kwargs_orders is not None:
             # first ensure that exactly one expected subproduct_kwarg is 
-            # available in kwargs
+            # available in kwargs. in other words, can only get the calibration
+            # for one subproduct_kwarg at a time. 
             nmatch = 0
             for subproduct_kwarg in subproduct_kwargs_orders.keys():
                 if subproduct_kwarg in kwargs:
                     nmatch += 1
-                    subproduct_kwarg_key = subproduct_kwarg
-                    subproduct_kwarg_val = kwargs[subproduct_kwarg]
+                    k = subproduct_kwarg # e.g., el_split
+                    v = kwargs[subproduct_kwarg] # e.g., el1
             assert nmatch == 1, \
-                f"expected exactly one of {list(subproduct_kwargs_orders.keys())}" + \
+                f"expected exactly one of {list(subproduct_kwargs_orders.keys())} " + \
                 f"in kwargs, got {nmatch}"
-            idx = subproduct_kwargs_orders[subproduct_kwarg_key].index(subproduct_kwarg_val)
+            idx = subproduct_kwargs_orders[k].index(v)
         else:
             idx = 0
 
+        # calibration & polarization efficies are stored in a dictionary
+        # like {'dr6_pa4_f220': {'calibs': [0.9111]}}, annoyingly
         return d[key]['calibs'][idx]
