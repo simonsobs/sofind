@@ -1,0 +1,43 @@
+system_paths:
+  niagara: /home/s/sievers/kaper/rbond_karen/so/pipe0004_BN/maps
+
+allowed_qids_configs:
+- so_lat_ot_qids.yaml
+
+allowed_qids:
+- ot_i1_f150
+- ot_i1_f090
+- ot_i3_f150
+- ot_i3_f090
+- ot_i4_f150
+- ot_i4_f090
+- ot_i6_f150
+- ot_i6_f090
+
+allowed_qids_extra_kwargs:
+  ot_i1_f150:
+    num_splits: 4
+  
+  ot_i1_f090:
+    num_splits: 4
+
+  ot_i3_f150:
+    num_splits: 4
+  
+  ot_i3_f090:
+    num_splits: 4
+
+  ot_i4_f150:
+    num_splits: 4
+  
+  ot_i4_f090:
+    num_splits: 4
+
+  ot_i6_f150:
+    num_splits: 4
+  
+  ot_i6_f090:
+    num_splits: 4
+
+split_map_file_template: 'pipe4_{patch}_{freq}_{ot}_split{split_num}_{maptag}.fits'
+coadd_map_file_template: 'pipe4_{patch}_{freq}_{ot}_coadd_{maptag}.fits'

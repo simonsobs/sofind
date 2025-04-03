@@ -1,0 +1,11 @@
+system_paths:
+  niagara: /home/s/sievers/kaper/rbond_karen/so/pipe0004_BN/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+pipe4_BN:
+  mask_fn: prelim_pipe4_BN_mask.fits

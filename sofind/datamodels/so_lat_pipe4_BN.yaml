@@ -1,0 +1,21 @@
+qids_config: so_lat_ot_qids.yaml
+
+maps:
+  default_config: so_lat_pipe4_BN.yaml
+
+masks:
+  mnms_masks_config: mnms_masks.yaml
+  lensing_masks:  so_lat_pipe4_BN_lensing_mask.yaml 
+
+noise_models:  
+  default_config: so_lat_pipe4_BN.yaml
+
+calibrationspkl:
+  lat_iso_cal_theory: lat_iso_cal_theory.yaml
+  lat_iso_poleff_theory: lat_iso_poleff_theory.yaml
+
+beams:
+  beams_lat_iso_theory: beams_lat_iso_theory.yaml
+
+transfer_func:
+  tf_lat_iso_theory: tf_lat_iso_theory.yaml
