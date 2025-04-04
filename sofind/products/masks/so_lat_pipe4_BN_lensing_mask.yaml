@@ -8,4 +8,4 @@ allowed_qids: 'all'
 allowed_qids_extra_kwargs:
 
 pipe4_BN:
-  mask_fn: prelim_pipe4_BN_mask.fits
+  mask_fn: pipe4_BN_mask_joint_mask_80.fits

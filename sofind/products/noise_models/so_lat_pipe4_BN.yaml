@@ -63,10 +63,10 @@ tile_cmbmask:
   ivar_lmaxs: null
   kfilt_lbounds: null
   masks_subproduct: lensing_masks
-  mask_est_name: prelim_pipe4_BN_mask.fits
+  mask_est_name: pipe4_BN_mask_joint_mask_80.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  mask_obs_name: prelim_pipe4_BN_mask.fits
+  mask_obs_name: pipe4_BN_mask_joint_mask_80.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null
