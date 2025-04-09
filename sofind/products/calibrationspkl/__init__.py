@@ -19,7 +19,6 @@ class Calibration(Product):
     @implements(Product.get_fn)
     def get_calibration_fn(self, qid, which='cals', subproduct='default',
                       basename=False, **kwargs):
-        
         """Get the full path to a calibration product.
 
         Parameters
@@ -87,7 +86,7 @@ class Calibration(Product):
         basename : bool, optional
             Only return file basename, by default False.
         fn_kwargs : dict, optional
-            Any additional keyowrd arguments used to format the calibration filename.
+            Any additional keyword arguments used to format the calibration filename.
         kwargs : dict, optional
             Any additional keyword arguments used to format the calibration key
             and/or retrieve the calibration out of the data. I.e., the value of a
