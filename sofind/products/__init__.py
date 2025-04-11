@@ -7,5 +7,5 @@ from .hotdogs import HotDog
 from .noise_models import NoiseModel
 from .catalogs import Catalog
 from .masks import Mask
-from .calibrationspkl import Calibration
+from .calibrations import Calibration
 from .transfer_func import TransferFunc

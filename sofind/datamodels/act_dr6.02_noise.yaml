@@ -17,7 +17,7 @@ noise_models:
   inout_split_config: act_dr6.02_inout_split_noise.yaml
   t_split_config: act_dr6.02_t_split_noise.yaml
 
-calibrationspkl:
+calibrations:
   default_config: act_dr6.02.yaml
   el_split_config: act_dr6.02_el_split.yaml
   pwv_split_config: act_dr6.02_pwv_split.yaml
