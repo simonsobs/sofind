@@ -34,7 +34,8 @@ tile_cmbmask:
   subproduct: t_split
   maps_product: maps
   maps_subproduct: t_split
-  calibrated: false
+  calibrated: true
+  calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -75,7 +76,8 @@ tile_cmbmask_ivfwhm2:
   subproduct: t_split
   maps_product: maps
   maps_subproduct: t_split
-  calibrated: false
+  calibrated: true
+  calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -116,7 +118,8 @@ fdw_cmbmask:
   subproduct: t_split
   maps_product: maps
   maps_subproduct: t_split
-  calibrated: false
+  calibrated: true
+  calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -195,7 +198,8 @@ fdw_cmbmask_ivfwhm2:
   subproduct: t_split
   maps_product: maps
   maps_subproduct: t_split
-  calibrated: false
+  calibrated: true
+  calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true

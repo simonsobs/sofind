@@ -80,7 +80,8 @@ tile_cmbmask_ivfwhm2:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  calibrated: false
+  calibrated: true
+  calibrations_subproduct: default
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -121,7 +122,8 @@ fdw_cmbmask:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  calibrated: false
+  calibrated: true
+  calibrations_subproduct: default
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -200,7 +202,8 @@ fdw_cmbmask_ivfwhm2:
   subproduct: default
   maps_product: maps
   maps_subproduct: default
-  calibrated: false
+  calibrated: true
+  calibrations_subproduct: default
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true

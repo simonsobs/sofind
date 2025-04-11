@@ -33,6 +33,7 @@ fdw:
   maps_product: maps
   maps_subproduct: default
   calibrated: false
+  calibrations_subproduct: null
   catalogs_subproduct: null
   catalog_name: null
   differenced: false
