@@ -71,8 +71,8 @@ tile_cmbmask:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
-  model_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
 tile_cmbmask_ivfwhm2:
   noise_model_class: Tiled
@@ -113,8 +113,8 @@ tile_cmbmask_ivfwhm2:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
-  model_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
 fdw_cmbmask:
   noise_model_class: FDW
@@ -193,8 +193,8 @@ fdw_cmbmask:
   w_lmax: 10800
   w_lmax_j: 5300
   w_lmin: 10
-  model_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
 fdw_cmbmask_ivfwhm2:
   noise_model_class: FDW
@@ -273,5 +273,5 @@ fdw_cmbmask_ivfwhm2:
   w_lmax: 10800
   w_lmax_j: 5300
   w_lmin: 10
-  model_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
