@@ -1,8 +1,6 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v4/simulations/noise
-  perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
-  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/
-  niagara: /scratch/r/rbond/jaejoonk/dr6plus_noise_sims/
+  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/noise
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
@@ -36,12 +34,12 @@ allowed_qids_extra_kwargs:
 
 tile_cmbmask:
   noise_model_class: Tiled
-  data_model_name: act_dr6v4
-  subproduct: default
+  data_model_name: act_dr6.02_noise
+  subproduct: inout_split
   maps_product: maps
-  maps_subproduct: default
-  calibrated: false
-  calibrations_subproduct: null
+  maps_subproduct: inout_split
+  calibrated: true
+  calibrations_subproduct: inout_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -73,17 +71,17 @@ tile_cmbmask:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
-  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
 tile_cmbmask_ivfwhm2:
   noise_model_class: Tiled
-  data_model_name: act_dr6v4
-  subproduct: default
+  data_model_name: act_dr6.02_noise
+  subproduct: inout_split
   maps_product: maps
-  maps_subproduct: default
-  calibrated: false
-  calibrations_subproduct: null
+  maps_subproduct: inout_split
+  calibrated: true
+  calibrations_subproduct: inout_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -115,17 +113,17 @@ tile_cmbmask_ivfwhm2:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
-  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
 fdw_cmbmask:
   noise_model_class: FDW
-  data_model_name: act_dr6v4
-  subproduct: default
+  data_model_name: act_dr6.02_noise
+  subproduct: inout_split
   maps_product: maps
-  maps_subproduct: default
-  calibrated: false
-  calibrations_subproduct: null
+  maps_subproduct: inout_split
+  calibrated: true
+  calibrations_subproduct: inout_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -195,17 +193,17 @@ fdw_cmbmask:
   w_lmax: 10800
   w_lmax_j: 5300
   w_lmin: 10
-  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
 fdw_cmbmask_ivfwhm2:
   noise_model_class: FDW
-  data_model_name: act_dr6v4
-  subproduct: default
+  data_model_name: act_dr6.02_noise
+  subproduct: inout_split
   maps_product: maps
-  maps_subproduct: default
-  calibrated: false
-  calibrations_subproduct: null
+  maps_subproduct: inout_split
+  calibrated: true
+  calibrations_subproduct: inout_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -275,5 +273,5 @@ fdw_cmbmask_ivfwhm2:
   w_lmax: 10800
   w_lmax_j: 5300
   w_lmin: 10
-  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: 'act_dr6v4_inout_split_{noise_model_name}_null_{inout_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'

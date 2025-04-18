@@ -1,0 +1,36 @@
+system_paths:
+  della: /scratch/gpfs/ACT/dr6v4/maps/dr6v4_20230316/release
+  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/noise/ivar
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa4a
+- pa4b
+- pa5a
+- pa5b
+- pa6a
+- pa6b
+
+allowed_qids_extra_kwargs:
+  pa4a:
+    num_splits: 4
+
+  pa4b:
+    num_splits: 4
+
+  pa5a:
+    num_splits: 4
+
+  pa5b:
+    num_splits: 4
+
+  pa6a:
+    num_splits: 4
+
+  pa6b:
+    num_splits: 4
+
+split_map_file_template: '{patch}_{daynight}_{array}_{freq}_3pass_{num_splits}way_set{split_num}_{maptag}.fits'
+coadd_map_file_template: '{patch}_{daynight}_{array}_{freq}_3pass_{num_splits}way_coadd_{maptag}.fits'

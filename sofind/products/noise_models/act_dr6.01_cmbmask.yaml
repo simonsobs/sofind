@@ -39,6 +39,7 @@ tile:
   maps_product: maps
   maps_subproduct: default
   calibrated: false
+  calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -57,7 +58,7 @@ tile:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: mnms_masks_public
+  masks_subproduct: mnms_masks
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
   mask_est_edgecut: 0
   mask_est_apodization: 180
@@ -80,6 +81,7 @@ wav:
   maps_product: maps
   maps_subproduct: default
   calibrated: false
+  calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -98,7 +100,7 @@ wav:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: mnms_masks_public
+  masks_subproduct: mnms_masks
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
   mask_est_edgecut: 0
   mask_est_apodization: 180
@@ -127,6 +129,7 @@ fdw:
   maps_product: maps
   maps_subproduct: default
   calibrated: false
+  calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
   differenced: true
@@ -145,7 +148,7 @@ fdw:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: mnms_masks_public
+  masks_subproduct: mnms_masks
   mask_est_name: dr6v3_20220316_baseline_union_mask_cc.fits
   mask_est_edgecut: 0
   mask_est_apodization: 180

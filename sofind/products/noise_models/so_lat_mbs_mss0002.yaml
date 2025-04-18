@@ -33,6 +33,7 @@ fdw_lf:
   maps_product: maps
   maps_subproduct: default
   calibrated: false
+  calibrations_subproduct: null
   catalogs_subproduct: null
   catalog_name: null
   differenced: false
@@ -119,6 +120,7 @@ fdw_mf:
   maps_product: maps
   maps_subproduct: default
   calibrated: false
+  calibrations_subproduct: null
   catalogs_subproduct: null
   catalog_name: null
   differenced: false
@@ -205,6 +207,7 @@ fdw_uhf:
   maps_product: maps
   maps_subproduct: default
   calibrated: false
+  calibrations_subproduct: null
   catalogs_subproduct: null
   catalog_name: null
   differenced: false

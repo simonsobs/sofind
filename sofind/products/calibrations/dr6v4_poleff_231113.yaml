@@ -17,4 +17,7 @@ allowed_qids:
 
 allowed_qids_extra_kwargs:
 
-cal_template: poleff_EE.pkl
+subproduct_kwargs_orders:
+cals_file_template:
+poleffs_file_template: poleff_EE.pkl
+key_template: dr6_{array}_{freq}
