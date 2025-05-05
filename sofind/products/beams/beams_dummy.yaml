@@ -1,0 +1,16 @@
+system_paths:
+  perlmutter: 
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/dummy_beams/
+  niagara: 
+  penn-gpc: 
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+split_beam_file_template:  'dummy_beam.txt'
+coadd_beam_file_template:  'dummy_beam.txt'
+
+norm: False

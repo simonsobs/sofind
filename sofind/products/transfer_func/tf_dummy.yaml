@@ -1,0 +1,13 @@
+system_paths:
+  perlmutter: 
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/transfer_functions/dummy_tf/
+  niagara:
+  penn-gpc: 
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+tf_template: 'tf_dummy.dat'

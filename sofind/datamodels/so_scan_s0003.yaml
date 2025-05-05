@@ -10,3 +10,12 @@ masks:
 noise_models:
   default_config: so_scan_s0003.yaml
   cc_config: so_scan_s0003_cc.yaml
+
+calibrations:
+  dummy: dummy.yaml
+
+beams:
+  beams_dummy: beams_dummy.yaml
+
+transfer_func:
+  tf_dummy: tf_dummy.yaml
