@@ -8,8 +8,8 @@
 | beams_v4_20230130.yaml |    __coadd__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>   __splits__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>    |
 | beams_v4_20230902.yaml |    __coadd__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>   __splits__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>    |
 | beams_v4_day_20240115.yaml|   __coadd__: `pa4a_dw`, `pa4a_dd`, `pa4b_dw`, `pa4b_dd`, `pa5a_dw`, `pa5a_dd`, `pa5b_dw`, `pa5b_dd`, `pa6a_dw`, `pa6a_dd`, `pa6b_dw`, `pa6b_dd`|     
-
-
+| beams_planck_npipe.yaml|   __splits__: `p01`, `p02`, `p03`, `p04` `p05`, `p06`, `p07`, `p08`, `p09`
+| beams_dummy.yaml |    __coadd__: all,  __splits__: all   |
 
 ## Code snippets
 
