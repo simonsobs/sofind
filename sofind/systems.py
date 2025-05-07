@@ -4,5 +4,6 @@ sofind_systems = [
     'perlmutter',
     'rusty',
     'dirac',
-    'niagara'
+    'niagara', 
+    'souk'
 ]

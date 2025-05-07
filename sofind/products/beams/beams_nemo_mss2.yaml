@@ -1,6 +1,7 @@
 system_paths:
   della: 
   dirac: /home/ak2628/rds/rds-dirac-dp002/SO/nemo_mss2/20250415/beams
+  souk: /shared_home/akusiak/data/mss2/nemo/20250415/beams/
 
 allowed_qids_configs:
 - so_basic_qids.yaml

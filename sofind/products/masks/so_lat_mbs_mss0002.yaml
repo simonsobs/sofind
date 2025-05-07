@@ -2,6 +2,7 @@ system_paths:
   perlmutter: /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/masks
   rusty: /mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/masks
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/SO/masks
+  souk: /shared_home/akusiak/data/mss2/masks/
 
 allowed_qids_configs: 'all'
 

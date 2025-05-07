@@ -2,6 +2,7 @@ system_paths:
   perlmutter: /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed
   rusty: /mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/renamed
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/SO/mss-0002/RC1.r01/
+  souk: /shared_home/akusiak/data/mss2/mss-0002-srcfree/
 
 allowed_qids_configs:
 - so_basic_qids.yaml
