@@ -1,0 +1,10 @@
+system_paths:
+  della: /scratch/gpfs/zatkins/data/simonsobs/mnms/catalogs
+  dirac: /home/ak2628/software/SO_lensing/inpaint_catalogs/
+  souk: /shared_home/akusiak/data/mss2/nemo/inpaint_catalogs/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
