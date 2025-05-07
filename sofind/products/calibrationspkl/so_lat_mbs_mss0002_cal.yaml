@@ -1,0 +1,18 @@
+system_paths:
+  perlmutter:
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/dr6_v4_240410/
+
+allowed_qids_configs:
+- so_basic_qids.yaml
+
+allowed_qids:
+- lfa
+- lfb
+- mfa
+- mfb
+- uhfa
+- uhfb
+
+allowed_qids_extra_kwargs:
+
+cal_template: calibs_dict_ACTxACT-PR3xPR3.pkl

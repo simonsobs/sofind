@@ -1,0 +1,20 @@
+system_paths:
+  niagara: /home/s/sievers/kaper/rbond_karen/so/pipe0004_BN/calibrations/
+  dirac: /home/ak2628/rds/rds-dirac-dp002/SO/LAT_iso_sims/calibrations/
+
+allowed_qids_configs:
+- so_lat_ot_qids.yaml
+
+allowed_qids:
+- ot_i1_f150
+- ot_i1_f090
+- ot_i3_f150
+- ot_i3_f090
+- ot_i4_f150
+- ot_i4_f090
+- ot_i6_f150
+- ot_i6_f090
+
+allowed_qids_extra_kwargs:
+
+cal_template: poleff.pkl

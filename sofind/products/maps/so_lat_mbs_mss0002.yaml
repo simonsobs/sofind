@@ -1,6 +1,7 @@
 system_paths:
   perlmutter: /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504/renamed
   rusty: /mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat/renamed
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/SO/mss-0002/RC1.r01/
 
 allowed_qids_configs:
 - so_basic_qids.yaml
@@ -26,4 +27,5 @@ allowed_qids_extra_kwargs:
   uhfb:
     num_splits: 4
 
-split_map_file_template: 'sobs_RC1.r01_LAT_mission_{freq}_{num_splits}way_split{split_num}_noise_{maptag}_car.fits'
+split_map_file_template: 'sobs_RC1.r01_LAT_mission_{freq}_{num_splits}way_split{split_num}_{maptag}_car.fits'
+coadd_map_file_template: 'sobs_RC1.r01_LAT_mission_{freq}_{num_splits}way_coadd_{maptag}_car.fits'

@@ -1,0 +1,12 @@
+system_paths:
+  dirac: /home/ak2628/rds/rds-dirac-dp002/SO/nemo_mss2/output/
+  # dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/models/
+
+allowed_qids_configs:
+  - mss2_nemo.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'nemomodel_mss2_20250415_clustersSNR5_{freq}.fits' 

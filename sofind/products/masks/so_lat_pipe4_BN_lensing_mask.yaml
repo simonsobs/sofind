@@ -1,0 +1,12 @@
+system_paths:
+  niagara: /home/s/sievers/kaper/rbond_karen/so/pipe0004_BN/masks/
+  dirac: /home/ak2628/rds/rds-dirac-dp002/SO/LAT_iso_sims/masks
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+pipe4_BN:
+  mask_fn: pipe4_bn_joint_mask_80.fits
