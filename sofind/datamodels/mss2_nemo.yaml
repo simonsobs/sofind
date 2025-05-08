@@ -1,0 +1,4 @@
+qids_config: mss2_nemo.yaml  
+
+maps: 
+  mss2_nemo: mss2_nemo.yaml
