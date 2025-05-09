@@ -2,7 +2,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/dummy/
   della: 
   perlmutter:
-  niagara: 
+  niagara: /scratch/r/rbond/iabril/ACT_DR6_products/calibration/dummy/
 
 allowed_qids_configs: 'all'
 

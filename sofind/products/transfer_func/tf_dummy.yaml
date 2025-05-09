@@ -1,7 +1,7 @@
 system_paths:
   perlmutter: 
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/transfer_functions/dummy_tf/
-  niagara:
+  niagara: /scratch/r/rbond/jaejoonk/lensing_pipeline_data/transfer_functions/dummy_tf/
   penn-gpc: 
 
 allowed_qids_configs: 'all'
