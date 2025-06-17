@@ -3,6 +3,7 @@ system_paths:
   della: 
   perlmutter:
   niagara: /scratch/r/rbond/iabril/ACT_DR6_products/calibration/dummy/
+  penn-gpc: /data6/DR6_plus/dummy_products/calibration/dummy/
 
 allowed_qids_configs: 'all'
 
