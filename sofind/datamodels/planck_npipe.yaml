@@ -14,3 +14,7 @@ calibrations:
 
 transfer_func:
   tf_dummy: tf_dummy.yaml
+
+masks:
+  lensing_masks_20250513: lensing_masks_20250513.yaml
+  lensing_masks_20240919b: lensing_masks_20240919b.yaml
