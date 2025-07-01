@@ -2,7 +2,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/cal_day_to_nightdefault/
   della: 
   perlmutter: 
-  niagara: 
+  niagara: /project/r/rbond/jaejoonk/lensing_pipeline_data/calibration/cal_day_to_nightdefault/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
