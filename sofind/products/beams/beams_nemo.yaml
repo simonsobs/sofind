@@ -11,46 +11,87 @@ allowed_qids_configs:
 allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
+  p01:
+    nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
+  p02:
+    nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
+  p03: 
+    nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
   p04:
     nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
   p05:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
+  p06:
+    nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
+  p07:
+    nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
+  p08:
+    nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
+  p09:
+    nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa4a:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa4a_dd:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa4a_dw:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa4b:
     nemo_tag: 's17_pa4'
+    nemo_freq: 'f220'
   pa4b_dd:
     nemo_tag: 's17_pa4'
+    nemo_freq: 'f220'
   pa4b_dw:
     nemo_tag: 's17_pa4'
+    nemo_freq: 'f220'
   pa5a:
     nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
   pa5a_dd:
     nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
   pa5a_dw:
     nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
   pa5b:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa5b_dd:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150' 
   pa5b_dw:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa6a:
     nemo_tag: 's16_pa3'
+    nemo_freq: 'f090' 
   pa6a_dd:
     nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
   pa6a_dw:
     nemo_tag: 's16_pa3'
+    nemo_freq: 'f090'
   pa6b:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa6b_dd:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
   pa6b_dw:
     nemo_tag: 's16_pa2'
+    nemo_freq: 'f150'
 
-coadd_beam_file_template:  '{nemo_tag}_{freq}_nohwp_night_beam_tform_jitter.txt'
+coadd_beam_file_template:  '{nemo_tag}_{nemo_freq}_nohwp_night_beam_tform_jitter.txt'
 norm: True

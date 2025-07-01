@@ -9,7 +9,7 @@ maps:
 
 masks:
   mnms_masks_config: mnms_masks.yaml
-  lensing_masks_20250513: lensing_masks_20250513.yaml
+  lensing_masks: lensing_masks.yaml
   lensing_masks_20240919b: lensing_masks_20240919b.yaml
 
 catalogs:
@@ -30,6 +30,8 @@ calibrations:
   dr6v4_cal_240410: dr6v4_cal_240410.yaml
   dr6v4_poleff_231113: dr6v4_poleff_231113.yaml
   dr6v4_calday: dr6v4_calday.yaml
+  dr6v4_calday_tonight_daydeep: dr6v4_calday_tonight_daydeep.yaml
+  dr6v4_calday_tonight_daywide: dr6v4_calday_tonight_daywide.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
