@@ -1,0 +1,11 @@
+system_paths:
+  niagara: /home/r/rbond/kaper/project/so/mss0002/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+mss2_nofg:
+  mask_fn: mss0002_mask_enhanced_mask_70.fits

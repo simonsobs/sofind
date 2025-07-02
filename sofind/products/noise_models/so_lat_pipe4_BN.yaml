@@ -1,5 +1,5 @@
 system_paths:
-  niagara: /home/s/sievers/kaper/scratch/mnms_outputs/
+  niagara: /home/r/rbond/kaper/scratch/mnms_outputs/
 
 allowed_qids_configs:
 - so_lat_ot_qids.yaml
@@ -62,11 +62,11 @@ tile_cmbmask:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: lensing_masks
-  mask_est_name: pipe4_BN_mask_joint_mask_80.fits
+  masks_subproduct: lensing_nilc_preproc_masks
+  mask_est_name: pipe4_BN_mask_joint_mask_80_notapod.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  mask_obs_name: pipe4_BN_mask_joint_mask_80.fits
+  mask_obs_name: pipe4_BN_mask_joint_mask_80_notapod.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null

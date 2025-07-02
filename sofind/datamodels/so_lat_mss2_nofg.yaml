@@ -1,0 +1,17 @@
+qids_config: so_basic_qids.yaml
+
+maps:
+  default_config: so_lat_mss2_nofg.yaml
+
+masks:
+  mnms_masks_config: mnms_masks.yaml
+  lensing_masks: so_lat_mss2_nofg.yaml   
+
+noise_models:  
+  default_config: so_lat_mss2_nofg.yaml
+
+beams:
+  beams_lat_mss2_theory: beams_lat_mss2_theory.yaml
+
+transfer_func:
+  tf_lat_mss2_theory: tf_lat_mss2_theory.yaml

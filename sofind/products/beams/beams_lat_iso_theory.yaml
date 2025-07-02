@@ -1,5 +1,5 @@
 system_paths:
-  niagara: /home/s/sievers/kaper/rbond_karen/so/pipe0004_BN/beams/
+  niagara: /home/r/rbond/kaper/rbond_karen/so/pipe0004_BN/beams/
 
 allowed_qids_configs:
 - so_lat_ot_qids.yaml

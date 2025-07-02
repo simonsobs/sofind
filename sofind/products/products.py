@@ -526,7 +526,6 @@ class Product:
 
         assert my_system in systems.sofind_systems, \
             f'user system {my_system} not in sofind_systems: {systems.sofind_systems}'
-
         try:
             product = utils.get_producttag(product)
             subproduct_path = subproduct_dict['system_paths'][my_system]
