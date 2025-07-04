@@ -2,7 +2,7 @@ system_paths:
   perlmutter: 
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/v4_maps/dummy_beams/
   niagara: /scratch/r/rbond/iabril/ACT_DR6_products/beams/dummy_beams/
-  penn-gpc: 
+  penn-gpc: /data6/DR6_plus/dummy_products/beams/dummy_beams/
 
 allowed_qids_configs: 'all'
 

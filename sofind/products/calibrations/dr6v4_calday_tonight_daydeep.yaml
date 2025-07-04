@@ -3,6 +3,7 @@ system_paths:
   della: 
   perlmutter: 
   niagara: /project/r/rbond/jaejoonk/lensing_pipeline_data/calibration/cal_day_to_nightdefault/
+  penn-gpc: /data6/DR6_plus/calibrations/cal_day_to_nightdefault/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
