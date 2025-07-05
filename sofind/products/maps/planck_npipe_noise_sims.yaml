@@ -1,6 +1,7 @@
 system_paths:
   niagara: /project/r/rbond/jiaqu/
-  
+  penn-gpc: /data6/DR6_plus/
+
 allowed_qids_configs:
 - planck_qids.yaml
 
