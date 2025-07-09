@@ -29,7 +29,6 @@ calibrations:
   dr6v4_cal_230523: dr6v4_cal_230523.yaml
   dr6v4_cal_240410: dr6v4_cal_240410.yaml
   dr6v4_poleff_231113: dr6v4_poleff_231113.yaml
-  dr6v4_calday: dr6v4_calday.yaml
   dr6v4_calday_tonight_daydeep: dr6v4_calday_tonight_daydeep.yaml
   dr6v4_calday_tonight_daywide: dr6v4_calday_tonight_daywide.yaml
 
