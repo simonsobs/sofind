@@ -7,10 +7,10 @@ maps:
 beams:
   beams_nemo: beams_nemo.yaml
   beams_npipe: beams_planck_npipe.yaml
-  beams_dummy: beams_dummy.yaml
+  dummy: beams_dummy.yaml
 
 calibrations:
   dummy: dummy.yaml
 
 transfer_func:
-  tf_dummy: tf_dummy.yaml
+  dummy: tf_dummy.yaml

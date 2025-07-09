@@ -13,7 +13,7 @@ calibrations:
   dummy: dummy.yaml
 
 beams:
-  beams_dummy: beams_dummy.yaml
+  dummy: beams_dummy.yaml
 
 transfer_func:
-  tf_dummy: tf_dummy.yaml
+  dummy: tf_dummy.yaml
