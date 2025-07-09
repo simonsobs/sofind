@@ -9,6 +9,3 @@ allowed_qids_configs: 'all'
 allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
-
-dr6v4_20240919:
-  mask_fn: dr6v4_lensing_20240919_{daynight}_enhanced_mask_{skyfrac}.fits

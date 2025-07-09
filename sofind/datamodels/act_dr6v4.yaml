@@ -9,7 +9,7 @@ maps:
 
 masks:
   mnms_masks_config: mnms_masks.yaml
-  lensing_masks: lensing_masks.yaml
+  lensing_masks_20250513: lensing_masks_20250513.yaml
   lensing_masks_20240919b: lensing_masks_20240919b.yaml
 
 catalogs:
