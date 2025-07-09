@@ -99,6 +99,10 @@ class Calibration(Product):
         np.float
             The requested calibration value
         """
+        
+        if subproduct == 'dummy':
+            return 1
+
         subprod_dict = self.get_subproduct_dict(__name__, subproduct)
 
         # get the appropriate dictionary key template

@@ -95,6 +95,13 @@ class Beam(Product):
         np.array
             The requested beam = [ells, bells]
         """
+        
+        if subproduct == 'dummy':
+            # dummy beam:
+            ell = np.arange(0,10000+1)
+            beam = np.ones(len(ell))
+            return np.array([ell, beam])
+
         fn = self.get_beam_fn(qid, split_num=split_num, coadd=coadd,
                               subproduct=subproduct, basename=False, 
                               **kwargs)

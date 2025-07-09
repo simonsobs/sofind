@@ -4,7 +4,7 @@
 ## Allowed models
 | Config File (`subproduct`) |  `qid`(s) |
 | ----------- | -------- |
-| tf_dummy.yaml |  all | 
+| dummy |  all | 
 | tf_dr6v3_220701.yaml |  `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` | 
 | tf_dr6v4_230523.yaml|  `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b`|       
 | tf_dr6v4_240416.yaml|  `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b`|                                
