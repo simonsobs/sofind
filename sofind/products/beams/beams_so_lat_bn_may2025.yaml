@@ -1,0 +1,13 @@
+system_paths:
+  perlmutter: /global/homes/k/kaper/scratch/bossn_data_analysis/beams/
+
+allowed_qids_configs:
+- so_lat_ot_qids.yaml
+
+allowed_qids:
+- ot_i1_f090
+
+allowed_qids_extra_kwargs:
+
+split_beam_file_template: 'split{split_num}_{freq}_{ot}_beam_cmb.txt'
+coadd_beam_file_template: 'coadd_{freq}_{ot}_beam_cmb.txt'

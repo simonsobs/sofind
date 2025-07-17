@@ -1,0 +1,24 @@
+qids_config: so_lat_ot_qids.yaml
+
+maps:
+  default_config: so_lat_bn_may2025.yaml
+
+masks:
+  mnms_masks_config: mnms_masks.yaml
+  lensing_masks:  so_lat_bn_may2025_lensing_mask.yaml 
+  lensing_nilc_preproc_masks: so_lat_bn_may2025_preproc_mask.yaml
+
+noise_models:  
+  default_config: so_lat_bn_may2025.yaml
+
+beams:
+  beams_so_lat_bn_may2025: beams_so_lat_bn_may2025.yaml
+
+#transfer_func:
+#  tf_so_lat_bn_may2025: tf_so_lat_bn_may2025.yaml
+
+#calibrationspkl:
+#  cal_so_lat_bn_may2025: cal_so_lat_bn_may2025.yaml
+
+#catalogs:
+#  inpaint_catalogs_config: inpaint_catalogs.yaml

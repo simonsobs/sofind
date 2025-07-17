@@ -1,0 +1,11 @@
+system_paths:
+  perlmutter: /global/homes/k/kaper/scratch/bossn_data_analysis/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+pipe4_BN:
+  mask_fn: BOSSN_binary_mask_20250706.fits

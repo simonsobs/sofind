@@ -1,0 +1,15 @@
+system_paths:
+  perlmutter: "/global/homes/k/kaper/scratch/bossn_data_analysis/maps/"
+
+allowed_qids_configs:
+- so_lat_ot_qids.yaml
+
+allowed_qids:
+- ot_i1_f090
+
+allowed_qids_extra_kwargs:
+  ot_i1_f090:
+    num_splits: 4
+
+split_map_file_template: 'BOSSN_20250706_{ot}_{freq}_split{split_num}_{maptag}.fits'
+coadd_map_file_template: 'BOSSN_20250706_{ot}_{freq}_coadd_{maptag}.fits'
