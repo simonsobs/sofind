@@ -1,6 +1,8 @@
 system_paths:
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/dr6_v4_published/
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/calibrations
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/noise/calibrations
+  niagara: /scratch/r/rbond/iabril/ACT_DR6_products/calibration/dr6_v4_published/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml

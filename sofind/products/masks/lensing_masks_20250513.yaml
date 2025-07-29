@@ -1,14 +1,12 @@
 system_paths:
   perlmutter: 
-  niagara: 
+  niagara: /gpfs/fs0/project/r/rbond/msyriac/masks/dr6v4_lensing_250513_masks/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
   penn-gpc: /data5/act/DR6_products/masks/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/masks/dr6v4_lensing_250513_masks/
 
 allowed_qids_configs: 'all'
 
 allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
-
-dr6v4_20240919:
-  mask_fn: dr6v4_lensing_20240919_{daynight}_enhanced_mask_{skyfrac}.fits

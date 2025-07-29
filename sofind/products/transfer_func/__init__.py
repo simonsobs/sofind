@@ -87,6 +87,13 @@ class TransferFunc(Product):
         np.array
             The requested transfer function [ell, tf(ell)]
         """
+        
+        if subproduct == 'dummy':
+            # dummy transfer function:
+            ellt = np.arange(2,3000+1)
+            tf = np.ones(len(ellt))
+            
+            return np.array([ellt, tf])
 
         # use get_tf_fn and some external library to load the data
         fn = self.get_tf_fn(qid, subproduct=subproduct, 

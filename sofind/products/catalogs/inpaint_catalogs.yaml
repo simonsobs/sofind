@@ -4,6 +4,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/catalogues/inpaint_catalogs
   niagara: /home/r/rbond/jiaqu/projects/catalogs/inpaint_catalogs_20241002
   penn-gpc: /data5/act/catalogs/inpaint_catalogs_20241002
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/inpaint_catalogs_20241002/
 
 allowed_qids_configs: 'all'
 
