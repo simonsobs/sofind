@@ -1,6 +1,9 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v4/simulations/noise
-  perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
+  # these are alms
+  perlmutter: /pscratch/sd/j/jaejoonk/nilc_products/noise_sims/
+  # these are enmap versions
+  #perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/
   niagara: /scratch/r/rbond/jaejoonk/dr6plus_noise_sims/
   penn-gpc: /data6/DR6_plus/noise_sims/

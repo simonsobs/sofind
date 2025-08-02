@@ -1,5 +1,5 @@
 system_paths:
-  perlmutter: 
+  perlmutter: /global/cfs/cdirs/act/data/iabril/masks/
   niagara: /gpfs/fs0/project/r/rbond/msyriac/masks/dr6v4_lensing_250513_masks/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
   penn-gpc: /data6/DR6_plus/masks/dr6v4_lensing_250513_masks/
