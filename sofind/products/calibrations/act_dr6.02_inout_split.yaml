@@ -1,6 +1,7 @@
 system_paths:
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/calibrations
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/noise/calibrations
+  penn-gpc: /data6/DR6_plus/calibrations/dr6.02_calibrations
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
