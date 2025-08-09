@@ -3,6 +3,7 @@ system_paths:
   della: 
   perlmutter: 
   niagara: /project/r/rbond/jaejoonk/lensing_pipeline_data/calibration/cal_day_to_nightdefault/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/calibrations/cal_day_to_nightdefault/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml

@@ -3,6 +3,7 @@ system_paths:
   niagara: /gpfs/fs0/project/r/rbond/msyriac/masks/dr6v4_lensing_250513_masks/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
   penn-gpc: /data5/act/DR6_products/masks/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/masks/dr6v4_lensing_250513_masks/
 
 allowed_qids_configs: 'all'
 
