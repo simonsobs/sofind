@@ -1,0 +1,24 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/beams/leakage_beams/nominal/
+  dirac:
+  niagara: 
+  penn-gpc: 
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/beams/leakage_beams/nominal/
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa4a
+- pa4b
+- pa5a
+- pa5b
+- pa6a
+- pa6b
+
+allowed_qids_extra_kwargs:
+
+split_beam_file_template:  ''
+coadd_beam_file_template:  '{array}_{freq}_gamma_t2{leakage_comp}.txt'
+
+norm: False

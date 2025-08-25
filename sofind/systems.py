@@ -5,5 +5,6 @@ sofind_systems = [
     'rusty',
     'dirac',
     'niagara',
-    'penn-gpc'
+    'penn-gpc',
+    'souk'
 ]

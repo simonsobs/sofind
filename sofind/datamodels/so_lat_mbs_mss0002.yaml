@@ -8,12 +8,3 @@ masks:
 
 noise_models:
   default_config: so_lat_mbs_mss0002.yaml
-
-calibrations:
-  dummy: dummy.yaml
-
-beams:
-  beams_dummy: beams_dummy.yaml
-
-transfer_func:
-  tf_dummy: tf_dummy.yaml

@@ -7,7 +7,8 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/
   niagara: /scratch/r/rbond/jaejoonk/dr6plus_noise_sims/
   penn-gpc: /data6/DR6_plus/noise_sims/
-
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/simulations/mnms/
+  
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
 
