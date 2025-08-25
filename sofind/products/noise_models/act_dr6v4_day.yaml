@@ -47,7 +47,7 @@ tile_cmbmask_daydeep:
   calibrated: false
   calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
-  catalog_name: union_catalog_regular_20220316.csv
+  catalog_name: union_catalog_regular_20241002.csv
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
