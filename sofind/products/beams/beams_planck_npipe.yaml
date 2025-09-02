@@ -1,8 +1,8 @@
 system_paths:
   della: 
   perlmutter: 
-#  niagara: /gpfs/fs0/project/r/rbond/jiaqu/actpol/
   niagara: /gpfs/fs0/scratch/r/rbond/jaejoonk/planck_beams_from_nersc/
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/planck_beams/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/beams/planck_beams/
   penn-gpc: /data6/DR6_plus/planck_beams/
 

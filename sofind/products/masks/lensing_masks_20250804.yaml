@@ -1,5 +1,6 @@
 system_paths:
   perlmutter: 
+  trillium:
   niagara:
   dirac: 
   penn-gpc: 

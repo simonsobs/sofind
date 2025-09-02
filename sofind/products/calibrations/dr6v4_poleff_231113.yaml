@@ -1,6 +1,7 @@
 system_paths:
   perlmutter: /pscratch/sd/j/jaejoonk/nilc_products/calibration/dr6_v4_231113/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/dr6_v4_231113/
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/calibration/dr6_v4_231113/
   niagara: /project/r/rbond/jaejoonk/lensing_pipeline_data/calibration/dr6_v4_231113/
   penn-gpc: /data5/act/DR6_products/calibration/dr6_v4_231113/
 

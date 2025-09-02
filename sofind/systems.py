@@ -6,5 +6,6 @@ sofind_systems = [
     'dirac',
     'niagara',
     'penn-gpc',
-    'souk'
+    'souk',
+    'trillium'
 ]

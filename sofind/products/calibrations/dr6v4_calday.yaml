@@ -2,6 +2,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/dr6v4_calday/
   della: 
   perlmutter: 
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/calibration/dr6v4_calday/
   niagara: /scratch/r/rbond/iabril/ACT_DR6_products/calibration/dr6v4_calday/
   penn-gpc: /data6/DR6_plus/dr6v4_calday/
 

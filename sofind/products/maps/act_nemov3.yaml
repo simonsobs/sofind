@@ -1,5 +1,6 @@
 system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/models/
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/models/
   niagara: /scratch/r/rbond/jaejoonk/lensing_pipeline_data/models/
   penn-gpc: /data5/act/DR6_products/models/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/models/

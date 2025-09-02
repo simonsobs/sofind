@@ -1,5 +1,6 @@
 system_paths:
   perlmutter: /global/cfs/projectdirs/act/data/masks/dr6v4_lensing_20250318_masks/baseline/
+  trillium: /project/rrg-rbond-ac/msyriac/masks/dr6v4_lensing_20250318_masks/baseline/
   niagara: /gpfs/fs0/project/r/rbond/msyriac/masks/dr6v4_lensing_20250318_masks/baseline/
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
   penn-gpc: /data5/act/masks/dr6v4_lensing_20250318_masks/baseline/
