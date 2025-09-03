@@ -4,7 +4,7 @@ system_paths:
   trillium: /scratch/jaejoonk/DR6plus_lensing_data/calibration/dr6_v4_231113/
   niagara: /project/r/rbond/jaejoonk/lensing_pipeline_data/calibration/dr6_v4_231113/
   penn-gpc: /data5/act/DR6_products/calibration/dr6_v4_231113/
-
+  trillium: /project/rrg-rbond-ac/jaejoonk/lensing_pipeline_data/calibration/dr6_v4_231113/
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
 

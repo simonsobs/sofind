@@ -5,7 +5,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/
   penn-gpc: /data6/DR6_plus/masks/dr6v4_lensing_250513_masks/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/masks/dr6v4_lensing_250513_masks/
-
+  trillium: /project/rrg-rbond-ac/msyriac/masks/dr6v4_lensing_250513_masks/
 allowed_qids_configs: 'all'
 
 allowed_qids: 'all'
