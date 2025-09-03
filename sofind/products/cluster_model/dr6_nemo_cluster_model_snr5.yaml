@@ -1,6 +1,7 @@
 system_paths:
   perlmutter: 
   niagara: /home/r/rbond/jiaqu/sims/models/
+  trillium: 
   dirac: 
 
 allowed_qids_configs: 'all'
