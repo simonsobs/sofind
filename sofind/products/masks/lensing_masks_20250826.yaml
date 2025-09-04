@@ -1,0 +1,12 @@
+system_paths:
+  perlmutter: 
+  niagara:
+  dirac: 
+  penn-gpc: 
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/masks/dr6v4_lensing_250826_masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:

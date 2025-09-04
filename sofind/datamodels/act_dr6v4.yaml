@@ -10,8 +10,14 @@ maps:
 masks:
   mnms_masks_config: mnms_masks.yaml
   lensing_masks_20250513: lensing_masks_20250513.yaml
+  lensing_masks_20250513_obs: lensing_masks_20250513_obs.yaml
   lensing_masks_20250804: lensing_masks_20250804.yaml
+  lensing_masks_20250818: lensing_masks_20250818.yaml
+  lensing_masks_20250820: lensing_masks_20250820.yaml
+  lensing_masks_20250820b: lensing_masks_20250820b.yaml
+  lensing_masks_20250826: lensing_masks_20250826.yaml
   lensing_masks_20240919b: lensing_masks_20240919b.yaml
+  lensing_masks_20240919b_obs: lensing_masks_20240919b_obs.yaml
 
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
