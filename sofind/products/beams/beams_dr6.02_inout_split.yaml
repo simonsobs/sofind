@@ -1,6 +1,7 @@
 system_paths:
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/beams/main_beams/inout_split/
-  penn-gpc: /data6/DR6_plus/main_beams/inout_split/ 
+  penn-gpc: /data6/DR6_plus/main_beams/inout_split/
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/beams_path/main_beams/inout_split/ 
 
 allowed_qids_configs: 'all'
 

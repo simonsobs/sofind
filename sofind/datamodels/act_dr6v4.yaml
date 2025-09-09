@@ -34,9 +34,9 @@ calibrations:
   dr6v4_calday_tonight_daydeep: dr6v4_calday_tonight_daydeep.yaml
   dr6v4_calday_tonight_daywide: dr6v4_calday_tonight_daywide.yaml
   act_dr6.02_el_split: act_dr6.02_el_split.yaml
-  act_dr6.02_inout_split: act_dr6.02_el_split.yaml
-  act_dr6.02_pwv_split: act_dr6.02_el_split.yaml
-  act_dr6.02_t_split: act_dr6.02_el_split.yaml
+  act_dr6.02_inout_split: act_dr6.02_inout_split.yaml
+  act_dr6.02_pwv_split: act_dr6.02_pwv_split.yaml
+  act_dr6.02_t_split: act_dr6.02_t_split.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
