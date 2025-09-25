@@ -1,0 +1,12 @@
+system_paths:
+  perlmutter: 
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/masks/
+  niagara:
+  dirac: 
+  penn-gpc: 
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:

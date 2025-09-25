@@ -14,4 +14,4 @@ allowed_qids_extra_kwargs:
 split_beam_file_template:  '{t_split}/set{split_num}_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
 coadd_beam_file_template:  '{t_split}/coadd_{array}_{freq}_{daynight}_beam_tform_jitter_cmb.txt'
 
-norm: False
+norm: True
