@@ -1,10 +1,7 @@
 system_paths:
   perlmutter: /global/cfs/cdirs/act/data/alaposta/transfer_functions/dr6_v4_legacy_240416/
-  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/transfer_functions/dr6_v4_legacy_240416/
   trillium: /scratch/jaejoonk/DR6plus_lensing_data/transfer_functions/dr6_v4_legacy_240416/
-  niagara: /scratch/r/rbond/jaejoonk/lensing_pipeline_data/transfer_functions/dr6_v4_legacy_240416/
   penn-gpc: /data5/act/DR6_products/transfer_functions/dr6_v4_legacy_240416/
-  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/transfer_func/dr6_v4_legacy_240416/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
@@ -19,4 +16,4 @@ allowed_qids:
 
 allowed_qids_extra_kwargs:
 
-tf_template: 'tf_fit_dr6_{array}_{freq}_logistic.dat'
+tf_template: 'tf_fit_dr6_{array}_{freq}_logistic_lmax10000.dat'
