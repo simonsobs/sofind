@@ -1,0 +1,12 @@
+system_paths:
+  perlmutter: /global/homes/k/kaper/scratch/bossn_data_analysis/tf/
+
+allowed_qids_configs:
+- so_lat_ot_qids.yaml
+
+allowed_qids:
+- ot_i1_f090
+
+allowed_qids_extra_kwargs:
+
+tf_template: 'tf_so_lat_bn_may2025_{freq}_{ot}_logistic.dat'

@@ -14,8 +14,8 @@ noise_models:
 beams:
   beams_so_lat_bn_may2025: beams_so_lat_bn_may2025.yaml
 
-#transfer_func:
-#  tf_so_lat_bn_may2025: tf_so_lat_bn_may2025.yaml
+transfer_func:
+  tf_so_lat_bn_may2025: tf_so_lat_bn_may2025.yaml
 
 #calibrationspkl:
 #  cal_so_lat_bn_may2025: cal_so_lat_bn_may2025.yaml
