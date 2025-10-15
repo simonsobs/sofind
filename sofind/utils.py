@@ -5,6 +5,7 @@ import h5py
 
 import io
 import os, sys
+from itertools import product
 
 # adapted from soapack.interfaces
 def config_from_yaml_file(filename):
@@ -203,3 +204,52 @@ def get_protected_fn(*fns, no_fn_collisions=True, write_to_fn_idx=None):
 def get_producttag(product):
     """Return product.split('.')[-1]"""
     return product.split('.')[-1]
+
+def get_super_qids_from_qids_and_subproduct_kwargs(*qids, **subproduct_kwargs):
+    """Generate 'super_qids' from qids and a dictionary that maps keys of
+    subproduct_kwargs to an iterable of their possible values. 'super_qids'
+    are the outer product of the possible values for each key, and then the 
+    qids (starting with the subproduct_kwargs from left to right in insertion
+    order).
+
+    For example, if qids is ('pa5a', 'pa5b'), and subproduct_kwargs is
+    {'el_split': ['el1', 'el2', 'el3'], 'something_else': [0, 1]}, then
+    the following 12 tuples form the ordered 'super_qids':
+
+    ({'el_split': 'el1', 'something_else': 0}, 'pa5a'),
+    ({'el_split': 'el1', 'something_else': 0}, 'pa5b'),
+    ({'el_split': 'el1', 'something_else': 1}, 'pa5a'),
+    ({'el_split': 'el1', 'something_else': 1}, 'pa5b'),
+    ({'el_split': 'el2', 'something_else': 0}, 'pa5a'),
+    ({'el_split': 'el2', 'something_else': 0}, 'pa5b'),
+    ({'el_split': 'el2', 'something_else': 1}, 'pa5a'),
+    ({'el_split': 'el2', 'something_else': 1}, 'pa5b'),
+    ({'el_split': 'el3', 'something_else': 0}, 'pa5a'),
+    ({'el_split': 'el3', 'something_else': 0}, 'pa5b'),
+    ({'el_split': 'el3', 'something_else': 1}, 'pa5a'),
+    ({'el_split': 'el3', 'something_else': 1}, 'pa5b')
+
+    Parameters
+    ----------
+    qids : str or iterable of str
+        One or more array qids for this model.
+    subproduct_kwargs : (key, iterable) mapping, optional
+        Any additional keyword arguments required to load products from
+        disk, or to format model and sim filenames. The iterable for each
+        key should list, in order, all possible values the key can take.
+
+    Returns
+    -------
+    _type_
+        _description_
+    """
+    super_qids = []
+    for vals in product(*subproduct_kwargs.values(), qids):
+        _subproduct_kwargs = dict(zip(subproduct_kwargs.keys(), vals[:-1]))
+        qid = vals[-1]
+
+        # e.g. ({'inout_split': 'inout1', 'el_split': 1}, 'pa5a')
+        super_qid = (_subproduct_kwargs, qid)
+        super_qids.append(super_qid)
+    
+    return super_qids
