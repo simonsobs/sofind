@@ -47,9 +47,9 @@ allowed_qids_extra_kwargs:
 tile_cmbmask:
   noise_model_class: Tiled
   data_model_name: so_lat_iso_sv1
-  subproduct: sim_config
+  subproduct: sim
   maps_product: maps
-  maps_subproduct: sim_config
+  maps_subproduct: sim
   calibrated: false
   calibrations_subproduct: null
   catalogs_subproduct: null
