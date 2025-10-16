@@ -1,0 +1,13 @@
+qids_config: so_lat_qids.yaml  
+
+maps: 
+  default_config:
+  sim_config: so_lat_iso_d56_sims.yaml
+  bn_config: 
+
+masks:
+  mnms_masks_config: mnms_masks_lat_iso_d56_sims.yaml
+
+noise_models:
+  default_config:
+  sim_config: so_lat_iso_d56_sims.yaml
