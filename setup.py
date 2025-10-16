@@ -4,7 +4,7 @@ setup(
     name='sofind',
     packages=find_packages(),
     package_data={'sofind': ['datamodels/*.yaml', 'products/*/*.yaml', 'qids/*.yaml']},
-    version='0.0.12',
+    version='0.0.13-alpha',
     install_requires=[
         'pixell>=0.12.0'
         ]
