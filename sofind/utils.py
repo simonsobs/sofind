@@ -240,8 +240,8 @@ def get_super_qids_from_qids_and_subproduct_kwargs(*qids, **subproduct_kwargs):
 
     Returns
     -------
-    _type_
-        _description_
+    list
+        List of the super_qids.
     """
     super_qids = []
     for vals in product(*subproduct_kwargs.values(), qids):
