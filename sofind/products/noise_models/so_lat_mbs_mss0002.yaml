@@ -2,7 +2,7 @@ system_paths:
   perlmutter: /global/cfs/cdirs/sobs/v4_sims/mbs/mbs_s0015_20240504
   rusty: /mnt/home/aduivenvoorden/project/so/20240504_mss0002_lat
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/SO/mbs/mbs_s0015_20240504/alms/
-  souk: /cephfs/soukdata/user_scratch/akusiak/mss2/mbs_s0015_20240504/alms/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/MSS2/mbs/mbs_s0015_20240504/alms/
 
 
 allowed_qids_configs:

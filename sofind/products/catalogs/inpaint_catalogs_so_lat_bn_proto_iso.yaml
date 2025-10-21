@@ -1,6 +1,6 @@
 system_paths:
   dirac: /home/ak2628/software/SO_lensing/inpaint_catalogs/
-  souk: /cephfs/soukdata/shared_projects/SO_lensing/MSS2/products/inpaint_catalogs/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/first_LAT/boss-n/products/inpaint_catalogs/
 
 allowed_qids_configs: 'all'
 

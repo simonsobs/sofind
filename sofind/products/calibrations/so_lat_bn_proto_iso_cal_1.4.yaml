@@ -1,0 +1,14 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/first_LAT/boss-n/products/cal
+
+allowed_qids_configs:
+  - so_lat_ot_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+subproduct_kwargs_orders:
+cals_file_template: so_lat_bn_proto_iso_cal_1.4.pkl
+poleffs_file_template:
+key_template: so_bn_{ot}_{freq}

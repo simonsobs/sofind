@@ -1,6 +1,6 @@
 system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/SO/mss-0002/tf/
-  souk: /shared_home/akusiak/data/mss2/products/tf/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/MSS2/mss2/products/tf/
 
 allowed_qids_configs:
 - so_basic_qids.yaml

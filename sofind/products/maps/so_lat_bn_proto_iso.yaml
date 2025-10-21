@@ -1,0 +1,36 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/first_LAT/boss-n/splits_20250801/
+
+allowed_qids_configs:
+  -  so_lat_ot_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+  ot_i1_f090:
+    num_splits: 4
+
+  # ot_i3_f090:
+  #   num_splits: 4
+
+  # ot_i4_f090:
+  #   num_splits: 4
+
+  # ot_i6_f090:
+  #   num_splits: 4
+
+  # ot_i1_f150:
+  #   num_splits: 4
+
+  # ot_i3_f150:
+  #   num_splits: 4
+  
+  # ot_i4_f150:
+  #   num_splits: 4
+  
+  # ot_i6_f150:
+  #   num_splits: 4
+
+coadd_map_file_template: '{maptag}_{ot}_{freq}_20250801_uK.fits'
+split_map_file_template:  '{maptag}_{ot}_{freq}_bundle{split_num}_20250801_uK.fits' 
+

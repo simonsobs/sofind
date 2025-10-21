@@ -1,0 +1,14 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/first_LAT/boss-n/products/poleff
+
+allowed_qids_configs:
+  - so_lat_ot_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+subproduct_kwargs_orders:
+cals_file_template:
+poleffs_file_template: 
+key_template: 

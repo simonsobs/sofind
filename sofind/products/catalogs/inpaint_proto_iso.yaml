@@ -1,0 +1,8 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/first_LAT/boss-n/products/inpaint_catalog
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:

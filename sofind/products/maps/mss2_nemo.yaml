@@ -1,6 +1,6 @@
 system_paths:
   dirac: /home/ak2628/rds/rds-dirac-dp002/SO/nemo_mss2/output/
-  souk: /shared_home/akusiak/data/mss2/nemo/output/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/MSS2/products/nemo/output/
 
 allowed_qids_configs:
   - mss2_nemo.yaml

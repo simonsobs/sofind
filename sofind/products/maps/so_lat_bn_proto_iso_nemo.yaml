@@ -1,0 +1,11 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/first_LAT/boss-n/nemo/
+
+allowed_qids_configs:
+  - so_lat_nemo_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'clusterModelMap_f{freq}_DR6_BN.fits'

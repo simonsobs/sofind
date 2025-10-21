@@ -1,10 +1,11 @@
 system_paths:
   della: 
   dirac: /home/ak2628/rds/rds-dirac-dp002/SO/nemo_mss2/20250415/beams
-  souk: /shared_home/akusiak/data/mss2/nemo/20250415/beams/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/MSS2/products/nemo/20250415/beams
 
 allowed_qids_configs:
 - so_basic_qids.yaml
+- so_lat_ot_qids.yaml
 
 allowed_qids: 'all'
 
@@ -17,6 +18,10 @@ allowed_qids_extra_kwargs:
     nemo_beam_freq: '225'
   uhfb:
     nemo_beam_freq: '280'
+  ot_i1_f090:
+    nemo_beam_freq: '093'
+  ot_i1_f150:
+    nemo_beam_freq: '145'
 
 coadd_beam_file_template:  'beam_gaussian_la{nemo_beam_freq}.txt'
 norm: True

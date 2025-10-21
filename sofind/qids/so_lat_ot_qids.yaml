@@ -1,0 +1,39 @@
+ot_i1_f150:
+  ot: i1
+  freq: f150
+  patch: BN
+
+ot_i1_f090:
+  ot: i1
+  freq: f090
+  patch: BN
+
+ot_i3_f150:
+  ot: i3
+  freq: f150
+  patch: BN
+
+ot_i3_f090:
+  ot: i3
+  freq: f090
+  patch: BN
+
+ot_i4_f150:
+  ot: i4
+  freq: f150
+  patch: BN
+
+ot_i4_f090:
+  ot: i4
+  freq: f090
+  patch: BN
+
+ot_i6_f150:
+  ot: i6
+  freq: f150
+  patch: BN
+
+ot_i6_f090:
+  ot: i6
+  freq: f090
+  patch: BN

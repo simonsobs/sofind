@@ -1,22 +1,16 @@
 system_paths:
   dirac: /home/ak2628/software/SO_lensing/beams_mss2/beams/
-  souk: /cephfs/soukdata/shared_projects/SO_lensing/MSS2/products/beams/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/first_LAT/boss-n/products/beams/
 
 allowed_qids_configs:
-- so_basic_qids.yaml
+- so_lat_ot_qids.yaml
 
-allowed_qids:
-- lfa
-- lfb
-- mfa
-- mfb
-- uhfa
-- uhfb
+allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
 
 #following https://github.com/simonsobs/map_based_simulations/blob/master/mbs-s0012-20230321/simonsobs_instrument_parameters_2023.03/so_default_resolution.csv
-split_beam_file_template:  'split{split_num}_{array}_{freq}_mss2_beam.txt'
-coadd_beam_file_template:  'coadd_{array}_{freq}_mss2_beam.txt'
+split_beam_file_template:  'split{split_num}_{ot}_{freq}_gaussian_beam.txt'
+coadd_beam_file_template:  'coadd_{ot}_{freq}_gaussian_beam.txt'
 
 norm: False

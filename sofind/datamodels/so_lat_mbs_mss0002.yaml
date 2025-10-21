@@ -2,18 +2,18 @@ qids_config: so_basic_qids.yaml
 
 maps: 
   default_config: so_lat_mbs_mss0002.yaml
-  so_lat_mbs_mss0002: so_lat_mbs_mss0002.yaml
 
 masks:
-  so_lat_mbs_mss0002_masks: so_lat_mbs_mss0002.yaml
   lensing_masks: so_lat_mbs_mss0002.yaml
 
 noise_models:
   default_config: so_lat_mbs_mss0002.yaml
 
+# calibrations:
+#   cal_lat_mbs_mss0002: cal_lat_mbs_mss0002.yaml
+
 catalogs:
   inpaint_catalogs_mss2: inpaint_catalogs_mss2.yaml  
-  inpaint_catalogs: inpaint_catalogs.yaml  
   
 beams:
   beams_lat_mbs_mss0002: beams_lat_mbs_mss0002.yaml

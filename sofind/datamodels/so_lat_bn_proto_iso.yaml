@@ -1,0 +1,31 @@
+qids_config: so_lat_ot_qids.yaml  
+
+maps: 
+  default_config: so_lat_bn_proto_iso_srcfree.yaml
+  # so_lat_bn_proto_iso: so_lat_bn_proto_iso.yaml
+  so_lat_bn_proto_iso_srcfree: so_lat_bn_proto_iso_srcfree.yaml
+  # so_lat_bn_proto_iso_nosplits: so_lat_bn_proto_iso_nosplits.yaml
+  
+catalogs: 
+  inpaint_proto_iso: inpaint_proto_iso.yaml
+
+masks:
+  so_lat_bn_proto_iso: so_lat_bn_proto_iso_masks.yaml
+  lensing_masks: so_lat_bn_proto_iso_masks.yaml
+
+calibrations:
+  so_lat_bn_proto_iso_cal: so_lat_bn_proto_iso_cal.yaml
+  so_lat_bn_proto_iso_cal_1.2: so_lat_bn_proto_iso_cal_1.2.yaml
+  so_lat_bn_proto_iso_cal_1.4: so_lat_bn_proto_iso_cal_1.4.yaml
+  so_lat_bn_proto_iso_poleff: so_lat_bn_proto_iso_poleff.yaml
+
+noise_models:
+  default_config: so_lat_bn_may2025.yaml  
+  
+beams:
+  so_lat_bn_proto_iso: beams_so_lat_bn_proto_iso.yaml
+  so_lat_bn_proto_iso_src: beams_so_lat_bn_proto_iso_src.yaml
+  beams_nemo_iso: beams_nemo_iso.yaml
+
+transfer_func:
+  tf_so_lat_bn_proto_iso: tf_so_lat_bn_proto_iso.yaml
