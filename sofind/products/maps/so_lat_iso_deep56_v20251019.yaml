@@ -1,0 +1,36 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/sobs/users/chervias/LAT/maps/deep56_ISO/
+
+allowed_qids_configs:
+- so_lat_qids.yaml
+
+allowed_qids:
+- i1a
+- i1b
+- i3a
+- i3b
+- i4a
+- i4b
+- i6a
+- i6b
+
+allowed_qids_extra_kwargs:
+  i1a:
+    num_splits: 4
+  i1b:
+    num_splits: 4
+  i3a:
+    num_splits: 4
+  i3b:
+    num_splits: 4
+  i4a:
+    num_splits: 4
+  i4b:
+    num_splits: 4
+  i6a:
+    num_splits: 4
+  i6b:
+    num_splits: 4
+
+split_map_file_template: 'sky_{maptag}_{tube}_{freq}_set{split_num}_20251019.fits'
+coadd_map_file_template: 'sky_{maptag}_{tube}_{freq}_coadd_20251019.fits'

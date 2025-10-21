@@ -1,0 +1,20 @@
+system_paths:
+  perlmutter: /global/homes/k/kaper/scratch/deep56_20251019/beams/
+
+allowed_qids_configs:
+- so_lat_qids.yaml
+
+allowed_qids:
+- i1a
+- i1b
+- i3a
+- i3b
+- i4a
+- i4b
+- i6a
+- i6b
+
+allowed_qids_extra_kwargs:
+
+split_beam_file_template: 'split{split_num}_{freq}_{tube}_theory_beam_cmb.txt' ##these are dummy beams with 2.2 and 1.4 fhwm
+coadd_beam_file_template: 'coadd_{freq}_{tube}_theory_beam_cmb.txt' ##these are dummy beams with 2.2 and 1.4 fhwm
