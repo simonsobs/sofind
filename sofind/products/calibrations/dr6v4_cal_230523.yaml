@@ -3,7 +3,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/dr6_v4_230523/
   niagara: /project/r/rbond/jaejoonk/lensing_pipeline_data/calibration/dr6_v4_230523/
   penn-gpc: /data5/act/DR6_products/calibration/dr6_v4_230523/
-
+  trillium: /project/rrg-rbond-ac/jaejoonk/lensing_pipeline_data/calibration/dr6_v4_230523/
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
 
