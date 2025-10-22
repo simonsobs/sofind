@@ -1,0 +1,9 @@
+system_paths:
+  perlmutter: /global/homes/k/kaper/scratch/deep56_20251019/source_catalogs/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+

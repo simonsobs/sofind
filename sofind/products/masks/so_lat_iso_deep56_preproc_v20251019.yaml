@@ -8,4 +8,4 @@ allowed_qids: 'all'
 allowed_qids_extra_kwargs:
 
 deep56:
-  mask_fn: mask_20251019_binary.fits
+  mask_fn: mask_20251019_boxesmasked_binary.fits

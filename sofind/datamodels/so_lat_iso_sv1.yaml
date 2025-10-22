@@ -14,3 +14,6 @@ noise_models:
 
 beams:
   v20251019: beams_so_lat_iso_deep56_v20251019.yaml
+
+catalogs:
+  v20251019: catalog_so_lat_iso_deep56_v20251019.yaml

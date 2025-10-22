@@ -40,8 +40,10 @@ tile_cmbmask:
   maps_subproduct: v20251019
   calibrated: false
   calibrations_subproduct: null
-  catalogs_subproduct: null
-  catalog_name: null
+  catalogs_subproduct: v20251019
+  catalog_name: ACT_catalog_simple_mnms.txt
+  inpaint_radius: 10
+  inpaint_thumb_width: 180
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -56,10 +58,10 @@ tile_cmbmask:
   ivar_lmaxs: null
   kfilt_lbounds: null
   masks_subproduct: v20251019_preproc_masks
-  mask_est_name: mask_20251019_binary.fits
+  mask_est_name: mask_20251019_boxesmasked_binary.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  mask_obs_name: mask_20251019_binary.fits
+  mask_obs_name: mask_20251019_boxesmasked_binary.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null
