@@ -1,5 +1,6 @@
 system_paths:
   perlmutter: /global/homes/k/kaper/scratch/deep56_20251019/source_catalogs/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/source_catalogs/
 
 allowed_qids_configs: 'all'
 

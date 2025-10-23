@@ -1,5 +1,6 @@
 system_paths:
   perlmutter: /global/cfs/cdirs/sobs/users/chervias/LAT/maps/deep56_ISO/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/maps/
 
 allowed_qids_configs:
 - so_lat_qids.yaml
