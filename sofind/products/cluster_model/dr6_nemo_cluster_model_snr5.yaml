@@ -1,0 +1,13 @@
+system_paths:
+  perlmutter: 
+  niagara: /home/r/rbond/jiaqu/sims/models/
+  trillium: 
+  dirac: 
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+cluster_fn_template: "nemomodel_dr6_all_clustersSNR{SNR}{frequency}{downgrade}.fits"

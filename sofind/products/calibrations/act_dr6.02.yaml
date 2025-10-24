@@ -3,6 +3,9 @@ system_paths:
   della: /scratch/gpfs/zatkins/data/simonsobs/mnms/calibrations
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/noise/calibrations
   niagara: /scratch/r/rbond/iabril/ACT_DR6_products/calibration/dr6_v4_published/
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/calibration/dr6.02_calibrations/
+  penn-gpc: /data5/act/DR6_products/calibration/dr6_v4_published/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/calibrations/act_dr6.02/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml

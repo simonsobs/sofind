@@ -1,0 +1,12 @@
+system_paths:
+  trillium: /scratch/jaejoonk/cmodel/nemo/cand_release/cmodel_20251015
+  penn-gpc: /data6/depot/cmodel/nemo/cand_release/cmodel_20251015
+
+allowed_qids_configs:
+  - act_nemo.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'processed_model_f{freq}.fits'

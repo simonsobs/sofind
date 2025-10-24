@@ -7,3 +7,14 @@ maps:
 beams:
   beams_nemo: beams_nemo.yaml
   beams_npipe: beams_planck_npipe.yaml
+
+#calibrations:
+#  dummy: dummy.yaml
+
+#transfer_func:
+#  tf_dummy: tf_dummy.yaml
+
+masks:
+  lensing_masks_20250513: lensing_masks_20250513.yaml
+  lensing_masks_20240919b: lensing_masks_20240919b.yaml
+  lensing_masks_20250826: lensing_masks_20250826.yaml

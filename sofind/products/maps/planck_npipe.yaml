@@ -1,7 +1,9 @@
 system_paths:
   perlmutter: /global/cfs/projectdirs/act/data/planck/npipe/fejer1_equ/
+  trillium: /project/rrg-rbond-ac/sigurdkn/actpol/planck/npipe/fejer1_equ/
   niagara: /gpfs/fs0/project/r/rbond/sigurdkn/actpol/planck/npipe/fejer1_equ/
-  
+  penn-gpc: /data6/DR6_plus/npipe_fejer1_equ/
+
 allowed_qids_configs:
 - planck_qids.yaml
 
