@@ -2,6 +2,7 @@ system_paths:
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/beams/leakage_beams/nominal/
   dirac:
   niagara: 
+  trillium: /scratch/iabril/dr6.02_leakage/nominal/
   penn-gpc: 
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/beams/leakage_beams/nominal/
 

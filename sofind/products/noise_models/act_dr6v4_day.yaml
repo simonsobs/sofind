@@ -66,11 +66,15 @@ tile_cmbmask_daydeep:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: lensing_masks
-  mask_est_name: dr6v4_lensing_20240919_daydeep_enhanced_mask_60.fits
+  # subject to change!
+  # masks_subproduct: lensing_masks
+  # mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
+  masks_subproduct: lensing_masks_20250915
+  mask_est_name: dr6v4_lensing_250826_daydeep_enhanced_mask_wtop_rightcutS_shrink1.5_70.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  mask_obs_name: dr6v4_lensing_20240919_daydeep_enhanced_mask_60.fits
+  # mask_obs_name: dr6v4_lensing_20240919_daywide_enhanced_mask_80.fits
+  mask_obs_name: dr6v4_lensing_250826_daydeep_enhanced_mask_wtop_rightcutS_shrink1.5_70.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null
@@ -108,11 +112,15 @@ tile_cmbmask_daywide:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: lensing_masks
-  mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
+  # subject to change!
+  # masks_subproduct: lensing_masks
+  # mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
+  masks_subproduct: lensing_masks_20250915
+  mask_est_name: dr6v4_lensing_250826_daywide_enhanced_mask_70_South.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  mask_obs_name: dr6v4_lensing_20240919_daywide_enhanced_mask_80.fits
+  # mask_obs_name: dr6v4_lensing_20240919_daywide_enhanced_mask_80.fits
+  mask_obs_name: dr6v4_lensing_250826_daywide_enhanced_mask_70_South.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null

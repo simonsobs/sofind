@@ -14,6 +14,7 @@ masks:
   lensing_masks_20240919b: lensing_masks_20240919b.yaml
   lensing_masks_20250318: lensing_masks_20250318.yaml
   lensing_masks_20250513: lensing_masks_20250513.yaml
+  lensing_masks_20250826: lensing_masks_20250826.yaml
   lensing_masks_20250915: lensing_masks_20250915.yaml
 
 catalogs:
@@ -33,7 +34,9 @@ calibrations:
   dr6v4_cal_240410: dr6v4_cal_240410.yaml
   dr6v4_poleff_231113: dr6v4_poleff_231113.yaml
   dr6v4_calday_tonight_daydeep: dr6v4_calday_tonight_daydeep.yaml
+  dr6v4_calday_tonight_daydeep_250826: dr6v4_calday_tonight_daydeep_250826.yaml
   dr6v4_calday_tonight_daywide: dr6v4_calday_tonight_daywide.yaml
+  dr6v4_calday_tonight_daywide_250826: dr6v4_calday_tonight_daywide_250826.yaml
   act_dr6.02_el_split: act_dr6.02_el_split.yaml
   act_dr6.02_inout_split: act_dr6.02_inout_split.yaml
   act_dr6.02_pwv_split: act_dr6.02_pwv_split.yaml
@@ -49,9 +52,11 @@ beams:
   beams_dr6.02_inout_split: beams_dr6.02_inout_split.yaml
   beams_dr6.02_t_split: beams_dr6.02_t_split.yaml
   beams_nemo_v4: beams_nemo_v4.yaml
+  beams_nemo_v5: beams_nemo_v5.yaml
   beams_nominal: beams_v4_nominal.yaml
   beams_leakage: beams_v4_leakage.yaml
 
 transfer_func:
   tf_dr6v4_230523: tf_dr6v4_230523.yaml
   tf_dr6v4_240416: tf_dr6v4_240416.yaml
+  tf_dr6v4_240416_lmax10000: tf_dr6v4_240416_lmax10000.yaml
