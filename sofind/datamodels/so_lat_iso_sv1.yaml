@@ -21,6 +21,7 @@ calibrations:
 
 beams:
   v20251019_dummy: beams_dummy_lat_iso.yaml
+  act_beams_nemo_v5: beams_nemo_v5.yaml
 
 transfer_func:
   v20251019_dummy: tf_dummy_lat_iso.yaml

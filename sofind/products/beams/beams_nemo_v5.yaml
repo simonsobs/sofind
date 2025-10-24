@@ -1,0 +1,86 @@
+system_paths:
+  #trillium: /scratch/jaejoonk/cmodel/nemo/cand_release/cmodel_20251015/
+  #penn-gpc: /scratch/cmodel/nemo/cand_release/cmodel_20251015/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/nemo_models/ACT_DR6plus_models/
+
+allowed_qids_configs:
+  - act_dr6vX_qids.yaml
+  - planck_qids.yaml
+  - so_lat_qids.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+  p01:
+    nemo_freq: 'f090'
+  p02:
+    nemo_freq: 'f090'
+  p03: 
+    nemo_freq: 'f090'
+  p04:
+    nemo_freq: 'f090'
+  p05:
+    nemo_freq: 'f150'
+  p06:
+    nemo_freq: 'f150'
+  p07:
+    nemo_freq: 'f150'
+  p08:
+    nemo_freq: 'f150'
+  p09:
+    nemo_freq: 'f150'
+  pa4a:
+    nemo_freq: 'f150'
+  pa4a_dd:
+    nemo_freq: 'f150'
+  pa4a_dw:
+    nemo_freq: 'f150'
+  pa4b:
+    nemo_freq: 'f220'
+  pa4b_dd:
+    nemo_freq: 'f220'
+  pa4b_dw:
+    nemo_freq: 'f220'
+  pa5a:
+    nemo_freq: 'f090'
+  pa5a_dd:
+    nemo_freq: 'f090'
+  pa5a_dw:
+    nemo_freq: 'f090'
+  pa5b:
+    nemo_freq: 'f150'
+  pa5b_dd:
+    nemo_freq: 'f150' 
+  pa5b_dw:
+    nemo_freq: 'f150'
+  pa6a:
+    nemo_freq: 'f090' 
+  pa6a_dd:
+    nemo_freq: 'f090'
+  pa6a_dw:
+    nemo_freq: 'f090'
+  pa6b:
+    nemo_freq: 'f150'
+  pa6b_dd:
+    nemo_freq: 'f150'
+  pa6b_dw:
+    nemo_freq: 'f150'
+  i1a:
+    nemo_freq: 'f090'
+  i1b:
+    nemo_freq: 'f150'
+  i3a:
+    nemo_freq: 'f090'
+  i3b:
+    nemo_freq: 'f150'
+  i4a:
+    nemo_freq: 'f090'
+  i4b:
+    nemo_freq: 'f150'
+  i6a:
+    nemo_freq: 'f090'
+  i6b:
+    nemo_freq: 'f150'
+
+coadd_beam_file_template:  'beam_dr6_daynight_{nemo_freq}_tfun.txt'
+norm: True

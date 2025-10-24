@@ -1,0 +1,13 @@
+system_paths:
+  #trillium: /scratch/jaejoonk/cmodel/nemo/cand_release/cmodel_20251015
+  #penn-gpc: /data6/depot/cmodel/nemo/cand_release/cmodel_20251015
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/nemo_models/ACT_DR6plus_models/
+
+allowed_qids_configs:
+  - act_nemo.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'processed_model_f{freq}.fits'
