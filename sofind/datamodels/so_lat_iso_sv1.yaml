@@ -25,3 +25,6 @@ beams:
 
 transfer_func:
   v20251019_dummy: tf_dummy_lat_iso.yaml
+
+masks_healpix:
+  v20251019_preproc_masks_healpix: so_lat_iso_deep56_masks_healpix_v20251019.yaml
