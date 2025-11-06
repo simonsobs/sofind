@@ -1,0 +1,15 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/unwise/unwise_2048/
+
+allowed_qids_configs:
+- unwise_qids.yaml
+
+allowed_qids: 
+- blue_2048
+- green_2048
+- red_2048
+
+
+allowed_qids_extra_kwargs:
+
+map_file_template: '{color}_delta_{nside}.fits'

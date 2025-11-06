@@ -1,0 +1,38 @@
+blue_2048:
+  color: blue
+  nside: 2048
+
+green_2048:
+  color: green
+  nside: 2048
+
+red_2048:
+  color: red
+  nside: 2048
+
+blue_4096:  
+  color: blue
+  nside: 4096
+
+green_4096:
+  color: green
+  nside: 4096
+
+red_4096:
+  color: red
+  nside: 4096
+
+blue_8192:
+  color: blue
+  nside: 8192
+
+green_8192:
+  color: green
+  nside: 8192
+
+red_8192:
+  color: red
+  nside: 8192
+
+
+
