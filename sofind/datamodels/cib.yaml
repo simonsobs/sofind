@@ -1,7 +1,7 @@
 qids_config: cib_qids.yaml  
 
 maps: 
-  planck_GNILC: planck_GNILC.yaml
+  cib: cib.yaml
 
 beams:
-  planck_GNILC_beams: beams_planck_GNILC.yaml
+  cib_beams: beams_cib.yaml
