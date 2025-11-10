@@ -14,6 +14,10 @@ allowed_qids:
 - i4b
 - i6a
 - i6b
+- c1a
+- c1b
+- i5a
+- i5b
 
 allowed_qids_extra_kwargs:
   i1a:
@@ -31,6 +35,14 @@ allowed_qids_extra_kwargs:
   i6a:
     num_splits: 4
   i6b:
+    num_splits: 4
+  c1a:
+    num_splits: 4
+  c1b:
+    num_splits: 4
+  i5a:
+    num_splits: 4
+  i5b:
     num_splits: 4
 
 split_map_file_template: 'sky_{maptag}_{tube}_{freq}_set{split_num}_20251019.fits'

@@ -1,15 +1,13 @@
 qids_config: so_lat_qids.yaml  
 
 maps: 
-  #sim_config: so_lat_iso_deep56_sims.yaml
   v20251019: so_lat_iso_deep56_v20251019.yaml
 
 masks:
-  #mnms_masks_sim_config: mnms_masks_lat_iso_deep56_sims.yaml
   v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
 
 noise_models:
-  #sim_config: so_lat_iso_deep56_sims.yaml
+  sim_factory: so_lat_iso_deep56_sims.yaml
   v20251019: so_lat_iso_deep56_v20251019.yaml
 
 catalogs:
