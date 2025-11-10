@@ -7,7 +7,7 @@ masks:
   v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
 
 noise_models:
-  sim_factory: so_lat_iso_deep56_sims.yaml
+  sim_factory: so_lat_iso_deep56_sim_factory.yaml
   v20251019: so_lat_iso_deep56_v20251019.yaml
 
 catalogs:
