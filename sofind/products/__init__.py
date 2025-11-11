@@ -9,5 +9,3 @@ from .catalogs import Catalog
 from .masks import Mask
 from .calibrations import Calibration
 from .transfer_func import TransferFunc
-from .maps_healpix import MapsHealpix
-from .masks_healpix import MasksHealpix

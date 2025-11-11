@@ -1,7 +1,0 @@
-qids_config: cib_qids.yaml  
-
-maps: 
-  cib: cib.yaml
-
-beams:
-  cib_beams: beams_cib.yaml
