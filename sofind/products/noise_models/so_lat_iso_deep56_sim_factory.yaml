@@ -47,13 +47,17 @@ allowed_qids_extra_kwargs:
 tile_cmbmask:
   noise_model_class: Tiled
   data_model_name: so_lat_iso_sv1
-  subproduct: sim
+  subproduct: sim_factory
   maps_product: maps
-  maps_subproduct: sim
+  maps_subproduct: v20251019
   calibrated: false
   calibrations_subproduct: null
   catalogs_subproduct: null
   catalog_name: null
+  inpaint_radius: null
+  inpaint_thumb_width: null
+  inpaint_radius: null
+  inpaint_thumb_width: null
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -68,11 +72,11 @@ tile_cmbmask:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  masks_subproduct: mnms_masks_sim
+  masks_subproduct: null
   mask_est_name: null
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  mask_obs_name: mask_obs_mf_uhf.fits
+  mask_obs_name: null
   mask_obs_edgecut: 0
   model_lim: 0.000001
   model_lim0: null
