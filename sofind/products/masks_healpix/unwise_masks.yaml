@@ -1,8 +1,0 @@
-system_paths:
-  souk: /cephfs/soukdata/shared_projects/SO_lensing/unwise/unwise_2048/
-
-allowed_qids_configs: 'all'
-  
-allowed_qids: 'all'
-
-allowed_qids_extra_kwargs:

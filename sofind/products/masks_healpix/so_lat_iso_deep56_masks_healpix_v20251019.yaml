@@ -1,9 +1,0 @@
-system_paths:
-  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/masks/
-
-allowed_qids_configs: 'all'
-  
-allowed_qids: 'all'
-
-allowed_qids_extra_kwargs:
-

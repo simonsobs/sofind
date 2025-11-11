@@ -16,6 +16,3 @@ catalogs:
 beams:
   v20251019_gaussian: beams_gaussian_lat_iso.yaml
   act_beams_nemo_v5: beams_nemo_v5.yaml
-
-masks_healpix:
-  v20251019_preproc_masks_healpix: so_lat_iso_deep56_masks_healpix_v20251019.yaml
