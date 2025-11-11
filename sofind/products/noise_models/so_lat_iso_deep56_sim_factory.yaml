@@ -56,6 +56,8 @@ tile_cmbmask:
   catalog_name: null
   inpaint_radius: null
   inpaint_thumb_width: null
+  inpaint_radius: null
+  inpaint_thumb_width: null
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
