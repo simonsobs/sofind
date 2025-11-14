@@ -6,6 +6,8 @@ maps:
 
 beams:
   beams_nemo: beams_nemo.yaml
+  beams_nemo_v4: beams_nemo_v4.yaml
+  beams_nemo_v5: beams_nemo_v5.yaml
   beams_npipe: beams_planck_npipe.yaml
 
 #calibrations:

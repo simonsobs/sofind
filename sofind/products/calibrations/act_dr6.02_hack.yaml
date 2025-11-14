@@ -1,0 +1,20 @@
+system_paths:
+  # dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/calibration/dr6_v4_published/
+  # della: /scratch/gpfs/zatkins/data/simonsobs/mnms/calibrations
+  # perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/simulations/noise/calibrations
+  # niagara: /scratch/r/rbond/iabril/ACT_DR6_products/calibration/dr6_v4_published/
+  trillium: /scratch/jiaqu/calibration/dr6v4_hack/
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+allowed_qids:
+- pa4a
+- pa4b
+- pa5a
+- pa5b
+- pa6a
+- pa6b
+allowed_qids_extra_kwargs:
+subproduct_kwargs_orders:
+cals_file_template: 
+poleffs_file_template: hack_poleff_pa5amf.pkl
+key_template: dr6_{array}_{freq}

@@ -22,5 +22,6 @@ allowed_qids_extra_kwargs:
 
 subproduct_kwargs_orders:
 cals_file_template: act_dr6.02_cals.pkl
-poleffs_file_template: act_dr6.02_poleffs.pkl
+#poleffs_file_template: act_dr6.02_poleffs.pkl
+poleffs_file_template: act_dr6.02_poleffs_pa5a_hack.pkl
 key_template: dr6_{array}_{freq}

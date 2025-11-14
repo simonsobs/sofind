@@ -1,0 +1,34 @@
+system_paths:
+  perlmutter:
+  della:
+  dirac:
+  niagara:
+
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+
+allowed_qids: all
+
+allowed_qids_extra_kwargs:
+
+# gain factors 
+
+pa4b:
+  cal: 1.0274146516062883 
+  poleff: 1.1119
+
+pa5a:
+  cal: 1.009463740391127
+  poleff: 0.9625
+
+pa5b:
+  cal: 0.9850773599437168
+  poleff: 0.9961
+
+pa6a:
+  cal: 1.0140213622811152
+  poleff: 0.9660
+
+pa6b:
+  cal: 0.9686333859482543
+  poleff: 0.9764

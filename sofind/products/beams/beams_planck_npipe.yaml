@@ -16,4 +16,4 @@ allowed_qids_extra_kwargs:
 split_beam_file_template:  'npipe_DR6_{split_num}x{split_num}/bl_T_npipe_DR6_{split_num}x{split_num}_{freq}{split_num}x{freq}{split_num}.dat'
 coadd_beam_file_template:  'npipe_DR6_coadd/bl_T_npipe_DR6_coadd_{freq}GHzx{freq}GHz.dat'
 
-norm: False
+norm: True
