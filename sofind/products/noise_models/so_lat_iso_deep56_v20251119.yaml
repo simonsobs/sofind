@@ -52,8 +52,8 @@ tile_cmbmask:
   maps_subproduct: v20251119
   calibrated: false
   calibrations_subproduct: null
-  catalogs_subproduct: v20251019            # TODO: check this
-  catalog_name: ACT_catalog_simple_mnms.txt # TODO: check this
+  catalogs_subproduct: inpaint_catalogs
+  catalog_name: union_catalog_regular_20220316.csv
   inpaint_radius: 10
   inpaint_thumb_width: 180
   differenced: true
