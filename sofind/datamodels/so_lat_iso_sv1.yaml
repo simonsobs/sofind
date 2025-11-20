@@ -2,6 +2,7 @@ qids_config: so_lat_qids.yaml
 
 maps: 
   v20251019: so_lat_iso_deep56_v20251019.yaml
+  v20251119: so_lat_iso_deep56_v20251119.yaml
 
 masks:
   v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
@@ -9,6 +10,7 @@ masks:
 noise_models:
   sim_factory: so_lat_iso_deep56_sim_factory.yaml
   v20251019: so_lat_iso_deep56_v20251019.yaml
+  v20251119: so_lat_iso_deep56_v20251119.yaml
 
 catalogs:
   v20251019: catalog_so_lat_iso_deep56_v20251019.yaml
