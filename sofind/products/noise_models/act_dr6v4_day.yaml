@@ -69,7 +69,7 @@ tile_cmbmask_daydeep:
   # subject to change!
   # masks_subproduct: lensing_masks
   # mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
-  masks_subproduct: lensing_masks_20250915
+  masks_subproduct: lensing_masks_20250826
   mask_est_name: dr6v4_lensing_250826_daydeep_enhanced_mask_wtop_rightcutS_shrink1.5_70.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
@@ -115,7 +115,7 @@ tile_cmbmask_daywide:
   # subject to change!
   # masks_subproduct: lensing_masks
   # mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
-  masks_subproduct: lensing_masks_20250915
+  masks_subproduct: lensing_masks_20250826
   mask_est_name: dr6v4_lensing_250826_daywide_enhanced_mask_70_South.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
