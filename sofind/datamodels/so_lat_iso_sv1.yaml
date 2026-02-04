@@ -7,7 +7,7 @@ maps:
 
 masks:
   v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
-  mnms_masks: mnms_masks.yaml
+  mnms_masks_lat_iso: mnms_masks_lat_iso.yaml
 
 noise_models:
   sim_factory: so_lat_iso_deep56_sim_factory.yaml
@@ -17,6 +17,7 @@ noise_models:
 
 catalogs:
   inpaint_catalogs: inpaint_catalogs.yaml
+  inpaint_catalogs_lat_iso: inpaint_catalogs_lat_iso.yaml
   v20251019: catalog_so_lat_iso_deep56_v20251019.yaml
 
 beams:

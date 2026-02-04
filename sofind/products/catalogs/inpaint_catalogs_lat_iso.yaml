@@ -1,0 +1,10 @@
+system_paths:
+  tiger: /scratch/gpfs/SIMONSOBS/users/zatkins/projects/mnms/catalogs
+  perlmutter: /global/cfs/cdirs/sobs/lat-iso/mbs/mnms_products/catalogs
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
