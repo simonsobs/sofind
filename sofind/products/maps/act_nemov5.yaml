@@ -1,6 +1,6 @@
 system_paths:
   trillium: /scratch/jaejoonk/cmodel/nemo/cand_release/cmodel_20251015
-  penn-gpc: /data6/depot/cmodel/nemo/cand_release/cmodel_20251015
+  penn-gpc: /data6/DR6_plus/depot/cmodel/nemo/cand_release/cmodel_20251015
 
 allowed_qids_configs:
   - act_nemo.yaml
