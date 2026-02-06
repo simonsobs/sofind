@@ -3,7 +3,7 @@ system_paths:
   perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/
   # not saving noise sims to disk anymore on trillium
-  trillium: 
+  trillium: /scratch/iabril/mnms/
   niagara: /scratch/r/rbond/jaejoonk/dr6plus_noise_sims/
   penn-gpc: /data6/DR6_plus/noise_sims/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/simulations/mnms/
@@ -39,8 +39,7 @@ allowed_qids_extra_kwargs:
   pa5b_dw:
     num_splits: 4
 
-
-tile_cmbmask_daydeep:
+tile_cmbmask_daydeep_250513:
   noise_model_class: Tiled
   data_model_name: act_dr6v4
   subproduct: day
@@ -68,13 +67,11 @@ tile_cmbmask_daydeep:
   kfilt_lbounds: null
   # subject to change!
   # masks_subproduct: lensing_masks
-  # mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
-  masks_subproduct: lensing_masks_20250826
-  mask_est_name: dr6v4_lensing_250826_daydeep_enhanced_mask_wtop_rightcutS_shrink1.5_70.fits
+  masks_subproduct: lensing_masks_20250513
+  mask_est_name: dr6v4_lensing_250513_daydeep_enhanced_mask_70.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  # mask_obs_name: dr6v4_lensing_20240919_daywide_enhanced_mask_80.fits
-  mask_obs_name: dr6v4_lensing_250826_daydeep_enhanced_mask_wtop_rightcutS_shrink1.5_70.fits
+  mask_obs_name: dr6v4_lensing_250513_daydeep_enhanced_mask_70.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null
@@ -86,7 +83,7 @@ tile_cmbmask_daydeep:
   model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
-tile_cmbmask_daywide:
+tile_cmbmask_daywide_250513:
   noise_model_class: Tiled
   data_model_name: act_dr6v4
   subproduct: day
@@ -95,7 +92,7 @@ tile_cmbmask_daywide:
   calibrated: false
   calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
-  catalog_name: union_catalog_regular_20220316.csv
+  catalog_name: union_catalog_regular_20241002.csv
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -112,15 +109,11 @@ tile_cmbmask_daywide:
   ivar_fwhms: null
   ivar_lmaxs: null
   kfilt_lbounds: null
-  # subject to change!
-  # masks_subproduct: lensing_masks
-  # mask_est_name: dr6v4_lensing_20240919_daywide_enhanced_mask_60.fits
-  masks_subproduct: lensing_masks_20250826
-  mask_est_name: dr6v4_lensing_250826_daywide_enhanced_mask_70_South.fits
+  masks_subproduct: lensing_masks_20250513
+  mask_est_name: dr6v4_lensing_250513_daywide_enhanced_mask_70.fits
   mask_est_edgecut: 60
   mask_est_apodization: 180
-  # mask_obs_name: dr6v4_lensing_20240919_daywide_enhanced_mask_80.fits
-  mask_obs_name: dr6v4_lensing_250826_daywide_enhanced_mask_70_South.fits
+  mask_obs_name: dr6v4_lensing_250513_daywide_enhanced_mask_70.fits
   mask_obs_edgecut: 10
   model_lim: 0.000001
   model_lim0: null
