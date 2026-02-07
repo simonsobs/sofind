@@ -1,7 +1,8 @@
 system_paths:
   perlmutter: /global/cfs/cdirs/act/data/iabril/masks/
   trillium: /scratch/jaejoonk/DR6plus_lensing_data/masks_250826/
-  
+  penn-gpc: /data6/DR6_plus/masks/masks_250826/
+
 allowed_qids_configs: 'all'
 
 allowed_qids: 'all'
