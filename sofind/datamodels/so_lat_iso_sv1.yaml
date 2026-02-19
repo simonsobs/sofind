@@ -1,21 +1,36 @@
 qids_config: so_lat_qids.yaml  
 
 maps: 
-  v20251019: so_lat_iso_deep56_v20251019.yaml
+  v20260201: so_lat_iso_deep56_v20260201.yaml
+  v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  v20260201_srcfree: so_lat_iso_deep56_v20260201_srcfree.yaml
 
 masks:
-  v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
+  v20260201: so_lat_iso_deep56_preproc_v20260201.yaml
+  mnms_masks_lat_iso: mnms_masks_lat_iso.yaml
 
 noise_models:
-  sim_factory: so_lat_iso_deep56_sim_factory.yaml
-  v20251019: so_lat_iso_deep56_v20251019.yaml
+  # sim_factory: so_lat_iso_deep56_sim_factory.yaml
+  # v20251019: so_lat_iso_deep56_v20251019.yaml
+  v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
 
 catalogs:
   v20251019: catalog_so_lat_iso_deep56_v20251019.yaml
+  v20260201_extrasrc: catalog_so_lat_iso_deep56_v20260201_extra_src.yaml
 
 beams:
-  v20251019_gaussian: beams_gaussian_lat_iso.yaml
+  v20251019_dummy: beams_so_lat_iso_deep56_dummy.yaml
+  v20260201_jitter: beams_so_lat_iso_deep56_jitter.yaml
   act_beams_nemo_v5: beams_nemo_v5.yaml
+
+calibrations:
+  v20251019_cal_dummy: calibrations_dummy_lat_iso.yaml
+  v20251019_poleff_dummy: poleffs_dummy_lat_iso.yaml
+  v20260201_cal_merry: so_lat_iso_deep56_v20260201_cal.yaml
+
+transfer_func:
+  # v20251019_dummy: tf_dummy_lat_iso.yaml
+  v20260201_merry: tf_v20260201_lat_iso.yaml
 
 masks_healpix:
   v20251019_preproc_masks_healpix: so_lat_iso_deep56_masks_healpix_v20251019.yaml

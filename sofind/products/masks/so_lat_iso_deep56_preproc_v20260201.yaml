@@ -1,0 +1,12 @@
+system_paths:
+  perlmutter: /pscratch/sd/k/kaper/deep56_20251019/masks/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+deep56:
+  mask_fn: 20260201_skn_mnms_mask_obs_smooth_width2_cvar_quantile0.3_shrink.fits
