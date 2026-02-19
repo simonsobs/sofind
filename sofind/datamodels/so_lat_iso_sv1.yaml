@@ -4,6 +4,7 @@ maps:
   v20251019: so_lat_iso_deep56_v20251019.yaml
   v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  vtype1_type3_50cg: so_lat_iso_type1_type3_50cg.yaml
 
 masks:
   v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
@@ -14,6 +15,7 @@ noise_models:
   v20251019: so_lat_iso_deep56_v20251019.yaml
   v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  vtype1_type3_50cg: so_lat_iso_type1_type3_50cg.yaml
 
 catalogs:
   inpaint_catalogs: inpaint_catalogs.yaml
