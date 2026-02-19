@@ -1,0 +1,22 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/calibrations/
+
+allowed_qids_configs:
+- so_lat_qids.yaml
+
+allowed_qids:
+- i1a
+- i1b
+- i3a
+- i3b
+- i4a
+- i4b
+- i6a
+- i6b
+
+allowed_qids_extra_kwargs:
+
+subproduct_kwargs_orders:
+cals_file_template: calibs_dummy_dict.pkl
+poleffs_file_template:
+key_template: dummy_{tube}_{freq}
