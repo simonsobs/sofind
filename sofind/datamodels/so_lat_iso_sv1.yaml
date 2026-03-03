@@ -4,22 +4,48 @@ maps:
   v20251019: so_lat_iso_deep56_v20251019.yaml
   v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  v20260201_skn_50cg_el0: so_lat_iso_deep56_v20260201_skn_50cg_el0.yaml
+  v20260201_skn_50cg_el1: so_lat_iso_deep56_v20260201_skn_50cg_el1.yaml
+  v20260201_skn_50cg_flip0: so_lat_iso_deep56_v20260201_skn_50cg_flip0.yaml
+  v20260201_skn_50cg_flip1: so_lat_iso_deep56_v20260201_skn_50cg_flip1.yaml
+  v20260201_skn_50cg_inout0: so_lat_iso_deep56_v20260201_skn_50cg_inout0.yaml
+  v20260201_skn_50cg_inout1: so_lat_iso_deep56_v20260201_skn_50cg_inout1.yaml
+  v20260201_skn_50cg_pwv0: so_lat_iso_deep56_v20260201_skn_50cg_pwv0.yaml
+  v20260201_skn_50cg_pwv1: so_lat_iso_deep56_v20260201_skn_50cg_pwv1.yaml 
 
 masks:
   v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
   mnms_masks_lat_iso: mnms_masks_lat_iso.yaml
+  v20260201_preproc_masks: so_lat_iso_deep56_preproc_v20260201.yaml
 
 noise_models:
   sim_factory: so_lat_iso_deep56_sim_factory.yaml
   v20251019: so_lat_iso_deep56_v20251019.yaml
   v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  v20260201_skn_50cg_el0: so_lat_iso_deep56_v20260201_skn_50cg_el0.yaml
+  v20260201_skn_50cg_el1: so_lat_iso_deep56_v20260201_skn_50cg_el1.yaml
+  v20260201_skn_50cg_flip0: so_lat_iso_deep56_v20260201_skn_50cg_flip0.yaml
+  v20260201_skn_50cg_flip1: so_lat_iso_deep56_v20260201_skn_50cg_flip1.yaml
+  v20260201_skn_50cg_inout0: so_lat_iso_deep56_v20260201_skn_50cg_inout0.yaml
+  v20260201_skn_50cg_inout1: so_lat_iso_deep56_v20260201_skn_50cg_inout1.yaml
+  v20260201_skn_50cg_pwv0: so_lat_iso_deep56_v20260201_skn_50cg_pwv0.yaml
+  v20260201_skn_50cg_pwv1: so_lat_iso_deep56_v20260201_skn_50cg_pwv1.yaml 
 
 catalogs:
   inpaint_catalogs: inpaint_catalogs.yaml
   inpaint_catalogs_lat_iso: inpaint_catalogs_lat_iso.yaml
   v20251019: catalog_so_lat_iso_deep56_v20251019.yaml
+  v20260201_inpaint: catalog_so_lat_iso_deep56_v20260201.yaml
 
 beams:
-  v20251019_gaussian: beams_gaussian_lat_iso.yaml
+  v20251019_dummy: beams_251019_dummy.yaml
   act_beams_nemo_v5: beams_nemo_v5.yaml
+  gaussian: beams_gaussian_lat_iso.yaml
+  v20260201: beams_v20260201.yaml
+
+calibrations:
+  v20260201_skn_50cg: so_lat_iso_v20260201_skn_50cg.yaml
+
+transfer_func:
+  v20260201_skn_50cg: tf_so_lat_iso_v20260201_skn_50cg.yaml
