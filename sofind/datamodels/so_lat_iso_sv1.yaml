@@ -4,14 +4,10 @@ maps:
   v20251019: so_lat_iso_deep56_v20251019.yaml
   v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
-  v20260201_skn_50cg_el0: so_lat_iso_deep56_v20260201_skn_50cg_el0.yaml
-  v20260201_skn_50cg_el1: so_lat_iso_deep56_v20260201_skn_50cg_el1.yaml
-  v20260201_skn_50cg_flip0: so_lat_iso_deep56_v20260201_skn_50cg_flip0.yaml
-  v20260201_skn_50cg_flip1: so_lat_iso_deep56_v20260201_skn_50cg_flip1.yaml
-  v20260201_skn_50cg_inout0: so_lat_iso_deep56_v20260201_skn_50cg_inout0.yaml
-  v20260201_skn_50cg_inout1: so_lat_iso_deep56_v20260201_skn_50cg_inout1.yaml
-  v20260201_skn_50cg_pwv0: so_lat_iso_deep56_v20260201_skn_50cg_pwv0.yaml
-  v20260201_skn_50cg_pwv1: so_lat_iso_deep56_v20260201_skn_50cg_pwv1.yaml 
+  v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
+  v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
+  v20260201_skn_50cg_inout_split: so_lat_iso_deep56_v20260201_skn_50cg_inout_split.yaml
+  v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
 
 masks:
   v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
@@ -23,14 +19,10 @@ noise_models:
   v20251019: so_lat_iso_deep56_v20251019.yaml
   v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
-  v20260201_skn_50cg_el0: so_lat_iso_deep56_v20260201_skn_50cg_el0.yaml
-  v20260201_skn_50cg_el1: so_lat_iso_deep56_v20260201_skn_50cg_el1.yaml
-  v20260201_skn_50cg_flip0: so_lat_iso_deep56_v20260201_skn_50cg_flip0.yaml
-  v20260201_skn_50cg_flip1: so_lat_iso_deep56_v20260201_skn_50cg_flip1.yaml
-  v20260201_skn_50cg_inout0: so_lat_iso_deep56_v20260201_skn_50cg_inout0.yaml
-  v20260201_skn_50cg_inout1: so_lat_iso_deep56_v20260201_skn_50cg_inout1.yaml
-  v20260201_skn_50cg_pwv0: so_lat_iso_deep56_v20260201_skn_50cg_pwv0.yaml
-  v20260201_skn_50cg_pwv1: so_lat_iso_deep56_v20260201_skn_50cg_pwv1.yaml 
+  v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
+  v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
+  v20260201_skn_50cg_inout_split: so_lat_iso_deep56_v20260201_skn_50cg_inout_split.yaml
+  v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
 
 catalogs:
   inpaint_catalogs: inpaint_catalogs.yaml

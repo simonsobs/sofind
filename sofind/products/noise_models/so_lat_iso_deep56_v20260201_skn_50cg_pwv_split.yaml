@@ -47,9 +47,9 @@ allowed_qids_extra_kwargs:
 tile_cmbmask_120obscut_120estcut_2_30:
   noise_model_class: Tiled
   data_model_name: so_lat_iso_sv1
-  subproduct: v20260201_skn_50cg_pwv1
+  subproduct: v20260201_skn_50cg_pwv
   maps_product: maps
-  maps_subproduct: v20260201_skn_50cg_pwv1
+  maps_subproduct: v20260201_skn_50cg_pwv_split
   calibrated: false
   calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs_lat_iso
@@ -82,5 +82,5 @@ tile_cmbmask_120obscut_120estcut_2_30:
   delta_ell_smooth: 100
   height_deg: 4.0
   width_deg: 4.0
-  model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
-  sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
+  model_file_template: '{config_name}_{noise_model_name}_{pwv_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
+  sim_file_template: '{config_name}_{noise_model_name}_{pwv_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'

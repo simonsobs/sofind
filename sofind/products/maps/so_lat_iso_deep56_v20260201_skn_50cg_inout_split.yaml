@@ -44,5 +44,5 @@ allowed_qids_extra_kwargs:
   i5b:
     num_splits: 4
 
-split_map_file_template: 'deep56_inout1_{tube}_4way_0{split_num}_{freq}_sky_{maptag}.fits'
-coadd_map_file_template: 'deep56_inout1_{tube}_4way_coadd_{freq}_sky_{maptag}.fits'
+split_map_file_template: 'deep56_{inout_split}_{tube}_4way_0{split_num}_{freq}_sky_{maptag}.fits'
+coadd_map_file_template: 'deep56_{inout_split}_{tube}_4way_coadd_{freq}_sky_{maptag}.fits'
