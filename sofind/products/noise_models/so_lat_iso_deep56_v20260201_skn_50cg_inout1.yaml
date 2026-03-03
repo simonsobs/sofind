@@ -1,6 +1,4 @@
 system_paths:
-  tiger: /scratch/gpfs/SIMONSOBS/users/zatkins/public/mnms
-  perlmutter: /global/cfs/cdirs/sobs/lat-iso/mbs/mnms_products
   souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/mnms_outputs
 
 allowed_qids_configs:
@@ -49,9 +47,9 @@ allowed_qids_extra_kwargs:
 tile_cmbmask_120obscut_120estcut_2_30:
   noise_model_class: Tiled
   data_model_name: so_lat_iso_sv1
-  subproduct: v20260201_skn_50cg
+  subproduct: v20260201_skn_50cg_inout1
   maps_product: maps
-  maps_subproduct: v20260201_skn_50cg
+  maps_subproduct: v20260201_skn_50cg_inout1
   calibrated: false
   calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs_lat_iso
@@ -75,7 +73,7 @@ tile_cmbmask_120obscut_120estcut_2_30:
   mask_est_name: null
   mask_est_edgecut: 120
   mask_est_apodization: 120
-  mask_obs_name: 20260201_skn_mnms_mask_obs_smooth_width2_cvar_quantile0.3.fits
+  mask_obs_name: 20260201_inout_skn_mnms_mask_obs_smooth_width2_cvar_quantile0.25.fits
   mask_obs_edgecut: 120
   model_lim: 0.000001
   model_lim0: null
