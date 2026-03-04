@@ -1,5 +1,6 @@
 system_paths:
   souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/mnms_outputs
+  perlmutter: /global/cfs/cdirs/sobs/lat-iso/mbs/mnms_products
 
 allowed_qids_configs:
 - so_lat_qids.yaml
