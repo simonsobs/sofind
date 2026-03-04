@@ -47,7 +47,7 @@ allowed_qids_extra_kwargs:
 tile_cmbmask_120obscut_120estcut_2_30:
   noise_model_class: Tiled
   data_model_name: so_lat_iso_sv1
-  subproduct: v20260201_skn_50cg_el
+  subproduct: v20260201_skn_50cg_el_split
   maps_product: maps
   maps_subproduct: v20260201_skn_50cg_el_split
   calibrated: false
