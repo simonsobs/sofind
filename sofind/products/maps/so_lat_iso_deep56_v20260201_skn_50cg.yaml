@@ -1,5 +1,5 @@
 system_paths:
-  tiger: /scratch/gpfs/SIMONSOBS/users/zatkins/projects/lat-iso/piso/maps/lat/deep56/20260201_skn
+  tiger: /scratch/gpfs/SIMONSOBS/lat-iso/phase2/deep56/20260201_inpaint_holes
   perlmutter: /global/cfs/cdirs/sobs/lat-iso/phase2/deep56/20260201_inpaint_holes
   souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/deep56_20260201_skn_50cg_inpaint_i1_set1/
 
