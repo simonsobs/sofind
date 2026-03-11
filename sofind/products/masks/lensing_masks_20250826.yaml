@@ -2,11 +2,13 @@ system_paths:
   perlmutter: /global/cfs/cdirs/act/data/iabril/masks/
   trillium: /scratch/jaejoonk/DR6plus_lensing_data/masks_250826/
   penn-gpc: /data6/DR6_plus/masks/masks_250826/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/masks/dr6v4_lensing_250826_masks/
+  dirac: 
+  penn-gpc: 
 
 allowed_qids_configs: 'all'
 
 allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
-
 
