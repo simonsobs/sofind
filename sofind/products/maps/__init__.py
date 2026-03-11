@@ -112,3 +112,27 @@ class Map(Product):
             read_map_kwargs = {}
 
         return enmap.read_map(fn, **read_map_kwargs)
+    
+    def get_if_dfact_map(self, subproduct='default'):
+
+        """Check if the map has already been downgraded
+
+        Parameters
+        ----------
+        subproduct : str, optional
+            Name of map subproduct to load raw products from, by default 
+            'default'.
+
+        Returns
+        -------
+        np.int
+            None if information unavailable
+            dfact applied otherwise
+        """
+
+        subprod_dict = self.get_subproduct_dict(__name__, subproduct)
+
+        # Verify if 'norm' exists on subprod_dict
+        norm_value = subprod_dict.get('dfact', None)
+
+        return norm_value

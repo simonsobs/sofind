@@ -13,3 +13,5 @@ allowed_qids: 'all'
 allowed_qids_extra_kwargs:
 
 coadd_map_file_template: 'nemomodel_dr6_all_clustersSNR5{freq}down2_fejer1.fits'
+
+dfact: 2

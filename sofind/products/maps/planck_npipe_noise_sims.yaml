@@ -2,7 +2,8 @@ system_paths:
   trillium: /project/rrg-rbond-ac/jiaqu/
   niagara: /project/r/rbond/jiaqu/
   penn-gpc: /data6/DR6_plus/
-
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/simulations/
+  
 allowed_qids_configs:
 - planck_qids.yaml
 

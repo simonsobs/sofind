@@ -1,6 +1,8 @@
 system_paths:
+  dirac: 
   trillium: /scratch/jaejoonk/cmodel/nemo/cand_release/cmodel_20251015/
   penn-gpc: /scratch/cmodel/nemo/cand_release/cmodel_20251015/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/beams/cmodel_20251015
 
 allowed_qids_configs:
   - act_dr6vX_qids.yaml

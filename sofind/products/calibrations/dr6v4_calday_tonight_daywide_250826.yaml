@@ -20,3 +20,4 @@ subproduct_kwargs_orders:
 cals_file_template: cal_day_to_nightdefault_daywide_250826.pkl
 poleffs_file_template: 
 key_template: dr6_{array}_{freq}
+
