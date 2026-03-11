@@ -1,7 +1,7 @@
 system_paths:
   perlmutter: 
   niagara:
-  dirac: 
+  dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/masks/dr6v4_lensing_250826_masks/
   penn-gpc: 
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/masks/dr6v4_lensing_250826_masks/
 

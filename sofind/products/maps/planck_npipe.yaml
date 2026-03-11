@@ -1,7 +1,9 @@
 system_paths:
   perlmutter: /global/cfs/projectdirs/act/data/planck/npipe/fejer1_equ/
   niagara: /gpfs/fs0/project/r/rbond/sigurdkn/actpol/planck/npipe/fejer1_equ/
-  
+  dirac: 
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/maps/planck/
+
 allowed_qids_configs:
 - planck_qids.yaml
 

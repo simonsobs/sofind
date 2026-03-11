@@ -37,6 +37,9 @@ calibrations:
   dr6v4_poleff_231113: dr6v4_poleff_231113.yaml
   dr6v4_calday_tonight_daydeep: dr6v4_calday_tonight_daydeep.yaml
   dr6v4_calday_tonight_daywide: dr6v4_calday_tonight_daywide.yaml
+  dr6v4_calday_tonight_daydeep_250826: dr6v4_calday_tonight_daydeep_250826.yaml
+  dr6v4_calday_tonight_daywide_250826: dr6v4_calday_tonight_daywide_250826.yaml
+  act_dr6.02_hack: act_dr6.02_hack.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
@@ -44,9 +47,11 @@ beams:
   beams_v4_day_20240115: beams_v4_day_20240115.yaml
   beams_nemo: beams_nemo.yaml
   beams_nemo_v4: beams_nemo_v4.yaml
+  beams_nemo_v5: beams_nemo_v5.yaml
   beams_nominal: beams_v4_nominal.yaml
   beams_leakage: beams_v4_leakage.yaml
 
 transfer_func:
   tf_dr6v4_230523: tf_dr6v4_230523.yaml
   tf_dr6v4_240416: tf_dr6v4_240416.yaml
+  tf_dr6v4_240416_lmax1000: tf_dr6v4_240416_lmax1000.yaml
