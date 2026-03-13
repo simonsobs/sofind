@@ -55,4 +55,4 @@ beams:
 transfer_func:
   tf_dr6v4_230523: tf_dr6v4_230523.yaml
   tf_dr6v4_240416: tf_dr6v4_240416.yaml
-  tf_dr6v4_240416_lmax1000: tf_dr6v4_240416_lmax1000.yaml
+  tf_dr6v4_240416_lmax10000: tf_dr6v4_240416_lmax10000.yaml
