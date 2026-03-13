@@ -40,6 +40,7 @@ calibrations:
   dr6v4_calday_tonight_daydeep_250826: dr6v4_calday_tonight_daydeep_250826.yaml
   dr6v4_calday_tonight_daywide_250826: dr6v4_calday_tonight_daywide_250826.yaml
   act_dr6.02_hack: act_dr6.02_hack.yaml
+  act_dr6.02_wmflike: act_dr6.02_wmflike.yaml
 
 beams:
   beams_v4_20230130 : beams_v4_20230130.yaml
