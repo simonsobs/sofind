@@ -44,7 +44,7 @@ allowed_qids_extra_kwargs:
   i5b:
     num_splits: 4
 
-tile_cmbmask_120obscut_120estcut_2_30:
+tile_cmbmask_120obscut_120estcut_2_25:
   noise_model_class: Tiled
   data_model_name: so_lat_iso_sv1
   subproduct: v20260201_skn_50cg_el_split

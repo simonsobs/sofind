@@ -1,6 +1,7 @@
 system_paths:
   tiger: /scratch/gpfs/SIMONSOBS/users/zatkins/projects/mnms/catalogs
   perlmutter: /global/cfs/cdirs/sobs/lat-iso/mbs/mnms_products/catalogs
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/catalogs/
 
 allowed_qids_configs: 'all'
 
