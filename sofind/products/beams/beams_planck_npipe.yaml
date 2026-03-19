@@ -6,6 +6,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/DR6_products/beams/planck_beams/
   penn-gpc: /data6/DR6_plus/planck_beams/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/beams/npipe/
+  trillium: /scratch/jaejoonk/DR6plus_lensing_data/planck_beams/planck_beams_from_nersc/
 
 allowed_qids_configs:
 - planck_qids.yaml
