@@ -160,6 +160,8 @@ tile_cmbmask_daydeep_250513:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
@@ -202,6 +204,8 @@ tile_cmbmask_daywide_250513:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   model_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
