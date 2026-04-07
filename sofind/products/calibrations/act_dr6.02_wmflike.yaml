@@ -4,6 +4,7 @@ system_paths:
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
 allowed_qids:
+- pa4b
 - pa5a
 - pa5b
 - pa6a

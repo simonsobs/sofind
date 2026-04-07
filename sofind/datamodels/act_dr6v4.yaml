@@ -6,6 +6,7 @@ maps:
   pwv_split_config: act_dr6v4_pwv_split.yaml
   inout_split_config: act_dr6v4_inout_split.yaml
   t_split_config: act_dr6v4_t_split.yaml
+  pact_nemo_20260403: pact_nemo_20260403.yaml
 
 masks:
   mnms_masks_config: mnms_masks.yaml
@@ -25,6 +26,8 @@ masks:
 
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
+  inpaint_catalogs_260331: inpaint_catalogs_260331.yaml
+  inpaint_catalogs_260404: inpaint_catalogs_260404.yaml
 
 noise_models:
   default_config: act_dr6v4.yaml
@@ -61,6 +64,7 @@ beams:
   beams_dr6.02_t_split: beams_dr6.02_t_split.yaml
   beams_nemo_v4: beams_nemo_v4.yaml
   beams_nemo_v5: beams_nemo_v5.yaml
+  beams_nemo_v5_20260331: beams_nemo_v5_20260331.yaml
   beams_nominal: beams_v4_nominal.yaml
   beams_leakage: beams_v4_leakage.yaml
 

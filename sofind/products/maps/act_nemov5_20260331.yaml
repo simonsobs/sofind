@@ -1,0 +1,17 @@
+system_paths:
+  dirac:
+  trillium: 
+  penn-gpc: 
+  perlmutter: /global/cfs/projectdirs/act/data/msyriac/cmodel_20260331/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/inpaint_catalogs_20260331/
+
+allowed_qids_configs:
+  - act_nemo.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'processed_model_f{freq}_v20260331.fits'
+
+dfact: 1

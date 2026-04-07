@@ -3,19 +3,21 @@ qids_config: planck_qids.yaml
 maps:
   default_config: planck_npipe.yaml
   noise_sims_config: planck_npipe_noise_sims.yaml
+  pact_nemo_20260403: pact_nemo_20260403.yaml
 
 beams:
   beams_nemo: beams_nemo.yaml
+  beams_nemo_v5_20260331: beams_nemo_v5_20260331.yaml
   beams_nemo_v4: beams_nemo_v4.yaml
   beams_nemo_v5: beams_nemo_v5.yaml
   beams_npipe: beams_planck_npipe.yaml
+
+catalogs:
+  inpaint_catalogs_config: inpaint_catalogs.yaml
+  inpaint_catalogs_260331: inpaint_catalogs_260331.yaml
+  inpaint_catalogs_260404: inpaint_catalogs_260404.yaml
 
 masks:
   lensing_masks_20250513: lensing_masks_20250513.yaml
   lensing_masks_20240919b: lensing_masks_20240919b.yaml
   lensing_masks_20250826: lensing_masks_20250826.yaml
-
-catalogs:
-  inpaint_catalogs_config: inpaint_catalogs.yaml
-
-  
