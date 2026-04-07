@@ -1,7 +1,6 @@
 system_paths:
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/calibrations/act_dr6.02_wmflike/
-  trillium: /scratch/jaejoonk/DR6plus_lensing_data/calibration/act_dr6.02_wmflike/
-#  trillium: /scratch/iabril/calibration/act_dr6.02_wmflike/
+  trillium: /scratch/iabril/calibration/act_dr6.02_wmflike/
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
 allowed_qids:
@@ -12,6 +11,6 @@ allowed_qids:
 - pa6b
 allowed_qids_extra_kwargs:
 subproduct_kwargs_orders:
-cals_file_template: act_dr6.02_cals_wmflike_v3.pkl
-poleffs_file_template: act_dr6.02_poleffs_wmflike_v2.pkl
+cals_file_template: act_dr6.02_cals_wmflike.pkl
+poleffs_file_template: act_dr6.02_poleffs_wmflike.pkl
 key_template: dr6_{array}_{freq}
