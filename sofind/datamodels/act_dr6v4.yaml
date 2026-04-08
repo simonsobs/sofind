@@ -7,6 +7,9 @@ maps:
   inout_split_config: act_dr6v4_inout_split.yaml
   t_split_config: act_dr6v4_t_split.yaml
   pact_nemo_20260403: pact_nemo_20260403.yaml
+  pact_nemo_20260403_el: pact_nemo_20260403_el.yaml
+  pact_nemo_20260403_inout: pact_nemo_20260403_inout.yaml
+  pact_nemo_20260403_pwv: pact_nemo_20260403_pwv.yaml
 
 masks:
   mnms_masks_config: mnms_masks.yaml
