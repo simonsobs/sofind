@@ -1,8 +1,6 @@
 qids_config: so_lat_qids.yaml  
 
 maps: 
-  v20251019: so_lat_iso_deep56_v20251019.yaml
-  v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
   v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
   v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
@@ -10,14 +8,9 @@ maps:
   v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
 
 masks:
-  v20251019_preproc_masks: so_lat_iso_deep56_preproc_v20251019.yaml
   mnms_masks_lat_iso: mnms_masks_lat_iso.yaml
-  v20260201_preproc_masks: so_lat_iso_deep56_preproc_v20260201.yaml
 
 noise_models:
-  sim_factory: so_lat_iso_deep56_sim_factory.yaml
-  v20251019: so_lat_iso_deep56_v20251019.yaml
-  v20251119: so_lat_iso_deep56_v20251119.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
   v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
   v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
@@ -25,19 +18,4 @@ noise_models:
   v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
 
 catalogs:
-  inpaint_catalogs: inpaint_catalogs.yaml
   inpaint_catalogs_lat_iso: inpaint_catalogs_lat_iso.yaml
-  v20251019: catalog_so_lat_iso_deep56_v20251019.yaml
-  v20260201_inpaint: catalog_so_lat_iso_deep56_v20260201.yaml
-
-beams:
-  v20251019_dummy: beams_251019_dummy.yaml
-  act_beams_nemo_v5: beams_nemo_v5.yaml
-  gaussian: beams_gaussian_lat_iso.yaml
-  v20260201: beams_v20260201.yaml
-
-calibrations:
-  v20260201_skn_50cg: so_lat_iso_v20260201_skn_50cg.yaml
-
-transfer_func:
-  v20260201_skn_50cg: tf_so_lat_iso_v20260201_skn_50cg.yaml
