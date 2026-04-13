@@ -6,10 +6,13 @@ system_paths:
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/cmodel_20260403/
 
 allowed_qids_configs:
-#  - planck_qids.yaml
   - act_dr6vX_qids.yaml
 
-allowed_qids: 'all'
+allowed_qids:
+- pa5a
+- pa5b
+- pa6a
+- pa6b
 
 allowed_qids_extra_kwargs:
 

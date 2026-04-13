@@ -7,6 +7,10 @@ maps:
   inout_split_config: act_dr6v4_inout_split.yaml
   t_split_config: act_dr6v4_t_split.yaml
   pact_nemo_20260403: pact_nemo_20260403.yaml
+  pact_nemo_20260403_el: pact_nemo_20260403_el.yaml
+  pact_nemo_20260403_inout: pact_nemo_20260403_inout.yaml
+  pact_nemo_20260403_pwv: pact_nemo_20260403_pwv.yaml
+  day_nemo_20260410: day_nemo_20260410.yaml
 
 masks:
   mnms_masks_config: mnms_masks.yaml
@@ -42,6 +46,8 @@ calibrations:
   dr6v4_calday_tonight_daywide: dr6v4_calday_tonight_daywide.yaml
   dr6v4_calday_tonight_daydeep_250826: dr6v4_calday_tonight_daydeep_250826.yaml
   dr6v4_calday_tonight_daywide_250826: dr6v4_calday_tonight_daywide_250826.yaml
+  dr6v4_calday_tonight_daywide_260410: dr6v4_calday_tonight_daywide_260410.yaml
+  dr6v4_calday_tonight_daydeep_260410: dr6v4_calday_tonight_daydeep_260410.yaml
   act_dr6.02_hack: act_dr6.02_hack.yaml
   act_dr6.02_wmflike: act_dr6.02_wmflike.yaml
 
