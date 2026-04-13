@@ -9,6 +9,12 @@ allowed_qids:
 - pa5b
 - pa6a
 - pa6b
+- pa5a_dw
+- pa5b_dw
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
 allowed_qids_extra_kwargs:
 subproduct_kwargs_orders:
 cals_file_template: act_dr6.02_cals_wmflike.pkl

@@ -1,0 +1,24 @@
+system_paths:
+  dirac:
+  trillium: /scratch/iabril/newyear/nemo/model_maps/
+  penn-gpc: 
+  perlmutter: 
+  souk: /cephfs/soukdata/user_data/iabril/dr6plus/daylens_cal/sources/cluster_verify/processed_maps
+
+allowed_qids_configs:
+  - act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa5a_dw
+- pa5b_dw
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'tSZ_model_{daynight}_{array}_{freq}_coadd.fits'
+split_map_file_template: ''
+
+dfact: 1

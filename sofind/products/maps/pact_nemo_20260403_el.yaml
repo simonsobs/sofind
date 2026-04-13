@@ -6,13 +6,16 @@ system_paths:
   souk:
 
 allowed_qids_configs:
-#  - planck_qids.yaml
   - act_dr6vX_qids.yaml
 
-allowed_qids: 'all'
+allowed_qids:
+- pa5a
+- pa5b
+- pa6a
+- pa6b
 
 allowed_qids_extra_kwargs:
 
-coadd_map_file_template: 'candidatesModelMap_{daynight}_{array}_{freq}_coadd_{el_split}_fixedSNR5_ring0_extobj0_dust0_find0.fits'
+coadd_map_file_template: 'candidatesModelMap_{array}_{freq}_coadd_{el_split}_fixedSNR5_ring0_extobj0_dust0_find0.fits'
 
 dfact: 1
