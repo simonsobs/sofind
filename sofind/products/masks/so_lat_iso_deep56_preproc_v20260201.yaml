@@ -1,0 +1,11 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+deep56:
+  mask_fn: mask_20260201_binary.fits
