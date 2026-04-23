@@ -1,6 +1,6 @@
 system_paths:
   dirac:
-  trillium: 
+  trillium: /scratch/iabril/newyear/nemo/model_maps/
   penn-gpc: 
   perlmutter: 
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/cmodel_20260420/

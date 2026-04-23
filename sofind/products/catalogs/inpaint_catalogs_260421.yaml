@@ -3,7 +3,7 @@ system_paths:
   perlmutter: 
   dirac: 
   penn-gpc: 
-  trillium: 
+  trillium: /scratch/iabril/newyear/inpaint_catalogs_20260421/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/inpaint_catalogs_20260421/
 
 allowed_qids_configs: 'all'
