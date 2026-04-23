@@ -5,18 +5,13 @@ system_paths:
   perlmutter: /global/cfs/projectdirs/act/data/iabril/cluster_and_inpaint_20260404/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/cmodel_20260403/
 
-allowed_qids_configs:
-  - act_dr6vX_qids.yaml
+allowed_qids_configs: 'all'
 
-allowed_qids:
-- pa5a
-- pa5b
-- pa6a
-- pa6b
+allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
 
 coadd_map_file_template: 'candidatesModelMap_{daynight}_{array}_{freq}_coadd_fixedSNR5_ring0_extobj0_dust0_find0.fits'
-split_map_file_template: 'candidatesModelMap_{freq}_split{split_num}_fixedSNR5_ring0_extobj0_dust0_find0.fits'
+split_map_file_template: 'candidatesModelMap_{freq}_split{split_num}_fixedSNR5_ring0_extobj0_dust0_find0_goodbeam_tcmbbandcorr.fits'
 
 dfact: 1

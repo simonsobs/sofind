@@ -16,6 +16,8 @@ catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
   inpaint_catalogs_260331: inpaint_catalogs_260331.yaml
   inpaint_catalogs_260404: inpaint_catalogs_260404.yaml
+  inpaint_catalogs_260417: inpaint_catalogs_260417.yaml
+  inpaint_catalogs_260421: inpaint_catalogs_260421.yaml
 
 masks:
   lensing_masks_20250513: lensing_masks_20250513.yaml
