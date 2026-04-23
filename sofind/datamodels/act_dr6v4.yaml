@@ -11,6 +11,7 @@ maps:
   pact_nemo_20260403_inout: pact_nemo_20260403_inout.yaml
   pact_nemo_20260403_pwv: pact_nemo_20260403_pwv.yaml
   day_nemo_20260410: day_nemo_20260410.yaml
+  day_nemo_20260420: day_nemo_20260420.yaml
 
 masks:
   mnms_masks_config: mnms_masks.yaml

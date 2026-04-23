@@ -1,0 +1,24 @@
+system_paths:
+  dirac:
+  trillium: 
+  penn-gpc: 
+  perlmutter: 
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/cmodel_20260420/
+
+allowed_qids_configs:
+  - act_dr6vX_qids.yaml
+
+allowed_qids:
+- pa5a_dw
+- pa5b_dw
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'candidatesModelMap_{daynight}_{array}_{freq}_coadd_fixedSNR5_ring0_extobj0_dust0_find0_beamtaperell1.fits'
+split_map_file_template: ''
+
+dfact: 1
