@@ -19,3 +19,17 @@ noise_models:
 
 catalogs:
   inpaint_catalogs_lat_iso: inpaint_catalogs_lat_iso.yaml
+
+calibrations:
+  v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
+  v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
+  # v20260201_skn_50cg_inout_split: so_lat_iso_deep56_v20260201_skn_50cg_inout_split.yaml
+  v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
+
+transfer_func:
+  tf_v20260201_skn_50cg: tf_so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  tf_v20260201_skn_50cg_el_split: tf_so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
+  tf_v20260201_skn_50cg_flip_split: tf_so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
+  # tf_v20260201_skn_50cg_inout_split: tf_so_lat_iso_deep56_v20260201_skn_50cg_inout_split.yaml
+  tf_v20260201_skn_50cg_pwv_split: tf_so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
