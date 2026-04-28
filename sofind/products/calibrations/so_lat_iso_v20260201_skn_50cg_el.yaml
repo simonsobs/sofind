@@ -23,6 +23,7 @@ allowed_qids:
 allowed_qids_extra_kwargs:
 
 subproduct_kwargs_orders:
-cals_file_template: deep56_20260201_skn_50cg_inpaint_holes_cals.pkl
-poleffs_file_template: deep56_20260201_skn_50cg_inpaint_holes_poleffs.pkl
+  el_split: [el0, el1]
+cals_file_template: deep56_20260201_skn_50cg_inpaint_holes_el_split_cals.pkl
+poleffs_file_template: deep56_20260201_skn_50cg_inpaint_holes_el_split_poleffs.pkl
 key_template: lat_iso_{tube}_{freq}

@@ -1,0 +1,22 @@
+system_paths:
+  perlmutter: /global/cfs/cdirs/sobs/lat-iso/ps/phase2/20260201_inpaint_holes/transfer_functions/deep56_20260201_skn_50cg_inpaint_holes_pwv_split/
+  tiger: /scratch/gpfs/SIMONSOBS/lat-iso/ps/phase2/20260201_inpaint_holes/transfer_functions/deep56_20260201_skn_50cg_inpaint_holes_pwv_split/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/tf/tf_20260426/deep56_20260201_skn_50cg_inpaint_holes_pwv_split/
+
+
+allowed_qids_configs:
+- so_lat_qids.yaml
+
+allowed_qids:
+- i1a
+- i1b
+- i3a
+- i3b
+- i4a
+- i4b
+- i6a
+- i6b
+
+allowed_qids_extra_kwargs:
+
+tf_template: 'tf_fit_lat_iso_{tube}_{freq}_pwv1_logistic.dat'

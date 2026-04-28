@@ -1,0 +1,11 @@
+system_paths:
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/nemo_models/
+
+allowed_qids_configs:
+  - so_lat_nemo.yaml
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+coadd_map_file_template: 'clusterModelMap_{freq}.fits'

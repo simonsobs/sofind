@@ -1,0 +1,4 @@
+qids_config: so_lat_nemo.yaml 
+
+maps: 
+  nemo_v1: so_lat_iso_nemo.yaml
