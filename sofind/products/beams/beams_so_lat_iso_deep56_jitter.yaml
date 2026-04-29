@@ -1,6 +1,6 @@
 system_paths:
   perlmutter: /global/homes/k/kaper/scratch/deep56_20251019/beams/
-  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/beams/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/beams/new_terrible_jitter_beams/
 
 allowed_qids_configs:
 - so_lat_qids.yaml
@@ -16,6 +16,5 @@ allowed_qids:
 - i6b
 
 allowed_qids_extra_kwargs:
-
-split_beam_file_template: 'beam_jitter_{tube}_{freq}_1756699200_20000000000.txt' # same for all splits
-coadd_beam_file_template: 'beam_jitter_{tube}_{freq}_1756699200_20000000000.txt' # same as split_beam_file_template
+split_beam_file_template: 'beam_{tube}_{freq}_cmb_tform.txt' # same for all splits
+coadd_beam_file_template: 'beam_{tube}_{freq}_cmb_tform.txt' # same as split_beam_file_template

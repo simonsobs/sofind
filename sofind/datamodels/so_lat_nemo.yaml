@@ -1,0 +1,4 @@
+qids_config: act_nemo.yaml  
+
+maps: 
+  nemo_v20260201: so_lat_iso_deep56_v20260201_nemo.yaml

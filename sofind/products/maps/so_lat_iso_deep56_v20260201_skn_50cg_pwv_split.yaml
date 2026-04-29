@@ -1,5 +1,5 @@
 system_paths:
-  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/deep56_20260201_skn_50cg_inpaint_i1_set1/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20260201/null_maps_50cg/
 
 allowed_qids_configs:
 - so_lat_qids.yaml
@@ -44,5 +44,5 @@ allowed_qids_extra_kwargs:
   i5b:
     num_splits: 4
 
-split_map_file_template: 'deep56_full_{tube}_4way_0{split_num}_{freq}_sky_{maptag}.fits'
-coadd_map_file_template: 'coadds_by_ola/deep56_full_{tube}_4way_coadd_{freq}_sky_{maptag}.fits'
+split_map_file_template: 'deep56_{pwv_split}_{tube}_4way_0{split_num}_{freq}_sky_{maptag}.fits'
+coadd_map_file_template: 'deep56_{pwv_split}_{tube}_4way_coadd_{freq}_sky_{maptag}.fits'

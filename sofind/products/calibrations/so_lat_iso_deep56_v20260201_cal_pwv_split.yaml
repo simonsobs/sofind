@@ -17,6 +17,6 @@ allowed_qids:
 allowed_qids_extra_kwargs:
 
 subproduct_kwargs_orders:
-cals_file_template: calibs_dict_baseline.pkl
+cals_file_template: calibs_dict_{pwv_split}.pkl
 poleffs_file_template:
-key_template: lat_iso_{tube}_{freq}
+key_template: lat_iso_{tube}_{freq}_{pwv_split}

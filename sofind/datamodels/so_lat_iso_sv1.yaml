@@ -1,36 +1,48 @@
 qids_config: so_lat_qids.yaml  
 
 maps: 
-  v20260201: so_lat_iso_deep56_v20260201.yaml
+  # v20260201: so_lat_iso_deep56_v20260201.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
-  v20260201_srcfree: so_lat_iso_deep56_v20260201_srcfree.yaml
+  v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
+  v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
+  v20260201_skn_50cg_inout_split: so_lat_iso_deep56_v20260201_skn_50cg_inout_split.yaml
+  v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
 
 masks:
   v20260201: so_lat_iso_deep56_preproc_v20260201.yaml
   mnms_masks_lat_iso: mnms_masks_lat_iso.yaml
 
 noise_models:
-  # sim_factory: so_lat_iso_deep56_sim_factory.yaml
+  sim_factory: so_lat_iso_deep56_sim_factory.yaml
   # v20251019: so_lat_iso_deep56_v20251019.yaml
   v20260201_skn_50cg: so_lat_iso_deep56_v20260201_skn_50cg.yaml
+  v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_skn_50cg_el_split.yaml
+  v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_skn_50cg_flip_split.yaml
+  v20260201_skn_50cg_inout_split: so_lat_iso_deep56_v20260201_skn_50cg_inout_split.yaml
+  v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_skn_50cg_pwv_split.yaml
 
 catalogs:
   v20251019: catalog_so_lat_iso_deep56_v20251019.yaml
-  v20260201_extrasrc: catalog_so_lat_iso_deep56_v20260201_extra_src.yaml
+  v20260201_inpaint: catalog_so_lat_iso_deep56_v20260201_extra_src.yaml
 
 beams:
   v20251019_dummy: beams_so_lat_iso_deep56_dummy.yaml
-  v20260201_jitter: beams_so_lat_iso_deep56_jitter.yaml
-  act_beams_nemo_v5: beams_nemo_v5.yaml
+  v20260201: beams_so_lat_iso_deep56_jitter.yaml
+  # act_beams_nemo_v5: beams_nemo_v5.yaml
+  beams_nemo_v20260201: beams_so_lat_iso_deep56_nemo.yaml
 
 calibrations:
   v20251019_cal_dummy: calibrations_dummy_lat_iso.yaml
   v20251019_poleff_dummy: poleffs_dummy_lat_iso.yaml
-  v20260201_cal_merry: so_lat_iso_deep56_v20260201_cal.yaml
+  v20260201_skn_50cg: so_lat_iso_deep56_v20260201_cal.yaml
+  v20260201_skn_50cg_flip_split: so_lat_iso_deep56_v20260201_cal_flip_split.yaml
+  # v20260201_skn_50cg_inout_split: so_lat_iso_deep56_v20260201_cal_inout_split.yaml
+  v20260201_skn_50cg_pwv_split: so_lat_iso_deep56_v20260201_cal_pwv_split.yaml
+  # v20260201_skn_50cg_el_split: so_lat_iso_deep56_v20260201_cal_el_split.yaml
 
 transfer_func:
   # v20251019_dummy: tf_dummy_lat_iso.yaml
-  v20260201_merry: tf_v20260201_lat_iso.yaml
+  v20260201_skn_50cg: tf_v20260201_lat_iso.yaml
 
 masks_healpix:
   v20251019_preproc_masks_healpix: so_lat_iso_deep56_masks_healpix_v20251019.yaml
