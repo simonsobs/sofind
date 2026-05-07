@@ -1,19 +1,28 @@
 'p01':
   freq: '030'
+  daynight: planck
 'p02':
   freq: '044'
+  daynight: planck
 'p03':
   freq: '070'
+  daynight: planck
 'p04':
   freq: '100'
+  daynight: planck
 'p05':
   freq: '143'
+  daynight: planck
 'p06':
   freq: '217'
+  daynight: planck
 'p07':
   freq: '353'
+  daynight: planck
 'p08':
   freq: '545'
+  daynight: planck
 'p09':
   freq: '857'
+  daynight: planck
 
