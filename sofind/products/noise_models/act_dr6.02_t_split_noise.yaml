@@ -38,6 +38,8 @@ tile_cmbmask:
   calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -80,6 +82,8 @@ tile_cmbmask_ivfwhm2:
   calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -122,6 +126,8 @@ fdw_cmbmask:
   calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -202,6 +208,8 @@ fdw_cmbmask_ivfwhm2:
   calibrations_subproduct: t_split
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:

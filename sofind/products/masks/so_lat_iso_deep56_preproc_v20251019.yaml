@@ -1,0 +1,12 @@
+system_paths:
+  perlmutter: /pscratch/sd/k/kaper/deep56_20251019/masks/
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/masks/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+deep56:
+  mask_fn: mask_20251019_boxesmasked_binary.fits

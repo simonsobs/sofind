@@ -1,0 +1,104 @@
+o6a:
+  tube: o6
+  freq: f030
+
+o6b:
+  tube: o6b
+  freq: f040
+
+i1a:
+  tube: i1
+  freq: f090
+
+i1b:
+  tube: i1
+  freq: f150
+
+i3a:
+  tube: i3
+  freq: f090
+
+i3b:
+  tube: i3
+  freq: f150
+
+i4a:
+  tube: i4
+  freq: f090
+
+i4b:
+  tube: i4
+  freq: f150
+
+i6a:
+  tube: i6
+  freq: f090
+
+i6b:
+  tube: i6
+  freq: f150
+
+o2a:
+  tube: o2
+  freq: f090
+
+o2b:
+  tube: o2
+  freq: f150
+
+o3a:
+  tube: o3
+  freq: f090
+
+o3b:
+  tube: o3
+  freq: f150
+
+o4a:
+  tube: o4
+  freq: f090
+
+o4b:
+  tube: o4
+  freq: f150
+
+o5a:
+  tube: o5
+  freq: f090
+
+o5b:
+  tube: o5
+  freq: f150
+
+c1a:
+  tube: c1
+  freq: f220
+
+c1b:
+  tube: c1
+  freq: f280
+
+i2a:
+  tube: i2
+  freq: f220
+
+i2b:
+  tube: i2
+  freq: f280
+
+i5a:
+  tube: i5
+  freq: f220
+
+i5b:
+  tube: i5
+  freq: f280
+
+o1a:
+  tube: o1
+  freq: f220
+
+o1b:
+  tube: o1
+  freq: f280
+  

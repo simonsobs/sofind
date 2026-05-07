@@ -36,6 +36,8 @@ fdw:
   calibrations_subproduct: null
   catalogs_subproduct: null
   catalog_name: null
+  inpaint_radius: null
+  inpaint_thumb_width: null
   differenced: false
   dtype: f4
   enforce_equal_qid_kwargs:

@@ -42,6 +42,8 @@ tile:
   calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -84,6 +86,8 @@ wav:
   calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:
@@ -132,6 +136,8 @@ fdw:
   calibrations_subproduct: null
   catalogs_subproduct: inpaint_catalogs
   catalog_name: union_catalog_regular_20220316.csv
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   differenced: true
   dtype: f4
   enforce_equal_qid_kwargs:

@@ -4,6 +4,7 @@ system_paths:
   niagara: /scratch/r/rbond/jaejoonk/lensing_pipeline_data/models/
   penn-gpc: /data5/act/DR6_products/models/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/models/
+  # souk: /cephfs/soukdata/shared_projects/SO_lensing/ISO/d56/20251019/nemo_models/ACT_DR6plus_models/
 
 allowed_qids_configs:
   - act_nemo.yaml
