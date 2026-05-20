@@ -1,0 +1,13 @@
+system_paths:
+  della: 
+  perlmutter: /global/cfs/projectdirs/act/data/msyriac/cmodel_20260331/
+  dirac: 
+  penn-gpc: 
+  souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/inpaint_catalogs_20260331/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+

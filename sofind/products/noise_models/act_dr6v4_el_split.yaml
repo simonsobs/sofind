@@ -1,6 +1,7 @@
 system_paths:
   della: /scratch/gpfs/ACT/dr6v4/simulations/noise
   perlmutter: /global/cfs/cdirs/act/data/act_dr6v4/simulations/noise
+  trillium: /project/rpp-ahincks/jaejoonk/mnms/
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
@@ -73,6 +74,8 @@ tile_cmbmask:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   model_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
@@ -117,6 +120,8 @@ tile_cmbmask_ivfwhm2:
   delta_ell_smooth: 400
   height_deg: 4.0
   width_deg: 4.0
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   model_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
@@ -199,6 +204,8 @@ fdw_cmbmask:
   w_lmax: 10800
   w_lmax_j: 5300
   w_lmin: 10
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   model_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'
 
@@ -281,5 +288,7 @@ fdw_cmbmask_ivfwhm2:
   w_lmax: 10800
   w_lmax_j: 5300
   w_lmin: 10
+  inpaint_radius: 6
+  inpaint_thumb_width: 120
   model_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_model'
   sim_file_template: '{config_name}_{noise_model_name}_null_{el_split}_{qid_names}_lmax{lmax}_{num_splits}way_set{split_num}_noise_sim_{alm_str}{sim_num:04}'

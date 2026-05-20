@@ -90,9 +90,8 @@ class TransferFunc(Product):
         
         if subproduct == 'dummy':
             # dummy transfer function:
-            ellt = np.arange(2,3000+1)
+            ellt = np.arange(2,10000+1)
             tf = np.ones(len(ellt))
-            
             return np.array([ellt, tf])
 
         # use get_tf_fn and some external library to load the data

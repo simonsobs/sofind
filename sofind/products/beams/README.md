@@ -9,6 +9,7 @@
 | beams_v4_20230902.yaml |    __coadd__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>   __splits__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>    |
 | beams_v4_day_20240115.yaml|   __coadd__: `pa4a_dw`, `pa4a_dd`, `pa4b_dw`, `pa4b_dd`, `pa5a_dw`, `pa5a_dd`, `pa5b_dw`, `pa5b_dd`, `pa6a_dw`, `pa6a_dd`, `pa6b_dw`, `pa6b_dd`|     
 | beams_planck_npipe.yaml|   __splits__: `p01`, `p02`, `p03`, `p04` `p05`, `p06`, `p07`, `p08`, `p09`
+| beams_dr6.02_el_split.yaml | __coadd__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>   __splits__: `pa4a`, `pa4b`, `pa5a`, `pa5b`, `pa6a`, `pa6b` <br>    |
 | dummy |    __coadd__: all,  __splits__: all   |
 
 ## Code snippets
@@ -28,3 +29,11 @@ Check if beam needs to be normalised, if the information is available:
 ```
 get_if_norm_beam(subproduct)
 ```
+
+## Required keyword arguments
+
+| Config File (`subproduct`) | `keyword`(s): `value`(s) |
+| beams_dr6.02_el_split.yaml | `el_split`: `el1`, `el2`, `el3` |
+| beams_dr6.02_pwv_split.yaml | `pwv_split`: `pwv1`, `pwv2` |
+| beams_dr6.02_inout_split.yaml | `inout_split`: `inout1`, `inout2` |
+| beams_dr6.02_t_split.yaml | `time_split`: `t1`, `t2` |
