@@ -1,0 +1,12 @@
+system_paths:
+  perlmutter: 
+  trillium: /project/rrg-rbond-ac/msyriac/masks/dr6v4_lensing_260608_masks/
+  niagara:
+  dirac: 
+  penn-gpc: 
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:

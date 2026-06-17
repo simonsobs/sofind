@@ -28,6 +28,8 @@ masks:
   lensing_masks_20250513: lensing_masks_20250513.yaml
   lensing_masks_20250826: lensing_masks_20250826.yaml
   lensing_masks_20250915: lensing_masks_20250915.yaml
+  lensing_masks_20260530: lensing_masks_20260530.yaml
+  lensing_masks_20260608: lensing_masks_20260608.yaml
 
 catalogs:
   inpaint_catalogs_config: inpaint_catalogs.yaml
