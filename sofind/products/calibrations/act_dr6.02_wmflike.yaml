@@ -1,6 +1,7 @@
 system_paths:
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/calibrations/act_dr6.02_wmflike/
   trillium: /scratch/iabril/calibration/act_dr6.02_wmflike/
+  penn-gpc: /data5/act/DR6_products/calibration/act_dr6.02_wmflike/
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
 allowed_qids:

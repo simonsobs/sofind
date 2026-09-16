@@ -2,7 +2,7 @@ system_paths:
   della: 
   perlmutter: /global/cfs/projectdirs/act/data/iabril/cluster_and_inpaint_20260404/
   dirac: 
-  penn-gpc: 
+  penn-gpc: /data5/act/catalogs/inpaint_catalogs_20260404/ 
   trillium: /scratch/iabril/newyear/inpaint_catalogs_20260404/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/catalogs/inpaint_catalogs_20260404/
 

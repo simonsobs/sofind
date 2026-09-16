@@ -2,6 +2,7 @@ system_paths:
   dirac: 
   della: 
   perlmutter: 
+  penn-gpc: /data6/DR6_plus/calibrations/cal_day_to_nightdefault/
   trillium: /scratch/iabril/calibration/cal_day_to_nightdefault/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/calibrations/cal_day_to_nightdefault/
   

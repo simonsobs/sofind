@@ -2,7 +2,7 @@ system_paths:
   perlmutter: /global/cfs/cdirs/cmb/data/act_dr6/dr6.02/beams/main_beams/nominal/
   dirac: 
   trillium: /scratch/jaejoonk/DR6plus_lensing_data/beams_path/main_beams/nominal/
-  penn-gpc: 
+  penn-gpc: /data5/act/beams/nominal/
   souk: /cephfs/soukdata/shared_projects/SO_lensing/AdvACT/beams/nominal/
 
 allowed_qids_configs:
