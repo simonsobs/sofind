@@ -61,6 +61,7 @@ calibrations:
   dr6v4_calday_tonight_daydeep_260410: dr6v4_calday_tonight_daydeep_260410.yaml
   act_dr6.02_hack: act_dr6.02_hack.yaml
   act_dr6.02_wmflike: act_dr6.02_wmflike.yaml
+  act_dr6.02_wcmblite: act_dr6.02_wcmblite.yaml
   dr6v4_calday_tonight_daywide_N_260513: dr6v4_calday_tonight_daywide_N_260513.yaml
   dr6v4_calday_tonight_daywide_S_260513: dr6v4_calday_tonight_daywide_S_260513.yaml
   dr6v4_calday_tonight_daydeep_260513: dr6v4_calday_tonight_daydeep_260513.yaml
