@@ -1,0 +1,22 @@
+system_paths:
+  souk: 
+  trillium: /scratch/iabril/calibration/act_dr6.02_wcmblite/
+allowed_qids_configs:
+- act_dr6vX_qids.yaml
+allowed_qids:
+- pa4b
+- pa5a
+- pa5b
+- pa6a
+- pa6b
+- pa5a_dw
+- pa5b_dw
+- pa5a_dd
+- pa5b_dd
+- pa6a_dd
+- pa6b_dd
+allowed_qids_extra_kwargs:
+subproduct_kwargs_orders:
+cals_file_template: act_dr6.02_cals_wcmblite.pkl
+poleffs_file_template: act_dr6.02_poleffs_wcmblite.pkl
+key_template: dr6_{array}_{freq}
