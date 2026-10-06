@@ -4,6 +4,7 @@ maps:
   default_config: planck_npipe.yaml
   noise_sims_config: planck_npipe_noise_sims.yaml
   pact_nemo_20260403: pact_nemo_20260403.yaml
+  planck_nemo_20261006: planck_nemo_20261006.yaml
 
 beams:
   beams_nemo: beams_nemo.yaml
