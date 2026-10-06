@@ -1,6 +1,7 @@
 system_paths:
   souk: 
   trillium: /scratch/iabril/calibration/act_dr6.02_wcmblite/
+  penn-gpc: /data5/act/DR6_products/calibration/act_dr6.02_wcmblite/
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
 allowed_qids:
