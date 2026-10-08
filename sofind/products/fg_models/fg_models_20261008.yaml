@@ -1,0 +1,15 @@
+system_paths:
+  perlmutter: /global/cfs/projectdirs/act/data/msyriac/fgcovcubes/20261008/
+  trillium: /project/rrg-rbond-ac/msyriac/fgcovcubes/20261008/
+  niagara:
+  dirac:
+  penn-gpc: /data5/act/fgcovcubes/20261008/
+  souk:
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+fg_model_fn: fg_fsky_{fsky}.npz

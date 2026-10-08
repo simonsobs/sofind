@@ -9,3 +9,4 @@ from .catalogs import Catalog
 from .masks import Mask
 from .calibrations import Calibration
 from .transfer_func import TransferFunc
+from .fg_models import FGModel
