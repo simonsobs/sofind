@@ -1,9 +1,9 @@
 system_paths:
-  perlmutter:
+  perlmutter: /global/cfs/projectdirs/act/data/masks/dr6v4_lensing_261008_masks/
   trillium: /project/rrg-rbond-ac/msyriac/masks/dr6v4_lensing_261008_masks/
   niagara: 
   dirac: 
-  penn-gpc: 
+  penn-gpc: /data5/act/masks/dr6v4_lensing_261008_masks/
   souk: 
   
 allowed_qids_configs: 'all'
