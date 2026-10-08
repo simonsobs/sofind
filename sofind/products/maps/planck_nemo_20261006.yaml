@@ -1,0 +1,35 @@
+# Cluster (tSZ) model maps for the Planck NPIPE splits A and B (split_num 1 and 2),
+# in uK_CMB, for subtraction from the Planck maps. Each split model is convolved with
+# the NPIPE beam of that split (beams_npipe).
+#
+# - p04 (100 GHz) and p05 (143 GHz): identical copies of pact_nemo_20260403.
+# - p03 (70 GHz), p07 (353 GHz), p08 (545 GHz): the p05 split models rescaled in harmonic
+#   space by g(nu) / g(143 GHz) * B_nu,split(l) / B_143,split(l), with g the
+#   non-relativistic tSZ frequency factor at the nominal frequency (no bandpass
+#   integration, although the file names keep the convention of pact_nemo_20260403)
+#   and B the NPIPE beams of the same split, up to the Nyquist multipole of the maps.
+#
+# A provenance.yaml next to the maps records the settings and the sha256 of every file.
+
+system_paths:
+  dirac:
+  trillium: /project/rrg-rbond-ac/msyriac/cmodels/planck_nemo_20261006/
+  penn-gpc: /data5/act/cmodels/planck_nemo_20261006/
+  perlmutter: /global/cfs/projectdirs/act/data/msyriac/planck_nemo_20261006/
+  souk:
+
+allowed_qids_configs:
+  - planck_qids.yaml
+
+allowed_qids:
+  - 'p03'
+  - 'p04'
+  - 'p05'
+  - 'p07'
+  - 'p08'
+
+allowed_qids_extra_kwargs:
+
+split_map_file_template: 'candidatesModelMap_{freq}_split{split_num}_fixedSNR5_ring0_extobj0_dust0_find0_goodbeam_tcmbbandcorr.fits'
+
+dfact: 1

@@ -1,0 +1,13 @@
+system_paths:
+  perlmutter: /global/cfs/projectdirs/act/data/masks/dr6v4_lensing_20250318_masks/fullsky_galactic/
+  trillium: /project/rrg-rbond-ac/msyriac/masks/dr6v4_lensing_20250318_masks/fullsky_galactic/
+  penn-gpc: /data5/act/masks/dr6v4_lensing_20250318_masks/fullsky_galactic/
+
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+
+planck_galactic:
+  mask_fn: dr6v4_lensing_20240918_planck_galactic_mask_{skyfrac}.fits

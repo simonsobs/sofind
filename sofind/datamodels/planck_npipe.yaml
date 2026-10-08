@@ -4,6 +4,7 @@ maps:
   default_config: planck_npipe.yaml
   noise_sims_config: planck_npipe_noise_sims.yaml
   pact_nemo_20260403: pact_nemo_20260403.yaml
+  planck_nemo_20261006: planck_nemo_20261006.yaml
 
 beams:
   beams_nemo: beams_nemo.yaml
@@ -22,6 +23,7 @@ catalogs:
 masks:
   lensing_masks_20250513: lensing_masks_20250513.yaml
   lensing_masks_20240919b: lensing_masks_20240919b.yaml
+  lensing_masks_20250318_galactic: lensing_masks_20250318_galactic.yaml
   lensing_masks_20250826: lensing_masks_20250826.yaml
   lensing_masks_20260530: lensing_masks_20260530.yaml
   lensing_masks_20260608: lensing_masks_20260608.yaml
