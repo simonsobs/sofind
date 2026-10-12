@@ -12,5 +12,5 @@ allowed_qids: 'all'
 
 allowed_qids_extra_kwargs:
 
-dr6v4_20250513:
+dr6v4_20261008:
   mask_fn: dr6v4_lensing_261008_{daynight}_enhanced_mask_{skyfrac}.fits
