@@ -1,0 +1,7 @@
+qids_config: planck_qids.yaml  
+
+maps:
+  deep56_geom_only: so_lat_iso_deep56_geom_only.yaml
+
+noise_models:
+  e2e_raw: planck_e2e_raw.yaml

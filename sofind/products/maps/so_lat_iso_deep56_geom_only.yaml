@@ -1,0 +1,65 @@
+system_paths:
+  tiger: /scratch/gpfs/SIMONSOBS/lat-iso/phase2/deep56
+  
+allowed_qids_configs: 'all'
+
+allowed_qids: 'all'
+
+allowed_qids_extra_kwargs:
+  'p01':
+    num_splits: 2
+  'p02':
+    num_splits: 2
+  'p03':
+    num_splits: 2
+  'p04':
+    num_splits: 2
+  'p05':
+    num_splits: 2
+  'p06':
+    num_splits: 2
+  'p07':
+    num_splits: 2
+  'p08':
+    num_splits: 2
+  'p09':
+    num_splits: 2
+  pa4a:
+    num_splits: 4
+  pa4b:
+    num_splits: 4
+  pa5a:
+    num_splits: 4
+  pa5b:
+    num_splits: 4
+  pa6a:
+    num_splits: 4
+  pa6b:
+    num_splits: 4
+  i1a:
+    num_splits: 4
+  i1b:
+    num_splits: 4
+  i3a:
+    num_splits: 4
+  i3b:
+    num_splits: 4
+  i4a:
+    num_splits: 4
+  i4b:
+    num_splits: 4
+  i6a:
+    num_splits: 4
+  i6b:
+    num_splits: 4
+  c1a:
+    num_splits: 4
+  c1b:
+    num_splits: 4
+  i5a:
+    num_splits: 4
+  i5b:
+    num_splits: 4
+
+split_map_file_template: 'deep56_geometry.fits'
+coadd_map_file_template: 'deep56_geometry.fits'
