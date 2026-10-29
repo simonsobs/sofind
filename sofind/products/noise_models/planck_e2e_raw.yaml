@@ -1,5 +1,5 @@
 system_paths:
-  tiger: /scratch/gpfs/SIMONSOBS/lat-iso/mbs/mnms_products
+  tiger: /scratch/gpfs/SIMONSOBS/planck/processed_planck_sims/noise
 
 allowed_qids_configs:
 - planck_qids.yaml
