@@ -4,6 +4,7 @@ system_paths:
   dirac: /rds/project/dirac_vol5/rds-dirac-dp002/AdvACT/simulations/mnms/
   niagara: /scratch/r/rbond/jaejoonk/dr6plus_noise_sims/
   tiger: /scratch/gpfs/ACT/data/act_dr6/dr6v4/simulations/noise
+  penn-gpc: /data6/mnms
 
 allowed_qids_configs:
 - act_dr6vX_qids.yaml
